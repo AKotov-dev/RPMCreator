@@ -1,0 +1,124 @@
+object UnpackForm: TUnpackForm
+  Left = 242
+  Height = 476
+  Top = 148
+  Width = 666
+  Caption = 'Распаковщик'
+  ClientHeight = 476
+  ClientWidth = 666
+  DesignTimePPI = 97
+  FormStyle = fsStayOnTop
+  OnCreate = FormCreate
+  Position = poMainFormCenter
+  SessionProperties = 'Height;Width'
+  LCLVersion = '1.8.4.0'
+  object LogMemo: TMemo
+    AnchorSideTop.Control = EditButton2
+    AnchorSideTop.Side = asrBottom
+    Left = 0
+    Height = 341
+    Top = 135
+    Width = 666
+    Align = alBottom
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Top = 10
+    ReadOnly = True
+    ScrollBars = ssVertical
+    TabOrder = 2
+  end
+  object Label1: TLabel
+    AnchorSideLeft.Control = EditButton1
+    AnchorSideBottom.Control = EditButton1
+    Left = 5
+    Height = 15
+    Top = 26
+    Width = 236
+    Anchors = [akLeft, akBottom]
+    BorderSpacing.Bottom = 3
+    Caption = 'Исходный пакет (*.deb или *.rpm):'
+    ParentColor = False
+  end
+  object EditButton1: TEditButton
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 5
+    Height = 25
+    Top = 44
+    Width = 656
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Right = 5
+    ButtonCaption = '...'
+    ButtonWidth = 23
+    Color = 15663103
+    MaxLength = 0
+    NumGlyphs = 1
+    OnButtonClick = EditButton1ButtonClick
+    OnChange = EditButton1Change
+    OnKeyPress = EditButton1KeyPress
+    PasswordChar = #0
+    TabOrder = 0
+  end
+  object EditButton2: TEditButton
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 5
+    Height = 25
+    Top = 100
+    Width = 656
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Right = 5
+    ButtonCaption = '...'
+    ButtonWidth = 23
+    Color = 15663103
+    MaxLength = 0
+    NumGlyphs = 1
+    OnButtonClick = EditButton2ButtonClick
+    OnChange = EditButton1Change
+    OnKeyPress = EditButton1KeyPress
+    PasswordChar = #0
+    TabOrder = 1
+  end
+  object Label2: TLabel
+    AnchorSideLeft.Control = EditButton2
+    AnchorSideBottom.Control = EditButton2
+    Left = 5
+    Height = 15
+    Top = 82
+    Width = 212
+    Anchors = [akLeft, akBottom]
+    BorderSpacing.Bottom = 3
+    Caption = 'Папка выгрузки содержимого:'
+    ParentColor = False
+  end
+  object Button1: TButton
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 606
+    Height = 25
+    Hint = '|Приступить к распаковке'
+    Top = 8
+    Width = 55
+    Anchors = [akTop, akRight]
+    BorderSpacing.Right = 5
+    Caption = 'Ok'
+    Enabled = False
+    OnClick = Button1Click
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 3
+  end
+  object SelectDirectoryDialog1: TSelectDirectoryDialog
+    left = 128
+    top = 176
+  end
+  object OpenDialog1: TOpenDialog
+    Filter = 'Package (*.deb, *.rpm)|*.deb;*.rpm'
+    left = 40
+    top = 144
+  end
+  object UnpackFormStorage: TXMLPropStorage
+    StoredValues = <>
+    left = 432
+    top = 144
+  end
+end
