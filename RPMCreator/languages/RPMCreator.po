@@ -1,0 +1,407 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Project-Id-Version: RPMCreator\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: alex_q_2000\n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"X-Generator: Poedit 2.4.2\n"
+
+#: taboutform.button1.caption
+msgctxt "taboutform.button1.caption"
+msgid "Ok"
+msgstr ""
+
+#: taboutform.caption
+msgid "About"
+msgstr ""
+
+#: taboutform.label1.caption
+msgctxt "taboutform.label1.caption"
+msgid "RPMCreator"
+msgstr ""
+
+#: taboutform.label2.caption
+msgid ""
+"Package build program\n"
+"\n"
+"License: GPLv3\n"
+"Compilation: Lazarus 2.0.10\n"
+"Author: alex_q_2000 (C) 2021\n"
+"Grantitudes: AlexL\n"
+"Used by rpmbuild (spec, src)\n"
+"\n"
+"Russian Linux Forum:\n"
+"https://linuxforum.ru\n"
+msgstr ""
+
+#: tmainform.aboutbtn.caption
+msgid "?"
+msgstr ""
+
+#: tmainform.aboutbtn.hint
+msgid "|About"
+msgstr ""
+
+#: tmainform.buildbtn.caption
+msgctxt "tmainform.buildbtn.caption"
+msgid "Build package"
+msgstr ""
+
+#: tmainform.buildlabel.caption
+msgid "building an intermediate archive, wait..."
+msgstr ""
+
+#: tmainform.button1.caption
+msgid "+ Files and Folders"
+msgstr ""
+
+#: tmainform.button1.hint
+msgid "|Add files to the list [active Ctrl+Mouse]"
+msgstr ""
+
+#: tmainform.button3.caption
+msgid "X"
+msgstr ""
+
+#: tmainform.button3.hint
+msgid "|Delete selected list entries"
+msgstr ""
+
+#: tmainform.button7.caption
+msgid "{*}"
+msgstr ""
+
+#: tmainform.button7.hint
+msgid "|Select all entries in the list"
+msgstr ""
+
+#: tmainform.caption
+msgctxt "tmainform.caption"
+msgid "RPMCreator"
+msgstr ""
+
+#: tmainform.createrepacktxt.caption
+msgid "Create repack.txt"
+msgstr ""
+
+#: tmainform.debcheckbox.caption
+msgid "+DEB"
+msgstr ""
+
+#: tmainform.debcheckbox.hint
+msgid "|Additionally build a DEB package in ~/debbuild (scripts not support)"
+msgstr ""
+
+#: tmainform.depsedit.hint
+msgid "|Package names separated by commas or spaces"
+msgstr ""
+
+#: tmainform.dnbtn.caption
+msgid "DN"
+msgstr ""
+
+#: tmainform.dnbtn.hint
+msgid "|Move record down"
+msgstr ""
+
+#: tmainform.infomemo.hint
+msgctxt "tmainform.infomemo.hint"
+msgid "|/usr/share/doc/package_name/repack.txt"
+msgstr ""
+
+#: tmainform.label1.caption
+msgid "Package name:"
+msgstr ""
+
+#: tmainform.label10.caption
+msgid "URL author sources + binaries (32 bit):"
+msgstr ""
+
+#: tmainform.label11.caption
+msgid "Before install (%pre):"
+msgstr ""
+
+#: tmainform.label12.caption
+msgid "Before remove (%preun):"
+msgstr ""
+
+#: tmainform.label13.caption
+msgid "Vendor:"
+msgstr ""
+
+#: tmainform.label14.caption
+msgid "License:"
+msgstr ""
+
+#: tmainform.label15.caption
+msgid "Group:"
+msgstr ""
+
+#: tmainform.label16.caption
+msgid "Brief description of the package:"
+msgstr ""
+
+#: tmainform.label17.caption
+msgid " URL of a copy of the source code (*.tar.gz, *.src.rpm, etc):"
+msgstr ""
+
+#: tmainform.label19.caption
+msgid "Development tools:"
+msgstr ""
+
+#: tmainform.label2.caption
+msgid "Program name:"
+msgstr ""
+
+#: tmainform.label20.caption
+msgctxt "tmainform.label20.caption"
+msgid "Version:"
+msgstr ""
+
+#: tmainform.label21.caption
+msgid "URL author sources + binaries (64 bit):"
+msgstr ""
+
+#: tmainform.label23.caption
+msgid "Additional information:"
+msgstr ""
+
+#: tmainform.label3.caption
+msgid "Package dependencies:"
+msgstr ""
+
+#: tmainform.label4.caption
+msgctxt "tmainform.label4.caption"
+msgid "Version:"
+msgstr ""
+
+#: tmainform.label5.caption
+msgid "Package description:"
+msgstr ""
+
+#: tmainform.label6.caption
+msgid "After install (%post):"
+msgstr ""
+
+#: tmainform.label7.caption
+msgid "After remove (%postun):"
+msgstr ""
+
+#: tmainform.label8.caption
+msgid "Release:"
+msgstr ""
+
+#: tmainform.label9.caption
+msgid "Maintainer:"
+msgstr ""
+
+#: tmainform.listbox1.hint
+msgid "|List of files and folders to build the package [there is a PopUp menu]"
+msgstr ""
+
+#: tmainform.loadbtn.caption
+msgctxt "tmainform.loadbtn.caption"
+msgid "Load project"
+msgstr ""
+
+#: tmainform.loadbtn.hint
+msgid "|Load *.prj or *.lst files"
+msgstr ""
+
+#: tmainform.menuitem1.caption
+msgid "Add objects"
+msgstr ""
+
+#: tmainform.menuitem10.caption
+msgctxt "tmainform.menuitem10.caption"
+msgid "Build package"
+msgstr ""
+
+#: tmainform.menuitem7.caption
+msgctxt "tmainform.menuitem7.caption"
+msgid "Load project"
+msgstr ""
+
+#: tmainform.menuitem8.caption
+msgctxt "tmainform.menuitem8.caption"
+msgid "Save project"
+msgstr ""
+
+#: tmainform.metacheck.caption
+msgid "meta"
+msgstr ""
+
+#: tmainform.metacheck.hint
+msgid "|Empty package"
+msgstr ""
+
+#: tmainform.noarchcheck.caption
+msgid "noarch"
+msgstr ""
+
+#: tmainform.noarchcheck.hint
+msgid "|For all architectures"
+msgstr ""
+
+#: tmainform.releaseedit.hint
+msgctxt "tmainform.releaseedit.hint"
+msgid "|Sample: 0.mrx8"
+msgstr ""
+
+#: tmainform.rpmbtn.caption
+msgid "RPM"
+msgstr ""
+
+#: tmainform.rpmbtn.hint
+msgid "|Download a list of files by package name"
+msgstr ""
+
+#: tmainform.savebtn.caption
+msgctxt "tmainform.savebtn.caption"
+msgid "Save project"
+msgstr ""
+
+#: tmainform.savebtn.hint
+msgid "|Save project *.prj"
+msgstr ""
+
+#: tmainform.signcheckbox.caption
+msgid "sign rpm"
+msgstr ""
+
+#: tmainform.signcheckbox.hint
+msgid "|Sign RPM package"
+msgstr ""
+
+#: tmainform.tabsheet1.caption
+msgid "Basic"
+msgstr ""
+
+#: tmainform.tabsheet2.caption
+msgid "Script's"
+msgstr ""
+
+#: tmainform.tabsheet3.caption
+msgid "repack.txt"
+msgstr ""
+
+#: tmainform.tabsheet3.hint
+msgctxt "tmainform.tabsheet3.hint"
+msgid "|/usr/share/doc/package_name/repack.txt"
+msgstr ""
+
+#: tmainform.tabsheet4.caption
+msgid "HELP"
+msgstr ""
+
+#: tmainform.unpackbtn.caption
+msgid "Unpack"
+msgstr ""
+
+#: tmainform.upbtn.caption
+msgid "UP"
+msgstr ""
+
+#: tmainform.upbtn.hint
+msgid "|Move record up"
+msgstr ""
+
+#: tselectform.button1.caption
+msgid "Add"
+msgstr ""
+
+#: tselectform.button2.caption
+msgid "Update"
+msgstr ""
+
+#: tselectform.caption
+msgctxt "tselectform.caption"
+msgid "Select files and folders"
+msgstr ""
+
+#: tselectform.filelistbox1.hint
+msgid "|Select file(s) [Ctrl+Mouse]"
+msgstr ""
+
+#: tselectform.shelltreeview1.hint
+msgid "|Select directory"
+msgstr ""
+
+#: tunpackform.button1.caption
+msgctxt "tunpackform.button1.caption"
+msgid "Ok"
+msgstr ""
+
+#: tunpackform.button1.hint
+msgid "|Start unpacking"
+msgstr ""
+
+#: tunpackform.caption
+msgctxt "tunpackform.caption"
+msgid "Package unpacker"
+msgstr ""
+
+#: tunpackform.editbutton1.buttoncaption
+msgctxt "tunpackform.editbutton1.buttoncaption"
+msgid "..."
+msgstr ""
+
+#: tunpackform.editbutton2.buttoncaption
+msgctxt "tunpackform.editbutton2.buttoncaption"
+msgid "..."
+msgstr ""
+
+#: tunpackform.label1.caption
+msgid "Unpack (*.deb or *.rpm):"
+msgstr ""
+
+#: tunpackform.label2.caption
+msgid "Content upload folder:"
+msgstr ""
+
+#: unit1.sclearworkdir
+msgid "Clearing the working directory..."
+msgstr ""
+
+#: unit1.scompleted
+msgid "Completed. Press Enter to continue..."
+msgstr ""
+
+#: unit1.sdeleterecords
+msgid "Delete selected items?"
+msgstr ""
+
+#: unit1.sfilelistempty
+msgid "The list of files is empty!"
+msgstr ""
+
+#: unit1.sinputname
+msgid "Please, enter the name of the package:"
+msgstr ""
+
+#: unit1.smacrosnotfound
+msgid "No file found ~/.rpmmacros! Not ready to sign packages!"
+msgstr ""
+
+#: unit1.snodata
+msgid "Not enough data for build package!"
+msgstr ""
+
+#: unit1.snolistobject
+msgid "No list object:"
+msgstr ""
+
+#: unit1.sprojectchange
+msgid "Project changed. Save it?"
+msgstr ""
+
+#: unit1.ssignrpm
+msgid "Sign the packages:"
+msgstr ""
+

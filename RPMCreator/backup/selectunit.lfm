@@ -1,0 +1,116 @@
+object SelectForm: TSelectForm
+  Left = 339
+  Height = 549
+  Top = 163
+  Width = 762
+  ActiveControl = FileListBox1
+  Caption = 'Select files and folders'
+  ClientHeight = 549
+  ClientWidth = 762
+  FormStyle = fsStayOnTop
+  OnCreate = FormCreate
+  OnShow = FormShow
+  Position = poMainFormCenter
+  SessionProperties = 'Height;Width'
+  LCLVersion = '2.0.10.0'
+  object ShellTreeView1: TShellTreeView
+    Left = 0
+    Height = 491
+    Hint = '|Select directory'
+    Top = 40
+    Width = 253
+    Align = alLeft
+    BackgroundColor = clDefault
+    Color = clDefault
+    FileSortType = fstAlphabet
+    HotTrack = True
+    ParentFont = False
+    ParentShowHint = False
+    ReadOnly = True
+    Root = '/'
+    RowSelect = True
+    ScrollBars = ssVertical
+    ShowHint = True
+    TabOrder = 0
+    OnChange = ShellTreeView1Change
+    OnClick = ShellTreeView1Click
+    Options = [tvoAutoItemHeight, tvoHideSelection, tvoHotTrack, tvoKeepCollapsedNodes, tvoReadOnly, tvoRowSelect, tvoShowButtons, tvoShowLines, tvoShowRoot, tvoToolTips, tvoThemedDraw]
+    ObjectTypes = [otFolders, otHidden]
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 40
+    Top = 0
+    Width = 762
+    Align = alTop
+    ClientHeight = 40
+    ClientWidth = 762
+    Font.Color = clFuchsia
+    ParentFont = False
+    TabOrder = 1
+    object Button1: TButton
+      AnchorSideRight.Control = Panel1
+      AnchorSideRight.Side = asrBottom
+      Left = 657
+      Height = 28
+      Top = 5
+      Width = 99
+      Anchors = [akTop, akRight]
+      BorderSpacing.Right = 5
+      Caption = 'Add'
+      OnClick = Button1Click
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 1
+    end
+    object Button2: TButton
+      Left = 6
+      Height = 28
+      Top = 5
+      Width = 99
+      Caption = 'Update'
+      OnClick = Button2Click
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 0
+    end
+  end
+  object Splitter1: TSplitter
+    Left = 253
+    Height = 491
+    Top = 40
+    Width = 5
+  end
+  object FileListBox1: TFileListBox
+    Left = 258
+    Height = 491
+    Top = 40
+    Width = 504
+    Align = alClient
+    Directory = '~/'
+    FileType = [ftReadOnly, ftHidden, ftSystem, ftArchive, ftNormal]
+    ItemHeight = 0
+    MultiSelect = True
+    OnClick = FileListBox1Click
+    ParentShowHint = False
+    ParentFont = False
+    ShowHint = True
+    TabOrder = 3
+    TopIndex = -1
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Height = 18
+    Top = 531
+    Width = 762
+    Panels = <>
+    ParentFont = False
+  end
+  object SelectFormStorage: TXMLPropStorage
+    StoredValues = <>
+    Left = 649
+    Top = 55
+  end
+end
