@@ -699,6 +699,9 @@ begin
     //Подчищаем временный файл
     DeleteFile('./files.lst');
 
+    //Для списка
+    SPEC := TStringList.Create;
+
     //------------Сборка DEB------------
 
     if DEBCheckBox.Checked then
@@ -706,9 +709,6 @@ begin
       //Распаковываем архив для deb-пакета
       StartProcess('nice -n 15 tar -xvzf ' + NameEdit.Text + '-' +
         VersEdit.Text + '.tar.gz' + ' -C ~/debbuild/tmp', 'sh');
-
-      //Для списка
-      SPEC := TStringList.Create;
 
       SPEC.Add('Package: ' + NameEdit.Text);
       SPEC.Add('Version: ' + VersEdit.Text + '-' + ReleaseEdit.Text);
@@ -728,9 +728,11 @@ begin
       SPEC.Add('Description: ' + SummaryEdit.Text);
 
       //Если в зависимостях нет запятых, заменяем пробелы запятыми
-      if pos(DepsEdit.Text, ',') = 0 then
+      if pos(',', DepsEdit.Text) = 0 then
         SPEC.Add('Depends: ' + Trim(StringReplace(DepsEdit.Text, ' ',
-          ',', [rfReplaceAll])));
+          ',', [rfReplaceAll])))
+      else
+        SPEC.Add('Depends: ' + Trim(DepsEdit.Text));
 
       SPEC.Add('Priority: extra');
       SPEC.Add('Section: misc');

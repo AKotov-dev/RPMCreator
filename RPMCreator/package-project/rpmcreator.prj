@@ -5,7 +5,7 @@ name=rpmcreator
 version=1.6
 
 [RELEASE]
-release=0.mrx8
+release=1.mrx8
 
 [GROUP]
 group=Applications/System
@@ -31,7 +31,7 @@ urlcopy=https://cloud.mail.ru/public/5kma/573FjdpNE
 license=GPLv3
 
 [DEPS]
-deps=sakura rpm-build rpm-sign gnupg gnupg2 createrepo gcc make p7zip dpkg-dev
+deps=sakura rpm-build rpm-sign gnupg createrepo gcc make p7zip dpkg-dev
 
 [META]
 meta=0
@@ -43,7 +43,7 @@ noarch=0
 sign=0
 
 [DEB]
-deb=1
+deb=0
 
 [FILES]
 0=/usr/bin/rpmcreator
@@ -70,19 +70,22 @@ toolversion=2.0.10
 [INFO]
 0=Lazarus is required to compile the program
 1=
-2=v1.6-0
-3=+DEB packages create in ~/debbuild
-4=+i18 translation En/Ru
-5=
-6=v1.5-1
-7=+Disable check shebang in script's (#!/bin/bash <> #!/usr/bin/bash)
+2=v1.6-1
+3=+DEB dependencies correction
+4=
+5=v1.6-0
+6=+DEB packages create in ~/debbuild
+7=+i18 translation En/Ru
 8=
-9=v1.5-0
-10=+Change "Requires:" to "Recommends:"
+9=v1.5-1
+10=+Disable check shebang in script's (#!/bin/bash <> #!/usr/bin/bash)
 11=
-12=v1.4-1
-13=+ Lazarus 2.0.10 rebuild
-14=+ new list of rpm groups from Mageia-8
-15=url: https://fedoraproject.org/wiki/RPMGroups
-16=rpm -qa --qf '%{group}\n' | sort -u
-17=+ updated the list of licenses
+12=v1.5-0
+13=+Change "Requires:" to "Recommends:"
+14=
+15=v1.4-1
+16=+ Lazarus 2.0.10 rebuild
+17=+ new list of rpm groups from Mageia-8
+18=url: https://fedoraproject.org/wiki/RPMGroups
+19=rpm -qa --qf '%{group}\n' | sort -u
+20=+ updated the list of licenses
