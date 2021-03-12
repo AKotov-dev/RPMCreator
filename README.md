@@ -1,4 +1,4 @@
-**RPMCreator** - GUI for building RPM packages from pre-installed files and folders
+**RPMCreator** - GUI for building RPM and DEB packages from pre-installed files and folders
 
 Dependencies: `sakura rpm-build rpm-sign gnupg createrepo gcc make p7zip dpkg-dev`
 
