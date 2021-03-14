@@ -3,7 +3,7 @@ object AboutForm: TAboutForm
   Height = 261
   Top = 126
   Width = 360
-  ActiveControl = Button1
+  ActiveControl = OkBtn
   Caption = 'About'
   ClientHeight = 261
   ClientWidth = 360
@@ -400,7 +400,7 @@ object AboutForm: TAboutForm
     BorderSpacing.Right = 8
     Shape = bsTopLine
   end
-  object Button1: TButton
+  object OkBtn: TButton
     AnchorSideRight.Control = Owner
     AnchorSideRight.Side = asrBottom
     Left = 144
@@ -410,7 +410,7 @@ object AboutForm: TAboutForm
     Anchors = [akBottom]
     BorderSpacing.Right = 165
     Caption = 'Ok'
-    OnClick = Button1Click
+    OnClick = OkBtnClick
     TabOrder = 0
   end
   object AboutFormStorage: TXMLPropStorage

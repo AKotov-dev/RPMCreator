@@ -86,6 +86,7 @@ object SelectForm: TSelectForm
   object FileListBox1: TFileListBox
     Left = 258
     Height = 491
+    Hint = '|Select file(s) [Ctrl+Mouse]'
     Top = 40
     Width = 504
     Align = alClient

@@ -385,8 +385,8 @@ object AboutForm: TAboutForm
     Left = 112
     Height = 150
     Top = 48
-    Width = 223
-    Caption = 'RPM and DEB package build program'#10#10'License: GPLv3'#10'Compilation: Lazarus 2.0.10'#10'Author: alex_q_2000 (C) 2021'#10'Grantitudes: AlexL'#10'Used by rpmbuild (spec, src)'#10#10'Russian Linux Forum:'#10'https://linuxforum.ru'
+    Width = 175
+    Caption = 'Package build program'#10#10'License: GPLv3'#10'Compilation: Lazarus 2.0.10'#10'Author: alex_q_2000 (C) 2021'#10'Grantitudes: AlexL'#10'Used by rpmbuild (spec, src)'#10#10'Russian Linux Forum:'#10'https://linuxforum.ru'
     ParentColor = False
   end
   object Bevel1: TBevel

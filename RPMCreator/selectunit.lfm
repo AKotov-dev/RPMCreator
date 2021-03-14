@@ -1,12 +1,12 @@
 object SelectForm: TSelectForm
-  Left = 339
-  Height = 549
-  Top = 163
-  Width = 762
+  Left = 334
+  Height = 575
+  Top = 144
+  Width = 779
   ActiveControl = FileListBox1
   Caption = 'Select files and folders'
-  ClientHeight = 549
-  ClientWidth = 762
+  ClientHeight = 575
+  ClientWidth = 779
   FormStyle = fsStayOnTop
   OnCreate = FormCreate
   OnShow = FormShow
@@ -15,7 +15,7 @@ object SelectForm: TSelectForm
   LCLVersion = '2.0.10.0'
   object ShellTreeView1: TShellTreeView
     Left = 0
-    Height = 491
+    Height = 517
     Hint = '|Select directory'
     Top = 40
     Width = 253
@@ -41,36 +41,36 @@ object SelectForm: TSelectForm
     Left = 0
     Height = 40
     Top = 0
-    Width = 762
+    Width = 779
     Align = alTop
     ClientHeight = 40
-    ClientWidth = 762
+    ClientWidth = 779
     Font.Color = clFuchsia
     ParentFont = False
     TabOrder = 1
-    object Button1: TButton
+    object AddBtn: TButton
       AnchorSideRight.Control = Panel1
       AnchorSideRight.Side = asrBottom
-      Left = 657
+      Left = 674
       Height = 28
       Top = 5
       Width = 99
       Anchors = [akTop, akRight]
       BorderSpacing.Right = 5
       Caption = 'Add'
-      OnClick = Button1Click
+      OnClick = AddBtnClick
       ParentFont = False
       ParentShowHint = False
       ShowHint = True
       TabOrder = 1
     end
-    object Button2: TButton
+    object UpdateBtn: TButton
       Left = 6
       Height = 28
       Top = 5
       Width = 99
       Caption = 'Update'
-      OnClick = Button2Click
+      OnClick = UpdateBtnClick
       ParentFont = False
       ParentShowHint = False
       ShowHint = True
@@ -79,16 +79,16 @@ object SelectForm: TSelectForm
   end
   object Splitter1: TSplitter
     Left = 253
-    Height = 491
+    Height = 517
     Top = 40
     Width = 5
   end
   object FileListBox1: TFileListBox
     Left = 258
-    Height = 491
+    Height = 517
     Hint = '|Select file(s) [Ctrl+Mouse]'
     Top = 40
-    Width = 504
+    Width = 521
     Align = alClient
     Directory = '~/'
     FileType = [ftReadOnly, ftHidden, ftSystem, ftArchive, ftNormal]
@@ -104,8 +104,8 @@ object SelectForm: TSelectForm
   object StatusBar1: TStatusBar
     Left = 0
     Height = 18
-    Top = 531
-    Width = 762
+    Top = 557
+    Width = 779
     Panels = <>
     ParentFont = False
   end

@@ -12,11 +12,6 @@ msgstr ""
 "Language: en\n"
 "X-Generator: Poedit 2.4.2\n"
 
-#: taboutform.button1.caption
-msgctxt "taboutform.button1.caption"
-msgid "Ok"
-msgstr ""
-
 #: taboutform.caption
 msgid "About"
 msgstr ""
@@ -38,6 +33,11 @@ msgid ""
 "\n"
 "Russian Linux Forum:\n"
 "https://linuxforum.ru\n"
+msgstr ""
+
+#: taboutform.okbtn.caption
+msgctxt "taboutform.okbtn.caption"
+msgid "Ok"
 msgstr ""
 
 #: tmainform.aboutbtn.caption
@@ -312,12 +312,9 @@ msgstr ""
 msgid "|Move record up"
 msgstr ""
 
-#: tselectform.button1.caption
+#: tselectform.addbtn.caption
+msgctxt "tselectform.addbtn.caption"
 msgid "Add"
-msgstr ""
-
-#: tselectform.button2.caption
-msgid "Update"
 msgstr ""
 
 #: tselectform.caption
@@ -333,13 +330,9 @@ msgstr ""
 msgid "|Select directory"
 msgstr ""
 
-#: tunpackform.button1.caption
-msgctxt "tunpackform.button1.caption"
-msgid "Ok"
-msgstr ""
-
-#: tunpackform.button1.hint
-msgid "|Start unpacking"
+#: tselectform.updatebtn.caption
+msgctxt "tselectform.updatebtn.caption"
+msgid "Update"
 msgstr ""
 
 #: tunpackform.caption
@@ -363,6 +356,16 @@ msgstr ""
 
 #: tunpackform.label2.caption
 msgid "Content upload folder:"
+msgstr ""
+
+#: tunpackform.unpackbtn.caption
+msgctxt "tunpackform.unpackbtn.caption"
+msgid "Ok"
+msgstr ""
+
+#: tunpackform.unpackbtn.hint
+msgctxt "tunpackform.unpackbtn.hint"
+msgid "|Start unpacking"
 msgstr ""
 
 #: unit1.sclearworkdir

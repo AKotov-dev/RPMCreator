@@ -13,7 +13,7 @@ type
   { TUnpackForm }
 
   TUnpackForm = class(TForm)
-    Button1: TButton;
+    UnpackBtn: TButton;
     EditButton1: TEditButton;
     EditButton2: TEditButton;
     Label1: TLabel;
@@ -22,7 +22,7 @@ type
     OpenDialog1: TOpenDialog;
     SelectDirectoryDialog1: TSelectDirectoryDialog;
     UnpackFormStorage: TXMLPropStorage;
-    procedure Button1Click(Sender: TObject);
+    procedure UnpackBtnClick(Sender: TObject);
     procedure EditButton1ButtonClick(Sender: TObject);
     procedure EditButton1Change(Sender: TObject);
     procedure EditButton1KeyPress(Sender: TObject; var Key: char);
@@ -87,9 +87,9 @@ end;
 procedure TUnpackForm.EditButton1Change(Sender: TObject);
 begin
   if (EditButton1.Text = '') or (EditButton2.Text = '') then
-    Button1.Enabled := False
+    UnpackBtn.Enabled := False
   else
-    Button1.Enabled := True;
+    UnpackBtn.Enabled := True;
 end;
 
 procedure TUnpackForm.EditButton1KeyPress(Sender: TObject; var Key: char);
@@ -98,7 +98,7 @@ begin
 end;
 
 //Распаковка
-procedure TUnpackForm.Button1Click(Sender: TObject);
+procedure TUnpackForm.UnpackBtnClick(Sender: TObject);
 begin
   LogMemo.Clear;
 

@@ -1,7 +1,7 @@
 {"version":1,"strings":[
 {"hash":198837139,"name":"tselectform.caption","sourcebytes":[83,101,108,101,99,116,32,102,105,108,101,115,32,97,110,100,32,102,111,108,100,101,114,115],"value":"Select files and folders"},
 {"hash":60645817,"name":"tselectform.shelltreeview1.hint","sourcebytes":[124,83,101,108,101,99,116,32,100,105,114,101,99,116,111,114,121],"value":"|Select directory"},
-{"hash":18340,"name":"tselectform.button1.caption","sourcebytes":[65,100,100],"value":"Add"},
-{"hash":96905381,"name":"tselectform.button2.caption","sourcebytes":[85,112,100,97,116,101],"value":"Update"},
+{"hash":18340,"name":"tselectform.addbtn.caption","sourcebytes":[65,100,100],"value":"Add"},
+{"hash":96905381,"name":"tselectform.updatebtn.caption","sourcebytes":[85,112,100,97,116,101],"value":"Update"},
 {"hash":90831869,"name":"tselectform.filelistbox1.hint","sourcebytes":[124,83,101,108,101,99,116,32,102,105,108,101,40,115,41,32,91,67,116,114,108,43,77,111,117,115,101,93],"value":"|Select file(s) [Ctrl+Mouse]"}
 ]}

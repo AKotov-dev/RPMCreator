@@ -13,16 +13,16 @@ type
   { TSelectForm }
 
   TSelectForm = class(TForm)
-    Button1: TButton;
-    Button2: TButton;
+    AddBtn: TButton;
+    UpdateBtn: TButton;
     FileListBox1: TFileListBox;
     Panel1: TPanel;
     ShellTreeView1: TShellTreeView;
     Splitter1: TSplitter;
     SelectFormStorage: TXMLPropStorage;
     StatusBar1: TStatusBar;
-    procedure Button1Click(Sender: TObject);
-    procedure Button2Click(Sender: TObject);
+    procedure AddBtnClick(Sender: TObject);
+    procedure UpdateBtnClick(Sender: TObject);
     procedure FileListBox1Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
@@ -65,7 +65,7 @@ begin
   FileListBox1.Color := clWindow;
 end;
 
-procedure TSelectForm.Button1Click(Sender: TObject);
+procedure TSelectForm.AddBtnClick(Sender: TObject);
 var
   i: integer;
 begin
@@ -93,7 +93,7 @@ begin
 end;
 
 //Перечитать
-procedure TSelectForm.Button2Click(Sender: TObject);
+procedure TSelectForm.UpdateBtnClick(Sender: TObject);
 begin
   Screen.Cursor := crHourGlass;
   //Выбираем топ-ноду и делаем рефреш всего
@@ -123,7 +123,7 @@ end;
 
 procedure TSelectForm.FormShow(Sender: TObject);
 begin
-  Button2.Click;
+  UpdateBtn.Click;
 end;
 
 end.

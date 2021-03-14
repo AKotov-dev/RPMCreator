@@ -12,11 +12,6 @@ msgstr ""
 "Language: ru\n"
 "X-Generator: Poedit 2.4.2\n"
 
-#: taboutform.button1.caption
-msgctxt "taboutform.button1.caption"
-msgid "Ok"
-msgstr ""
-
 #: taboutform.caption
 msgid "About"
 msgstr "О программе"
@@ -49,6 +44,11 @@ msgstr ""
 "\n"
 "Russian Linux Forum:\n"
 "https://linuxforum.ru\n"
+
+#: taboutform.okbtn.caption
+msgctxt "taboutform.okbtn.caption"
+msgid "Ok"
+msgstr ""
 
 #: tmainform.aboutbtn.caption
 msgid "?"
@@ -322,13 +322,11 @@ msgstr ""
 msgid "|Move record up"
 msgstr "|Переместить запись вверх"
 
-#: tselectform.button1.caption
+#: tselectform.addbtn.caption
+#, fuzzy
+msgctxt "tselectform.addbtn.caption"
 msgid "Add"
 msgstr "Добавить"
-
-#: tselectform.button2.caption
-msgid "Update"
-msgstr "Обновить"
 
 #: tselectform.caption
 msgctxt "tselectform.caption"
@@ -343,14 +341,11 @@ msgstr "|Выбор файла(ов) [Ctrl+Мышь]"
 msgid "|Select directory"
 msgstr "|Выбор директории"
 
-#: tunpackform.button1.caption
-msgctxt "tunpackform.button1.caption"
-msgid "Ok"
-msgstr ""
-
-#: tunpackform.button1.hint
-msgid "|Start unpacking"
-msgstr "|Приступить к распаковке"
+#: tselectform.updatebtn.caption
+#, fuzzy
+msgctxt "tselectform.updatebtn.caption"
+msgid "Update"
+msgstr "Обновить"
 
 #: tunpackform.caption
 msgctxt "tunpackform.caption"
@@ -374,6 +369,17 @@ msgstr "Распаковать (*.deb или *.rpm):"
 #: tunpackform.label2.caption
 msgid "Content upload folder:"
 msgstr "Каталог выгрузки содержимого:"
+
+#: tunpackform.unpackbtn.caption
+msgctxt "tunpackform.unpackbtn.caption"
+msgid "Ok"
+msgstr ""
+
+#: tunpackform.unpackbtn.hint
+#, fuzzy
+msgctxt "tunpackform.unpackbtn.hint"
+msgid "|Start unpacking"
+msgstr "|Приступить к распаковке"
 
 #: unit1.sclearworkdir
 msgid "Clearing the working directory..."
@@ -414,3 +420,4 @@ msgstr "Проект изменялся. Сохранить изменения?"
 #: unit1.ssignrpm
 msgid "Sign the packages:"
 msgstr "Подпись пакетов:"
+

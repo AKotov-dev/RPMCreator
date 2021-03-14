@@ -1,11 +1,11 @@
 object UnpackForm: TUnpackForm
-  Left = 321
-  Height = 509
-  Top = 140
-  Width = 711
+  Left = 379
+  Height = 572
+  Top = 150
+  Width = 780
   Caption = 'Package unpacker'
-  ClientHeight = 509
-  ClientWidth = 711
+  ClientHeight = 572
+  ClientWidth = 780
   FormStyle = fsStayOnTop
   OnCreate = FormCreate
   Position = poMainFormCenter
@@ -15,9 +15,9 @@ object UnpackForm: TUnpackForm
     AnchorSideTop.Control = EditButton2
     AnchorSideTop.Side = asrBottom
     Left = 0
-    Height = 364
+    Height = 427
     Top = 145
-    Width = 711
+    Width = 780
     Align = alBottom
     Anchors = [akTop, akLeft, akRight, akBottom]
     BorderSpacing.Top = 10
@@ -45,7 +45,7 @@ object UnpackForm: TUnpackForm
     Left = 5
     Height = 36
     Top = 44
-    Width = 701
+    Width = 770
     Anchors = [akTop, akLeft, akRight]
     BorderSpacing.Right = 5
     ButtonCaption = '...'
@@ -66,7 +66,7 @@ object UnpackForm: TUnpackForm
     Left = 5
     Height = 36
     Top = 99
-    Width = 701
+    Width = 770
     Anchors = [akTop, akLeft, akRight]
     BorderSpacing.Right = 5
     ButtonCaption = '...'
@@ -94,10 +94,10 @@ object UnpackForm: TUnpackForm
     ParentColor = False
     ParentFont = False
   end
-  object Button1: TButton
+  object UnpackBtn: TButton
     AnchorSideRight.Control = Owner
     AnchorSideRight.Side = asrBottom
-    Left = 652
+    Left = 721
     Height = 28
     Hint = '|Start unpacking'
     Top = 8
@@ -106,7 +106,7 @@ object UnpackForm: TUnpackForm
     BorderSpacing.Right = 5
     Caption = 'Ok'
     Enabled = False
-    OnClick = Button1Click
+    OnClick = UnpackBtnClick
     ParentFont = False
     ParentShowHint = False
     ShowHint = True

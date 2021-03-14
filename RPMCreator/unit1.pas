@@ -20,7 +20,6 @@ type
     BeforeInstallEdit: TMemo;
     BeforeRemoveEdit: TMemo;
     Bevel1: TBevel;
-    Bevel2: TBevel;
     Bevel3: TBevel;
     Bevel4: TBevel;
     Bevel5: TBevel;
@@ -608,6 +607,7 @@ procedure TMainForm.BuildBtnClick(Sender: TObject);
 var
   SPEC, FILES: TStringList;
   i: integer;
+  size: ansistring;
 begin
   //Обрезаем крайние пробелы
   TrimEdits;
@@ -725,7 +725,6 @@ begin
         SPEC.Add('Architecture: i386');
 
       SPEC.Add('Maintainer: ' + MaintainerEdit.Text);
-      SPEC.Add('Description: ' + SummaryEdit.Text);
 
       //Если в зависимостях нет запятых, заменяем пробелы запятыми
       if pos(',', DepsEdit.Text) = 0 then
@@ -736,6 +735,13 @@ begin
 
       SPEC.Add('Priority: extra');
       SPEC.Add('Section: misc');
+
+      //Ставим размер в KiB (килобайты)
+      if RunCommand('/bin/bash', ['-c', 'du -sk ~/debbuild/tmp | awk ' +
+        '''' + '{ print $1 }' + ''''], size) then
+        SPEC.Add('Installed-Size: ' + Trim(size));
+
+      SPEC.Add('Description: ' + SummaryEdit.Text);
 
       SPEC.SaveToFile(GetEnvironmentVariable('HOME') + '/debbuild/tmp/DEBIAN/control');
 

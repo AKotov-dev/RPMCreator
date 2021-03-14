@@ -15,11 +15,11 @@ type
   TAboutForm = class(TForm)
     AboutFormStorage: TXMLPropStorage;
     Bevel1: TBevel;
-    Button1: TButton;
+    OkBtn: TButton;
     Image1: TImage;
     Label1: TLabel;
     Label2: TLabel;
-    procedure Button1Click(Sender: TObject);
+    procedure OkBtnClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
   private
     { private declarations }
@@ -38,7 +38,7 @@ uses unit1;
 
 { TAboutForm }
 
-procedure TAboutForm.Button1Click(Sender: TObject);
+procedure TAboutForm.OkBtnClick(Sender: TObject);
 begin
   AboutForm.Close;
 end;

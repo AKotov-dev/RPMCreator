@@ -5,7 +5,7 @@ name=rpmcreator
 version=1.6
 
 [RELEASE]
-release=1.mrx8
+release=2.mrx8
 
 [GROUP]
 group=Applications/System
@@ -70,22 +70,25 @@ toolversion=2.0.10
 [INFO]
 0=Lazarus is required to compile the program
 1=
-2=v1.6-1
-3=+DEB dependencies correction
+2=v1.6-2
+3=+Installed-Size: to ~/debbuild/tmp/DEBIAN/control (KiB)
 4=
-5=v1.6-0
-6=+DEB packages create in ~/debbuild
-7=+i18 translation En/Ru
-8=
-9=v1.5-1
-10=+Disable check shebang in script's (#!/bin/bash <> #!/usr/bin/bash)
+5=v1.6-1
+6=+DEB dependencies correction
+7=
+8=v1.6-0
+9=+DEB packages create in ~/debbuild
+10=+i18 translation En/Ru
 11=
-12=v1.5-0
-13=+Change "Requires:" to "Recommends:"
+12=v1.5-1
+13=+Disable check shebang in script's (#!/bin/bash <> #!/usr/bin/bash)
 14=
-15=v1.4-1
-16=+ Lazarus 2.0.10 rebuild
-17=+ new list of rpm groups from Mageia-8
-18=url: https://fedoraproject.org/wiki/RPMGroups
-19=rpm -qa --qf '%{group}\n' | sort -u
-20=+ updated the list of licenses
+15=v1.5-0
+16=+Change "Requires:" to "Recommends:"
+17=
+18=v1.4-1
+19=+ Lazarus 2.0.10 rebuild
+20=+ new list of rpm groups from Mageia-8
+21=url: https://fedoraproject.org/wiki/RPMGroups
+22=rpm -qa --qf '%{group}\n' | sort -u
+23=+ updated the list of licenses

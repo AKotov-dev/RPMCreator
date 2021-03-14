@@ -1,7 +1,7 @@
 object MainForm: TMainForm
-  Left = 310
+  Left = 301
   Height = 703
-  Top = 108
+  Top = 124
   Width = 969
   ActiveControl = LoadBtn
   Caption = 'RPMCreator'
@@ -1016,13 +1016,6 @@ object MainForm: TMainForm
       ShowHint = True
       TabOrder = 1
     end
-    object Bevel2: TBevel
-      Left = 728
-      Height = 31
-      Top = 5
-      Width = 9
-      Shape = bsLeftLine
-    end
     object AboutBtn: TButton
       Left = 736
       Height = 28
@@ -1098,7 +1091,7 @@ object MainForm: TMainForm
       Shape = bsLeftLine
     end
     object DEBCheckBox: TCheckBox
-      Left = 648
+      Left = 640
       Height = 32
       Hint = '|Additionally build a DEB package in ~/debbuild (scripts not support)'
       Top = 5
