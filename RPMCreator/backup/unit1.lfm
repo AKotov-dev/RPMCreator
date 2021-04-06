@@ -1,12 +1,12 @@
 object MainForm: TMainForm
-  Left = 301
+  Left = 306
   Height = 703
   Top = 124
-  Width = 969
+  Width = 964
   ActiveControl = LoadBtn
   Caption = 'RPMCreator'
   ClientHeight = 703
-  ClientWidth = 969
+  ClientWidth = 964
   OnClose = FormClose
   OnCloseQuery = FormCloseQuery
   OnCreate = FormCreate
@@ -18,7 +18,7 @@ object MainForm: TMainForm
     Left = 0
     Height = 637
     Top = 48
-    Width = 969
+    Width = 964
     ActivePage = TabSheet1
     Align = alClient
     ParentShowHint = False
@@ -27,7 +27,7 @@ object MainForm: TMainForm
     object TabSheet1: TTabSheet
       Caption = 'Basic'
       ClientHeight = 600
-      ClientWidth = 963
+      ClientWidth = 958
       object Label1: TLabel
         AnchorSideLeft.Control = NameEdit
         AnchorSideBottom.Control = NameEdit
@@ -169,7 +169,7 @@ object MainForm: TMainForm
         Left = 5
         Height = 98
         Top = 343
-        Width = 953
+        Width = 948
         Anchors = [akTop, akLeft, akRight]
         BorderSpacing.Right = 5
         Color = 15663103
@@ -193,7 +193,7 @@ object MainForm: TMainForm
         Height = 67
         Hint = '|Package names separated by commas or spaces'
         Top = 528
-        Width = 953
+        Width = 948
         Anchors = [akTop, akLeft, akRight, akBottom]
         BorderSpacing.Right = 5
         BorderSpacing.Bottom = 5
@@ -239,14 +239,14 @@ object MainForm: TMainForm
         Height = 160
         Hint = '|List of files and folders to build the package [there is a PopUp menu]'
         Top = 40
-        Width = 953
+        Width = 948
         Anchors = [akTop, akLeft, akRight]
         BorderSpacing.Right = 5
         ItemHeight = 0
         MultiSelect = True
         ParentShowHint = False
         PopupMenu = PopupMenu1
-        ScrollWidth = 951
+        ScrollWidth = 946
         ShowHint = True
         TabOrder = 7
         TopIndex = -1
@@ -290,7 +290,7 @@ object MainForm: TMainForm
       object Label14: TLabel
         AnchorSideLeft.Control = LicenseEdit
         AnchorSideBottom.Control = LicenseEdit
-        Left = 792
+        Left = 787
         Height = 15
         Top = 213
         Width = 47
@@ -303,7 +303,7 @@ object MainForm: TMainForm
       object RPMBtn: TButton
         AnchorSideRight.Control = TabSheet1
         AnchorSideRight.Side = asrBottom
-        Left = 894
+        Left = 889
         Height = 28
         Hint = '|Download a list of files by package name'
         Top = 8
@@ -435,7 +435,7 @@ object MainForm: TMainForm
       object LicenseEdit: TComboBox
         AnchorSideRight.Control = TabSheet1
         AnchorSideRight.Side = asrBottom
-        Left = 792
+        Left = 787
         Height = 36
         Top = 231
         Width = 166
@@ -468,7 +468,7 @@ object MainForm: TMainForm
         Left = 536
         Height = 36
         Top = 287
-        Width = 422
+        Width = 417
         Anchors = [akTop, akLeft, akRight]
         BorderSpacing.Left = 5
         BorderSpacing.Right = 5
@@ -512,7 +512,7 @@ object MainForm: TMainForm
         Left = 5
         Height = 36
         Top = 464
-        Width = 953
+        Width = 948
         Anchors = [akTop, akLeft, akRight]
         BorderSpacing.Right = 5
         Color = 15663103
@@ -524,12 +524,12 @@ object MainForm: TMainForm
       end
       object UnpackBtn: TButton
         AnchorSideRight.Control = RPMBtn
-        Left = 765
+        Left = 761
         Height = 28
         Top = 8
         Width = 124
         Anchors = [akTop, akRight]
-        BorderSpacing.Right = 5
+        BorderSpacing.Right = 4
         Caption = 'Unpack'
         OnClick = UnpackBtnClick
         ParentShowHint = False
@@ -571,7 +571,7 @@ object MainForm: TMainForm
     object TabSheet2: TTabSheet
       Caption = 'Script''s'
       ClientHeight = 600
-      ClientWidth = 963
+      ClientWidth = 958
       object Label6: TLabel
         AnchorSideLeft.Control = AfterInstallEdit
         AnchorSideBottom.Control = AfterInstallEdit
@@ -708,7 +708,7 @@ object MainForm: TMainForm
       Hint = '|/usr/share/doc/package_name/repack.txt'
       Caption = 'repack.txt'
       ClientHeight = 600
-      ClientWidth = 963
+      ClientWidth = 958
       ParentShowHint = False
       ShowHint = True
       object Label2: TLabel
@@ -911,7 +911,7 @@ object MainForm: TMainForm
     object TabSheet4: TTabSheet
       Caption = 'HELP'
       ClientHeight = 600
-      ClientWidth = 963
+      ClientWidth = 958
       object Memo1: TMemo
         Left = 5
         Height = 590
@@ -980,10 +980,10 @@ object MainForm: TMainForm
     Left = 0
     Height = 48
     Top = 0
-    Width = 969
+    Width = 964
     Align = alTop
     ClientHeight = 48
-    ClientWidth = 969
+    ClientWidth = 964
     TabOrder = 1
     object Bevel1: TBevel
       Left = 372
@@ -1017,11 +1017,14 @@ object MainForm: TMainForm
       TabOrder = 1
     end
     object AboutBtn: TButton
-      Left = 736
+      AnchorSideRight.Control = BuildBtn
+      Left = 731
       Height = 28
       Hint = '|About'
       Top = 6
       Width = 31
+      Anchors = [akTop, akRight]
+      BorderSpacing.Right = 4
       Caption = '?'
       OnClick = AboutBtnClick
       ParentShowHint = False
@@ -1031,7 +1034,7 @@ object MainForm: TMainForm
     object BuildBtn: TButton
       AnchorSideRight.Control = Panel1
       AnchorSideRight.Side = asrBottom
-      Left = 771
+      Left = 766
       Height = 28
       Top = 6
       Width = 192
@@ -1114,7 +1117,7 @@ object MainForm: TMainForm
     Left = 0
     Height = 18
     Top = 685
-    Width = 969
+    Width = 964
     AutoHint = True
     Font.Height = -12
     Font.Name = 'Sans'
@@ -1131,7 +1134,7 @@ object MainForm: TMainForm
     AnchorSideTop.Control = PageControl1
     AnchorSideRight.Control = PageControl1
     AnchorSideRight.Side = asrBottom
-    Left = 732
+    Left = 727
     Height = 15
     Top = 52
     Width = 232

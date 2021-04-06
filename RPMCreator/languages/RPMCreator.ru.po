@@ -323,7 +323,6 @@ msgid "|Move record up"
 msgstr "|Переместить запись вверх"
 
 #: tselectform.addbtn.caption
-#, fuzzy
 msgctxt "tselectform.addbtn.caption"
 msgid "Add"
 msgstr "Добавить"
@@ -342,7 +341,6 @@ msgid "|Select directory"
 msgstr "|Выбор директории"
 
 #: tselectform.updatebtn.caption
-#, fuzzy
 msgctxt "tselectform.updatebtn.caption"
 msgid "Update"
 msgstr "Обновить"
@@ -376,7 +374,6 @@ msgid "Ok"
 msgstr ""
 
 #: tunpackform.unpackbtn.hint
-#, fuzzy
 msgctxt "tunpackform.unpackbtn.hint"
 msgid "|Start unpacking"
 msgstr "|Приступить к распаковке"
@@ -421,3 +418,6 @@ msgstr "Проект изменялся. Сохранить изменения?"
 msgid "Sign the packages:"
 msgstr "Подпись пакетов:"
 
+#: unit1.ssymlink
+msgid "This is SymLink! Need a real target!"
+msgstr "Это SymLink! Нужна настоящая цель!"

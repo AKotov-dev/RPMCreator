@@ -5,7 +5,7 @@ name=rpmcreator
 version=1.6
 
 [RELEASE]
-release=2.mrx8
+release=3.mrx8
 
 [GROUP]
 group=Applications/System
@@ -25,7 +25,7 @@ vendor=alex_q_2000 (C) 2021
 summary=RPMCreator - GUI for rpmbuild
 
 [URLCOPY]
-urlcopy=https://cloud.mail.ru/public/5kma/573FjdpNE
+urlcopy=https://github.com/AKotov-dev/RPMCreator
 
 [LICENSE]
 license=GPLv3
@@ -53,10 +53,10 @@ deb=0
 4=/usr/share/doc/rpmcreator/
 
 [URL32]
-url32=https://cloud.mail.ru/public/5kma/573FjdpNE
+url32=https://github.com/AKotov-dev/RPMCreator
 
 [URL64]
-url64=
+url64=https://github.com/AKotov-dev/RPMCreator
 
 [PROGRAMNAME]
 programname=RPMCreator
@@ -70,25 +70,28 @@ toolversion=2.0.10
 [INFO]
 0=Lazarus is required to compile the program
 1=
-2=v1.6-2
-3=+Installed-Size: to ~/debbuild/tmp/DEBIAN/control (KiB)
+2=v1.6-3
+3=+SymLink warning when adding files to a package
 4=
-5=v1.6-1
-6=+DEB dependencies correction
+5=v1.6-2
+6=+Installed-Size: to ~/debbuild/tmp/DEBIAN/control (KiB)
 7=
-8=v1.6-0
-9=+DEB packages create in ~/debbuild
-10=+i18 translation En/Ru
-11=
-12=v1.5-1
-13=+Disable check shebang in script's (#!/bin/bash <> #!/usr/bin/bash)
+8=v1.6-1
+9=+DEB dependencies correction
+10=
+11=v1.6-0
+12=+DEB packages create in ~/debbuild
+13=+i18 translation En/Ru
 14=
-15=v1.5-0
-16=+Change "Requires:" to "Recommends:"
+15=v1.5-1
+16=+Disable check shebang in script's (#!/bin/bash <> #!/usr/bin/bash)
 17=
-18=v1.4-1
-19=+ Lazarus 2.0.10 rebuild
-20=+ new list of rpm groups from Mageia-8
-21=url: https://fedoraproject.org/wiki/RPMGroups
-22=rpm -qa --qf '%{group}\n' | sort -u
-23=+ updated the list of licenses
+18=v1.5-0
+19=+Change "Requires:" to "Recommends:"
+20=
+21=v1.4-1
+22=+ Lazarus 2.0.10 rebuild
+23=+ new list of rpm groups from Mageia-8
+24=url: https://fedoraproject.org/wiki/RPMGroups
+25=rpm -qa --qf '%{group}\n' | sort -u
+26=+ updated the list of licenses

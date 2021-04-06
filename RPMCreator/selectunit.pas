@@ -51,7 +51,7 @@ begin
 
   //Проверяем каталог на симлинк
   if fpReadLink(ExcludeTrailingPathDelimiter(ShellTreeView1.Path)) <> '' then
-    Panel1.Caption := SymLink
+    Panel1.Caption := SSymLink
   else
     Panel1.Caption := '';
 

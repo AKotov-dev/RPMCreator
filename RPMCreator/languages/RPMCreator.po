@@ -408,3 +408,7 @@ msgstr ""
 msgid "Sign the packages:"
 msgstr ""
 
+#: unit1.ssymlink
+msgid "This is SymLink! Need a real target!"
+msgstr ""
+
