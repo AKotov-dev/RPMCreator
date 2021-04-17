@@ -140,7 +140,7 @@ resourcestring
   SSignRPM = 'Sign the packages:';
   SCompleted = 'Completed. Press Enter to continue...';
   SInputName = 'Please, enter the name of the package:';
-  SSymLink = 'This is SymLink! Need a target file or folder!';
+  SSymLink = 'This is SymLink! Need a real target!';
 
 var
   MainForm: TMainForm;
