@@ -2,16 +2,16 @@
 name=rpmcreator
 
 [VERSION]
-version=1.6
+version=1.7
 
 [RELEASE]
-release=3.mrx8
+release=0.mrx8
 
 [GROUP]
 group=Applications/System
 
 [DESCRIPTION]
-0=The program creates rpm-packages from portable programs
+0=GUI for building RPM and DEB packages from pre-installed files and folders
 1=---
 2=More information: /usr/share/doc/package_name/repack.txt
 
@@ -70,28 +70,31 @@ toolversion=2.0.10
 [INFO]
 0=Lazarus is required to compile the program
 1=
-2=v1.6-3
-3=+SymLink warning when adding files to a package
+2=v1.7-0
+3=+ Icons for files and folders, highlighting the active panel
 4=
-5=v1.6-2
-6=+Installed-Size: to ~/debbuild/tmp/DEBIAN/control (KiB)
+5=v1.6-3
+6=+SymLink warning when adding files to a package
 7=
-8=v1.6-1
-9=+DEB dependencies correction
+8=v1.6-2
+9=+Installed-Size: to ~/debbuild/tmp/DEBIAN/control (KiB)
 10=
-11=v1.6-0
-12=+DEB packages create in ~/debbuild
-13=+i18 translation En/Ru
-14=
-15=v1.5-1
-16=+Disable check shebang in script's (#!/bin/bash <> #!/usr/bin/bash)
+11=v1.6-1
+12=+DEB dependencies correction
+13=
+14=v1.6-0
+15=+DEB packages create in ~/debbuild
+16=+i18 translation En/Ru
 17=
-18=v1.5-0
-19=+Change "Requires:" to "Recommends:"
+18=v1.5-1
+19=+Disable check shebang in script's (#!/bin/bash <> #!/usr/bin/bash)
 20=
-21=v1.4-1
-22=+ Lazarus 2.0.10 rebuild
-23=+ new list of rpm groups from Mageia-8
-24=url: https://fedoraproject.org/wiki/RPMGroups
-25=rpm -qa --qf '%{group}\n' | sort -u
-26=+ updated the list of licenses
+21=v1.5-0
+22=+Change "Requires:" to "Recommends:"
+23=
+24=v1.4-1
+25=+ Lazarus 2.0.10 rebuild
+26=+ new list of rpm groups from Mageia-8
+27=url: https://fedoraproject.org/wiki/RPMGroups
+28=rpm -qa --qf '%{group}\n' | sort -u
+29=+ updated the list of licenses

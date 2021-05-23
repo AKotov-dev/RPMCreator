@@ -1,5 +1,5 @@
 object MainForm: TMainForm
-  Left = 306
+  Left = 303
   Height = 703
   Top = 124
   Width = 964
@@ -11,8 +11,8 @@ object MainForm: TMainForm
   OnCloseQuery = FormCloseQuery
   OnCreate = FormCreate
   OnShow = FormShow
-  Position = poDesktopCenter
-  SessionProperties = 'Height;LangBtn.Caption;Splitter1.Top;Width'
+  Position = poMainFormCenter
+  SessionProperties = 'Height;LangBtn.Caption;Splitter1.Top;Width;Left;Top'
   LCLVersion = '2.0.10.0'
   object PageControl1: TPageControl
     Left = 0

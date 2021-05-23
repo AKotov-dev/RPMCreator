@@ -817,7 +817,7 @@ begin
     //Зависимости для сборки
     if DepsEdit.Text <> '' then
     begin
-      SPEC.Add('Recommends: ' + DepsEdit.Text);
+      SPEC.Add('Requires: ' + DepsEdit.Text);
       SPEC.Add('BuildRequires: ' + DepsEdit.Text);
       SPEC.Add('');
     end;

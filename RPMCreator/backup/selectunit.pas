@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, ShellCtrls,
-  StdCtrls, ExtCtrls, XMLPropStorage, FileCtrl, ComCtrls, BaseUnix, Unix;
+  StdCtrls, ExtCtrls, XMLPropStorage, FileCtrl, ComCtrls, BaseUnix, Unix, Types;
 
 type
 
@@ -14,6 +14,7 @@ type
 
   TSelectForm = class(TForm)
     AddBtn: TButton;
+    ImageList1: TImageList;
     UpdateBtn: TButton;
     FileListBox1: TFileListBox;
     Panel1: TPanel;
@@ -22,6 +23,10 @@ type
     SelectFormStorage: TXMLPropStorage;
     StatusBar1: TStatusBar;
     procedure AddBtnClick(Sender: TObject);
+    procedure FileListBox1DrawItem(Control: TWinControl; Index: integer;
+      ARect: TRect; State: TOwnerDrawState);
+    procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
+    procedure ShellTreeView1GetImageIndex(Sender: TObject; Node: TTreeNode);
     procedure UpdateBtnClick(Sender: TObject);
     procedure FileListBox1Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -92,6 +97,42 @@ begin
   end;
 end;
 
+
+//Иконки файлов в FileListBox
+procedure TSelectForm.FileListBox1DrawItem(Control: TWinControl;
+  Index: integer; ARect: TRect; State: TOwnerDrawState);
+var
+  BitMap: TBitMap;
+begin
+  try
+    BitMap := TBitMap.Create;
+    with FileListBox1 do
+    begin
+      Canvas.FillRect(aRect);
+      //Название файла
+      Canvas.TextOut(aRect.Left + 26, aRect.Top + 5, Items[Index]);
+      //Иконка файла
+      ImageList1.GetBitMap(1, BitMap);
+      Canvas.Draw(aRect.Left + 2, aRect.Top + 2, BitMap);
+    end;
+  finally
+    BitMap.Free;
+  end;
+end;
+
+procedure TSelectForm.FormClose(Sender: TObject; var CloseAction: TCloseAction);
+begin
+  if MainForm.ListBox1.Count <> 0 then
+    MainForm.ListBox1.ItemIndex := 0;
+end;
+
+//Иконки директорий в ShellTreeView1
+procedure TSelectForm.ShellTreeView1GetImageIndex(Sender: TObject; Node: TTreeNode);
+begin
+  Node.ImageIndex := 0;
+  Node.SelectedIndex := Node.ImageIndex;
+end;
+
 //Перечитать
 procedure TSelectForm.UpdateBtnClick(Sender: TObject);
 begin
@@ -110,15 +151,13 @@ begin
   Screen.Cursor := crDefault;
 end;
 
+//Цвет - указатель панели
 procedure TSelectForm.FileListBox1Click(Sender: TObject);
 begin
- { if FileListBox1.Count <> 0 then
-    ShellTreeView1.Color := clDefault
-  else}
+  if FileListBox1.Count <> 0 then
   begin
-    ShellTreeView1.Color := clWindow;
+    ShellTreeView1.Color := clDefault;
     FileListBox1.Color := RGBtoColor(255, 255, 238);
-    FileListBox1.Refresh;
   end;
 end;
 
