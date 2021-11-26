@@ -7,3 +7,4 @@ Rpmbuild is using. Building an RPM package goes through the creation of a simple
 Made and tested in Mageia Linux-8.
 
 ![](https://github.com/AKotov-dev/RPMCreator/blob/main/RPMCreator.png)
+
