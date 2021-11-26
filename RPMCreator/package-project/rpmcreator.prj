@@ -2,7 +2,7 @@
 name=rpmcreator
 
 [VERSION]
-version=1.7
+version=1.8
 
 [RELEASE]
 release=0.mrx8
@@ -31,7 +31,7 @@ urlcopy=https://github.com/AKotov-dev/RPMCreator
 license=GPLv3
 
 [DEPS]
-deps=sakura rpm-build rpm-sign gnupg createrepo gcc make p7zip dpkg-dev
+deps=sakura rpm-build rpm-sign gnupg createrepo gcc make p7zip dpkg-dev md5deep
 
 [META]
 meta=0
@@ -70,31 +70,40 @@ toolversion=2.0.10
 [INFO]
 0=Lazarus is required to compile the program
 1=
-2=v1.7-0
-3=+ Icons for files and folders, highlighting the active panel
-4=
-5=v1.6-3
-6=+SymLink warning when adding files to a package
-7=
-8=v1.6-2
-9=+Installed-Size: to ~/debbuild/tmp/DEBIAN/control (KiB)
+2=v1.8-0
+3=+ md5deep dependence
+4=+ DEBIAN pre/post scripts
+5=+ DEBIAN/md5sums
+6=+ Homepage: in control file
+7=+ Changed the calculation of the installation size
+8=+ Complete cleaning of all build directories: ~/rpmbuild ~/debbuild
+9=+ Stretching the size of the Scripts tab fields
 10=
-11=v1.6-1
-12=+DEB dependencies correction
+11=v1.7-0
+12=+ Icons for files and folders, highlighting the active panel
 13=
-14=v1.6-0
-15=+DEB packages create in ~/debbuild
-16=+i18 translation En/Ru
-17=
-18=v1.5-1
-19=+Disable check shebang in script's (#!/bin/bash <> #!/usr/bin/bash)
-20=
-21=v1.5-0
-22=+Change "Requires:" to "Recommends:"
-23=
-24=v1.4-1
-25=+ Lazarus 2.0.10 rebuild
-26=+ new list of rpm groups from Mageia-8
-27=url: https://fedoraproject.org/wiki/RPMGroups
-28=rpm -qa --qf '%{group}\n' | sort -u
-29=+ updated the list of licenses
+14=v1.6-3
+15=+SymLink warning when adding files to a package
+16=
+17=v1.6-2
+18=+Installed-Size: to ~/debbuild/tmp/DEBIAN/control (KiB)
+19=
+20=v1.6-1
+21=+DEB dependencies correction
+22=
+23=v1.6-0
+24=+DEB packages create in ~/debbuild
+25=+i18 translation En/Ru
+26=
+27=v1.5-1
+28=+Disable check shebang in script's (#!/bin/bash <> #!/usr/bin/bash)
+29=
+30=v1.5-0
+31=+Change "Requires:" to "Recommends:"
+32=
+33=v1.4-1
+34=+ Lazarus 2.0.10 rebuild
+35=+ new list of rpm groups from Mageia-8
+36=url: https://fedoraproject.org/wiki/RPMGroups
+37=rpm -qa --qf '%{group}\n' | sort -u
+38=+ updated the list of licenses

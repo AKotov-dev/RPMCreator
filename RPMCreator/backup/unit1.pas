@@ -654,17 +654,13 @@ begin
     //Показываем метку ожидания
     BuildLabel.Visible := True;
 
-    //Создаём рабочие директории для сборки RPM
+    //Пересоздаём рабочие директории для сборки RPM
+    StartProcess('[ -d ~/rpmbuild ] && rm -rf ~/rpmbuild/*', 'sh');
     StartProcess('mkdir -p ~/rpmbuild/{BUILD,BUILDROOT,RPMS,SOURCES,SPECS,SRPMS}', 'sh');
-    //Создаём рабочие директории для сборки DEB
-    StartProcess('mkdir -p ~/debbuild/tmp/DEBIAN', 'sh');
 
-    //Очистка каталогов RPM на случай прерывания процесса (закрытие окна терминала sakura)
-    StartProcess('[ -d ~/rpmbuild/BUILD/PACKAGE ] && rm -rf ~/rpmbuild/BUILD/PACKAGE/*',
-      'sh');
-    StartProcess('[ -d ~/rpmbuild/BUILDROOT ] && rm -rf ~/rpmbuild/BUILDROOT/*', 'sh');
-    //Очистка каталогов DEB на случай прерывания процесса (закрытие окна терминала sakura)
-    StartProcess('[ -d ~/debbuild/tmp ] && rm -rf ~/debbuild/tmp/*[^DEBIAN]', 'sh');
+    //Пересоздаём рабочие директории для сборки DEB
+    StartProcess('[ -d ~/debbuild ] && rm -rf ~/debbuild/*', 'sh');
+    StartProcess('mkdir -p ~/debbuild/tmp/DEBIAN', 'sh');
 
     //АРХИВ ИСХОДНИКОВ ДОЛЖЕН БЫТЬ ВСЕГДА!
     //Собираем /home/$USER/rpmbuild/SOURCES/имя_пакета-версия.tar.gz
@@ -673,11 +669,6 @@ begin
 
     //Устанавливаем текущую директорию для tar
     SetCurrentDir(GetEnvironmentVariable('HOME') + '/rpmbuild/SOURCES');
-
-    //Тарим/сжимаем исходники в имя_пакета-версия.tar.gz
-    //Удаляем предыдущий архив исходников, чтобы не выполнять append
-    if FileExists(NameEdit.Text + '-' + VersEdit.Text + '.tar.gz') then
-      DeleteFile(NameEdit.Text + '-' + VersEdit.Text + '.tar.gz');
 
     //Жмём архив
     StartProcess('nice -n 15 tar -czf ' + NameEdit.Text + '-' +
@@ -736,15 +727,40 @@ begin
 
       SPEC.Add('Priority: extra');
       SPEC.Add('Section: misc');
+      SPEC.Add('Homepage: ' + URLCopyEdit.Text);
 
       //Ставим размер в KiB (килобайты)
-      if RunCommand('/bin/bash', ['-c', 'du -sk ~/debbuild/tmp | awk ' +
-        '''' + '{ print $1 }' + ''''], size) then
+      if RunCommand('/bin/bash', ['-c', 'du -sk ~/debbuild/tmp/*[^DEBIAN] | cut -f1 '],
+        size) then
         SPEC.Add('Installed-Size: ' + Trim(size));
 
       SPEC.Add('Description: ' + SummaryEdit.Text);
 
       SPEC.SaveToFile(GetEnvironmentVariable('HOME') + '/debbuild/tmp/DEBIAN/control');
+
+      //Контрольная сумма файлов корня пакета DEB
+      StartProcess('md5deep -r ~/debbuild/tmp/*[^DEBIAN] > ~/debbuild/tmp/DEBIAN/md5sums',
+        'sh');
+
+      //pre/post скрипты
+      if Trim(BeforeInstallEdit.Text) <> '' then
+        BeforeInstallEdit.Lines.SaveToFile(GetEnvironmentVariable('HOME') +
+          '/debbuild/tmp/DEBIAN/preinst');
+
+      if Trim(AfterInstallEdit.Text) <> '' then
+        AfterInstallEdit.Lines.SaveToFile(GetEnvironmentVariable('HOME') +
+          '/debbuild/tmp/DEBIAN/postinst');
+
+      if Trim(BeforeRemoveEdit.Text) <> '' then
+        BeforeRemoveEdit.Lines.SaveToFile(GetEnvironmentVariable('HOME') +
+          '/debbuild/tmp/DEBIAN/prerm');
+
+      if Trim(AfterRemoveEdit.Text) <> '' then
+        AfterRemoveEdit.Lines.SaveToFile(GetEnvironmentVariable('HOME') +
+          '/debbuild/tmp/DEBIAN/postrm');
+
+      //Права на скрипты pre/post (755)
+      StartProcess('chmod 755 ~/debbuild/tmp/DEBIAN/{pre*,post*}', 'sh');
 
       //Собираем DEB-пакет в ~/debbuild
       StartProcess('dpkg-deb -b ~/debbuild/tmp ~/debbuild', 'sh');
@@ -851,7 +867,7 @@ begin
 
     //Предустановочные/постустановочные скрипты
     //Секция %pre
-    if BeforeInstallEdit.Text <> '' then
+    if Trim(BeforeInstallEdit.Text) <> '' then
     begin
       SPEC.Add('%pre');
       for i := 0 to BeforeInstallEdit.Lines.Count - 1 do
@@ -860,7 +876,7 @@ begin
     end;
 
     //Секция %post
-    if AfterInstallEdit.Text <> '' then
+    if Trim(AfterInstallEdit.Text) <> '' then
     begin
       SPEC.Add('%post');
       for i := 0 to AfterInstallEdit.Lines.Count - 1 do
@@ -869,7 +885,7 @@ begin
     end;
 
     //Секция %preun
-    if BeforeRemoveEdit.Text <> '' then
+    if Trim(BeforeRemoveEdit.Text) <> '' then
     begin
       SPEC.Add('%preun');
       for i := 0 to BeforeRemoveEdit.Lines.Count - 1 do
@@ -878,7 +894,7 @@ begin
     end;
 
     //Секция %postun
-    if AfterRemoveEdit.Text <> '' then
+    if Trim(AfterRemoveEdit.Text) <> '' then
     begin
       SPEC.Add('%postun');
       for i := 0 to AfterRemoveEdit.Lines.Count - 1 do
