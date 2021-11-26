@@ -95,7 +95,7 @@ msgid "+DEB"
 msgstr ""
 
 #: tmainform.debcheckbox.hint
-msgid "|Additionally build a DEB package in ~/debbuild (scripts not support)"
+msgid "|Additionally build a DEB package in ~/debbuild"
 msgstr ""
 
 #: tmainform.depsedit.hint

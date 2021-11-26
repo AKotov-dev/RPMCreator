@@ -105,8 +105,8 @@ msgid "+DEB"
 msgstr ""
 
 #: tmainform.debcheckbox.hint
-msgid "|Additionally build a DEB package in ~/debbuild (scripts not support)"
-msgstr "|Дополнительно собрать пакет DEB в ~/debbuild (скрипты не поддерживаются)"
+msgid "|Additionally build a DEB package in ~/debbuild"
+msgstr "|Дополнительно собрать пакет DEB в ~/debbuild"
 
 #: tmainform.depsedit.hint
 msgid "|Package names separated by commas or spaces"

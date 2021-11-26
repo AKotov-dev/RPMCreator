@@ -319,7 +319,7 @@ object MainForm: TMainForm
       object Bevel3: TBevel
         Left = 178
         Height = 26
-        Top = 7
+        Top = 9
         Width = 9
         Shape = bsLeftLine
       end
@@ -563,7 +563,7 @@ object MainForm: TMainForm
       object Bevel5: TBevel
         Left = 373
         Height = 26
-        Top = 7
+        Top = 9
         Width = 9
         Shape = bsLeftLine
       end
@@ -1115,7 +1115,7 @@ object MainForm: TMainForm
     object DEBCheckBox: TCheckBox
       Left = 640
       Height = 32
-      Hint = '|Additionally build a DEB package in ~/debbuild (scripts not support)'
+      Hint = '|Additionally build a DEB package in ~/debbuild'
       Top = 5
       Width = 67
       Caption = '+DEB'
