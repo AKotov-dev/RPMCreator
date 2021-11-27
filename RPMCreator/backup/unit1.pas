@@ -730,8 +730,8 @@ begin
       SPEC.Add('Homepage: ' + URLCopyEdit.Text);
 
       //Ставим размер в KiB (килобайты)
-      if RunCommand('/bin/bash', ['-c', 'du -sk ~/debbuild/tmp/*[^DEBIAN] | cut -f1 '],
-        size) then
+      if RunCommand('/bin/bash',
+        ['-c', 'du -schk ~/debbuild/tmp/*[^DEBIAN] | tail -n1 | cut -f1 '], size) then
         SPEC.Add('Installed-Size: ' + Trim(size));
 
       SPEC.Add('Description: ' + SummaryEdit.Text);
@@ -739,8 +739,10 @@ begin
       SPEC.SaveToFile(GetEnvironmentVariable('HOME') + '/debbuild/tmp/DEBIAN/control');
 
       //Контрольная сумма файлов корня пакета DEB
-      StartProcess('md5deep -r ~/debbuild/tmp/*[^DEBIAN] > ~/debbuild/tmp/DEBIAN/md5sums',
-        'sh');
+      if not MetaCheck.Checked then
+        StartProcess(
+          'cd ~/debbuild/tmp; md5sum $(find *[^DEBIAN] -type f) > ~/debbuild/tmp/DEBIAN/md5sums; cd -',
+          'sh');
 
       //pre/post скрипты
       if Trim(BeforeInstallEdit.Text) <> '' then

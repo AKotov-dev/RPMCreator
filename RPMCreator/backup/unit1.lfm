@@ -255,7 +255,7 @@ object MainForm: TMainForm
         Left = 5
         Height = 28
         Hint = '|Add files to the list [active Ctrl+Mouse]'
-        Top = 7
+        Top = 8
         Width = 159
         Caption = '+ Files and Folders'
         OnClick = Button1Click
@@ -267,7 +267,7 @@ object MainForm: TMainForm
         Left = 191
         Height = 28
         Hint = '|Select all entries in the list'
-        Top = 7
+        Top = 8
         Width = 40
         Caption = '{*}'
         OnClick = Button7Click
@@ -279,7 +279,7 @@ object MainForm: TMainForm
         Left = 232
         Height = 28
         Hint = '|Delete selected list entries'
-        Top = 7
+        Top = 8
         Width = 40
         Caption = 'X'
         OnClick = Button3Click
@@ -306,7 +306,7 @@ object MainForm: TMainForm
         Left = 916
         Height = 28
         Hint = '|Download a list of files by package name'
-        Top = 7
+        Top = 8
         Width = 64
         Anchors = [akTop, akRight]
         BorderSpacing.Right = 5
@@ -319,7 +319,7 @@ object MainForm: TMainForm
       object Bevel3: TBevel
         Left = 178
         Height = 26
-        Top = 8
+        Top = 9
         Width = 9
         Shape = bsLeftLine
       end
@@ -526,7 +526,7 @@ object MainForm: TMainForm
         AnchorSideRight.Control = RPMBtn
         Left = 788
         Height = 28
-        Top = 7
+        Top = 8
         Width = 124
         Anchors = [akTop, akRight]
         BorderSpacing.Right = 4
@@ -540,7 +540,7 @@ object MainForm: TMainForm
         Left = 279
         Height = 28
         Hint = '|Move record up'
-        Top = 7
+        Top = 8
         Width = 40
         Caption = 'UP'
         OnClick = UPBtnClick
@@ -552,7 +552,7 @@ object MainForm: TMainForm
         Left = 320
         Height = 28
         Hint = '|Move record down'
-        Top = 7
+        Top = 8
         Width = 40
         Caption = 'DN'
         OnClick = UPBtnClick
@@ -563,7 +563,7 @@ object MainForm: TMainForm
       object Bevel5: TBevel
         Left = 373
         Height = 26
-        Top = 8
+        Top = 9
         Width = 9
         Shape = bsLeftLine
       end
