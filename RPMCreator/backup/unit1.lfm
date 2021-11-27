@@ -831,7 +831,7 @@ object MainForm: TMainForm
         AnchorSideRight.Side = asrBottom
         Left = 808
         Height = 28
-        Hint = '|The root password will be required; A file will be created /usr/share/doc/package_name/repack.txt, and the directory is added to the list of package files'
+        Hint = '|The root password will be required; A file will be created /usr/share/doc/package_name/repack.txt and the directory is added to the list of package files'
         Top = 26
         Width = 172
         Anchors = [akTop, akRight]

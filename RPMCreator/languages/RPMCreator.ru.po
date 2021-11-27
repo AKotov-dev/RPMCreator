@@ -225,8 +225,8 @@ msgid "Load project"
 msgstr "Загрузить проект"
 
 #: tmainform.loadbtn.hint
-msgid "|Load *.prj or *.lst files"
-msgstr "|Загрузить *.prj или *.lst файлы"
+msgid "|Load *.prj file"
+msgstr "|Загрузить *.prj файл"
 
 #: tmainform.menuitem1.caption
 msgid "Add objects"

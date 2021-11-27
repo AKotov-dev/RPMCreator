@@ -46,7 +46,7 @@
 {"hash":227615146,"name":"tmainform.label10.caption","sourcebytes":[85,82,76,32,97,117,116,104,111,114,32,115,111,117,114,99,101,115,32,43,32,98,105,110,97,114,105,101,115,32,40,51,50,32,98,105,116,41,58],"value":"URL author sources + binaries (32 bit):"},
 {"hash":261169498,"name":"tmainform.label21.caption","sourcebytes":[85,82,76,32,97,117,116,104,111,114,32,115,111,117,114,99,101,115,32,43,32,98,105,110,97,114,105,101,115,32,40,54,52,32,98,105,116,41,58],"value":"URL author sources + binaries (64 bit):"},
 {"hash":313872,"name":"tmainform.tabsheet4.caption","sourcebytes":[72,69,76,80],"value":"HELP"},
-{"hash":73932003,"name":"tmainform.loadbtn.hint","sourcebytes":[124,76,111,97,100,32,42,46,112,114,106,32,111,114,32,42,46,108,115,116,32,102,105,108,101,115],"value":"|Load *.prj or *.lst files"},
+{"hash":262941189,"name":"tmainform.loadbtn.hint","sourcebytes":[124,76,111,97,100,32,42,46,112,114,106,32,102,105,108,101],"value":"|Load *.prj file"},
 {"hash":46235092,"name":"tmainform.loadbtn.caption","sourcebytes":[76,111,97,100,32,112,114,111,106,101,99,116],"value":"Load project"},
 {"hash":236506,"name":"tmainform.savebtn.hint","sourcebytes":[124,83,97,118,101,32,112,114,111,106,101,99,116,32,42,46,112,114,106],"value":"|Save project *.prj"},
 {"hash":36621524,"name":"tmainform.savebtn.caption","sourcebytes":[83,97,118,101,32,112,114,111,106,101,99,116],"value":"Save project"},

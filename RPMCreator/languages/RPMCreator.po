@@ -215,7 +215,7 @@ msgid "Load project"
 msgstr ""
 
 #: tmainform.loadbtn.hint
-msgid "|Load *.prj or *.lst files"
+msgid "|Load *.prj file"
 msgstr ""
 
 #: tmainform.menuitem1.caption
