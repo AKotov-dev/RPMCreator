@@ -367,7 +367,7 @@ msgid "Select files and folders"
 msgstr ""
 
 #: tselectform.filelistbox1.hint
-msgid "|Select file(s) [Ctrl+Mouse]"
+msgid "|Select files [Ctrl+Mouse]"
 msgstr ""
 
 #: tselectform.shelltreeview1.hint
@@ -400,6 +400,10 @@ msgstr ""
 
 #: tunpackform.label2.caption
 msgid "Content upload folder:"
+msgstr ""
+
+#: tunpackform.logmemo.hint
+msgid "|Log of the package unpacking process"
 msgstr ""
 
 #: tunpackform.unpackbtn.caption

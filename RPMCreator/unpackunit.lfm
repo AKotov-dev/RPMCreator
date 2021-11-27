@@ -16,14 +16,17 @@ object UnpackForm: TUnpackForm
     AnchorSideTop.Side = asrBottom
     Left = 0
     Height = 427
+    Hint = '|Log of the package unpacking process'
     Top = 145
     Width = 780
     Align = alBottom
     Anchors = [akTop, akLeft, akRight, akBottom]
     BorderSpacing.Top = 10
     ParentFont = False
+    ParentShowHint = False
     ReadOnly = True
     ScrollBars = ssVertical
+    ShowHint = True
     TabOrder = 2
   end
   object Label1: TLabel

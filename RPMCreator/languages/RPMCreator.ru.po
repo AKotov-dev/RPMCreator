@@ -377,8 +377,8 @@ msgid "Select files and folders"
 msgstr "Выбор файлов и папок"
 
 #: tselectform.filelistbox1.hint
-msgid "|Select file(s) [Ctrl+Mouse]"
-msgstr "|Выбор файла(ов) [Ctrl+Мышь]"
+msgid "|Select files [Ctrl+Mouse]"
+msgstr "|Выбор файлов [Ctrl+Мышь]"
 
 #: tselectform.shelltreeview1.hint
 msgid "|Select directory"
@@ -411,6 +411,10 @@ msgstr "Распаковать (*.deb или *.rpm):"
 #: tunpackform.label2.caption
 msgid "Content upload folder:"
 msgstr "Каталог выгрузки содержимого:"
+
+#: tunpackform.logmemo.hint
+msgid "|Log of the package unpacking process"
+msgstr "|Лог процесса распаковки пакета"
 
 #: tunpackform.unpackbtn.caption
 msgctxt "tunpackform.unpackbtn.caption"
