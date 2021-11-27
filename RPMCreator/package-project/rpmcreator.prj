@@ -48,9 +48,9 @@ deb=0
 [FILES]
 0=/usr/bin/rpmcreator
 1=/usr/share/RPMCreator/
-2=/usr/share/icons/rpmcreator.png
-3=/usr/share/applications/rpmcreator.desktop
-4=/usr/share/doc/rpmcreator/
+2=/usr/share/doc/rpmcreator/
+3=/usr/share/icons/rpmcreator.png
+4=/usr/share/applications/rpmcreator.desktop
 
 [URL32]
 url32=https://github.com/AKotov-dev/RPMCreator
