@@ -70,7 +70,7 @@ toolversion=2.0.10
 [INFO]
 0=Lazarus is required to compile the program
 1=
-2=v1.8-0
+2=v1.8-1
 3=+ md5deep dependence
 4=+ DEBIAN pre/post scripts
 5=+ DEBIAN/md5sums
