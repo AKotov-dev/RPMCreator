@@ -241,8 +241,8 @@ msgid "Load project"
 msgstr "Загрузить проект"
 
 #: tmainform.loadbtn.hint
-msgid "|Load *.prj file"
-msgstr "|Загрузить *.prj файл"
+msgid "|Load project *.prj"
+msgstr "|Загрузить проект *.prj"
 
 #: tmainform.maintaineredit.hint
 msgid "|Sample: Alex Kotov"

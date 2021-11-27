@@ -231,7 +231,7 @@ msgid "Load project"
 msgstr ""
 
 #: tmainform.loadbtn.hint
-msgid "|Load *.prj file"
+msgid "|Load project *.prj"
 msgstr ""
 
 #: tmainform.maintaineredit.hint
