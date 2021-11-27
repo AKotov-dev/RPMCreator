@@ -58,6 +58,22 @@ msgstr ""
 msgid "|About"
 msgstr "|О программе"
 
+#: tmainform.afterinstalledit.hint
+msgid "|Actions performed after installing the package"
+msgstr "|Действия выполняются после установки пакета"
+
+#: tmainform.afterremoveedit.hint
+msgid "|Actions performed after deleting a package"
+msgstr "|Действия выполняются после удаления пакета"
+
+#: tmainform.beforeinstalledit.hint
+msgid "|Actions performed before installing the package"
+msgstr "|Действия выполняются перед установкой пакета"
+
+#: tmainform.beforeremoveedit.hint
+msgid "|Actions performed before deleting a package"
+msgstr "|Действия выполняются перед удалением пакета"
+
 #: tmainform.buildbtn.caption
 msgctxt "tmainform.buildbtn.caption"
 msgid "Build package"

@@ -1,7 +1,7 @@
 object MainForm: TMainForm
-  Left = 286
+  Left = 289
   Height = 703
-  Top = 112
+  Top = 122
   Width = 991
   ActiveControl = LoadBtn
   Caption = 'RPMCreator'
@@ -514,10 +514,10 @@ object MainForm: TMainForm
         Left = 5
         Height = 15
         Top = 446
-        Width = 379
+        Width = 375
         Anchors = [akLeft, akBottom]
         BorderSpacing.Bottom = 3
-        Caption = ' URL of a copy of the source code (*.tar.gz, *.src.rpm, etc):'
+        Caption = 'URL of a copy of the source code (*.tar.gz, *.src.rpm, etc):'
         Font.Color = clBlue
         Font.Height = -13
         Font.Name = 'Sans'
@@ -614,6 +614,7 @@ object MainForm: TMainForm
         AnchorSideBottom.Control = Label12
         Left = 5
         Height = 123
+        Hint = '|Actions performed after installing the package'
         Top = 176
         Width = 975
         Anchors = [akTop, akLeft, akRight, akBottom]
@@ -641,6 +642,7 @@ object MainForm: TMainForm
         AnchorSideBottom.Side = asrBottom
         Left = 5
         Height = 123
+        Hint = '|Actions performed after deleting a package'
         Top = 472
         Width = 975
         Anchors = [akTop, akLeft, akRight, akBottom]
@@ -696,6 +698,7 @@ object MainForm: TMainForm
         AnchorSideBottom.Control = Label6
         Left = 5
         Height = 123
+        Hint = '|Actions performed before installing the package'
         Top = 28
         Width = 975
         Anchors = [akTop, akLeft, akRight, akBottom]
@@ -730,6 +733,7 @@ object MainForm: TMainForm
         AnchorSideBottom.Control = Label7
         Left = 5
         Height = 123
+        Hint = '|Actions performed before deleting a package'
         Top = 324
         Width = 975
         Anchors = [akTop, akLeft, akRight, akBottom]
