@@ -48,6 +48,7 @@ object MainForm: TMainForm
         AnchorSideRight.Side = asrBottom
         Left = 5
         Height = 36
+        Hint = '|Sample: mypackage'
         Top = 231
         Width = 219
         Color = 15663103
@@ -77,6 +78,7 @@ object MainForm: TMainForm
         AnchorSideRight.Side = asrBottom
         Left = 232
         Height = 36
+        Hint = '|Sample: 1.2'
         Top = 231
         Width = 80
         Color = 15663103
@@ -149,6 +151,7 @@ object MainForm: TMainForm
         AnchorSideLeft.Side = asrBottom
         Left = 5
         Height = 36
+        Hint = '|Sample: Alex Kotov'
         Top = 287
         Width = 259
         BorderSpacing.Left = 5
@@ -231,6 +234,7 @@ object MainForm: TMainForm
         AnchorSideRight.Side = asrBottom
         Left = 272
         Height = 36
+        Hint = '|Sample: alex_q_2000 (C) 2021'
         Top = 287
         Width = 256
         BorderSpacing.Left = 5
@@ -525,6 +529,7 @@ object MainForm: TMainForm
         AnchorSideRight.Side = asrBottom
         Left = 5
         Height = 36
+        Hint = '|Sample: https://github.com/AKotov-dev/RPMCreator'
         Top = 464
         Width = 975
         Anchors = [akTop, akLeft, akRight]

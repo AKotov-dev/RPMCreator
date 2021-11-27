@@ -152,7 +152,7 @@ msgid "Brief description of the package:"
 msgstr ""
 
 #: tmainform.label17.caption
-msgid " URL of a copy of the source code (*.tar.gz, *.src.rpm, etc):"
+msgid "URL of a copy of the source code (*.tar.gz, *.src.rpm, etc):"
 msgstr ""
 
 #: tmainform.label19.caption
@@ -216,6 +216,10 @@ msgstr ""
 
 #: tmainform.loadbtn.hint
 msgid "|Load *.prj file"
+msgstr ""
+
+#: tmainform.maintaineredit.hint
+msgid "|Sample: Alex Kotov"
 msgstr ""
 
 #: tmainform.menuitem1.caption
@@ -322,6 +326,14 @@ msgstr ""
 
 #: tmainform.upbtn.hint
 msgid "|Move record up"
+msgstr ""
+
+#: tmainform.urlcopyedit.hint
+msgid "|Sample: https://github.com/AKotov-dev/RPMCreator"
+msgstr ""
+
+#: tmainform.vendoredit.hint
+msgid "|Sample: alex_q_2000 (C) 2021"
 msgstr ""
 
 #: tmainform.versedit.hint

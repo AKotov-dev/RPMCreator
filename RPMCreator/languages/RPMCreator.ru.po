@@ -162,8 +162,8 @@ msgid "Brief description of the package:"
 msgstr "Краткое описание пакета:"
 
 #: tmainform.label17.caption
-msgid " URL of a copy of the source code (*.tar.gz, *.src.rpm, etc):"
-msgstr " URL копии исходников (*.tar.gz, *.src.rpm, etc):"
+msgid "URL of a copy of the source code (*.tar.gz, *.src.rpm, etc):"
+msgstr "URL копии исходников (*.tar.gz, *.src.rpm, etc):"
 
 #: tmainform.label19.caption
 msgid "Development tools:"
@@ -227,6 +227,10 @@ msgstr "Загрузить проект"
 #: tmainform.loadbtn.hint
 msgid "|Load *.prj file"
 msgstr "|Загрузить *.prj файл"
+
+#: tmainform.maintaineredit.hint
+msgid "|Sample: Alex Kotov"
+msgstr "|Например: Alex Kotov"
 
 #: tmainform.menuitem1.caption
 msgid "Add objects"
@@ -333,6 +337,14 @@ msgstr ""
 #: tmainform.upbtn.hint
 msgid "|Move record up"
 msgstr "|Переместить запись вверх"
+
+#: tmainform.urlcopyedit.hint
+msgid "|Sample: https://github.com/AKotov-dev/RPMCreator"
+msgstr "|Например: https://github.com/AKotov-dev/RPMCreator"
+
+#: tmainform.vendoredit.hint
+msgid "|Sample: alex_q_2000 (C) 2021"
+msgstr "|Например: alex_q_2000 (C) 2021"
 
 #: tmainform.versedit.hint
 msgid "|Sample: 1.2"
