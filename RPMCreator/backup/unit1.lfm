@@ -34,13 +34,13 @@ object MainForm: TMainForm
         Left = 5
         Height = 15
         Top = 213
-        Width = 113
+        Width = 98
         Anchors = [akLeft, akBottom]
         BorderSpacing.Bottom = 3
         Caption = 'Package name:'
+        Font.Color = clBlue
         Font.Height = -13
         Font.Name = 'Sans'
-        Font.Style = [fsBold]
         ParentColor = False
         ParentFont = False
       end
@@ -63,13 +63,13 @@ object MainForm: TMainForm
         Left = 232
         Height = 15
         Top = 213
-        Width = 59
+        Width = 52
         Anchors = [akLeft, akBottom]
         BorderSpacing.Bottom = 3
         Caption = 'Version:'
+        Font.Color = clBlue
         Font.Height = -13
         Font.Name = 'Sans'
-        Font.Style = [fsBold]
         ParentColor = False
         ParentFont = False
       end
@@ -92,13 +92,13 @@ object MainForm: TMainForm
         Left = 320
         Height = 15
         Top = 213
-        Width = 63
+        Width = 55
         Anchors = [akLeft, akBottom]
         BorderSpacing.Bottom = 3
         Caption = 'Release:'
+        Font.Color = clBlue
         Font.Height = -13
         Font.Name = 'Sans'
-        Font.Style = [fsBold]
         ParentColor = False
         ParentFont = False
       end
@@ -122,13 +122,13 @@ object MainForm: TMainForm
         Left = 5
         Height = 15
         Top = 325
-        Width = 153
+        Width = 133
         Anchors = [akLeft, akBottom]
         BorderSpacing.Bottom = 3
         Caption = 'Package description:'
+        Font.Color = clBlue
         Font.Height = -13
         Font.Name = 'Sans'
-        Font.Style = [fsBold]
         ParentColor = False
         ParentFont = False
       end
@@ -432,13 +432,13 @@ object MainForm: TMainForm
         Left = 416
         Height = 15
         Top = 213
-        Width = 49
+        Width = 43
         Anchors = [akLeft, akBottom]
         BorderSpacing.Bottom = 3
         Caption = 'Group:'
+        Font.Color = clBlue
         Font.Height = -13
         Font.Name = 'Sans'
-        Font.Style = [fsBold]
         ParentColor = False
         ParentFont = False
       end
@@ -494,13 +494,13 @@ object MainForm: TMainForm
         Left = 536
         Height = 15
         Top = 269
-        Width = 242
+        Width = 211
         Anchors = [akLeft, akBottom]
         BorderSpacing.Bottom = 3
         Caption = 'Brief description of the package:'
+        Font.Color = clBlue
         Font.Height = -13
         Font.Name = 'Sans'
-        Font.Style = [fsBold]
         ParentColor = False
         ParentFont = False
       end
@@ -510,13 +510,13 @@ object MainForm: TMainForm
         Left = 5
         Height = 15
         Top = 446
-        Width = 437
+        Width = 379
         Anchors = [akLeft, akBottom]
         BorderSpacing.Bottom = 3
         Caption = ' URL of a copy of the source code (*.tar.gz, *.src.rpm, etc):'
+        Font.Color = clBlue
         Font.Height = -13
         Font.Name = 'Sans'
-        Font.Style = [fsBold]
         ParentColor = False
         ParentFont = False
       end

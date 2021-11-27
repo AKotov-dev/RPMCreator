@@ -91,7 +91,7 @@ msgid "Create repack.txt"
 msgstr ""
 
 #: tmainform.createrepacktxt.hint
-msgid "|The root password will be required; A file will be created /usr/share/doc/package_name/repack.txt, and the directory is added to the list of package files"
+msgid "|The root password will be required; A file will be created /usr/share/doc/package_name/repack.txt and the directory is added to the list of package files"
 msgstr ""
 
 #: tmainform.debcheckbox.caption
