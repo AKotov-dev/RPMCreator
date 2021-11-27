@@ -5,7 +5,7 @@ name=rpmcreator
 version=1.8
 
 [RELEASE]
-release=0.mrx8
+release=1.mrx8
 
 [GROUP]
 group=Applications/System

@@ -374,7 +374,6 @@ object AboutForm: TAboutForm
     Top = 16
     Width = 128
     Caption = 'RPMCreator'
-    Font.Color = clMaroon
     Font.Height = -19
     Font.Name = 'Sans'
     Font.Style = [fsBold]

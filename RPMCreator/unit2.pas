@@ -45,7 +45,8 @@ end;
 
 procedure TAboutForm.FormCreate(Sender: TObject);
 begin
-  AboutForm.AboutFormStorage.FileName := MainForm.MainFormStorage.FileName;
+  Label1.Caption := Application.Title;
+  AboutFormStorage.FileName := MainForm.MainFormStorage.FileName;
 end;
 
 end.
