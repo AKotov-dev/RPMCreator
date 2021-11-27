@@ -118,8 +118,8 @@ object SelectForm: TSelectForm
   end
   object SelectFormStorage: TXMLPropStorage
     StoredValues = <>
-    Left = 649
-    Top = 55
+    Left = 632
+    Top = 56
   end
   object ImageList1: TImageList
     Height = 22

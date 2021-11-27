@@ -39,6 +39,7 @@ object SelectForm: TSelectForm
     OnClick = ShellTreeView1Click
     OnGetImageIndex = ShellTreeView1GetImageIndex
     Options = [tvoAutoItemHeight, tvoHideSelection, tvoHotTrack, tvoKeepCollapsedNodes, tvoReadOnly, tvoRowSelect, tvoShowButtons, tvoShowLines, tvoShowRoot, tvoToolTips, tvoThemedDraw]
+    ExpandSignColor = clGray
     ObjectTypes = [otFolders, otHidden]
   end
   object Panel1: TPanel
