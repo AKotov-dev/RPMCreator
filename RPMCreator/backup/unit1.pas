@@ -699,6 +699,7 @@ begin
     if DEBCheckBox.Checked then
     begin
       //Распаковываем архив для deb-пакета
+      if not MetaCheck.Checked then
       StartProcess('nice -n 15 tar -xvzf ' + NameEdit.Text + '-' +
         VersEdit.Text + '.tar.gz' + ' -C ~/debbuild/tmp', 'sh');
 
@@ -729,7 +730,7 @@ begin
       SPEC.Add('Section: misc');
       SPEC.Add('Homepage: ' + URLCopyEdit.Text);
 
-      //Ставим размер в KiB (килобайты)
+      //Ставим Installed-Size в KiB (килобайты)
       if RunCommand('/bin/bash',
         ['-c', 'du -schk ~/debbuild/tmp/*[^DEBIAN] | tail -n1 | cut -f1 '], size) then
         SPEC.Add('Installed-Size: ' + Trim(size));

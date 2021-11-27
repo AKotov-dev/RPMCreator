@@ -699,8 +699,9 @@ begin
     if DEBCheckBox.Checked then
     begin
       //Распаковываем архив для deb-пакета
-      StartProcess('nice -n 15 tar -xvzf ' + NameEdit.Text + '-' +
-        VersEdit.Text + '.tar.gz' + ' -C ~/debbuild/tmp', 'sh');
+      if not MetaCheck.Checked then
+        StartProcess('nice -n 15 tar -xvzf ' + NameEdit.Text + '-' +
+          VersEdit.Text + '.tar.gz' + ' -C ~/debbuild/tmp', 'sh');
 
       SPEC.Add('Package: ' + NameEdit.Text);
       SPEC.Add('Version: ' + VersEdit.Text + '-' + ReleaseEdit.Text);
