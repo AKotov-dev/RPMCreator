@@ -302,9 +302,14 @@ end;
 procedure TMainForm.StatusBar1DrawPanel(StatusBar: TStatusBar;
   Panel: TStatusPanel; const Rect: TRect);
 begin
-  StatusBar.Canvas.Font.Color := clRed;
-  StatusBar.Canvas.Brush.Color := StatusBar1.Color;
-  StatusBar.Canvas.TextOut(Rect.Left, Rect.Top, Application.Hint);
+  with StatusBar.Canvas do
+  begin
+    Font.Size := 10;
+    Font.Style:=[fsBold];
+  //  Font.Color := clRed;
+    Brush.Color := StatusBar1.Color;
+    TextOut(Rect.Left, Rect.Top, Application.Hint);
+  end;
 end;
 
 procedure TMainForm.Button1Click(Sender: TObject);
@@ -335,6 +340,7 @@ procedure TMainForm.CreateRepackTxtClick(Sender: TObject);
 var
   RepackTXT: TStringList;
   i: integer;
+  output: ansistring;
 begin
   //Убираем крайние пробелы
   TrimEdits;
@@ -417,11 +423,22 @@ begin
         Add('');
       end;
 
-      //Сохраняем repack.txt
-      SaveFile.Filter := 'Text files (*.txt)|*.txt';
-      SaveFile.FileName := 'repack.txt';
-      if SaveFile.Execute then
-        RepackTXT.SaveToFile(SaveFile.FileName);
+      //Сохраняем через pkexec в /usr/share/doc/имя_пакета
+      RepackTXT.SaveToFile(WorkDir + '/repack.txt');
+      Application.ProcessMessages;
+
+      RunCommand('/bin/bash',
+        ['-c', 'pkexec /bin/bash -c "mkdir /usr/share/doc/' +
+        NameEdit.Text + '; mv -f ' + WorkDir + '/repack.txt ' +
+        '/usr/share/doc/' + NameEdit.Text + '/repack.txt"; echo $?'],
+        output);
+
+      //Ловим отмену и ошибку аутентификации pkexec
+      if (Trim(output) <> '126') and (Trim(output) <> '127') then
+
+        //Добавляем папку /usr/share/doc/имя_пакета в список файлов, если её там нет
+        if ListBox1.Items.IndexOf('/usr/share/doc/' + NameEdit.Text + '/') = -1 then
+          ListBox1.Items.Append('/usr/share/doc/' + NameEdit.Text + '/');
     end;
 
   finally;
@@ -476,9 +493,6 @@ begin
   if SaveFlag then
     if MessageDlg(SProjectChange, mtConfirmation, [mbYes, mbNo], 0) = mrYes then
       SaveBtn.Click;
-
-  OpenFile.Filter := 'RPMCreator Files (*.prj, *.lst)|*.prj;*.lst|Any files (*)|*';
-  OpenFile.FilterIndex := 1;
 
   if OpenFile.Execute then
   begin
@@ -700,8 +714,8 @@ begin
     begin
       //Распаковываем архив для deb-пакета
       if not MetaCheck.Checked then
-      StartProcess('nice -n 15 tar -xvzf ' + NameEdit.Text + '-' +
-        VersEdit.Text + '.tar.gz' + ' -C ~/debbuild/tmp', 'sh');
+        StartProcess('nice -n 15 tar -xvzf ' + NameEdit.Text + '-' +
+          VersEdit.Text + '.tar.gz' + ' -C ~/debbuild/tmp', 'sh');
 
       SPEC.Add('Package: ' + NameEdit.Text);
       SPEC.Add('Version: ' + VersEdit.Text + '-' + ReleaseEdit.Text);
@@ -1017,9 +1031,6 @@ var
 begin
   //Обрезаем лишние пробелы в эдитах
   TrimEdits;
-
-  SaveFile.Filter := 'RPMCreator Files (*.prj)|*.prj';
-  // SaveFile.FileName := NameEdit.Text + '.prj';
 
   if SaveFile.Execute then
   begin

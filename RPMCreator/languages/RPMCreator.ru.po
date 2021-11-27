@@ -100,6 +100,10 @@ msgstr ""
 msgid "Create repack.txt"
 msgstr "Создать repack.txt"
 
+#: tmainform.createrepacktxt.hint
+msgid "|The root password will be required; A file will be created /usr/share/doc/package_name/repack.txt, and the directory is added to the list of package files"
+msgstr "|Потребуется пароль root; будет создан файл /usr/share/doc/package_name/repack.txt, а каталог добавлен в список файлов пакета"
+
 #: tmainform.debcheckbox.caption
 msgid "+DEB"
 msgstr ""
@@ -313,6 +317,10 @@ msgstr "Помощь"
 #: tmainform.unpackbtn.caption
 msgid "Unpack"
 msgstr "Распаковать"
+
+#: tmainform.unpackbtn.hint
+msgid "|Unpack RPM or DEB package"
+msgstr "|Распаковать пакет RPM или DEB"
 
 #: tmainform.upbtn.caption
 msgid "UP"

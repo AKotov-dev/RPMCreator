@@ -1,7 +1,7 @@
 object MainForm: TMainForm
-  Left = 289
+  Left = 286
   Height = 703
-  Top = 123
+  Top = 112
   Width = 991
   ActiveControl = LoadBtn
   Caption = 'RPMCreator'
@@ -34,11 +34,13 @@ object MainForm: TMainForm
         Left = 5
         Height = 15
         Top = 213
-        Width = 90
+        Width = 113
         Anchors = [akLeft, akBottom]
         BorderSpacing.Bottom = 3
         Caption = 'Package name:'
-        Font.Color = clBlue
+        Font.Height = -13
+        Font.Name = 'Sans'
+        Font.Style = [fsBold]
         ParentColor = False
         ParentFont = False
       end
@@ -61,11 +63,13 @@ object MainForm: TMainForm
         Left = 232
         Height = 15
         Top = 213
-        Width = 48
+        Width = 59
         Anchors = [akLeft, akBottom]
         BorderSpacing.Bottom = 3
         Caption = 'Version:'
-        Font.Color = clBlue
+        Font.Height = -13
+        Font.Name = 'Sans'
+        Font.Style = [fsBold]
         ParentColor = False
         ParentFont = False
       end
@@ -88,11 +92,13 @@ object MainForm: TMainForm
         Left = 320
         Height = 15
         Top = 213
-        Width = 49
+        Width = 63
         Anchors = [akLeft, akBottom]
         BorderSpacing.Bottom = 3
         Caption = 'Release:'
-        Font.Color = clBlue
+        Font.Height = -13
+        Font.Name = 'Sans'
+        Font.Style = [fsBold]
         ParentColor = False
         ParentFont = False
       end
@@ -116,11 +122,13 @@ object MainForm: TMainForm
         Left = 5
         Height = 15
         Top = 325
-        Width = 123
+        Width = 153
         Anchors = [akLeft, akBottom]
         BorderSpacing.Bottom = 3
         Caption = 'Package description:'
-        Font.Color = clBlue
+        Font.Height = -13
+        Font.Name = 'Sans'
+        Font.Style = [fsBold]
         ParentColor = False
         ParentFont = False
       end
@@ -424,11 +432,13 @@ object MainForm: TMainForm
         Left = 416
         Height = 15
         Top = 213
-        Width = 41
+        Width = 49
         Anchors = [akLeft, akBottom]
         BorderSpacing.Bottom = 3
         Caption = 'Group:'
-        Font.Color = clBlue
+        Font.Height = -13
+        Font.Name = 'Sans'
+        Font.Style = [fsBold]
         ParentColor = False
         ParentFont = False
       end
@@ -484,11 +494,13 @@ object MainForm: TMainForm
         Left = 536
         Height = 15
         Top = 269
-        Width = 193
+        Width = 242
         Anchors = [akLeft, akBottom]
         BorderSpacing.Bottom = 3
         Caption = 'Brief description of the package:'
-        Font.Color = clBlue
+        Font.Height = -13
+        Font.Name = 'Sans'
+        Font.Style = [fsBold]
         ParentColor = False
         ParentFont = False
       end
@@ -498,11 +510,13 @@ object MainForm: TMainForm
         Left = 5
         Height = 15
         Top = 446
-        Width = 338
+        Width = 437
         Anchors = [akLeft, akBottom]
         BorderSpacing.Bottom = 3
         Caption = ' URL of a copy of the source code (*.tar.gz, *.src.rpm, etc):'
-        Font.Color = clBlue
+        Font.Height = -13
+        Font.Name = 'Sans'
+        Font.Style = [fsBold]
         ParentColor = False
         ParentFont = False
       end
@@ -526,6 +540,7 @@ object MainForm: TMainForm
         AnchorSideRight.Control = RPMBtn
         Left = 788
         Height = 28
+        Hint = '|Unpack RPM or DEB package'
         Top = 8
         Width = 124
         Anchors = [akTop, akRight]
@@ -561,9 +576,9 @@ object MainForm: TMainForm
         TabOrder = 4
       end
       object Bevel5: TBevel
-        Left = 373
+        Left = 372
         Height = 26
-        Top = 9
+        Top = 8
         Width = 9
         Shape = bsLeftLine
       end
@@ -816,6 +831,7 @@ object MainForm: TMainForm
         AnchorSideRight.Side = asrBottom
         Left = 808
         Height = 28
+        Hint = '|The root password will be required; A file will be created /usr/share/doc/package_name/repack.txt, and the directory is added to the list of package files'
         Top = 26
         Width = 172
         Anchors = [akTop, akRight]
@@ -1173,13 +1189,14 @@ object MainForm: TMainForm
   end
   object SaveFile: TSaveDialog
     DefaultExt = '.*.prj'
-    Filter = 'Файлы PatchCreator (*.prj)|*.prj'
+    Filter = 'RPMCreator Files (*.prj)|*.prj'
     InitialDir = '~/'
     Options = [ofOverwritePrompt, ofNoNetworkButton, ofEnableSizing, ofViewDetail]
     Left = 512
     Top = 616
   end
   object OpenFile: TOpenDialog
+    Filter = 'RPMCreator Files (*.prj)|*.prj'
     InitialDir = '~/'
     Options = [ofAllowMultiSelect, ofEnableSizing, ofViewDetail]
     Left = 360
