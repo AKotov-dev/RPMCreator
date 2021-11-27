@@ -1030,7 +1030,7 @@ object MainForm: TMainForm
     object LoadBtn: TButton
       Left = 6
       Height = 28
-      Hint = '|Load *.prj or *.lst files'
+      Hint = '|Load *.prj file'
       Top = 6
       Width = 176
       Caption = 'Load project'

@@ -255,6 +255,10 @@ msgstr ""
 msgid "|Empty package"
 msgstr "|Пустой пакет"
 
+#: tmainform.nameedit.hint
+msgid "|Sample: mypackage"
+msgstr "|Например: mypackage"
+
 #: tmainform.noarchcheck.caption
 msgid "noarch"
 msgstr ""
@@ -329,6 +333,10 @@ msgstr ""
 #: tmainform.upbtn.hint
 msgid "|Move record up"
 msgstr "|Переместить запись вверх"
+
+#: tmainform.versedit.hint
+msgid "|Sample: 1.2"
+msgstr "|Например: 1.2"
 
 #: tselectform.addbtn.caption
 msgctxt "tselectform.addbtn.caption"
