@@ -439,8 +439,11 @@ begin
       if (Trim(output) <> '126') and (Trim(output) <> '127') then
 
         //Добавляем папку /usr/share/doc/имя_пакета в список файлов, если её там нет
+      begin
         if ListBox1.Items.IndexOf('/usr/share/doc/' + NameEdit.Text + '/') = -1 then
           ListBox1.Items.Append('/usr/share/doc/' + NameEdit.Text + '/');
+        SaveFlag := True;
+      end;
     end;
 
   finally;

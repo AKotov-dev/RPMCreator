@@ -440,7 +440,10 @@ begin
 
         //Добавляем папку /usr/share/doc/имя_пакета в список файлов, если её там нет
         if ListBox1.Items.IndexOf('/usr/share/doc/' + NameEdit.Text + '/') = -1 then
+        begin
           ListBox1.Items.Append('/usr/share/doc/' + NameEdit.Text + '/');
+          SaveFlag := True;
+        end;
     end;
 
   finally;
