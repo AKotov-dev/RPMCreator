@@ -78,7 +78,7 @@ msgid "+ Files and Folders"
 msgstr ""
 
 #: tmainform.button1.hint
-msgid "|Add files to the list [active Ctrl+Mouse]"
+msgid "|Add files and folders to the list [active Ctrl+Mouse]"
 msgstr ""
 
 #: tmainform.button3.caption
@@ -222,7 +222,7 @@ msgid "Maintainer:"
 msgstr ""
 
 #: tmainform.listbox1.hint
-msgid "|List of files and folders to build the package [there is a PopUp menu]"
+msgid "|List of files and folders to build the package [there is a PopUp menu]; double click - edit an entry in the list"
 msgstr ""
 
 #: tmainform.loadbtn.caption
@@ -426,6 +426,10 @@ msgstr ""
 
 #: unit1.sdeleterecords
 msgid "Delete selected items?"
+msgstr ""
+
+#: unit1.seditrecord
+msgid "Editing an entry:"
 msgstr ""
 
 #: unit1.sfilelistempty

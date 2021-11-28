@@ -106,6 +106,7 @@ type
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCloseQuery(Sender: TObject; var CanClose: boolean);
     procedure FormShow(Sender: TObject);
+    procedure ListBox1DblClick(Sender: TObject);
     procedure LoadBtnClick(Sender: TObject);
     procedure BuildBtnClick(Sender: TObject);
     procedure Button7Click(Sender: TObject);
@@ -141,6 +142,7 @@ resourcestring
   SCompleted = 'Completed. Press Enter to continue...';
   SInputName = 'Please, enter the name of the package:';
   SSymLink = 'This is SymLink! Need a real target!';
+  SEditRecord = 'Editing an entry:';
 
 var
   MainForm: TMainForm;
@@ -305,8 +307,8 @@ begin
   with StatusBar.Canvas do
   begin
     Font.Size := 10;
-    Font.Style:=[fsBold];
-  //  Font.Color := clRed;
+    Font.Style := [fsBold];
+    //  Font.Color := clRed;
     Brush.Color := StatusBar1.Color;
     TextOut(Rect.Left, Rect.Top, Application.Hint);
   end;
@@ -481,6 +483,24 @@ procedure TMainForm.FormShow(Sender: TObject);
 begin
   MainForm.Caption := Application.Title;
   PageControl1.ActivePageIndex := 0;
+end;
+
+//Редактирование записей списка файлов и папок
+procedure TMainForm.ListBox1DblClick(Sender: TObject);
+var
+  S: string;
+begin
+  if ListBox1.Count <> 0 then
+  begin
+    S := ListBox1.Items.Strings[ListBox1.ItemIndex];
+    if not InputQuery('RPMCreator', SEditRecord, S) or (Trim(S) = '') then
+      Exit
+    else
+    begin
+      ListBox1.Items.Strings[ListBox1.ItemIndex] := S;
+      SaveFlag := True;
+    end;
+  end;
 end;
 
 procedure TMainForm.LoadBtnClick(Sender: TObject);

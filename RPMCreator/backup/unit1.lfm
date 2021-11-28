@@ -249,13 +249,14 @@ object MainForm: TMainForm
         AnchorSideRight.Side = asrBottom
         Left = 5
         Height = 160
-        Hint = '|List of files and folders to build the package [there is a PopUp menu]'
+        Hint = '|List of files and folders to build the package [there is a PopUp menu]; Double click - edit an entry in the list'
         Top = 40
         Width = 975
         Anchors = [akTop, akLeft, akRight]
         BorderSpacing.Right = 5
         ItemHeight = 0
         MultiSelect = True
+        OnDblClick = ListBox1DblClick
         ParentShowHint = False
         PopupMenu = PopupMenu1
         ScrollWidth = 973
@@ -266,7 +267,7 @@ object MainForm: TMainForm
       object Button1: TButton
         Left = 5
         Height = 28
-        Hint = '|Add files to the list [active Ctrl+Mouse]'
+        Hint = '|Add files and folders to the list [active Ctrl+Mouse]'
         Top = 8
         Width = 159
         Caption = '+ Files and Folders'
@@ -1039,7 +1040,7 @@ object MainForm: TMainForm
     object LoadBtn: TButton
       Left = 6
       Height = 28
-      Hint = '|Load *.prj file'
+      Hint = '|Load project *.prj'
       Top = 6
       Width = 176
       Caption = 'Load project'
