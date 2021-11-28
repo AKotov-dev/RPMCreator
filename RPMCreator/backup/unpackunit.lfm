@@ -12,18 +12,29 @@ object UnpackForm: TUnpackForm
   SessionProperties = 'Height;Width'
   LCLVersion = '2.0.10.0'
   object LogMemo: TMemo
+    AnchorSideLeft.Control = Owner
     AnchorSideTop.Control = EditButton2
     AnchorSideTop.Side = asrBottom
-    Left = 0
-    Height = 427
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 5
+    Height = 422
+    Hint = '|Log of the package unpacking process'
     Top = 145
-    Width = 780
+    Width = 770
     Align = alBottom
     Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Left = 5
     BorderSpacing.Top = 10
+    BorderSpacing.Right = 5
+    BorderSpacing.Bottom = 5
     ParentFont = False
+    ParentShowHint = False
     ReadOnly = True
     ScrollBars = ssVertical
+    ShowHint = True
     TabOrder = 2
   end
   object Label1: TLabel
@@ -40,13 +51,16 @@ object UnpackForm: TUnpackForm
     ParentFont = False
   end
   object EditButton1: TEditButton
+    AnchorSideLeft.Control = Owner
     AnchorSideRight.Control = Owner
     AnchorSideRight.Side = asrBottom
     Left = 5
     Height = 36
+    Hint = '|Select the package to unpack'
     Top = 44
     Width = 770
     Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Left = 5
     BorderSpacing.Right = 5
     ButtonCaption = '...'
     ButtonWidth = 23
@@ -57,17 +71,23 @@ object UnpackForm: TUnpackForm
     OnChange = EditButton1Change
     OnKeyPress = EditButton1KeyPress
     ParentFont = False
+    ParentShowHint = False
     PasswordChar = #0
+    ShowHint = True
     TabOrder = 0
+    TextHint = '|Select the package to unpack'
   end
   object EditButton2: TEditButton
+    AnchorSideLeft.Control = Owner
     AnchorSideRight.Control = Owner
     AnchorSideRight.Side = asrBottom
     Left = 5
     Height = 36
+    Hint = '|Select the directory to save the contents of the package'
     Top = 99
     Width = 770
     Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Left = 5
     BorderSpacing.Right = 5
     ButtonCaption = '...'
     ButtonWidth = 23
@@ -78,7 +98,9 @@ object UnpackForm: TUnpackForm
     OnChange = EditButton1Change
     OnKeyPress = EditButton1KeyPress
     ParentFont = False
+    ParentShowHint = False
     PasswordChar = #0
+    ShowHint = True
     TabOrder = 1
   end
   object Label2: TLabel
@@ -97,11 +119,11 @@ object UnpackForm: TUnpackForm
   object UnpackBtn: TButton
     AnchorSideRight.Control = Owner
     AnchorSideRight.Side = asrBottom
-    Left = 721
+    Left = 712
     Height = 28
     Hint = '|Start unpacking'
     Top = 8
-    Width = 54
+    Width = 63
     Anchors = [akTop, akRight]
     BorderSpacing.Right = 5
     Caption = 'Ok'

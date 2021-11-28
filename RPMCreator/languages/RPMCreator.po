@@ -78,7 +78,7 @@ msgid "+ Files and Folders"
 msgstr ""
 
 #: tmainform.button1.hint
-msgid "|Add files and folders to the list [active Ctrl+Mouse]"
+msgid "|Add files and folders to the list"
 msgstr ""
 
 #: tmainform.button3.caption
@@ -389,9 +389,18 @@ msgctxt "tunpackform.editbutton1.buttoncaption"
 msgid "..."
 msgstr ""
 
+#: tunpackform.editbutton1.hint
+msgctxt "tunpackform.editbutton1.hint"
+msgid "|Select the package to unpack"
+msgstr ""
+
 #: tunpackform.editbutton2.buttoncaption
 msgctxt "tunpackform.editbutton2.buttoncaption"
 msgid "..."
+msgstr ""
+
+#: tunpackform.editbutton2.hint
+msgid "|Select the directory to save the contents of the package"
 msgstr ""
 
 #: tunpackform.label1.caption

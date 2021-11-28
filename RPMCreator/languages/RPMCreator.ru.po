@@ -88,8 +88,8 @@ msgid "+ Files and Folders"
 msgstr "+ Файлы и Папки"
 
 #: tmainform.button1.hint
-msgid "|Add files and folders to the list [active Ctrl+Mouse]"
-msgstr "|Добавить файлы и папки в список [активно Ctrl+Мышь]"
+msgid "|Add files and folders to the list"
+msgstr "|Добавить в список файлы и папки"
 
 #: tmainform.button3.caption
 msgid "X"
@@ -399,10 +399,19 @@ msgctxt "tunpackform.editbutton1.buttoncaption"
 msgid "..."
 msgstr ""
 
+#: tunpackform.editbutton1.hint
+msgctxt "tunpackform.editbutton1.hint"
+msgid "|Select the package to unpack"
+msgstr "|Выберите пакет для распаковки"
+
 #: tunpackform.editbutton2.buttoncaption
 msgctxt "tunpackform.editbutton2.buttoncaption"
 msgid "..."
 msgstr ""
+
+#: tunpackform.editbutton2.hint
+msgid "|Select the directory to save the contents of the package"
+msgstr "|Выберите каталог для сохранения содержимого пакета"
 
 #: tunpackform.label1.caption
 msgid "Unpack (*.deb or *.rpm):"
@@ -473,3 +482,4 @@ msgstr "Подпись пакетов:"
 #: unit1.ssymlink
 msgid "This is SymLink! Need a real target!"
 msgstr "Это SymLink! Нужна настоящая цель!"
+
