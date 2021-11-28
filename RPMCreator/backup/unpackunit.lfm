@@ -1,7 +1,7 @@
 object UnpackForm: TUnpackForm
-  Left = 379
+  Left = 348
   Height = 572
-  Top = 150
+  Top = 143
   Width = 780
   Caption = 'Package unpacker'
   ClientHeight = 572
@@ -56,7 +56,7 @@ object UnpackForm: TUnpackForm
     AnchorSideRight.Side = asrBottom
     Left = 5
     Height = 36
-    Hint = '|Select the package to unpack'
+    Hint = 'Select the package to unpack'
     Top = 44
     Width = 770
     Anchors = [akTop, akLeft, akRight]
@@ -75,7 +75,6 @@ object UnpackForm: TUnpackForm
     PasswordChar = #0
     ShowHint = True
     TabOrder = 0
-    TextHint = '|Select the package to unpack'
   end
   object EditButton2: TEditButton
     AnchorSideLeft.Control = Owner
