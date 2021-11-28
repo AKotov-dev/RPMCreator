@@ -430,9 +430,10 @@ begin
       Application.ProcessMessages;
 
       RunCommand('/bin/bash',
-        ['-c', 'pkexec /bin/bash -c "mkdir /usr/share/doc/' +
-        NameEdit.Text + '; mv -f ' + WorkDir + '/repack.txt ' +
-        '/usr/share/doc/' + NameEdit.Text + '/repack.txt"; echo $?'],
+        ['-c', 'pkexec /bin/bash -c "[ -d /usr/share/doc/' + NameEdit.Text +
+        '] || mkdir /usr/share/doc/' + NameEdit.Text + '; mv -f ' +
+        WorkDir + '/repack.txt ' + '/usr/share/doc/' + NameEdit.Text +
+        '/repack.txt"; echo $?'],
         output);
 
       //Ловим отмену и ошибку аутентификации pkexec
