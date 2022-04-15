@@ -1,20 +1,9 @@
 msgid ""
-msgstr ""
-"Content-Type: text/plain; charset=UTF-8\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Project-Id-Version: RPMCreator\n"
-"POT-Creation-Date: \n"
-"PO-Revision-Date: \n"
-"Last-Translator: \n"
-"Language-Team: alex_q_2000\n"
-"MIME-Version: 1.0\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Language: ru\n"
-"X-Generator: Poedit 2.4.2\n"
+msgstr "Content-Type: text/plain; charset=UTF-8"
 
 #: taboutform.caption
 msgid "About"
-msgstr "О программе"
+msgstr ""
 
 #: taboutform.label1.caption
 msgctxt "taboutform.label1.caption"
@@ -22,18 +11,6 @@ msgid "RPMCreator"
 msgstr ""
 
 #: taboutform.label2.caption
-#, fuzzy
-#| msgid ""
-#| "Package build program\n"
-#| "\n"
-#| "License: GPLv3\n"
-#| "Compilation: Lazarus 2.0.10\n"
-#| "Author: alex_q_2000 (C) 2021\n"
-#| "Grantitudes: AlexL\n"
-#| "Used by rpmbuild (spec, src)\n"
-#| "\n"
-#| "Russian Linux Forum:\n"
-#| "https://linuxforum.ru\n"
 msgid ""
 "Package build program\n"
 "\n"
@@ -46,16 +23,6 @@ msgid ""
 "Russian Linux Forum:\n"
 "https://linuxforum.ru"
 msgstr ""
-"Программа сборки пакетов\n"
-"\n"
-"Лицензия: GPLv3\n"
-"Компиляция: Lazarus 2.0.10\n"
-"Автор: alex_q_2000 (C) 2021\n"
-"Благодарности: AlexL\n"
-"Используется rpmbuild (spec, src)\n"
-"\n"
-"Russian Linux Forum:\n"
-"https://linuxforum.ru\n"
 
 #: taboutform.okbtn.caption
 msgctxt "taboutform.okbtn.caption"
@@ -68,40 +35,40 @@ msgstr ""
 
 #: tmainform.aboutbtn.hint
 msgid "|About"
-msgstr "|О программе"
+msgstr ""
 
 #: tmainform.afterinstalledit.hint
 msgid "|Actions performed after installing the package"
-msgstr "|Действия выполняются после установки пакета"
+msgstr ""
 
 #: tmainform.afterremoveedit.hint
 msgid "|Actions performed after deleting a package"
-msgstr "|Действия выполняются после удаления пакета"
+msgstr ""
 
 #: tmainform.beforeinstalledit.hint
 msgid "|Actions performed before installing the package"
-msgstr "|Действия выполняются перед установкой пакета"
+msgstr ""
 
 #: tmainform.beforeremoveedit.hint
 msgid "|Actions performed before deleting a package"
-msgstr "|Действия выполняются перед удалением пакета"
+msgstr ""
 
 #: tmainform.buildbtn.caption
 msgctxt "tmainform.buildbtn.caption"
 msgid "Build package"
-msgstr "Собрать пакет"
+msgstr ""
 
 #: tmainform.buildlabel.caption
 msgid "building an intermediate archive, wait..."
-msgstr "сборка промежуточного архива, ждите..."
+msgstr ""
 
 #: tmainform.button1.caption
 msgid "+ Files and Folders"
-msgstr "+ Файлы и Папки"
+msgstr ""
 
 #: tmainform.button1.hint
 msgid "|Add files and folders to the list"
-msgstr "|Добавить в список файлы и папки"
+msgstr ""
 
 #: tmainform.button3.caption
 msgid "X"
@@ -109,7 +76,7 @@ msgstr ""
 
 #: tmainform.button3.hint
 msgid "|Delete selected list entries"
-msgstr "|Удалить выбранные записи"
+msgstr ""
 
 #: tmainform.button7.caption
 msgid "{*}"
@@ -117,7 +84,7 @@ msgstr ""
 
 #: tmainform.button7.hint
 msgid "|Select all entries in the list"
-msgstr "|Выбрать все записи в списке"
+msgstr ""
 
 #: tmainform.caption
 msgctxt "tmainform.caption"
@@ -126,11 +93,11 @@ msgstr ""
 
 #: tmainform.createrepacktxt.caption
 msgid "Create repack.txt"
-msgstr "Создать repack.txt"
+msgstr ""
 
 #: tmainform.createrepacktxt.hint
 msgid "|The root password will be required; A file will be created /usr/share/doc/package_name/repack.txt and the directory is added to the list of package files"
-msgstr "|Потребуется пароль root; будет создан файл /usr/share/doc/package_name/repack.txt и каталог добавлен в список файлов пакета"
+msgstr ""
 
 #: tmainform.debcheckbox.caption
 msgid "+DEB"
@@ -138,11 +105,11 @@ msgstr ""
 
 #: tmainform.debcheckbox.hint
 msgid "|Additionally build a DEB package in ~/debbuild"
-msgstr "|Дополнительно собрать пакет DEB в ~/debbuild"
+msgstr ""
 
 #: tmainform.depsedit.hint
 msgid "|Package names separated by commas or spaces"
-msgstr "|Имена пакетов разделяются запятыми или пробелами"
+msgstr ""
 
 #: tmainform.dnbtn.caption
 msgid "DN"
@@ -150,7 +117,7 @@ msgstr ""
 
 #: tmainform.dnbtn.hint
 msgid "|Move record down"
-msgstr "|Переместить запись вниз"
+msgstr ""
 
 #: tmainform.infomemo.hint
 msgctxt "tmainform.infomemo.hint"
@@ -159,129 +126,129 @@ msgstr ""
 
 #: tmainform.label1.caption
 msgid "Package name:"
-msgstr "Имя пакета:"
+msgstr ""
 
 #: tmainform.label10.caption
 msgid "URL author sources + binaries (32 bit):"
-msgstr "URL авторских sources + binaries (32 bit):"
+msgstr ""
 
 #: tmainform.label11.caption
 #, object-pascal-format
 msgid "Before install (%pre):"
-msgstr "Перед установкой (%pre):"
+msgstr ""
 
 #: tmainform.label12.caption
 #, object-pascal-format
 msgid "Before remove (%preun):"
-msgstr "Перед удалением (%preun):"
+msgstr ""
 
 #: tmainform.label13.caption
 msgid "Vendor:"
-msgstr "Вендор:"
+msgstr ""
 
 #: tmainform.label14.caption
 msgid "License:"
-msgstr "Лицензия:"
+msgstr ""
 
 #: tmainform.label15.caption
 msgid "Group:"
-msgstr "Группа:"
+msgstr ""
 
 #: tmainform.label16.caption
 msgid "Brief description of the package:"
-msgstr "Краткое описание пакета:"
+msgstr ""
 
 #: tmainform.label17.caption
 msgid "URL of a copy of the source code (*.tar.gz, *.src.rpm, etc):"
-msgstr "URL копии исходников (*.tar.gz, *.src.rpm, etc):"
+msgstr ""
 
 #: tmainform.label19.caption
 msgid "Development tools:"
-msgstr "Инструмент разработки:"
+msgstr ""
 
 #: tmainform.label2.caption
 msgid "Program name:"
-msgstr "Название программы:"
+msgstr ""
 
 #: tmainform.label20.caption
 msgctxt "tmainform.label20.caption"
 msgid "Version:"
-msgstr "Версия:"
+msgstr ""
 
 #: tmainform.label21.caption
 msgid "URL author sources + binaries (64 bit):"
-msgstr "URL авторских sources + binaries (64 bit):"
+msgstr ""
 
 #: tmainform.label23.caption
 msgid "Additional information:"
-msgstr "Дополнительная информация:"
+msgstr ""
 
 #: tmainform.label3.caption
 msgid "Package dependencies:"
-msgstr "Зависимости пакета:"
+msgstr ""
 
 #: tmainform.label4.caption
 msgctxt "tmainform.label4.caption"
 msgid "Version:"
-msgstr "Версия:"
+msgstr ""
 
 #: tmainform.label5.caption
 msgid "Package description:"
-msgstr "Описание пакета:"
+msgstr ""
 
 #: tmainform.label6.caption
 #, object-pascal-format
 msgid "After install (%post):"
-msgstr "После установки (%post):"
+msgstr ""
 
 #: tmainform.label7.caption
 #, object-pascal-format
 msgid "After remove (%postun):"
-msgstr "После удаления (%postun):"
+msgstr ""
 
 #: tmainform.label8.caption
 msgid "Release:"
-msgstr "Релиз:"
+msgstr ""
 
 #: tmainform.label9.caption
 msgid "Maintainer:"
-msgstr "Майнтейнер:"
+msgstr ""
 
 #: tmainform.listbox1.hint
 msgid "|List of files and folders to build the package [there is a PopUp menu]; double click - edit an entry in the list"
-msgstr "|Список файлов и папок для сборки пакета [есть PopUp меню]; двойной клик - редактирование записи списка"
+msgstr ""
 
 #: tmainform.loadbtn.caption
 msgctxt "tmainform.loadbtn.caption"
 msgid "Load project"
-msgstr "Загрузить проект"
+msgstr ""
 
 #: tmainform.loadbtn.hint
 msgid "|Load project *.prj"
-msgstr "|Загрузить проект *.prj"
+msgstr ""
 
 #: tmainform.maintaineredit.hint
 msgid "|Sample: Alex Kotov"
-msgstr "|Например: Alex Kotov"
+msgstr ""
 
 #: tmainform.menuitem1.caption
 msgid "Add objects"
-msgstr "Добавить объекты"
+msgstr ""
 
 #: tmainform.menuitem10.caption
 msgctxt "tmainform.menuitem10.caption"
 msgid "Build package"
-msgstr "Собрать пакет"
+msgstr ""
 
 #: tmainform.menuitem7.caption
 msgctxt "tmainform.menuitem7.caption"
 msgid "Load project"
-msgstr "Загрузить проект"
+msgstr ""
 
 #: tmainform.menuitem8.caption
 msgctxt "tmainform.menuitem8.caption"
 msgid "Save project"
-msgstr "Сохранить проект"
+msgstr ""
 
 #: tmainform.metacheck.caption
 msgid "meta"
@@ -289,11 +256,11 @@ msgstr ""
 
 #: tmainform.metacheck.hint
 msgid "|Empty package"
-msgstr "|Пустой пакет"
+msgstr ""
 
 #: tmainform.nameedit.hint
 msgid "|Sample: mypackage"
-msgstr "|Например: mypackage"
+msgstr ""
 
 #: tmainform.noarchcheck.caption
 msgid "noarch"
@@ -301,12 +268,11 @@ msgstr ""
 
 #: tmainform.noarchcheck.hint
 msgid "|For all architectures"
-msgstr "|Для всех архитектур"
+msgstr ""
 
 #: tmainform.releaseedit.hint
-msgctxt "tmainform.releaseedit.hint"
 msgid "|Sample: 0.mrx8"
-msgstr "|Например: 0.mrx8"
+msgstr ""
 
 #: tmainform.rpmbtn.caption
 msgid "RPM"
@@ -314,16 +280,16 @@ msgstr ""
 
 #: tmainform.rpmbtn.hint
 msgid "|Download a list of files by package name"
-msgstr "|Загрузить список файлов по имени пакета"
+msgstr ""
 
 #: tmainform.savebtn.caption
 msgctxt "tmainform.savebtn.caption"
 msgid "Save project"
-msgstr "Сохранить проект"
+msgstr ""
 
 #: tmainform.savebtn.hint
 msgid "|Save project *.prj"
-msgstr "|Сохранить проект *.prj"
+msgstr ""
 
 #: tmainform.signcheckbox.caption
 msgid "sign rpm"
@@ -331,15 +297,15 @@ msgstr ""
 
 #: tmainform.signcheckbox.hint
 msgid "|Sign RPM package"
-msgstr "|Подписать пакет RPM"
+msgstr ""
 
 #: tmainform.tabsheet1.caption
 msgid "Basic"
-msgstr "Основное"
+msgstr ""
 
 #: tmainform.tabsheet2.caption
 msgid "Script's"
-msgstr "Скрипты"
+msgstr ""
 
 #: tmainform.tabsheet3.caption
 msgid "repack.txt"
@@ -352,15 +318,15 @@ msgstr ""
 
 #: tmainform.tabsheet4.caption
 msgid "HELP"
-msgstr "Помощь"
+msgstr ""
 
 #: tmainform.unpackbtn.caption
 msgid "Unpack"
-msgstr "Распаковать"
+msgstr ""
 
 #: tmainform.unpackbtn.hint
 msgid "|Unpack RPM or DEB package"
-msgstr "|Распаковать пакет RPM или DEB"
+msgstr ""
 
 #: tmainform.upbtn.caption
 msgid "UP"
@@ -368,47 +334,43 @@ msgstr ""
 
 #: tmainform.upbtn.hint
 msgid "|Move record up"
-msgstr "|Переместить запись вверх"
+msgstr ""
 
 #: tmainform.urlcopyedit.hint
 msgid "|Sample: https://github.com/AKotov-dev/RPMCreator"
-msgstr "|Например: https://github.com/AKotov-dev/RPMCreator"
+msgstr ""
 
 #: tmainform.vendoredit.hint
 msgid "|Sample: alex_q_2000 (C) 2021"
-msgstr "|Например: alex_q_2000 (C) 2021"
+msgstr ""
 
 #: tmainform.versedit.hint
 msgid "|Sample: 1.2"
-msgstr "|Например: 1.2"
+msgstr ""
 
 #: tselectform.addbtn.caption
-msgctxt "tselectform.addbtn.caption"
 msgid "Add"
-msgstr "Добавить"
+msgstr ""
 
 #: tselectform.caption
-msgctxt "tselectform.caption"
 msgid "Select files and folders"
-msgstr "Выбор файлов и папок"
+msgstr ""
 
 #: tselectform.filelistbox1.hint
 msgid "|Select files [Ctrl+Mouse]"
-msgstr "|Выбор файлов [Ctrl+Мышь]"
+msgstr ""
 
 #: tselectform.shelltreeview1.hint
 msgid "|Select directory"
-msgstr "|Выбор директории"
+msgstr ""
 
 #: tselectform.updatebtn.caption
-msgctxt "tselectform.updatebtn.caption"
 msgid "Update"
-msgstr "Обновить"
+msgstr ""
 
 #: tunpackform.caption
-msgctxt "tunpackform.caption"
 msgid "Package unpacker"
-msgstr "Распаковщик пакетов"
+msgstr ""
 
 #: tunpackform.editbutton1.buttoncaption
 msgctxt "tunpackform.editbutton1.buttoncaption"
@@ -416,11 +378,8 @@ msgid "..."
 msgstr ""
 
 #: tunpackform.editbutton1.hint
-#, fuzzy
-#| msgid "|Select the package to unpack"
-msgctxt "tunpackform.editbutton1.hint"
 msgid "|Select the package to unpack"
-msgstr "|Выберите пакет для распаковки"
+msgstr ""
 
 #: tunpackform.editbutton2.buttoncaption
 msgctxt "tunpackform.editbutton2.buttoncaption"
@@ -429,19 +388,19 @@ msgstr ""
 
 #: tunpackform.editbutton2.hint
 msgid "|Select the directory to save the contents of the package"
-msgstr "|Выберите каталог для сохранения содержимого пакета"
+msgstr ""
 
 #: tunpackform.label1.caption
 msgid "Unpack (*.deb or *.rpm):"
-msgstr "Распаковать (*.deb или *.rpm):"
+msgstr ""
 
 #: tunpackform.label2.caption
 msgid "Content upload folder:"
-msgstr "Каталог выгрузки содержимого:"
+msgstr ""
 
 #: tunpackform.logmemo.hint
 msgid "|Log of the package unpacking process"
-msgstr "|Лог процесса распаковки пакета"
+msgstr ""
 
 #: tunpackform.unpackbtn.caption
 msgctxt "tunpackform.unpackbtn.caption"
@@ -449,55 +408,54 @@ msgid "Ok"
 msgstr ""
 
 #: tunpackform.unpackbtn.hint
-msgctxt "tunpackform.unpackbtn.hint"
 msgid "|Start unpacking"
-msgstr "|Приступить к распаковке"
+msgstr ""
 
 #: unit1.sclearworkdir
 msgid "Clearing the working directory..."
-msgstr "Очистка рабочей директории..."
+msgstr ""
 
 #: unit1.scompleted
 msgid "Completed. Press Enter to continue..."
-msgstr "Завершено. Для продолжения нажмите Enter..."
+msgstr ""
 
 #: unit1.sdeleterecords
 msgid "Delete selected items?"
-msgstr "Удалить выбранные записи?"
+msgstr ""
 
 #: unit1.seditrecord
 msgid "Editing an entry:"
-msgstr "Редактирование записи:"
+msgstr ""
 
 #: unit1.sfilelistempty
 msgid "The list of files is empty!"
-msgstr "Список файлов пуст!"
+msgstr ""
 
 #: unit1.sinputname
 msgid "Please, enter the name of the package:"
-msgstr "Пожалуйста, введите имя пакета:"
+msgstr ""
 
 #: unit1.smacrosnotfound
 msgid "No file found ~/.rpmmacros! Not ready to sign packages!"
-msgstr "Нет файла ~/.rpmmacros! Не готов подписать пакет!"
+msgstr ""
 
 #: unit1.snodata
 msgid "Not enough data for build package!"
-msgstr "Не хватает данных для сборки пакета!"
+msgstr ""
 
 #: unit1.snolistobject
 msgid "No list object:"
-msgstr "Отсутствует объект списка:"
+msgstr ""
 
 #: unit1.sprojectchange
 msgid "Project changed. Save it?"
-msgstr "Проект изменялся. Сохранить изменения?"
+msgstr ""
 
 #: unit1.ssignrpm
 msgid "Sign the packages:"
-msgstr "Подпись пакетов:"
+msgstr ""
 
 #: unit1.ssymlink
 msgid "This is SymLink! Need a real target!"
-msgstr "Это SymLink! Нужна настоящая цель!"
+msgstr ""
 
