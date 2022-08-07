@@ -180,18 +180,20 @@ begin
   Application.ProcessMessages;
   ExProcess := TProcess.Create(nil);
   try
-    ExProcess.Executable := terminal;  //sh или sakura
+    ExProcess.Executable := terminal;  //sh или xterm
     if terminal <> 'sh' then
     begin
-      ExProcess.Parameters.Add('--font');
-      ExProcess.Parameters.Add('10');
-      ExProcess.Parameters.Add('--columns');
-      ExProcess.Parameters.Add('120');
-      ExProcess.Parameters.Add('--rows');
-      ExProcess.Parameters.Add('40');
-      ExProcess.Parameters.Add('--title');
+      ExProcess.Parameters.Add('-xrm');
+      ExProcess.Parameters.Add('XTerm*foreground:gray');
+      ExProcess.Parameters.Add('-xrm');
+      ExProcess.Parameters.Add('XTerm*background:black');
+      ExProcess.Parameters.Add('-xrm');
+      ExProcess.Parameters.Add('XTerm*allowTitleOps:false');
+      ExProcess.Parameters.Add('-T');
       ExProcess.Parameters.Add('Build RPM-package');
-      ExProcess.Parameters.Add('--execute');
+      ExProcess.Parameters.Add('-g');
+      ExProcess.Parameters.Add('110x47+10+10');
+      ExProcess.Parameters.Add('-e');
     end
     else
       ExProcess.Parameters.Add('-c');
@@ -748,9 +750,7 @@ begin
       if NoArchCheck.Checked then
         SPEC.Add('Architecture: all')
       else
-      if string(
-{$I %FPCTARGETCPU%}
-        ) = 'x86_64' then
+      if string({$I %FPCTARGETCPU%}) = 'x86_64' then
         SPEC.Add('Architecture: amd64')
       else
         SPEC.Add('Architecture: i386');
@@ -985,7 +985,7 @@ begin
     StartProcess('chmod +x ' + WorkDir + '/build.sh', 'sh');
 
     //Собираем пакет rpm + src.rpm
-    StartProcess(WorkDir + '/build.sh', 'sakura');
+    StartProcess(WorkDir + '/build.sh', 'xterm');
 
   finally;
 

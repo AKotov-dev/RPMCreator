@@ -2,10 +2,10 @@
 name=rpmcreator
 
 [VERSION]
-version=1.8
+version=1.9
 
 [RELEASE]
-release=3.mrx9
+release=0.mrx9
 
 [GROUP]
 group=Applications/System
@@ -31,7 +31,7 @@ urlcopy=https://github.com/AKotov-dev/RPMCreator
 license=GPLv3
 
 [DEPS]
-deps=sakura rpm-build rpm-sign gnupg createrepo gcc make p7zip dpkg-dev
+deps=xterm rpm-build rpm-sign gnupg createrepo gcc make p7zip dpkg-dev gtk2
 
 [META]
 meta=0
@@ -70,49 +70,53 @@ toolversion=2.2.0
 [INFO]
 0=Lazarus is required to compile the program
 1=
-2=v1.8-3
-3=+ Correction of script templates
-4=+ Correction of the startup shortcut (RU)
-5=+ Changing the prefix of rpm-packages to mrx9
-6=
-7=v1.8-2
-8=+ Semiautomatic сreate /usr/share/doc/package_name/repack.txt
-9=+ Corrected and expanded operational hints
-10=+ Double click - edit an entry in the list of files and folders
-11=
-12=v1.8-1
-13=+ DEBIAN pre/post scripts
-14=+ DEBIAN/md5sums
-15=+ Homepage: in control file
-16=+ Changed the calculation of the installation size
-17=+ Complete cleaning of all build directories: ~/rpmbuild ~/debbuild
-18=+ Stretching the size of the Scripts tab fields
-19=
-20=v1.7-0
-21=+ Icons for files and folders, highlighting the active panel
-22=
-23=v1.6-3
-24=+SymLink warning when adding files to a package
-25=
-26=v1.6-2
-27=+Installed-Size: to ~/debbuild/tmp/DEBIAN/control (KiB)
-28=
-29=v1.6-1
-30=+DEB dependencies correction
-31=
-32=v1.6-0
-33=+DEB packages create in ~/debbuild
-34=+i18 translation En/Ru
+2=v1.9
+3=+ rpm: added gtk2 dependency (for GNOME)
+4=+ replacing sakura terminal with xterm (bug: https://github.com/dabisu/sakura/issues/16)
+5=
+6=v1.8-3
+7=+ Correction of script templates
+8=+ Correction of the startup shortcut (RU)
+9=+ Changing the prefix of rpm-packages to mrx9
+10=
+11=v1.8-2
+12=+ Semiautomatic сreate /usr/share/doc/package_name/repack.txt
+13=+ Corrected and expanded operational hints
+14=+ Double click - edit an entry in the list of files and folders
+15=
+16=v1.8-1
+17=+ DEBIAN pre/post scripts
+18=+ DEBIAN/md5sums
+19=+ Homepage: in control file
+20=+ Changed the calculation of the installation size
+21=+ Complete cleaning of all build directories: ~/rpmbuild ~/debbuild
+22=+ Stretching the size of the Scripts tab fields
+23=
+24=v1.7-0
+25=+ Icons for files and folders, highlighting the active panel
+26=
+27=v1.6-3
+28=+SymLink warning when adding files to a package
+29=
+30=v1.6-2
+31=+Installed-Size: to ~/debbuild/tmp/DEBIAN/control (KiB)
+32=
+33=v1.6-1
+34=+DEB dependencies correction
 35=
-36=v1.5-1
-37=+Disable check shebang in script's (#!/bin/bash <> #!/usr/bin/bash)
-38=
-39=v1.5-0
-40=+Change "Requires:" to "Recommends:"
-41=
-42=v1.4-1
-43=+ Lazarus 2.0.10 rebuild
-44=+ new list of rpm groups from Mageia-8
-45=url: https://fedoraproject.org/wiki/RPMGroups
-46=rpm -qa --qf '%{group}\n' | sort -u
-47=+ updated the list of licenses
+36=v1.6-0
+37=+DEB packages create in ~/debbuild
+38=+i18 translation En/Ru
+39=
+40=v1.5-1
+41=+Disable check shebang in script's (#!/bin/bash <> #!/usr/bin/bash)
+42=
+43=v1.5-0
+44=+Change "Requires:" to "Recommends:"
+45=
+46=v1.4-1
+47=+ Lazarus 2.0.10 rebuild
+48=+ new list of rpm groups from Mageia-8
+49=url: https://fedoraproject.org/wiki/RPMGroups
+50=rpm -qa --qf '%{group}\n' | sort -u
+51=+ updated the list of licenses

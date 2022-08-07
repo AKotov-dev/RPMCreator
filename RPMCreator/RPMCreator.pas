@@ -18,7 +18,7 @@ var
 {$R *.res}
 
 begin
-  Application.Title:='RPMCreator v1.8-3';
+  Application.Title:='RPMCreator v1.9';
   //Создаём объект с уникальным идентификатором
   MyProg := TUniqueInstance.Create('RPMCreator');
 
