@@ -1,17 +1,17 @@
 object AboutForm: TAboutForm
-  Left = 307
-  Height = 261
-  Top = 126
-  Width = 360
+  Left = 337
+  Height = 234
+  Top = 137
+  Width = 411
   ActiveControl = OkBtn
   Caption = 'About'
-  ClientHeight = 261
-  ClientWidth = 360
+  ClientHeight = 234
+  ClientWidth = 411
   FormStyle = fsStayOnTop
   OnCreate = FormCreate
   Position = poMainFormCenter
   SessionProperties = 'Width;Height'
-  LCLVersion = '2.0.10.0'
+  LCLVersion = '2.2.0.4'
   object Image1: TImage
     Left = 8
     Height = 72
@@ -370,31 +370,29 @@ object AboutForm: TAboutForm
   end
   object Label1: TLabel
     Left = 112
-    Height = 21
+    Height = 23
     Top = 16
     Width = 128
     Caption = 'RPMCreator'
     Font.Height = -19
     Font.Name = 'Sans'
     Font.Style = [fsBold]
-    ParentColor = False
     ParentFont = False
   end
   object Label2: TLabel
     Left = 112
-    Height = 150
+    Height = 119
     Top = 48
-    Width = 175
-    Caption = 'Package build program'#10#10'License: GPLv3'#10'Compilation: Lazarus 2.0.10'#10'Author: alex_q_2000 (C) 2021'#10'Grantitudes: AlexL'#10'Used by rpmbuild (spec, src)'#10#10'Russian Linux Forum:'#10'https://linuxforum.ru'
-    ParentColor = False
+    Width = 253
+    Caption = 'Package build program'#10#10'License: GPLv3'#10'Compilation: Lazarus 2.2.0'#10'Author: alex_q_2000 (C) 2021'#10'Grantitudes: AlexL'#10'Used by rpmbuild (spec, src)'#10#10'Russian Linux Forum: https://linuxforum.ru'
   end
   object Bevel1: TBevel
     AnchorSideRight.Control = Owner
     AnchorSideRight.Side = asrBottom
     Left = 8
     Height = 16
-    Top = 216
-    Width = 344
+    Top = 193
+    Width = 395
     Anchors = [akLeft, akRight]
     BorderSpacing.Right = 8
     Shape = bsTopLine
@@ -402,9 +400,9 @@ object AboutForm: TAboutForm
   object OkBtn: TButton
     AnchorSideRight.Control = Owner
     AnchorSideRight.Side = asrBottom
-    Left = 144
+    Left = 170
     Height = 28
-    Top = 224
+    Top = 197
     Width = 75
     Anchors = [akBottom]
     BorderSpacing.Right = 165
