@@ -1,7 +1,7 @@
 object MainForm: TMainForm
-  Left = 313
+  Left = 365
   Height = 703
-  Top = 124
+  Top = 400
   Width = 991
   ActiveControl = LoadBtn
   Caption = 'RPMCreator'
@@ -16,7 +16,7 @@ object MainForm: TMainForm
   LCLVersion = '2.2.0.4'
   object PageControl1: TPageControl
     Left = 0
-    Height = 637
+    Height = 636
     Top = 48
     Width = 991
     ActivePage = TabSheet1
@@ -26,7 +26,7 @@ object MainForm: TMainForm
     TabOrder = 0
     object TabSheet1: TTabSheet
       Caption = 'Basic'
-      ClientHeight = 600
+      ClientHeight = 599
       ClientWidth = 985
       object Label1: TLabel
         AnchorSideLeft.Control = NameEdit
@@ -46,7 +46,7 @@ object MainForm: TMainForm
       object NameEdit: TEdit
         AnchorSideRight.Side = asrBottom
         Left = 5
-        Height = 36
+        Height = 37
         Hint = '|Sample: mypackage'
         Top = 231
         Width = 219
@@ -75,7 +75,7 @@ object MainForm: TMainForm
       object VersEdit: TEdit
         AnchorSideRight.Side = asrBottom
         Left = 232
-        Height = 36
+        Height = 37
         Hint = '|Sample: 1.2'
         Top = 231
         Width = 80
@@ -104,7 +104,7 @@ object MainForm: TMainForm
       object ReleaseEdit: TEdit
         AnchorSideRight.Side = asrBottom
         Left = 320
-        Height = 36
+        Height = 37
         Hint = '|Sample: 0.mrx8'
         Top = 231
         Width = 88
@@ -145,7 +145,7 @@ object MainForm: TMainForm
       object MaintainerEdit: TEdit
         AnchorSideLeft.Side = asrBottom
         Left = 5
-        Height = 36
+        Height = 37
         Hint = '|Sample: Alex Kotov'
         Top = 287
         Width = 259
@@ -195,7 +195,7 @@ object MainForm: TMainForm
         AnchorSideBottom.Control = TabSheet1
         AnchorSideBottom.Side = asrBottom
         Left = 5
-        Height = 67
+        Height = 66
         Hint = '|Package names separated by commas or spaces'
         Top = 528
         Width = 975
@@ -226,7 +226,7 @@ object MainForm: TMainForm
         AnchorSideRight.Control = TabSheet1
         AnchorSideRight.Side = asrBottom
         Left = 272
-        Height = 36
+        Height = 37
         Hint = '|Sample: alex_q_2000 (C) 2021'
         Top = 287
         Width = 256
@@ -332,73 +332,116 @@ object MainForm: TMainForm
         AnchorSideRight.Control = TabSheet1
         AnchorSideRight.Side = asrBottom
         Left = 416
-        Height = 36
+        Height = 37
         Top = 231
         Width = 328
         BorderSpacing.Right = 5
         Color = 15663103
         ItemHeight = 0
         Items.Strings = (
-          'Applications/File'
-          'Applications/Internet'
-          'Applications/System'
-          'Applications/Text'
+          'Accessibility'
           'Archiving/Backup'
           'Archiving/Cd burning'
           'Archiving/Compression'
+          'Archiving/Other'
           'Communications/Bluetooth'
+          'Communications/Dial-Up'
+          'Communications/Fax'
           'Communications/Mobile'
+          'Communications/Radio'
+          'Communications/Serial'
+          'Communications/Telephony'
           'Databases'
+          'Development/Basic'
           'Development/C'
           'Development/C++'
+          'Development/C#'
+          'Development/Databases'
+          'Development/Erlang'
           'Development/GNOME and GTK+'
           'Development/Java'
           'Development/KDE and Qt'
           'Development/Kernel'
-          'Development/Libraries'
           'Development/OCaml'
           'Development/Other'
-          'Development/Perl'
+          'Development/Perl'','
+          'Development/PHP'
           'Development/Python'
           'Development/Ruby'
           'Development/Tools'
           'Development/X11'
           'Documentation'
-          'Documentation/HTML'
           'Editors'
+          'Education'
           'Emulators'
           'File tools'
+          'Games/Adventure'
+          'Games/Arcade'
+          'Games/Boards'
+          'Games/Cards'
+          'Games/Other'
+          'Games/Puzzles'
+          'Games/Shooter'
+          'Games/Simulation'
+          'Games/Sports'
+          'Games/Strategy'
           'Geography'
           'Graphical desktop/Cinnamon'
+          'Graphical desktop/Enlightenment'
+          'Graphical desktop/FVWM based'
           'Graphical desktop/GNOME'
           'Graphical desktop/Icewm'
+          'Graphical desktop/KDE'
+          'Graphical desktop/MATE'
           'Graphical desktop/Other'
+          'Graphical desktop/Sawfish'
+          'Graphical desktop/WindowMaker'
           'Graphical desktop/Xfce'
-          'Graphics'
+          'Graphics/3D'
           'Graphics/Editors and Converters'
-          'Graphics/Scanning'
           'Graphics/Utilities'
+          'Graphics/Photography'
+          'Graphics/Scanning'
           'Graphics/Viewers'
           'Monitoring'
+          'Networking/Chat'
           'Networking/File transfer'
+          'Networking/IRC'
+          'Networking/Instant messaging'
+          'Networking/Mail'
+          'Networking/News'
           'Networking/Other'
           'Networking/Remote access'
           'Networking/WWW'
+          'Office/Dictionary'
+          'Office/Finance'
+          'Office/Management'
+          'Office/Organizer'
+          'Office/Utilities'
           'Office/Spreadsheet'
           'Office/Suite'
-          'Office/Utilities'
           'Office/Word processor'
-          'Public Keys'
           'Publishing'
+          'Sciences/Astronomy'
+          'Sciences/Biology'
+          'Sciences/Chemistry'
+          'Sciences/Computer science'
+          'Sciences/Geosciences'
           'Sciences/Mathematics'
+          'Sciences/Other'
+          'Sciences/Physics'
           'Security'
           'Shells'
           'Sound/Editors and Converters'
+          'Sound/Midi'
           'Sound/Mixers'
+          'Sound/Players'
           'Sound/Utilities'
           'System/Base'
           'System/Boot and Init'
+          'System/Cluster'
           'System/Configuration'
+          'System/Fonts/Console'
           'System/Fonts/True type'
           'System/Fonts/Type1'
           'System/Fonts/X11 bitmap'
@@ -412,11 +455,11 @@ object MainForm: TMainForm
           'System/X11'
           'Terminals'
           'Text tools'
-          'Unspecified'
-          'User Interface/X'
-          'Video/Editors and Converters'
-          'Video/Players'
-          'Video/Utilities'
+          'Toys'
+          ' Video/Editors and Converters'
+          ' Video/Players'
+          ' Video/Television'
+          ' Video/Utilities'
         )
         OnChange = NameEditChange
         ParentShowHint = False
@@ -442,7 +485,7 @@ object MainForm: TMainForm
         AnchorSideRight.Control = TabSheet1
         AnchorSideRight.Side = asrBottom
         Left = 814
-        Height = 36
+        Height = 37
         Top = 231
         Width = 166
         Anchors = [akTop, akRight]
@@ -472,7 +515,7 @@ object MainForm: TMainForm
         AnchorSideRight.Control = TabSheet1
         AnchorSideRight.Side = asrBottom
         Left = 536
-        Height = 36
+        Height = 37
         Top = 287
         Width = 444
         Anchors = [akTop, akLeft, akRight]
@@ -518,7 +561,7 @@ object MainForm: TMainForm
         AnchorSideRight.Control = TabSheet1
         AnchorSideRight.Side = asrBottom
         Left = 5
-        Height = 36
+        Height = 37
         Hint = '|Sample: https://github.com/AKotov-dev/RPMCreator'
         Top = 464
         Width = 975
@@ -580,7 +623,7 @@ object MainForm: TMainForm
     end
     object TabSheet2: TTabSheet
       Caption = 'Script''s'
-      ClientHeight = 600
+      ClientHeight = 599
       ClientWidth = 985
       object Label6: TLabel
         AnchorSideLeft.Control = AfterInstallEdit
@@ -602,7 +645,7 @@ object MainForm: TMainForm
         AnchorSideRight.Side = asrBottom
         AnchorSideBottom.Control = Label12
         Left = 5
-        Height = 121
+        Height = 120
         Hint = '|Actions performed after installing the package'
         Top = 177
         Width = 975
@@ -633,7 +676,7 @@ object MainForm: TMainForm
         Left = 5
         Height = 122
         Hint = '|Actions performed after deleting a package'
-        Top = 473
+        Top = 472
         Width = 975
         Anchors = [akTop, akLeft, akRight, akBottom]
         BorderSpacing.Top = 5
@@ -657,7 +700,7 @@ object MainForm: TMainForm
         AnchorSideBottom.Control = AfterRemoveEdit
         Left = 5
         Height = 17
-        Top = 451
+        Top = 450
         Width = 147
         Anchors = [akLeft]
         BorderSpacing.Bottom = 3
@@ -705,7 +748,7 @@ object MainForm: TMainForm
         AnchorSideBottom.Control = BeforeRemoveEdit
         Left = 5
         Height = 17
-        Top = 303
+        Top = 302
         Width = 150
         Anchors = [akLeft]
         BorderSpacing.Bottom = 3
@@ -722,7 +765,7 @@ object MainForm: TMainForm
         Left = 5
         Height = 121
         Hint = '|Actions performed before deleting a package'
-        Top = 325
+        Top = 324
         Width = 975
         Anchors = [akTop, akLeft, akRight, akBottom]
         BorderSpacing.Top = 5
@@ -738,7 +781,7 @@ object MainForm: TMainForm
     object TabSheet3: TTabSheet
       Hint = '|/usr/share/doc/package_name/repack.txt'
       Caption = 'repack.txt'
-      ClientHeight = 600
+      ClientHeight = 599
       ClientWidth = 985
       ParentShowHint = False
       ShowHint = True
@@ -757,7 +800,7 @@ object MainForm: TMainForm
       end
       object ProgramNameEdit: TEdit
         Left = 5
-        Height = 36
+        Height = 37
         Top = 134
         Width = 244
         Color = 15663103
@@ -808,7 +851,7 @@ object MainForm: TMainForm
         AnchorSideBottom.Control = TabSheet3
         AnchorSideBottom.Side = asrBottom
         Left = 5
-        Height = 403
+        Height = 402
         Hint = '|/usr/share/doc/package_name/repack.txt'
         Top = 192
         Width = 975
@@ -849,7 +892,7 @@ object MainForm: TMainForm
       object URLEdit32: TEdit
         AnchorSideRight.Control = CreateRepackTxt
         Left = 5
-        Height = 36
+        Height = 37
         Top = 26
         Width = 793
         Anchors = [akTop, akLeft, akRight]
@@ -865,7 +908,7 @@ object MainForm: TMainForm
         AnchorSideRight.Control = URLEdit32
         AnchorSideRight.Side = asrBottom
         Left = 5
-        Height = 36
+        Height = 37
         Top = 81
         Width = 793
         Anchors = [akTop, akLeft, akRight]
@@ -890,7 +933,7 @@ object MainForm: TMainForm
       object DevToolEdit: TComboBox
         AnchorSideRight.Control = ToolVersionEdit
         Left = 442
-        Height = 36
+        Height = 37
         Top = 134
         Width = 212
         Anchors = [akTop, akRight]
@@ -921,7 +964,7 @@ object MainForm: TMainForm
         AnchorSideRight.Control = URLEdit64
         AnchorSideRight.Side = asrBottom
         Left = 664
-        Height = 36
+        Height = 37
         Top = 134
         Width = 134
         Anchors = [akTop, akRight]
@@ -936,11 +979,11 @@ object MainForm: TMainForm
     end
     object TabSheet4: TTabSheet
       Caption = 'HELP'
-      ClientHeight = 600
+      ClientHeight = 599
       ClientWidth = 985
       object Memo1: TMemo
         Left = 5
-        Height = 590
+        Height = 589
         Top = 5
         Width = 975
         Align = alClient
@@ -1141,8 +1184,8 @@ object MainForm: TMainForm
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Height = 18
-    Top = 685
+    Height = 19
+    Top = 684
     Width = 991
     AutoHint = True
     Font.Height = -12

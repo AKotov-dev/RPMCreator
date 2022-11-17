@@ -123,6 +123,7 @@ type
     procedure TrimEdits;
     procedure UnpackBtnClick(Sender: TObject);
     procedure UPBtnClick(Sender: TObject);
+    procedure GetValidRPMGroups;
 
   private
 
@@ -157,6 +158,39 @@ uses unit2, selectunit, unpackunit;
 
 { TMainForm }
 
+//Получить список валидных групп RPM
+procedure TMainForm.GetValidRPMGroups;
+var
+  S: TStringList;
+  ExProcess: TProcess;
+begin
+  Screen.Cursor := crHourGlass;
+  Application.ProcessMessages;
+
+  S := TStringList.Create;
+  ExProcess := TProcess.Create(nil);
+
+  try
+    ExProcess.Executable := 'bash';
+    ExProcess.Parameters.Add('-c');
+    ExProcess.Options := [poUsePipes];
+
+    ExProcess.Parameters.Add(
+      '[[ $(type -f rpmlint 2>/dev/null) ]] && rpmlint --explain non-standard-group ' +
+      '| grep "\"" | tr -d "\"|." | tr -d [:space:] | tr "," "\n"');
+
+    ExProcess.Execute;
+    S.LoadFromStream(ExProcess.Output);
+
+    if S.Count <> 0 then GroupCBox.Items.Assign(S);
+
+  finally
+    S.Free;
+    ExProcess.Free;
+    Screen.Cursor := crDefault;
+  end;
+end;
+
 //Проверка - каталог пуст
 function DirectoryIsEmpty(Directory: string): boolean;
 var
@@ -183,16 +217,25 @@ begin
     ExProcess.Executable := terminal;  //sh или xterm
     if terminal <> 'sh' then
     begin
+      ExProcess.Parameters.Add('-fa'); //имя шрифта
+      ExProcess.Parameters.Add('monospace');
+      ExProcess.Parameters.Add('-fs'); //размер шрифта
+      ExProcess.Parameters.Add('10');
+
       ExProcess.Parameters.Add('-xrm');
-      ExProcess.Parameters.Add('XTerm*foreground:gray');
+      ExProcess.Parameters.Add('XTerm*foreground:white');
       ExProcess.Parameters.Add('-xrm');
       ExProcess.Parameters.Add('XTerm*background:black');
       ExProcess.Parameters.Add('-xrm');
-      ExProcess.Parameters.Add('XTerm.vt100.allowTitleOps:false');
+      ExProcess.Parameters.Add('XTerm*allowTitleOps:false');
       ExProcess.Parameters.Add('-T');
       ExProcess.Parameters.Add('Build RPM-package');
       ExProcess.Parameters.Add('-g');
-      ExProcess.Parameters.Add('110x47+10+10');
+      ExProcess.Parameters.Add('120x40+10+10');
+      ExProcess.Parameters.Add('-xrm');
+      ExProcess.Parameters.Add('XTerm*cursorColor:red'); //цвет курсора
+      ExProcess.Parameters.Add('-xrm');
+      ExProcess.Parameters.Add('XTerm*cursorBlink:true'); //мигающий курсор
       ExProcess.Parameters.Add('-e');
     end
     else
@@ -284,19 +327,14 @@ begin
   ListBox1.ItemIndex := N;
 end;
 
-
 //Ищем Рабочий Стол
 procedure TMainForm.SearchDeskTop;
-var
-  UserName: string;
 begin
-  UserName := GetEnvironmentVariable('USER');
-
-  if DirectoryExists('/home/' + UserName + '/Рабочий стол') then
-    OpenFile.InitialDir := '/home/' + UserName + '/Рабочий стол'
+  if DirectoryExists(GetUserDir + 'Рабочий стол') then
+    OpenFile.InitialDir := GetUserDir + 'Рабочий стол'
   else
-  if DirectoryExists('/home/' + UserName + '/Desktop') then
-    OpenFile.InitialDir := '/home/' + UserName + '/Desktop'
+  if DirectoryExists(GetUserDir + 'Desktop') then
+    OpenFile.InitialDir := GetUserDir + 'Desktop'
   else
     OpenFile.InitialDir := '/home';
 
@@ -487,6 +525,9 @@ end;
 
 procedure TMainForm.FormShow(Sender: TObject);
 begin
+  //For Plasma
+  MainFormStorage.Restore;
+
   MainForm.Caption := Application.Title;
   PageControl1.ActivePageIndex := 0;
 end;
@@ -681,8 +722,7 @@ begin
   end;
 
   //Прооверка готовности к подписи пакетов
-  if (SignCheckBox.Checked) and
-    (not FileExists(GetEnvironmentVariable('HOME') + '/.rpmmacros')) then
+  if (SignCheckBox.Checked) and (not FileExists(GetUserDir + '.rpmmacros')) then
   begin
     MessageDlg(SMacrosNotFound, mtWarning, [mbOK], 0);
     Exit;
@@ -704,15 +744,14 @@ begin
 
     //АРХИВ ИСХОДНИКОВ ДОЛЖЕН БЫТЬ ВСЕГДА!
     //Собираем /home/$USER/rpmbuild/SOURCES/имя_пакета-версия.tar.gz
-    ListBox1.Items.SaveToFile(GetEnvironmentVariable('HOME') +
-      '/rpmbuild/SOURCES/files.lst');
+    ListBox1.Items.SaveToFile(GetUserDir + 'rpmbuild/SOURCES/files.lst');
 
     //Устанавливаем текущую директорию для tar
-    SetCurrentDir(GetEnvironmentVariable('HOME') + '/rpmbuild/SOURCES');
+    SetCurrentDir(GetUserDir + 'rpmbuild/SOURCES');
 
     //Жмём архив
     StartProcess('nice -n 15 tar -czf ' + NameEdit.Text + '-' +
-      VersEdit.Text + '.tar.gz --exclude="*.bak" -T ./files.lst', 'sh');
+      VersEdit.Text + '.tar.gz --exclude="*.bak" --exclude="*.or" -T ./files.lst', 'sh');
 
     //Формируем необработанный список файлов архива исходников
     StartProcess('nice -n 15 tar -tzf ' + NameEdit.Text + '-' +
@@ -775,7 +814,7 @@ begin
 
       SPEC.Add('Description: ' + SummaryEdit.Text);
 
-      SPEC.SaveToFile(GetEnvironmentVariable('HOME') + '/debbuild/tmp/DEBIAN/control');
+      SPEC.SaveToFile(GetUserDir + 'debbuild/tmp/DEBIAN/control');
 
       //Контрольная сумма файлов корня пакета DEB
       if not MetaCheck.Checked then
@@ -785,20 +824,16 @@ begin
 
       //pre/post скрипты
       if Trim(BeforeInstallEdit.Text) <> '' then
-        BeforeInstallEdit.Lines.SaveToFile(GetEnvironmentVariable('HOME') +
-          '/debbuild/tmp/DEBIAN/preinst');
+        BeforeInstallEdit.Lines.SaveToFile(GetUserDir + 'debbuild/tmp/DEBIAN/preinst');
 
       if Trim(AfterInstallEdit.Text) <> '' then
-        AfterInstallEdit.Lines.SaveToFile(GetEnvironmentVariable('HOME') +
-          '/debbuild/tmp/DEBIAN/postinst');
+        AfterInstallEdit.Lines.SaveToFile(GetUserDir + 'debbuild/tmp/DEBIAN/postinst');
 
       if Trim(BeforeRemoveEdit.Text) <> '' then
-        BeforeRemoveEdit.Lines.SaveToFile(GetEnvironmentVariable('HOME') +
-          '/debbuild/tmp/DEBIAN/prerm');
+        BeforeRemoveEdit.Lines.SaveToFile(GetUserDir + 'debbuild/tmp/DEBIAN/prerm');
 
       if Trim(AfterRemoveEdit.Text) <> '' then
-        AfterRemoveEdit.Lines.SaveToFile(GetEnvironmentVariable('HOME') +
-          '/debbuild/tmp/DEBIAN/postrm');
+        AfterRemoveEdit.Lines.SaveToFile(GetUserDir + 'debbuild/tmp/DEBIAN/postrm');
 
       //Права на скрипты pre/post (755)
       StartProcess('chmod 755 ~/debbuild/tmp/DEBIAN/{pre*,post*}', 'sh');
@@ -817,20 +852,66 @@ begin
     //Обязательная шапка
     SPEC.Add('#Created automatically by ' + Application.Title);
     SPEC.Add('');
+   { SPEC.Add('#ROSA rpmlint bypass; from /usr/share/rpmlint/config.d/rosa.error.list');
+    SPEC.Add('%define _binary_or_shlib_defines_rpath_on_system_dir 0');
+    SPEC.Add('%define _buildprereq_use 0');
+    SPEC.Add('%define _debuginfo_without_sources 0');
+    SPEC.Add('%define _description_line_too_long 0');
+    SPEC.Add('%define _dir_or_file_in_home 0');
+    SPEC.Add('%define _dir_or_file_in_mnt 0');
+    SPEC.Add('%define _dir_or_file_in_opt 0');
+    SPEC.Add('%define _dir_or_file_in_tmp 0');
+    SPEC.Add('%define _dir_or_file_in_usr_local 0');
+    SPEC.Add('%define _dir_or_file_in_var_local 0');
+    SPEC.Add('%define _double_slash_in_path 0');
+    SPEC.Add('%define _empty_debuginfo_package 0');
+    //    SPEC.Add('%define _empty_%pre 0');
+    //    SPEC.Add('%define _empty_%pretrans 0');
+    //    SPEC.Add('%define _empty_%preun 0');
+    //    SPEC.Add('%define _empty_%post 0');
+    //    SPEC.Add('%define _empty_%posttrans 0');
+    //    SPEC.Add('%define _empty_%postun 0');
+    SPEC.Add('%define _external_depfilter_with_internal_depgen 0');
+    SPEC.Add('%define _incoherent_version_in_name 0');
+    SPEC.Add('%define _info_dir_file 0');
+    SPEC.Add('%define _info_files_with_install_info_postin 0');
+    SPEC.Add('%define _info_files_with_install_info_postun 0');
+    SPEC.Add('%define _non_ghost_in_var_lock 0');
+    SPEC.Add('%define _non_ghost_in_var_run 0');
+    SPEC.Add('%define _non_standard_group 0');
+    SPEC.Add('%define _percent_in_conflicts 0');
+    SPEC.Add('%define _percent_in_dependency 0');
+    SPEC.Add('%define _percent_in_obsoletes 0');
+    SPEC.Add('%define _percent_in_provides 0');
+    SPEC.Add('%define _prereq_use 0');
+    SPEC.Add('%define _requires_on_install_info 0');
+    SPEC.Add('%define _shared_lib_not_executable 0');
+    //    SPEC.Add('%define _standard_dir_owned_by-package 0');
+    SPEC.Add('%define _summary_ended_with_dot 0');
+    SPEC.Add('%define _summary_on_multiple_lines 0');
+    SPEC.Add('%define _summary_too_long 0');
+    SPEC.Add('%define _unexpanded_macro 0');
+    SPEC.Add('%define _unstripped_binary_or_object 0'); }
+
+    SPEC.Add('');
     SPEC.Add('#Allow building noarch packages that contain binaries');
     SPEC.Add('%define _binaries_in_noarch_packages_terminate_build 0');
+
     SPEC.Add('');
     SPEC.Add('#Disable RPM-s automatic dependency');
     SPEC.Add('AutoReq: no');
     SPEC.Add('AutoProv: no');
     SPEC.Add('AutoReqProv: no');
+
     SPEC.Add('');
     SPEC.Add('#Disable check shebang (#!/bin/bash <> #!/usr/bin/bash)');
     SPEC.Add('%define __brp_mangle_shebangs %{nil}');
+
     SPEC.Add('');
     SPEC.Add('#Disable Python dependency');
     SPEC.Add('AutoReqProv: nopython');
     SPEC.Add('%define __python %{nil}');
+
     SPEC.Add('#Turn off the brp-python-bytecompile script');
     SPEC.Add('%define __brp_python_bytecompile %{nil}');
 
@@ -838,10 +919,13 @@ begin
     SPEC.Add('#Disable Java dependency');
     SPEC.Add('%define __jar_repack %{nil}');
     SPEC.Add('');
+
     SPEC.Add('#Disable build-id');
     SPEC.Add('%global _missing_build_ids_terminate_build 0');
+
     SPEC.Add('#Disable other dependency');
     SPEC.Add('%global debug_package %{nil}');
+
     SPEC.Add('');
     SPEC.Add('Name: ' + NameEdit.Text);
     SPEC.Add('Version: ' + VersEdit.Text);
@@ -956,8 +1040,7 @@ begin
       SPEC.Add('%files');
 
     //Сохраняем файл имя_пакета.spec
-    SPEC.SaveToFile(GetEnvironmentVariable('HOME') + '/rpmbuild/SPECS/' +
-      NameEdit.Text + '.spec');
+    SPEC.SaveToFile(GetUserDir + 'rpmbuild/SPECS/' + NameEdit.Text + '.spec');
 
     //Создаём пускач сборки пакета
     SPEC.Clear;
@@ -1119,11 +1202,14 @@ end;
 
 procedure TMainForm.FormCreate(Sender: TObject);
 begin
+  //Получить список валидных групп RPM
+  GetValidRPMGroups;
+
   //Флаг сохранения списка
   SaveFlag := False;
 
   //Рабочая директория в профиле
-  WorkDir := GetEnvironmentVariable('HOME') + '/.RPMCreator';
+  WorkDir := GetUserDir + '.RPMCreator';
 
   if not DirectoryExists(WorkDir) then
     MkDir(WorkDir);

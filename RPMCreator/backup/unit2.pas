@@ -13,7 +13,6 @@ type
   { TAboutForm }
 
   TAboutForm = class(TForm)
-    AboutFormStorage: TXMLPropStorage;
     Bevel1: TBevel;
     OkBtn: TButton;
     Image1: TImage;
@@ -46,11 +45,10 @@ end;
 procedure TAboutForm.FormCreate(Sender: TObject);
 begin
   Label1.Caption := Application.Title;
-  AboutFormStorage.FileName := MainForm.MainFormStorage.FileName;
+
+  //Авторазмер
+  AboutForm.Width := Label2.Left + Label2.Width + 8;
+  AboutForm.Height := OkBtn.Top + OkBtn.Height + 8;
 end;
 
 end.
-
-
-
-
