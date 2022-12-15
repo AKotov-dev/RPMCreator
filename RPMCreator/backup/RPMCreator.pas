@@ -2,15 +2,18 @@ program RPMCreator;
 
 {$mode objfpc}{$H+}
 
-uses {$IFDEF UNIX} {$IFDEF UseCThreads}
-  cthreads, {$ENDIF} {$ENDIF}
+uses
+ {$IFDEF UNIX} {$IFDEF UseCThreads}
+  cthreads,  {$ENDIF}  {$ENDIF}
   Interfaces, // this includes the LCL widgetset
   Forms,
   Unit1,
   unique_utils,
   SysUtils,
   Dialogs,
-  Unit2, SelectUnit, unpackunit { you can add units after this };
+  Unit2,
+  SelectUnit,
+  unpackunit { you can add units after this };
 
 var
   MyProg: TUniqueInstance;
@@ -18,7 +21,7 @@ var
 {$R *.res}
 
 begin
-  Application.Title:='RPMCreator v2.0';
+  Application.Title := 'RPMCreator v2.0';
   //Создаём объект с уникальным идентификатором
   MyProg := TUniqueInstance.Create('RPMCreator');
 

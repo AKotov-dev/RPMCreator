@@ -959,7 +959,7 @@ begin
     if DepsEdit.Text <> '' then
     begin
       SPEC.Add('Requires: ' + DepsEdit.Text);
-      SPEC.Add('BuildRequires: ' + DepsEdit.Text);
+    //  SPEC.Add('BuildRequires: ' + DepsEdit.Text);
       SPEC.Add('');
     end;
 
