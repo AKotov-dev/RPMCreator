@@ -124,7 +124,7 @@ type
     procedure UnpackBtnClick(Sender: TObject);
     procedure UPBtnClick(Sender: TObject);
     procedure GetValidRPMGroups;
-    procedure LoadProject(FileName: string);
+    procedure LoadProject(FileName: string; Sender: TObject);
     procedure SaveProject(FileName: string);
 
   private
@@ -160,80 +160,28 @@ uses unit2, selectunit, unpackunit;
 
 { TMainForm }
 
-//Сохранить проект
-procedure TMainForm.SaveProject(FileName: string);
-var
-  i: integer;
-  PRJ: TIniFile;
-begin
-  if FileExists(SaveFile.FileName) then
-    DeleteFile(SaveFile.FileName);
-  PRJ := TIniFile.Create(SaveFile.FileName);
-
-  //Вкладка Основное
-  PRJ.WriteString('NAME', 'name', NameEdit.Text);
-  PRJ.WriteString('VERSION', 'version', VersEdit.Text);
-  PRJ.WriteString('RELEASE', 'release', ReleaseEdit.Text);
-  PRJ.WriteString('GROUP', 'group', GroupCBox.Text);
-
-  for i := 0 to DescEdit.Lines.Count - 1 do
-    PRJ.WriteString('DESCRIPTION', IntToStr(i), DescEdit.Lines[i]);
-
-  PRJ.WriteString('MAINTAINER', 'maintainer', MaintainerEdit.Text);
-  PRJ.WriteString('VENDOR', 'vendor', VendorEdit.Text);
-  PRJ.WriteString('SUMMARY', 'summary', SummaryEdit.Text);
-  PRJ.WriteString('URLCOPY', 'urlcopy', URLCopyEdit.Text);
-  PRJ.WriteString('LICENSE', 'license', LicenseEdit.Text);
-  PRJ.WriteString('DEPS', 'deps', DepsEdit.Text);
-  PRJ.WriteBool('META', 'meta', MetaCheck.Checked);
-  PRJ.WriteBool('NOARCH', 'noarch', NoArchCheck.Checked);
-  PRJ.WriteBool('SIGN', 'sign', SignCheckBox.Checked);
-  PRJ.WriteBool('DEB', 'deb', DEBCheckBox.Checked);
-
-  for i := 0 to ListBox1.Items.Count - 1 do
-    PRJ.WriteString('FILES', IntToStr(i), ListBox1.Items[i]);
-
-  //Вкладка Сценарии
-  for i := 0 to AfterInstallEdit.Lines.Count - 1 do
-    PRJ.WriteString('AFTERINSTALL', IntToStr(i), AfterInstallEdit.Lines[i]);
-
-  for i := 0 to AfterRemoveEdit.Lines.Count - 1 do
-    PRJ.WriteString('AFTERREMOVE', IntToStr(i), AfterRemoveEdit.Lines[i]);
-
-  for i := 0 to BeforeInstallEdit.Lines.Count - 1 do
-    PRJ.WriteString('BEFOREINSTALL', IntToStr(i), BeforeInstallEdit.Lines[i]);
-
-  for i := 0 to BeforeRemoveEdit.Lines.Count - 1 do
-    PRJ.WriteString('BEFOREREMOVE', IntToStr(i), BeforeRemoveEdit.Lines[i]);
-
-  //Вкладка repack.txt
-  PRJ.WriteString('URL32', 'url32', URLEdit32.Text);
-  PRJ.WriteString('URL64', 'url64', URLEdit64.Text);
-  PRJ.WriteString('PROGRAMNAME', 'programname', ProgramNameEdit.Text);
-  PRJ.WriteString('DEVTOOL', 'devtool', DevToolEdit.Text);
-  PRJ.WriteString('TOOLVERSION', 'toolversion', ToolVersionEdit.Text);
-
-  for i := 0 to InfoMemo.Lines.Count - 1 do
-    PRJ.WriteString('INFO', IntToStr(i), InfoMemo.Lines[i]);
-
-  MainForm.Caption := Application.Title + ' <' +
-    ExtractFileName(SaveFile.FileName) + '>';
-
-  PRJ.Free;
-  SaveFlag := False;
-end;
-
 //Открыть проект
-procedure TMainForm.LoadProject(FileName: string);
+procedure TMainForm.LoadProject(FileName: string; Sender: TObject);
 var
   PRJ: TIniFile;
   i: integer;
   S: string;
 begin
-  if ParamStr(1) <> '' then
-    PRJ := TIniFile.Create(ParamStr(1))
-  else
+  Screen.Cursor := crHourGlass;
+  Application.ProcessMessages;
+
+  //Загрузка с кнопки или из параметра?
+  if Sender = LoadBtn then
+  begin
     PRJ := TIniFile.Create(OpenFile.FileName);
+    MainForm.Caption := Application.Title + ' <' +
+      ExtractFileName(OpenFile.FileName) + '>';
+  end
+  else
+  begin
+    PRJ := TIniFile.Create(ParamStr(1));
+    MainForm.Caption := Application.Title + ' <' + ExtractFileName(ParamStr(1)) + '>';
+  end;
 
   // PathEdit.Text := PRJ.ReadString('PATH', 'path', '');
   NameEdit.Text := PRJ.ReadString('NAME', 'name', '');
@@ -331,12 +279,6 @@ begin
 
   PRJ.Free;
 
-  if ParamStr(1) = '' then
-    MainForm.Caption := Application.Title + ' <' +
-      ExtractFileName(OpenFile.FileName) + '>'
-  else
-    MainForm.Caption := Application.Title + ' <' + ExtractFileName(ParamStr(1)) + '>';
-
   PageControl1.ActivePageIndex := 0;
 
   //Передача фокуса на ListBox1, если не пуст
@@ -349,8 +291,72 @@ begin
     NameEdit.SetFocus;
 
   SaveFlag := False;
+
+  Screen.Cursor := crDefault;
 end;
 
+//Сохранить проект
+procedure TMainForm.SaveProject(FileName: string);
+var
+  i: integer;
+  PRJ: TIniFile;
+begin
+  if FileExists(SaveFile.FileName) then
+    DeleteFile(SaveFile.FileName);
+  PRJ := TIniFile.Create(SaveFile.FileName);
+
+  //Вкладка Основное
+  PRJ.WriteString('NAME', 'name', NameEdit.Text);
+  PRJ.WriteString('VERSION', 'version', VersEdit.Text);
+  PRJ.WriteString('RELEASE', 'release', ReleaseEdit.Text);
+  PRJ.WriteString('GROUP', 'group', GroupCBox.Text);
+
+  for i := 0 to DescEdit.Lines.Count - 1 do
+    PRJ.WriteString('DESCRIPTION', IntToStr(i), DescEdit.Lines[i]);
+
+  PRJ.WriteString('MAINTAINER', 'maintainer', MaintainerEdit.Text);
+  PRJ.WriteString('VENDOR', 'vendor', VendorEdit.Text);
+  PRJ.WriteString('SUMMARY', 'summary', SummaryEdit.Text);
+  PRJ.WriteString('URLCOPY', 'urlcopy', URLCopyEdit.Text);
+  PRJ.WriteString('LICENSE', 'license', LicenseEdit.Text);
+  PRJ.WriteString('DEPS', 'deps', DepsEdit.Text);
+  PRJ.WriteBool('META', 'meta', MetaCheck.Checked);
+  PRJ.WriteBool('NOARCH', 'noarch', NoArchCheck.Checked);
+  PRJ.WriteBool('SIGN', 'sign', SignCheckBox.Checked);
+  PRJ.WriteBool('DEB', 'deb', DEBCheckBox.Checked);
+
+  for i := 0 to ListBox1.Items.Count - 1 do
+    PRJ.WriteString('FILES', IntToStr(i), ListBox1.Items[i]);
+
+  //Вкладка Сценарии
+  for i := 0 to AfterInstallEdit.Lines.Count - 1 do
+    PRJ.WriteString('AFTERINSTALL', IntToStr(i), AfterInstallEdit.Lines[i]);
+
+  for i := 0 to AfterRemoveEdit.Lines.Count - 1 do
+    PRJ.WriteString('AFTERREMOVE', IntToStr(i), AfterRemoveEdit.Lines[i]);
+
+  for i := 0 to BeforeInstallEdit.Lines.Count - 1 do
+    PRJ.WriteString('BEFOREINSTALL', IntToStr(i), BeforeInstallEdit.Lines[i]);
+
+  for i := 0 to BeforeRemoveEdit.Lines.Count - 1 do
+    PRJ.WriteString('BEFOREREMOVE', IntToStr(i), BeforeRemoveEdit.Lines[i]);
+
+  //Вкладка repack.txt
+  PRJ.WriteString('URL32', 'url32', URLEdit32.Text);
+  PRJ.WriteString('URL64', 'url64', URLEdit64.Text);
+  PRJ.WriteString('PROGRAMNAME', 'programname', ProgramNameEdit.Text);
+  PRJ.WriteString('DEVTOOL', 'devtool', DevToolEdit.Text);
+  PRJ.WriteString('TOOLVERSION', 'toolversion', ToolVersionEdit.Text);
+
+  for i := 0 to InfoMemo.Lines.Count - 1 do
+    PRJ.WriteString('INFO', IntToStr(i), InfoMemo.Lines[i]);
+
+  MainForm.Caption := Application.Title + ' <' +
+    ExtractFileName(SaveFile.FileName) + '>';
+
+  PRJ.Free;
+  SaveFlag := False;
+end;
 
 //Получить список валидных групп RPM
 procedure TMainForm.GetValidRPMGroups;
@@ -726,7 +732,7 @@ begin
   PageControl1.ActivePageIndex := 0;
 
   //Параметры
-  if ParamStr(1) <> '' then LoadProject(ParamStr(1));
+  if ParamStr(1) <> '' then LoadProject(ParamStr(1), nil);
 end;
 
 //Редактирование записей списка файлов и папок
@@ -755,7 +761,7 @@ begin
       SaveBtn.Click;
 
   if OpenFile.Execute then
-    LoadProject(OpenFile.FileName);
+    LoadProject(OpenFile.FileName, Sender);
 end;
 
 
