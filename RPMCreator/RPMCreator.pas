@@ -15,15 +15,16 @@ uses
   SelectUnit,
   unpackunit { you can add units after this };
 
-var
-  MyProg: TUniqueInstance;
+{var
+  MyProg: TUniqueInstance;}
 
 {$R *.res}
 
 begin
+  Application.Scaled:=True;
   Application.Title:='RPMCreator v2.1';
   //Создаём объект с уникальным идентификатором
-  MyProg := TUniqueInstance.Create('RPMCreator');
+ { MyProg := TUniqueInstance.Create('RPMCreator');
 
   //Проверяем, нет ли в системе объекта с таким ID
   if MyProg.IsRunInstance then
@@ -33,7 +34,7 @@ begin
     Halt(1);
   end
   else
-    MyProg.RunListen;
+    MyProg.RunListen;}
 
   RequireDerivedFormResource := True;
   Application.Initialize;

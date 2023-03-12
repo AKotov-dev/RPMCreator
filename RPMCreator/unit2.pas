@@ -46,7 +46,7 @@ end;
 procedure TAboutForm.FormShow(Sender: TObject);
 begin
   //Авторазмер
-  AboutForm.Width := Label2.Left + Label2.Width + 8;
+  AboutForm.Width := Label2.Left + Label2.Width + 30;
   AboutForm.Height := OkBtn.Top + OkBtn.Height + 8;
 end;
 

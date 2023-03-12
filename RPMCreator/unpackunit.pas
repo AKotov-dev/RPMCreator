@@ -22,6 +22,7 @@ type
     OpenDialog1: TOpenDialog;
     SelectDirectoryDialog1: TSelectDirectoryDialog;
     UnpackFormStorage: TXMLPropStorage;
+    procedure FormShow(Sender: TObject);
     procedure UnpackBtnClick(Sender: TObject);
     procedure EditButton1ButtonClick(Sender: TObject);
     procedure EditButton1Change(Sender: TObject);
@@ -119,6 +120,13 @@ begin
         EditButton1.Text +
         ' -o./tmp; rm -rf ./deb; mkdir ./deb; tar -xvf ./tmp/*.tar -C ./deb; rm -rf ./tmp');
   end;
+end;
+
+procedure TUnpackForm.FormShow(Sender: TObject);
+begin
+  UnPackFormStorage.Restore;
+  EditButton1.Button.Width := EditButton1.Height;
+  EditButton2.Button.Width := EditButton2.Height;
 end;
 
 procedure TUnpackForm.EditButton2ButtonClick(Sender: TObject);

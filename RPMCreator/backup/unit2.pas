@@ -18,6 +18,7 @@ type
     Image1: TImage;
     Label1: TLabel;
     Label2: TLabel;
+    procedure FormShow(Sender: TObject);
     procedure OkBtnClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
   private
@@ -42,13 +43,16 @@ begin
   AboutForm.Close;
 end;
 
+procedure TAboutForm.FormShow(Sender: TObject);
+begin
+  //Авторазмер
+  AboutForm.Width := Label2.Left + Label2.Width + 20;
+  AboutForm.Height := OkBtn.Top + OkBtn.Height + 8;
+end;
+
 procedure TAboutForm.FormCreate(Sender: TObject);
 begin
   Label1.Caption := Application.Title;
-
-  //Авторазмер
-  AboutForm.Width := Label2.Left + Label2.Width + 8;
-  AboutForm.Height := OkBtn.Top + OkBtn.Height + 8;
 end;
 
 end.

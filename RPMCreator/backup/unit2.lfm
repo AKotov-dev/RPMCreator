@@ -1,17 +1,18 @@
 object AboutForm: TAboutForm
-  Left = 302
+  Left = 289
   Height = 277
-  Top = 125
-  Width = 387
+  Top = 126
+  Width = 405
   ActiveControl = OkBtn
   Caption = 'About'
   ClientHeight = 277
-  ClientWidth = 387
+  ClientWidth = 405
   FormStyle = fsStayOnTop
   OnCreate = FormCreate
+  OnShow = FormShow
   Position = poMainFormCenter
   SessionProperties = 'Width;Height'
-  LCLVersion = '2.2.0.4'
+  LCLVersion = '2.2.4.0'
   object Image1: TImage
     Left = 8
     Height = 72
@@ -377,6 +378,7 @@ object AboutForm: TAboutForm
     Font.Height = -19
     Font.Name = 'Sans'
     Font.Style = [fsBold]
+    ParentColor = False
     ParentFont = False
   end
   object Label2: TLabel
@@ -384,7 +386,8 @@ object AboutForm: TAboutForm
     Height = 170
     Top = 48
     Width = 253
-    Caption = 'Packages build program'#10'  '#10'License: GPLv3'#10'Grantitudes: AlexL'#10'Compilation: Lazarus 2.2.0'#10'Author: alex_q_2000 (C) 2021'#10'  '#10'Used by rpmbuild (spec, src)'#10'  '#10'Russian Linux Forum: https://linuxforum.ru'
+    Caption = 'Packages build program'#10'  '#10'License: GPLv3'#10'Compilation: Lazarus 2.2.4'#10'Grantitudes: AlexL, Oberon'#10'Author: alex_q_2000 (C) 2021'#10'  '#10'Used by rpmbuild (spec, src)'#10'  '#10'Russian Linux Forum: https://linuxforum.ru'
+    ParentColor = False
   end
   object Bevel1: TBevel
     AnchorSideLeft.Control = Owner
@@ -394,11 +397,11 @@ object AboutForm: TAboutForm
     AnchorSideRight.Side = asrBottom
     Left = 8
     Height = 10
-    Top = 233
-    Width = 371
+    Top = 231
+    Width = 389
     Anchors = [akTop, akLeft, akRight]
     BorderSpacing.Left = 8
-    BorderSpacing.Top = 15
+    BorderSpacing.Top = 13
     BorderSpacing.Right = 8
     Shape = bsTopLine
   end
@@ -407,9 +410,9 @@ object AboutForm: TAboutForm
     AnchorSideLeft.Side = asrCenter
     AnchorSideTop.Control = Bevel1
     AnchorSideRight.Side = asrBottom
-    Left = 156
-    Height = 28
-    Top = 241
+    Left = 165
+    Height = 30
+    Top = 239
     Width = 75
     BorderSpacing.Top = 8
     BorderSpacing.Right = 165

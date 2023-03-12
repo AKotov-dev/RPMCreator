@@ -1,16 +1,17 @@
 object UnpackForm: TUnpackForm
-  Left = 348
+  Left = 359
   Height = 572
-  Top = 143
+  Top = 164
   Width = 780
   Caption = 'Package unpacker'
   ClientHeight = 572
   ClientWidth = 780
   FormStyle = fsStayOnTop
   OnCreate = FormCreate
+  OnShow = FormShow
   Position = poMainFormCenter
   SessionProperties = 'Height;Width'
-  LCLVersion = '2.0.10.0'
+  LCLVersion = '2.2.4.0'
   object LogMemo: TMemo
     AnchorSideLeft.Control = Owner
     AnchorSideTop.Control = EditButton2
@@ -20,9 +21,9 @@ object UnpackForm: TUnpackForm
     AnchorSideBottom.Control = Owner
     AnchorSideBottom.Side = asrBottom
     Left = 5
-    Height = 422
+    Height = 419
     Hint = '|Log of the package unpacking process'
-    Top = 145
+    Top = 148
     Width = 770
     Align = alBottom
     Anchors = [akTop, akLeft, akRight, akBottom]
@@ -41,8 +42,8 @@ object UnpackForm: TUnpackForm
     AnchorSideLeft.Control = EditButton1
     AnchorSideBottom.Control = EditButton1
     Left = 5
-    Height = 15
-    Top = 26
+    Height = 17
+    Top = 24
     Width = 144
     Anchors = [akLeft, akBottom]
     BorderSpacing.Bottom = 3
@@ -55,7 +56,7 @@ object UnpackForm: TUnpackForm
     AnchorSideRight.Control = Owner
     AnchorSideRight.Side = asrBottom
     Left = 5
-    Height = 36
+    Height = 37
     Hint = '|Select the package to unpack'
     Top = 44
     Width = 770
@@ -81,9 +82,9 @@ object UnpackForm: TUnpackForm
     AnchorSideRight.Control = Owner
     AnchorSideRight.Side = asrBottom
     Left = 5
-    Height = 36
+    Height = 37
     Hint = '|Select the directory to save the contents of the package'
-    Top = 99
+    Top = 101
     Width = 770
     Anchors = [akTop, akLeft, akRight]
     BorderSpacing.Left = 5
@@ -106,7 +107,7 @@ object UnpackForm: TUnpackForm
     AnchorSideLeft.Control = EditButton2
     AnchorSideBottom.Control = EditButton2
     Left = 5
-    Height = 15
+    Height = 17
     Top = 81
     Width = 138
     Anchors = [akLeft, akBottom]
@@ -118,11 +119,11 @@ object UnpackForm: TUnpackForm
   object UnpackBtn: TButton
     AnchorSideRight.Control = Owner
     AnchorSideRight.Side = asrBottom
-    Left = 712
-    Height = 28
+    Left = 696
+    Height = 30
     Hint = '|Start unpacking'
-    Top = 8
-    Width = 63
+    Top = 6
+    Width = 79
     Anchors = [akTop, akRight]
     BorderSpacing.Right = 5
     Caption = 'Ok'

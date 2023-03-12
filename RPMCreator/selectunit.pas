@@ -168,6 +168,7 @@ end;
 
 procedure TSelectForm.FormShow(Sender: TObject);
 begin
+  SelectFormStorage.Restore;
   UpdateBtn.Click;
 end;
 
