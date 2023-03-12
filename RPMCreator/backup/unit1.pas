@@ -145,6 +145,7 @@ resourcestring
   SInputName = 'Please, enter the name of the package:';
   SSymLink = 'This is SymLink! Need a real target!';
   SEditRecord = 'Editing an entry:';
+    SAppIsRunning = 'Application is running!';
 
 var
   MainForm: TMainForm;

@@ -1,7 +1,7 @@
 object MainForm: TMainForm
-  Left = 287
+  Left = 479
   Height = 721
-  Top = 111
+  Top = 277
   Width = 989
   ActiveControl = LoadBtn
   Caption = 'RPMCreator'
@@ -348,7 +348,6 @@ object MainForm: TMainForm
         Color = 15663103
         ItemHeight = 0
         Items.Strings = (
-          '1'
           'Accessibility'
           'Archiving/Backup'
           'Archiving/Cd burning'

@@ -4,7 +4,7 @@ program RPMCreator;
 
 uses
  {$IFDEF UNIX}
-  cthreads,   {$ENDIF}
+  cthreads,    {$ENDIF}
   Interfaces, // this includes the LCL widgetset
   Forms,
   Unit1,
@@ -16,8 +16,8 @@ uses
   unpackunit,
   LoadGroupsTRD { you can add units after this };
 
-{var
-  MyProg: TUniqueInstance;}
+var
+  MyProg: TUniqueInstance;
 
 {$R *.res}
 
