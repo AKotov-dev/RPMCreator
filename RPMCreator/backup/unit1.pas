@@ -123,7 +123,6 @@ type
     procedure TrimEdits;
     procedure UnpackBtnClick(Sender: TObject);
     procedure UPBtnClick(Sender: TObject);
-    procedure GetValidRPMGroups;
     procedure LoadProject(FileName: string; Sender: TObject);
     procedure SaveProject(FileName: string);
 
@@ -154,7 +153,7 @@ var
 
 implementation
 
-uses unit2, selectunit, unpackunit;
+uses unit2, LoadGroupsTRD, selectunit, unpackunit;
 
 {$R *.lfm}
 
@@ -168,6 +167,7 @@ var
   S: string;
 begin
   Screen.Cursor := crHourGlass;
+  Application.ProcessMessages;
 
   //Загрузка с кнопки или из параметра?
   if Sender = LoadBtn then
@@ -355,39 +355,6 @@ begin
 
   PRJ.Free;
   SaveFlag := False;
-end;
-
-//Получить список валидных групп RPM
-procedure TMainForm.GetValidRPMGroups;
-var
-  S: TStringList;
-  ExProcess: TProcess;
-begin
-  Screen.Cursor := crHourGlass;
-  Application.ProcessMessages;
-
-  S := TStringList.Create;
-  ExProcess := TProcess.Create(nil);
-
-  try
-    ExProcess.Executable := 'bash';
-    ExProcess.Parameters.Add('-c');
-    ExProcess.Options := [poUsePipes];
-
-    ExProcess.Parameters.Add(
-      '[[ $(type -f rpmlint 2>/dev/null) ]] && rpmlint --explain non-standard-group ' +
-      '| grep "\"" | tr -d "\"|." | tr -d [:space:] | tr "," "\n"');
-
-    ExProcess.Execute;
-    S.LoadFromStream(ExProcess.Output);
-
-    if S.Count <> 0 then GroupCBox.Items.Assign(S);
-
-  finally
-    S.Free;
-    ExProcess.Free;
-    Screen.Cursor := crDefault;
-  end;
 end;
 
 //Проверка - каталог пуст
@@ -723,6 +690,9 @@ begin
 end;
 
 procedure TMainForm.FormShow(Sender: TObject);
+var
+  FStartLoadGroups: TThread;
+  //Поток считывания валидных групп
 begin
   //For Plasma
   MainFormStorage.Restore;
@@ -732,6 +702,10 @@ begin
 
   //Параметры
   if ParamStr(1) <> '' then LoadProject(ParamStr(1), nil);
+
+  //Получить список валидных групп RPM
+  FStartLoadGroups := StartLoadGroups.Create(False);
+  FStartLoadGroups.Priority := tpNormal;
 end;
 
 //Редактирование записей списка файлов и папок
@@ -1222,9 +1196,6 @@ end;
 
 procedure TMainForm.FormCreate(Sender: TObject);
 begin
-  //Получить список валидных групп RPM
-  GetValidRPMGroups;
-
   //Флаг сохранения списка
   SaveFlag := False;
 

@@ -348,6 +348,7 @@ object MainForm: TMainForm
         Color = 15663103
         ItemHeight = 0
         Items.Strings = (
+          '1'
           'Accessibility'
           'Archiving/Backup'
           'Archiving/Cd burning'
