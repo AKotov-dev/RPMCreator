@@ -669,7 +669,7 @@ object MainForm: TMainForm
           '#!/bin/bash'
           '#ldconfig'
           '#update-desktop-database -q /usr/share/applications'
-          '#update-mime-database /usr/share/mime'
+          '#update-mime-database -n /usr/share/mime'
           '#gtk-update-icon-cache -q -f /usr/share/icons/hicolor'
         )
         OnChange = NameEditChange
@@ -698,7 +698,7 @@ object MainForm: TMainForm
           '#!/bin/bash'
           '#ldconfig'
           '#update-desktop-database -q /usr/share/applications'
-          '#update-mime-database /usr/share/mime'
+          '#update-mime-database -n /usr/share/mime'
           '#gtk-update-icon-cache -q -f /usr/share/icons/hicolor'
         )
         OnChange = NameEditChange

@@ -668,9 +668,9 @@ object MainForm: TMainForm
         Lines.Strings = (
           '#!/bin/bash'
           '#ldconfig'
-          '#update-desktop-database -q /usr/share/applications'
-          '#update-mime-database /usr/share/mime'
           '#gtk-update-icon-cache -q -f /usr/share/icons/hicolor'
+          '#update-desktop-database -q /usr/share/applications'
+          '#export PKGSYSTEM_ENABLE_FSYNC=0 && update-mime-database -n /usr/share/mime'
         )
         OnChange = NameEditChange
         ParentShowHint = False
@@ -697,9 +697,9 @@ object MainForm: TMainForm
         Lines.Strings = (
           '#!/bin/bash'
           '#ldconfig'
-          '#update-desktop-database -q /usr/share/applications'
-          '#update-mime-database /usr/share/mime'
           '#gtk-update-icon-cache -q -f /usr/share/icons/hicolor'
+          '#update-desktop-database -q /usr/share/applications'
+          '#export PKGSYSTEM_ENABLE_FSYNC=0 && update-mime-database -n /usr/share/mime'
         )
         OnChange = NameEditChange
         ParentShowHint = False

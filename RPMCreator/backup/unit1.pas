@@ -381,6 +381,7 @@ var
 begin
   Screen.Cursor := crHourGlass;
   Application.ProcessMessages;
+
   ExProcess := TProcess.Create(nil);
   try
     ExProcess.Executable := terminal;  //sh или xterm
@@ -687,11 +688,9 @@ end;
 
 procedure TMainForm.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 begin
-  Screen.Cursor:=crHourGlass;
   //Очищаем рабочую папку
   MainForm.Caption := SClearWorkDir;
   StartProcess('find ' + WorkDir + '/* -type f ! -name "*.xml" -delete', 'sh');
-  Screen.Cursor:=crDefault;
 end;
 
 procedure TMainForm.FormCloseQuery(Sender: TObject; var CanClose: boolean);
