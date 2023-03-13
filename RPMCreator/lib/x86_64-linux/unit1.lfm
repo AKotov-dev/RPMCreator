@@ -1142,7 +1142,7 @@ object MainForm: TMainForm
       AnchorSideLeft.Side = asrBottom
       AnchorSideTop.Control = SaveBtn
       AnchorSideTop.Side = asrCenter
-      Left = 456
+      Left = 459
       Height = 32
       Hint = '|Empty package'
       Top = 5
@@ -1157,7 +1157,7 @@ object MainForm: TMainForm
     object NoArchCheck: TCheckBox
       AnchorSideTop.Control = SaveBtn
       AnchorSideTop.Side = asrCenter
-      Left = 376
+      Left = 379
       Height = 32
       Hint = '|For all architectures'
       Top = 5
@@ -1173,7 +1173,7 @@ object MainForm: TMainForm
     object SignCheckBox: TCheckBox
       AnchorSideTop.Control = SaveBtn
       AnchorSideTop.Side = asrCenter
-      Left = 536
+      Left = 539
       Height = 32
       Hint = '|Sign RPM package'
       Top = 5
@@ -1187,7 +1187,7 @@ object MainForm: TMainForm
     object Bevel4: TBevel
       AnchorSideTop.Control = SaveBtn
       AnchorSideTop.Side = asrCenter
-      Left = 528
+      Left = 531
       Height = 31
       Top = 6
       Width = 9
@@ -1196,7 +1196,7 @@ object MainForm: TMainForm
     object DEBCheckBox: TCheckBox
       AnchorSideTop.Control = SaveBtn
       AnchorSideTop.Side = asrCenter
-      Left = 640
+      Left = 643
       Height = 32
       Hint = '|Additionally build a DEB package in ~/debbuild'
       Top = 5
@@ -1210,7 +1210,7 @@ object MainForm: TMainForm
     object Bevel6: TBevel
       AnchorSideTop.Control = SaveBtn
       AnchorSideTop.Side = asrCenter
-      Left = 632
+      Left = 635
       Height = 31
       Top = 6
       Width = 9
