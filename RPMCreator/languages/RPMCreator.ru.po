@@ -330,7 +330,7 @@ msgid "Basic"
 msgstr "Основное"
 
 #: tmainform.tabsheet2.caption
-msgid "Script's"
+msgid "Scripts"
 msgstr "Скрипты"
 
 #: tmainform.tabsheet3.caption

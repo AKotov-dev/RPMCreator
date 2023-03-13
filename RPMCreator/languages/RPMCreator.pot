@@ -308,7 +308,7 @@ msgid "Basic"
 msgstr ""
 
 #: tmainform.tabsheet2.caption
-msgid "Script's"
+msgid "Scripts"
 msgstr ""
 
 #: tmainform.tabsheet3.caption
