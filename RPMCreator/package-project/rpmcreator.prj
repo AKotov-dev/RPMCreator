@@ -56,8 +56,14 @@ deb=0
 
 [AFTERINSTALL]
 0=#!/bin/bash
-1=update-mime-database /usr/share/mime
-2=update-desktop-database -q /usr/share/applications
+1=update-desktop-database -q /usr/share/applications
+2=export PKGSYSTEM_ENABLE_FSYNC=0 && update-mime-database /usr/share/mime
+3=gtk-update-icon-cache -q -f /usr/share/icons/hicolor
+
+[AFTERREMOVE]
+0=#!/bin/bash
+1=update-desktop-database -q /usr/share/applications
+2=export PKGSYSTEM_ENABLE_FSYNC=0 && update-mime-database /usr/share/mime
 3=gtk-update-icon-cache -q -f /usr/share/icons/hicolor
 
 [URL32]
