@@ -5,7 +5,7 @@ unit LoadGroupsTRD;
 interface
 
 uses
-  Classes, Process, SysUtils, Forms;
+  Classes, Process, SysUtils, Forms, Controls;
 
 type
   StartLoadGroups = class(TThread)

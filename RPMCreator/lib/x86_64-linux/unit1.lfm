@@ -1,7 +1,7 @@
 object MainForm: TMainForm
-  Left = 293
+  Left = 286
   Height = 721
-  Top = 92
+  Top = 103
   Width = 989
   ActiveControl = LoadBtn
   Caption = 'RPMCreator'
@@ -33,7 +33,7 @@ object MainForm: TMainForm
         AnchorSideBottom.Control = NameEdit
         Left = 5
         Height = 17
-        Top = 233
+        Top = 235
         Width = 98
         Anchors = [akLeft, akBottom]
         BorderSpacing.Bottom = 3
@@ -49,7 +49,7 @@ object MainForm: TMainForm
         Left = 5
         Height = 37
         Hint = '|Sample: mypackage'
-        Top = 253
+        Top = 255
         Width = 219
         Color = 15663103
         OnChange = NameEditChange
@@ -63,7 +63,7 @@ object MainForm: TMainForm
         AnchorSideBottom.Control = VersEdit
         Left = 232
         Height = 17
-        Top = 233
+        Top = 235
         Width = 52
         Anchors = [akLeft, akBottom]
         BorderSpacing.Bottom = 3
@@ -79,7 +79,7 @@ object MainForm: TMainForm
         Left = 232
         Height = 37
         Hint = '|Sample: 1.2'
-        Top = 253
+        Top = 255
         Width = 80
         Color = 15663103
         OnChange = NameEditChange
@@ -93,7 +93,7 @@ object MainForm: TMainForm
         AnchorSideBottom.Control = ReleaseEdit
         Left = 320
         Height = 17
-        Top = 233
+        Top = 235
         Width = 55
         Anchors = [akLeft, akBottom]
         BorderSpacing.Bottom = 3
@@ -109,7 +109,7 @@ object MainForm: TMainForm
         Left = 320
         Height = 37
         Hint = '|Sample: 0.mrx8'
-        Top = 253
+        Top = 255
         Width = 88
         Color = 15663103
         OnChange = NameEditChange
@@ -123,7 +123,7 @@ object MainForm: TMainForm
         AnchorSideBottom.Control = DescEdit
         Left = 5
         Height = 17
-        Top = 349
+        Top = 351
         Width = 133
         Anchors = [akLeft, akBottom]
         BorderSpacing.Bottom = 3
@@ -139,7 +139,7 @@ object MainForm: TMainForm
         AnchorSideBottom.Control = MaintainerEdit
         Left = 5
         Height = 17
-        Top = 291
+        Top = 293
         Width = 67
         Anchors = [akLeft, akBottom]
         BorderSpacing.Bottom = 3
@@ -152,7 +152,7 @@ object MainForm: TMainForm
         Left = 5
         Height = 37
         Hint = '|Sample: Alex Kotov'
-        Top = 311
+        Top = 313
         Width = 259
         BorderSpacing.Left = 5
         BorderSpacing.Right = 10
@@ -179,7 +179,7 @@ object MainForm: TMainForm
         AnchorSideRight.Side = asrBottom
         Left = 5
         Height = 98
-        Top = 369
+        Top = 371
         Width = 973
         Anchors = [akTop, akLeft, akRight]
         BorderSpacing.Right = 5
@@ -220,7 +220,7 @@ object MainForm: TMainForm
         AnchorSideBottom.Control = VendorEdit
         Left = 272
         Height = 17
-        Top = 291
+        Top = 293
         Width = 47
         Anchors = [akLeft, akBottom]
         BorderSpacing.Bottom = 3
@@ -235,7 +235,7 @@ object MainForm: TMainForm
         Left = 272
         Height = 37
         Hint = '|Sample: alex_q_2000 (C) 2021'
-        Top = 311
+        Top = 313
         Width = 256
         BorderSpacing.Left = 5
         BorderSpacing.Right = 5
@@ -305,7 +305,7 @@ object MainForm: TMainForm
         AnchorSideBottom.Control = LicenseEdit
         Left = 812
         Height = 17
-        Top = 233
+        Top = 235
         Width = 47
         Anchors = [akLeft, akBottom]
         BorderSpacing.Bottom = 3
@@ -342,7 +342,7 @@ object MainForm: TMainForm
         AnchorSideRight.Side = asrBottom
         Left = 416
         Height = 37
-        Top = 253
+        Top = 255
         Width = 328
         BorderSpacing.Right = 5
         Color = 15663103
@@ -480,7 +480,7 @@ object MainForm: TMainForm
         AnchorSideBottom.Control = GroupCBox
         Left = 416
         Height = 17
-        Top = 233
+        Top = 235
         Width = 43
         Anchors = [akLeft, akBottom]
         BorderSpacing.Bottom = 3
@@ -496,7 +496,7 @@ object MainForm: TMainForm
         AnchorSideRight.Side = asrBottom
         Left = 812
         Height = 37
-        Top = 253
+        Top = 255
         Width = 166
         Anchors = [akTop, akRight]
         BorderSpacing.Right = 5
@@ -526,7 +526,7 @@ object MainForm: TMainForm
         AnchorSideRight.Side = asrBottom
         Left = 536
         Height = 37
-        Top = 311
+        Top = 313
         Width = 442
         Anchors = [akTop, akLeft, akRight]
         BorderSpacing.Left = 5
@@ -542,7 +542,7 @@ object MainForm: TMainForm
         AnchorSideBottom.Control = SummaryEdit
         Left = 536
         Height = 17
-        Top = 291
+        Top = 293
         Width = 211
         Anchors = [akLeft, akBottom]
         BorderSpacing.Bottom = 3
@@ -558,7 +558,7 @@ object MainForm: TMainForm
         AnchorSideBottom.Control = URLCopyEdit
         Left = 5
         Height = 17
-        Top = 471
+        Top = 473
         Width = 375
         Anchors = [akLeft, akBottom]
         BorderSpacing.Bottom = 3
@@ -575,7 +575,7 @@ object MainForm: TMainForm
         Left = 5
         Height = 37
         Hint = '|Sample: https://github.com/AKotov-dev/RPMCreator'
-        Top = 491
+        Top = 493
         Width = 973
         Anchors = [akTop, akLeft, akRight]
         BorderSpacing.Right = 5

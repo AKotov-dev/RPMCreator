@@ -1,7 +1,7 @@
 object UnpackForm: TUnpackForm
-  Left = 359
+  Left = 302
   Height = 572
-  Top = 164
+  Top = 135
   Width = 780
   Caption = 'Package unpacker'
   ClientHeight = 572
@@ -119,14 +119,14 @@ object UnpackForm: TUnpackForm
   object UnpackBtn: TButton
     AnchorSideRight.Control = Owner
     AnchorSideRight.Side = asrBottom
-    Left = 696
+    Left = 680
     Height = 30
     Hint = '|Start unpacking'
     Top = 6
-    Width = 79
+    Width = 95
     Anchors = [akTop, akRight]
     BorderSpacing.Right = 5
-    Caption = 'Ok'
+    Caption = 'Start'
     Enabled = False
     OnClick = UnpackBtnClick
     ParentFont = False

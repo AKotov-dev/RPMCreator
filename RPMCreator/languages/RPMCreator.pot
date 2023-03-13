@@ -325,6 +325,7 @@ msgid "HELP"
 msgstr ""
 
 #: tmainform.unpackbtn.caption
+msgctxt "tmainform.unpackbtn.caption"
 msgid "Unpack"
 msgstr ""
 
@@ -408,7 +409,7 @@ msgstr ""
 
 #: tunpackform.unpackbtn.caption
 msgctxt "tunpackform.unpackbtn.caption"
-msgid "Ok"
+msgid "Start"
 msgstr ""
 
 #: tunpackform.unpackbtn.hint

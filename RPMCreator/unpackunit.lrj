@@ -8,5 +8,5 @@
 {"hash":12558,"name":"tunpackform.editbutton2.buttoncaption","sourcebytes":[46,46,46],"value":"..."},
 {"hash":45489066,"name":"tunpackform.label2.caption","sourcebytes":[67,111,110,116,101,110,116,32,117,112,108,111,97,100,32,102,111,108,100,101,114,58],"value":"Content upload folder:"},
 {"hash":250117815,"name":"tunpackform.unpackbtn.hint","sourcebytes":[124,83,116,97,114,116,32,117,110,112,97,99,107,105,110,103],"value":"|Start unpacking"},
-{"hash":1371,"name":"tunpackform.unpackbtn.caption","sourcebytes":[79,107],"value":"Ok"}
+{"hash":5941396,"name":"tunpackform.unpackbtn.caption","sourcebytes":[83,116,97,114,116],"value":"Start"}
 ]}

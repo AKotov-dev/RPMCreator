@@ -4,14 +4,14 @@ program RPMCreator;
 
 uses
  {$IFDEF UNIX}
-  cthreads,      {$ENDIF}
+  cthreads,   {$ENDIF}
   Interfaces, // this includes the LCL widgetset
   Forms,
   Unit1,
   unique_utils,
   SysUtils,
- Classes,
- Process,
+  Classes,
+  Process,
   Dialogs,
   Unit2,
   SelectUnit,
@@ -52,7 +52,6 @@ begin
   PID.Free;
 
   //---
-
 
   Application.Scaled := True;
   Application.Title := 'RPMCreator v2.1';

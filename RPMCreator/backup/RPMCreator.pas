@@ -4,14 +4,14 @@ program RPMCreator;
 
 uses
  {$IFDEF UNIX}
-  cthreads,      {$ENDIF}
+  cthreads,       {$ENDIF}
   Interfaces, // this includes the LCL widgetset
   Forms,
   Unit1,
   unique_utils,
   SysUtils,
- Classes,
- Process,
+  Classes,
+  Process,
   Dialogs,
   Unit2,
   SelectUnit,
@@ -31,7 +31,7 @@ begin
   try
     ExProcess.Executable := 'bash';
     ExProcess.Parameters.Add('-c');
-    ExProcess.Parameters.Add('pidof xraygui'); //Имя приложения
+    ExProcess.Parameters.Add('pidof RPMCreator'); //Имя приложения
     ExProcess.Options := ExProcess.Options + [poUsePipes];
 
     ExProcess.Execute;

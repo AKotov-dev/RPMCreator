@@ -347,6 +347,7 @@ msgid "HELP"
 msgstr "Помощь"
 
 #: tmainform.unpackbtn.caption
+msgctxt "tmainform.unpackbtn.caption"
 msgid "Unpack"
 msgstr "Распаковать"
 
@@ -435,8 +436,8 @@ msgstr "|Лог процесса распаковки пакета"
 
 #: tunpackform.unpackbtn.caption
 msgctxt "tunpackform.unpackbtn.caption"
-msgid "Ok"
-msgstr ""
+msgid "Start"
+msgstr "Старт"
 
 #: tunpackform.unpackbtn.hint
 msgctxt "tunpackform.unpackbtn.hint"

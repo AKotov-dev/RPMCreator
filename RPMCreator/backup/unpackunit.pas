@@ -119,6 +119,10 @@ begin
       UnpackProcess('rm -rf ./tmp ./deb; mkdir ./tmp ./deb; 7z x -y ' +
         EditButton1.Text +
         ' -o./tmp; rm -rf ./deb; mkdir ./deb; tar -xvf ./tmp/*.tar -C ./deb; rm -rf ./tmp');
+
+    //Промотать список вниз
+    LogMemo.SelStart := Length(LogMemo.Text);
+    LogMemo.SelLength := 0;
   end;
 end;
 
