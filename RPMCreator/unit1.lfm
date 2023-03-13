@@ -1110,7 +1110,7 @@ object MainForm: TMainForm
     end
     object AboutBtn: TButton
       AnchorSideRight.Control = BuildBtn
-      Left = 757
+      Left = 789
       Height = 30
       Hint = '|About'
       Top = 6
@@ -1126,10 +1126,10 @@ object MainForm: TMainForm
     object BuildBtn: TButton
       AnchorSideRight.Control = Panel1
       AnchorSideRight.Side = asrBottom
-      Left = 791
+      Left = 823
       Height = 30
       Top = 6
-      Width = 192
+      Width = 160
       Anchors = [akTop, akRight]
       BorderSpacing.Right = 5
       Caption = 'Build package'
