@@ -310,7 +310,6 @@ object MainForm: TMainForm
         Anchors = [akLeft, akBottom]
         BorderSpacing.Bottom = 3
         Caption = 'License:'
-        Font.Color = clBlue
         ParentColor = False
         ParentFont = False
       end

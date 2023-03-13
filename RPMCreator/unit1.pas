@@ -381,6 +381,7 @@ var
 begin
   Screen.Cursor := crHourGlass;
   Application.ProcessMessages;
+
   ExProcess := TProcess.Create(nil);
   try
     ExProcess.Executable := terminal;  //sh или xterm
