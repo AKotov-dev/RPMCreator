@@ -140,6 +140,10 @@ msgstr ""
 msgid "|Move record down"
 msgstr "|Переместить запись вниз"
 
+#: tmainform.editentry.caption
+msgid "Edit an entry"
+msgstr "Редактировать запись"
+
 #: tmainform.infomemo.hint
 msgctxt "tmainform.infomemo.hint"
 msgid "|/usr/share/doc/package_name/repack.txt"
@@ -439,6 +443,10 @@ msgctxt "tunpackform.unpackbtn.hint"
 msgid "|Start unpacking"
 msgstr "|Приступить к распаковке"
 
+#: unit1.sapprunning
+msgid "The program is already running!"
+msgstr "Программа уже запущена!"
+
 #: unit1.sclearworkdir
 msgid "Clearing the working directory..."
 msgstr "Очистка рабочей директории..."
@@ -486,4 +494,3 @@ msgstr "Подпись пакетов:"
 #: unit1.ssymlink
 msgid "This is SymLink! Need a real target!"
 msgstr "Это SymLink! Нужна настоящая цель!"
-

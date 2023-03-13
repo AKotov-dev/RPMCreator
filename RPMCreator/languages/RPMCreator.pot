@@ -119,6 +119,10 @@ msgstr ""
 msgid "|Move record down"
 msgstr ""
 
+#: tmainform.editentry.caption
+msgid "Edit an entry"
+msgstr ""
+
 #: tmainform.infomemo.hint
 msgctxt "tmainform.infomemo.hint"
 msgid "|/usr/share/doc/package_name/repack.txt"
@@ -409,6 +413,10 @@ msgstr ""
 
 #: tunpackform.unpackbtn.hint
 msgid "|Start unpacking"
+msgstr ""
+
+#: unit1.sapprunning
+msgid "The program is already running!"
 msgstr ""
 
 #: unit1.sclearworkdir

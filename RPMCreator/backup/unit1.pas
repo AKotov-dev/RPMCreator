@@ -26,6 +26,7 @@ type
     Bevel6: TBevel;
     Button1: TButton;
     DEBCheckBox: TCheckBox;
+    EditEntry: TMenuItem;
     UPBtn: TButton;
     DNBtn: TButton;
     UnpackBtn: TButton;
@@ -103,6 +104,7 @@ type
     procedure Button3Click(Sender: TObject);
     procedure CreateRepackTxtClick(Sender: TObject);
     procedure DevToolEditChange(Sender: TObject);
+    procedure EditEntryClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCloseQuery(Sender: TObject; var CanClose: boolean);
     procedure FormShow(Sender: TObject);
@@ -145,7 +147,6 @@ resourcestring
   SInputName = 'Please, enter the name of the package:';
   SSymLink = 'This is SymLink! Need a real target!';
   SEditRecord = 'Editing an entry:';
-    SAppIsRunning = 'Application is running!';
 
 var
   MainForm: TMainForm;
@@ -664,6 +665,25 @@ begin
   SaveFlag := True;
 end;
 
+//Редактирование записей списка файлов и папок
+procedure TMainForm.EditEntryClick(Sender: TObject);
+var
+  S: string;
+begin
+  if ListBox1.Count <> 0 then
+  begin
+    S := ListBox1.Items.Strings[ListBox1.ItemIndex];
+    if not InputQuery('RPMCreator', SEditRecord, S) or (Trim(S) = '') then
+      Exit
+    else
+    begin
+      ListBox1.Items.Strings[ListBox1.ItemIndex] := S;
+      SaveFlag := True;
+    end;
+  end;
+
+end;
+
 procedure TMainForm.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 begin
   //Очищаем рабочую папку
@@ -711,20 +731,8 @@ end;
 
 //Редактирование записей списка файлов и папок
 procedure TMainForm.ListBox1DblClick(Sender: TObject);
-var
-  S: string;
 begin
-  if ListBox1.Count <> 0 then
-  begin
-    S := ListBox1.Items.Strings[ListBox1.ItemIndex];
-    if not InputQuery('RPMCreator', SEditRecord, S) or (Trim(S) = '') then
-      Exit
-    else
-    begin
-      ListBox1.Items.Strings[ListBox1.ItemIndex] := S;
-      SaveFlag := True;
-    end;
-  end;
+  EditEntry.Click;
 end;
 
 procedure TMainForm.LoadBtnClick(Sender: TObject);
