@@ -74,6 +74,7 @@ object MainForm: TMainForm
         ParentFont = False
       end
       object VersEdit: TEdit
+        AnchorSideTop.Control = NameEdit
         AnchorSideRight.Side = asrBottom
         Left = 232
         Height = 37
@@ -103,6 +104,7 @@ object MainForm: TMainForm
         ParentFont = False
       end
       object ReleaseEdit: TEdit
+        AnchorSideTop.Control = VersEdit
         AnchorSideRight.Side = asrBottom
         Left = 320
         Height = 37
@@ -224,6 +226,7 @@ object MainForm: TMainForm
       end
       object VendorEdit: TEdit
         AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = MaintainerEdit
         AnchorSideRight.Control = TabSheet1
         AnchorSideRight.Side = asrBottom
         Left = 272
@@ -330,6 +333,7 @@ object MainForm: TMainForm
         Shape = bsLeftLine
       end
       object GroupCBox: TComboBox
+        AnchorSideTop.Control = ReleaseEdit
         AnchorSideRight.Control = TabSheet1
         AnchorSideRight.Side = asrBottom
         Left = 416
@@ -483,6 +487,7 @@ object MainForm: TMainForm
         ParentFont = False
       end
       object LicenseEdit: TComboBox
+        AnchorSideTop.Control = GroupCBox
         AnchorSideRight.Control = TabSheet1
         AnchorSideRight.Side = asrBottom
         Left = 812
@@ -512,6 +517,7 @@ object MainForm: TMainForm
       end
       object SummaryEdit: TEdit
         AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = VendorEdit
         AnchorSideRight.Control = TabSheet1
         AnchorSideRight.Side = asrBottom
         Left = 536

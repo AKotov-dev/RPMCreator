@@ -1132,7 +1132,7 @@ begin
 
     //Собираем пакет rpm + src.rpm
     StartProcess('rpmbuild -ba ~/rpmbuild/SPECS/' + NameEdit.Text +
-      '.spec; echo "---"; read -p "' + SCompleted + '"', 'xterm');
+      '.spec; echo -e "\n---"; read -p "' + SCompleted + '"', 'xterm');
 
   finally;
 
