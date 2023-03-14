@@ -10,7 +10,7 @@ object UnpackForm: TUnpackForm
   OnCreate = FormCreate
   OnShow = FormShow
   Position = poMainFormCenter
-  SessionProperties = 'Height;Width'
+  SessionProperties = 'Height;Width;EditButton2.Text'
   LCLVersion = '2.2.4.0'
   object LogMemo: TMemo
     AnchorSideLeft.Control = Owner

@@ -10,7 +10,7 @@ object UnpackForm: TUnpackForm
   OnCreate = FormCreate
   OnShow = FormShow
   Position = poMainFormCenter
-  SessionProperties = 'Height;Width'
+  SessionProperties = 'Height;Width;EditButton2.Text'
   LCLVersion = '2.2.4.0'
   object LogMemo: TMemo
     AnchorSideLeft.Control = Owner
@@ -119,11 +119,11 @@ object UnpackForm: TUnpackForm
   object UnpackBtn: TButton
     AnchorSideRight.Control = Owner
     AnchorSideRight.Side = asrBottom
-    Left = 672
+    Left = 680
     Height = 30
     Hint = '|Start unpacking'
     Top = 6
-    Width = 103
+    Width = 95
     Anchors = [akTop, akRight]
     BorderSpacing.Right = 5
     Caption = 'Start'

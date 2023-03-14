@@ -113,12 +113,12 @@ begin
     SetCurrentDir(EditButton2.Text);
 
     if Copy(EditButton1.Text, Length(EditButton1.Text) - 3, 4) = '.rpm' then
-      UnpackProcess('rm -rf ./tmp ./rpm; mkdir ./tmp ./rpm; 7z x -y ' +
-        EditButton1.Text + ' -o./tmp; 7z x -y ./tmp/*.cpio -o./rpm; rm -rf ./tmp')
+      UnpackProcess('rm -rf ./tmp ./rpm; mkdir ./tmp ./rpm; 7z x -y "' +
+        EditButton1.Text + '" -o./tmp; 7z x -y ./tmp/*.cpio -o./rpm; rm -rf ./tmp')
     else
-      UnpackProcess('rm -rf ./tmp ./deb; mkdir ./tmp ./deb; 7z x -y ' +
+      UnpackProcess('rm -rf ./tmp ./deb; mkdir ./tmp ./deb; 7z x -y "' +
         EditButton1.Text +
-        ' -o./tmp; rm -rf ./deb; mkdir ./deb; tar -xvf ./tmp/*.tar -C ./deb; rm -rf ./tmp');
+        '" -o./tmp; rm -rf ./deb; mkdir ./deb; tar -xvf ./tmp/*.tar -C ./deb; rm -rf ./tmp');
 
     //Промотать список вниз
     LogMemo.SelStart := Length(LogMemo.Text);
@@ -133,6 +133,7 @@ begin
   EditButton2.Button.Width := EditButton2.Height;
 end;
 
+//Выбор пакета для распаковки (*.rpm/*.deb)
 procedure TUnpackForm.EditButton2ButtonClick(Sender: TObject);
 begin
   if SelectDirectoryDialog1.Execute then
