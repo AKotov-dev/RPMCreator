@@ -1,12 +1,12 @@
 object MainForm: TMainForm
-  Left = 287
-  Height = 721
-  Top = 111
-  Width = 989
+  Left = 285
+  Height = 728
+  Top = 104
+  Width = 1000
   ActiveControl = LoadBtn
   Caption = 'RPMCreator'
-  ClientHeight = 721
-  ClientWidth = 989
+  ClientHeight = 728
+  ClientWidth = 1000
   OnClose = FormClose
   OnCloseQuery = FormCloseQuery
   OnCreate = FormCreate
@@ -16,9 +16,9 @@ object MainForm: TMainForm
   LCLVersion = '2.2.4.0'
   object PageControl1: TPageControl
     Left = 0
-    Height = 654
+    Height = 661
     Top = 48
-    Width = 989
+    Width = 1000
     ActivePage = TabSheet1
     Align = alClient
     ParentShowHint = False
@@ -26,17 +26,17 @@ object MainForm: TMainForm
     TabOrder = 0
     object TabSheet1: TTabSheet
       Caption = 'Basic'
-      ClientHeight = 617
-      ClientWidth = 983
+      ClientHeight = 624
+      ClientWidth = 994
       object Label1: TLabel
         AnchorSideLeft.Control = NameEdit
-        AnchorSideBottom.Control = NameEdit
+        AnchorSideTop.Control = ListBox1
+        AnchorSideTop.Side = asrBottom
         Left = 5
         Height = 17
-        Top = 234
+        Top = 244
         Width = 98
-        Anchors = [akLeft, akBottom]
-        BorderSpacing.Bottom = 3
+        BorderSpacing.Top = 5
         Caption = 'Package name:'
         Font.Color = clBlue
         Font.Height = -13
@@ -45,12 +45,15 @@ object MainForm: TMainForm
         ParentFont = False
       end
       object NameEdit: TEdit
+        AnchorSideTop.Control = Label1
+        AnchorSideTop.Side = asrBottom
         AnchorSideRight.Side = asrBottom
         Left = 5
         Height = 37
         Hint = '|Sample: mypackage'
-        Top = 254
+        Top = 263
         Width = 219
+        BorderSpacing.Top = 2
         Color = 15663103
         OnKeyPress = NameEditKeyPress
         ParentShowHint = False
@@ -59,13 +62,14 @@ object MainForm: TMainForm
       end
       object Label4: TLabel
         AnchorSideLeft.Control = VersEdit
-        AnchorSideBottom.Control = VersEdit
+        AnchorSideTop.Side = asrBottom
+        AnchorSideBottom.Control = Label1
+        AnchorSideBottom.Side = asrBottom
         Left = 232
         Height = 17
-        Top = 234
+        Top = 244
         Width = 52
         Anchors = [akLeft, akBottom]
-        BorderSpacing.Bottom = 3
         Caption = 'Version:'
         Font.Color = clBlue
         Font.Height = -13
@@ -79,7 +83,7 @@ object MainForm: TMainForm
         Left = 232
         Height = 37
         Hint = '|Sample: 1.2'
-        Top = 254
+        Top = 263
         Width = 80
         Color = 15663103
         OnKeyPress = NameEditKeyPress
@@ -89,13 +93,13 @@ object MainForm: TMainForm
       end
       object Label8: TLabel
         AnchorSideLeft.Control = ReleaseEdit
-        AnchorSideBottom.Control = ReleaseEdit
+        AnchorSideBottom.Control = Label1
+        AnchorSideBottom.Side = asrBottom
         Left = 320
         Height = 17
-        Top = 234
+        Top = 244
         Width = 55
         Anchors = [akLeft, akBottom]
-        BorderSpacing.Bottom = 3
         Caption = 'Release:'
         Font.Color = clBlue
         Font.Height = -13
@@ -109,7 +113,7 @@ object MainForm: TMainForm
         Left = 320
         Height = 37
         Hint = '|Sample: 0.mrx8'
-        Top = 254
+        Top = 263
         Width = 88
         Color = 15663103
         OnKeyPress = NameEditKeyPress
@@ -119,13 +123,13 @@ object MainForm: TMainForm
       end
       object Label5: TLabel
         AnchorSideLeft.Control = DescEdit
-        AnchorSideBottom.Control = DescEdit
+        AnchorSideTop.Control = MaintainerEdit
+        AnchorSideTop.Side = asrBottom
         Left = 5
         Height = 17
-        Top = 350
+        Top = 364
         Width = 133
-        Anchors = [akLeft, akBottom]
-        BorderSpacing.Bottom = 3
+        BorderSpacing.Top = 4
         Caption = 'Package description:'
         Font.Color = clBlue
         Font.Height = -13
@@ -135,51 +139,56 @@ object MainForm: TMainForm
       end
       object Label9: TLabel
         AnchorSideLeft.Control = MaintainerEdit
-        AnchorSideBottom.Control = MaintainerEdit
+        AnchorSideTop.Control = NameEdit
+        AnchorSideTop.Side = asrBottom
         Left = 5
         Height = 17
-        Top = 292
+        Top = 304
         Width = 67
-        Anchors = [akLeft, akBottom]
-        BorderSpacing.Bottom = 3
+        BorderSpacing.Top = 4
         Caption = 'Maintainer:'
         ParentColor = False
         ParentFont = False
       end
       object MaintainerEdit: TEdit
         AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = Label9
+        AnchorSideTop.Side = asrBottom
         Left = 5
         Height = 37
         Hint = '|Sample: Alex Kotov'
-        Top = 312
+        Top = 323
         Width = 259
         BorderSpacing.Left = 5
-        BorderSpacing.Right = 10
+        BorderSpacing.Top = 2
         ParentShowHint = False
         ShowHint = True
         TabOrder = 13
       end
       object Label3: TLabel
         AnchorSideLeft.Control = DepsEdit
-        AnchorSideBottom.Control = DepsEdit
+        AnchorSideTop.Control = URLCopyEdit
+        AnchorSideTop.Side = asrBottom
         Left = 5
         Height = 17
-        Top = 532
+        Top = 545
         Width = 139
-        Anchors = [akLeft, akBottom]
-        BorderSpacing.Bottom = 3
+        BorderSpacing.Top = 4
         Caption = 'Package dependencies:'
         ParentColor = False
         ParentFont = False
       end
       object DescEdit: TMemo
+        AnchorSideTop.Control = Label5
+        AnchorSideTop.Side = asrBottom
         AnchorSideRight.Control = TabSheet1
         AnchorSideRight.Side = asrBottom
         Left = 5
         Height = 98
-        Top = 370
-        Width = 973
+        Top = 383
+        Width = 984
         Anchors = [akTop, akLeft, akRight]
+        BorderSpacing.Top = 2
         BorderSpacing.Right = 5
         Color = 15663103
         Lines.Strings = (
@@ -193,16 +202,19 @@ object MainForm: TMainForm
         TabOrder = 16
       end
       object DepsEdit: TMemo
+        AnchorSideTop.Control = Label3
+        AnchorSideTop.Side = asrBottom
         AnchorSideRight.Control = TabSheet1
         AnchorSideRight.Side = asrBottom
         AnchorSideBottom.Control = TabSheet1
         AnchorSideBottom.Side = asrBottom
         Left = 5
-        Height = 60
+        Height = 55
         Hint = '|Package names separated by commas or spaces'
-        Top = 552
-        Width = 973
+        Top = 564
+        Width = 984
         Anchors = [akTop, akLeft, akRight, akBottom]
+        BorderSpacing.Top = 2
         BorderSpacing.Right = 5
         BorderSpacing.Bottom = 5
         ParentShowHint = False
@@ -213,13 +225,13 @@ object MainForm: TMainForm
       end
       object Label13: TLabel
         AnchorSideLeft.Control = VendorEdit
-        AnchorSideBottom.Control = VendorEdit
+        AnchorSideBottom.Control = Label9
+        AnchorSideBottom.Side = asrBottom
         Left = 272
         Height = 17
-        Top = 292
+        Top = 304
         Width = 47
         Anchors = [akLeft, akBottom]
-        BorderSpacing.Bottom = 3
         Caption = 'Vendor:'
         ParentColor = False
         ParentFont = False
@@ -232,7 +244,7 @@ object MainForm: TMainForm
         Left = 272
         Height = 37
         Hint = '|Sample: alex_q_2000 (C) 2021'
-        Top = 312
+        Top = 323
         Width = 256
         BorderSpacing.Left = 5
         BorderSpacing.Right = 5
@@ -244,11 +256,11 @@ object MainForm: TMainForm
         AnchorSideRight.Control = TabSheet1
         AnchorSideRight.Side = asrBottom
         Left = 5
-        Height = 192
+        Height = 199
         Hint = '|List of files and folders to build the package [there is a PopUp menu]; double click - edit an entry in the list'
         Top = 40
-        Width = 973
-        Anchors = [akTop, akLeft, akRight]
+        Width = 984
+        Anchors = [akTop, akLeft, akRight, akBottom]
         BorderSpacing.Right = 5
         ItemHeight = 0
         MultiSelect = True
@@ -298,13 +310,13 @@ object MainForm: TMainForm
       end
       object Label14: TLabel
         AnchorSideLeft.Control = LicenseEdit
-        AnchorSideBottom.Control = LicenseEdit
-        Left = 812
+        AnchorSideBottom.Control = Label1
+        AnchorSideBottom.Side = asrBottom
+        Left = 823
         Height = 17
-        Top = 234
+        Top = 244
         Width = 47
         Anchors = [akLeft, akBottom]
-        BorderSpacing.Bottom = 3
         Caption = 'License:'
         ParentColor = False
         ParentFont = False
@@ -312,11 +324,11 @@ object MainForm: TMainForm
       object RPMBtn: TButton
         AnchorSideRight.Control = TabSheet1
         AnchorSideRight.Side = asrBottom
-        Left = 914
+        Left = 919
         Height = 30
         Hint = '|Download a list of files by package name'
         Top = 6
-        Width = 64
+        Width = 70
         Anchors = [akTop, akRight]
         BorderSpacing.Right = 5
         Caption = 'RPM'
@@ -338,8 +350,8 @@ object MainForm: TMainForm
         AnchorSideRight.Side = asrBottom
         Left = 416
         Height = 37
-        Top = 254
-        Width = 328
+        Top = 263
+        Width = 344
         BorderSpacing.Right = 5
         Color = 15663103
         ItemHeight = 0
@@ -472,13 +484,13 @@ object MainForm: TMainForm
       end
       object Label15: TLabel
         AnchorSideLeft.Control = GroupCBox
-        AnchorSideBottom.Control = GroupCBox
+        AnchorSideBottom.Control = Label1
+        AnchorSideBottom.Side = asrBottom
         Left = 416
         Height = 17
-        Top = 234
+        Top = 244
         Width = 43
         Anchors = [akLeft, akBottom]
-        BorderSpacing.Bottom = 3
         Caption = 'Group:'
         Font.Color = clBlue
         Font.Height = -13
@@ -490,9 +502,9 @@ object MainForm: TMainForm
         AnchorSideTop.Control = GroupCBox
         AnchorSideRight.Control = TabSheet1
         AnchorSideRight.Side = asrBottom
-        Left = 812
+        Left = 823
         Height = 37
-        Top = 254
+        Top = 263
         Width = 166
         Anchors = [akTop, akRight]
         BorderSpacing.Right = 5
@@ -520,8 +532,8 @@ object MainForm: TMainForm
         AnchorSideRight.Side = asrBottom
         Left = 536
         Height = 37
-        Top = 312
-        Width = 442
+        Top = 323
+        Width = 453
         Anchors = [akTop, akLeft, akRight]
         BorderSpacing.Left = 5
         BorderSpacing.Right = 5
@@ -532,13 +544,13 @@ object MainForm: TMainForm
       end
       object Label16: TLabel
         AnchorSideLeft.Control = SummaryEdit
-        AnchorSideBottom.Control = SummaryEdit
+        AnchorSideBottom.Control = Label9
+        AnchorSideBottom.Side = asrBottom
         Left = 536
         Height = 17
-        Top = 292
+        Top = 304
         Width = 211
         Anchors = [akLeft, akBottom]
-        BorderSpacing.Bottom = 3
         Caption = 'Brief description of the package:'
         Font.Color = clBlue
         Font.Height = -13
@@ -548,13 +560,13 @@ object MainForm: TMainForm
       end
       object Label17: TLabel
         AnchorSideLeft.Control = URLCopyEdit
-        AnchorSideBottom.Control = URLCopyEdit
+        AnchorSideTop.Control = DescEdit
+        AnchorSideTop.Side = asrBottom
         Left = 5
         Height = 17
-        Top = 472
+        Top = 485
         Width = 375
-        Anchors = [akLeft, akBottom]
-        BorderSpacing.Bottom = 3
+        BorderSpacing.Top = 4
         Caption = 'URL of a copy of the source code (*.tar.gz, *.src.rpm, etc):'
         Font.Color = clBlue
         Font.Height = -13
@@ -563,14 +575,17 @@ object MainForm: TMainForm
         ParentFont = False
       end
       object URLCopyEdit: TEdit
+        AnchorSideTop.Control = Label17
+        AnchorSideTop.Side = asrBottom
         AnchorSideRight.Control = TabSheet1
         AnchorSideRight.Side = asrBottom
         Left = 5
         Height = 37
         Hint = '|Sample: https://github.com/AKotov-dev/RPMCreator'
-        Top = 492
-        Width = 973
+        Top = 504
+        Width = 984
         Anchors = [akTop, akLeft, akRight]
+        BorderSpacing.Top = 2
         BorderSpacing.Right = 5
         Color = 15663103
         OnKeyPress = NameEditKeyPress
@@ -580,11 +595,11 @@ object MainForm: TMainForm
       end
       object UnpackBtn: TButton
         AnchorSideRight.Control = RPMBtn
-        Left = 786
+        Left = 785
         Height = 30
         Hint = '|Unpack RPM or DEB package'
         Top = 6
-        Width = 124
+        Width = 130
         Anchors = [akTop, akRight]
         BorderSpacing.Right = 4
         Caption = 'Unpack'
@@ -627,14 +642,14 @@ object MainForm: TMainForm
     end
     object TabSheet2: TTabSheet
       Caption = 'Scripts'
-      ClientHeight = 617
-      ClientWidth = 983
+      ClientHeight = 624
+      ClientWidth = 994
       object Label6: TLabel
         AnchorSideLeft.Control = AfterInstallEdit
         AnchorSideBottom.Control = AfterInstallEdit
         Left = 5
         Height = 17
-        Top = 160
+        Top = 162
         Width = 124
         Anchors = [akLeft]
         BorderSpacing.Bottom = 3
@@ -650,14 +665,14 @@ object MainForm: TMainForm
         AnchorSideRight.Side = asrBottom
         AnchorSideBottom.Control = Label12
         Left = 5
-        Height = 124
+        Height = 129
         Hint = '|Actions performed after installing the package'
         Top = 182
-        Width = 973
+        Width = 984
         Anchors = [akTop, akLeft, akRight, akBottom]
-        BorderSpacing.Top = 5
+        BorderSpacing.Top = 2
         BorderSpacing.Right = 5
-        BorderSpacing.Bottom = 5
+        BorderSpacing.Bottom = 4
         Lines.Strings = (
           '#!/bin/bash'
           '#ldconfig'
@@ -678,12 +693,12 @@ object MainForm: TMainForm
         AnchorSideBottom.Control = TabSheet2
         AnchorSideBottom.Side = asrBottom
         Left = 5
-        Height = 126
+        Height = 130
         Hint = '|Actions performed after deleting a package'
-        Top = 486
-        Width = 973
+        Top = 489
+        Width = 984
         Anchors = [akTop, akLeft, akRight, akBottom]
-        BorderSpacing.Top = 5
+        BorderSpacing.Top = 2
         BorderSpacing.Right = 5
         BorderSpacing.Bottom = 5
         Lines.Strings = (
@@ -703,7 +718,7 @@ object MainForm: TMainForm
         AnchorSideBottom.Control = AfterRemoveEdit
         Left = 5
         Height = 17
-        Top = 464
+        Top = 469
         Width = 147
         Anchors = [akLeft]
         BorderSpacing.Bottom = 3
@@ -734,14 +749,14 @@ object MainForm: TMainForm
         AnchorSideRight.Side = asrBottom
         AnchorSideBottom.Control = Label6
         Left = 5
-        Height = 125
+        Height = 130
         Hint = '|Actions performed before installing the package'
-        Top = 30
-        Width = 973
+        Top = 28
+        Width = 984
         Anchors = [akTop, akLeft, akRight, akBottom]
-        BorderSpacing.Top = 5
+        BorderSpacing.Top = 2
         BorderSpacing.Right = 5
-        BorderSpacing.Bottom = 5
+        BorderSpacing.Bottom = 4
         ParentShowHint = False
         ScrollBars = ssVertical
         ShowHint = True
@@ -752,7 +767,7 @@ object MainForm: TMainForm
         AnchorSideBottom.Control = BeforeRemoveEdit
         Left = 5
         Height = 17
-        Top = 311
+        Top = 315
         Width = 150
         Anchors = [akLeft]
         BorderSpacing.Bottom = 3
@@ -768,14 +783,14 @@ object MainForm: TMainForm
         AnchorSideRight.Side = asrBottom
         AnchorSideBottom.Control = Label7
         Left = 5
-        Height = 126
+        Height = 130
         Hint = '|Actions performed before deleting a package'
-        Top = 333
-        Width = 973
+        Top = 335
+        Width = 984
         Anchors = [akTop, akLeft, akRight, akBottom]
-        BorderSpacing.Top = 5
+        BorderSpacing.Top = 2
         BorderSpacing.Right = 5
-        BorderSpacing.Bottom = 5
+        BorderSpacing.Bottom = 4
         ParentShowHint = False
         ScrollBars = ssVertical
         ShowHint = True
@@ -785,18 +800,20 @@ object MainForm: TMainForm
     object TabSheet3: TTabSheet
       Hint = '|/usr/share/doc/package_name/repack.txt'
       Caption = 'repack.txt'
-      ClientHeight = 617
-      ClientWidth = 983
+      ClientHeight = 624
+      ClientWidth = 994
       ParentShowHint = False
       ShowHint = True
       object Label2: TLabel
         AnchorSideLeft.Control = ProgramNameEdit
+        AnchorSideTop.Control = URLEdit32
+        AnchorSideTop.Side = asrBottom
         AnchorSideBottom.Control = ProgramNameEdit
         Left = 5
         Height = 17
-        Top = 114
+        Top = 65
         Width = 93
-        Anchors = [akLeft, akBottom]
+        BorderSpacing.Top = 3
         BorderSpacing.Bottom = 3
         Caption = 'Program name:'
         Font.Color = clBlue
@@ -804,21 +821,25 @@ object MainForm: TMainForm
         ParentFont = False
       end
       object ProgramNameEdit: TEdit
+        AnchorSideTop.Control = Label2
+        AnchorSideTop.Side = asrBottom
         Left = 5
         Height = 37
-        Top = 134
+        Top = 85
         Width = 244
+        BorderSpacing.Top = 2
         Color = 15663103
-        TabOrder = 2
+        TabOrder = 1
       end
       object Label19: TLabel
         AnchorSideLeft.Control = DevToolEdit
-        AnchorSideBottom.Control = DevToolEdit
-        Left = 440
+        AnchorSideTop.Control = Label2
+        AnchorSideBottom.Control = Label2
+        AnchorSideBottom.Side = asrBottom
+        Left = 451
         Height = 17
-        Top = 114
+        Top = 65
         Width = 118
-        Anchors = [akLeft, akBottom]
         BorderSpacing.Bottom = 3
         Caption = 'Development tools:'
         Font.Color = clBlue
@@ -827,12 +848,11 @@ object MainForm: TMainForm
       end
       object Label20: TLabel
         AnchorSideLeft.Control = ToolVersionEdit
-        AnchorSideBottom.Control = ToolVersionEdit
-        Left = 662
+        AnchorSideTop.Control = Label2
+        Left = 673
         Height = 17
-        Top = 114
+        Top = 65
         Width = 48
-        Anchors = [akLeft, akBottom]
         BorderSpacing.Bottom = 3
         Caption = 'Version:'
         Font.Color = clBlue
@@ -841,68 +861,76 @@ object MainForm: TMainForm
       end
       object Label23: TLabel
         AnchorSideLeft.Control = TabSheet3
-        AnchorSideBottom.Control = InfoMemo
+        AnchorSideTop.Control = ProgramNameEdit
+        AnchorSideTop.Side = asrBottom
         Left = 5
         Height = 17
-        Top = 172
+        Top = 132
         Width = 140
-        Anchors = [akLeft, akBottom]
         BorderSpacing.Left = 5
+        BorderSpacing.Top = 10
         BorderSpacing.Bottom = 3
         Caption = 'Additional information:'
         ParentColor = False
       end
       object InfoMemo: TMemo
+        AnchorSideTop.Control = Label23
+        AnchorSideTop.Side = asrBottom
         AnchorSideRight.Control = TabSheet3
         AnchorSideRight.Side = asrBottom
         AnchorSideBottom.Control = TabSheet3
         AnchorSideBottom.Side = asrBottom
         Left = 5
-        Height = 420
+        Height = 467
         Hint = '|/usr/share/doc/package_name/repack.txt'
-        Top = 192
-        Width = 973
+        Top = 152
+        Width = 984
         Anchors = [akTop, akLeft, akRight, akBottom]
         BorderSpacing.Right = 5
         BorderSpacing.Bottom = 5
         ScrollBars = ssVertical
-        TabOrder = 5
+        TabOrder = 4
       end
       object CreateRepackTxt: TButton
+        AnchorSideTop.Control = URLEdit32
         AnchorSideRight.Control = TabSheet3
         AnchorSideRight.Side = asrBottom
-        Left = 806
+        Left = 817
         Height = 30
         Hint = '|The root password will be required; A file will be created /usr/share/doc/package_name/repack.txt and the directory is added to the list of package files'
-        Top = 26
+        Top = 25
         Width = 172
         Anchors = [akTop, akRight]
         BorderSpacing.Right = 5
         Caption = 'Create repack.txt'
         OnClick = CreateRepackTxtClick
-        TabOrder = 6
+        TabOrder = 5
       end
       object Label10: TLabel
         AnchorSideLeft.Control = URLEdit32
+        AnchorSideTop.Control = TabSheet3
         AnchorSideBottom.Control = URLEdit32
         Left = 5
         Height = 17
-        Top = 6
-        Width = 223
-        Anchors = [akLeft, akBottom]
+        Top = 5
+        Width = 179
+        BorderSpacing.Top = 5
         BorderSpacing.Bottom = 3
-        Caption = 'URL author sources + binaries (32 bit):'
+        Caption = 'URL author sources + binaries:'
         Font.Color = clBlue
         ParentColor = False
         ParentFont = False
       end
       object URLEdit32: TEdit
+        AnchorSideTop.Control = Label10
+        AnchorSideTop.Side = asrBottom
         AnchorSideRight.Control = CreateRepackTxt
         Left = 5
         Height = 37
-        Top = 26
-        Width = 791
+        Top = 25
+        Width = 802
         Anchors = [akTop, akLeft, akRight]
+        BorderSpacing.Top = 2
         BorderSpacing.Right = 10
         Color = 15663103
         OnKeyPress = NameEditKeyPress
@@ -910,37 +938,12 @@ object MainForm: TMainForm
         ShowHint = True
         TabOrder = 0
       end
-      object URLEdit64: TEdit
-        AnchorSideRight.Control = URLEdit32
-        AnchorSideRight.Side = asrBottom
-        Left = 5
-        Height = 37
-        Top = 81
-        Width = 791
-        Anchors = [akTop, akLeft, akRight]
-        OnKeyPress = NameEditKeyPress
-        ParentShowHint = False
-        ShowHint = True
-        TabOrder = 1
-      end
-      object Label21: TLabel
-        AnchorSideLeft.Control = URLEdit64
-        AnchorSideBottom.Control = URLEdit64
-        Left = 5
-        Height = 17
-        Top = 61
-        Width = 225
-        Anchors = [akLeft, akBottom]
-        BorderSpacing.Bottom = 3
-        Caption = 'URL author sources + binaries (64 bit):'
-        ParentColor = False
-        ParentFont = False
-      end
       object DevToolEdit: TComboBox
+        AnchorSideTop.Control = ProgramNameEdit
         AnchorSideRight.Control = ToolVersionEdit
-        Left = 440
+        Left = 451
         Height = 37
-        Top = 134
+        Top = 85
         Width = 212
         Anchors = [akTop, akRight]
         BorderSpacing.Right = 10
@@ -963,14 +966,14 @@ object MainForm: TMainForm
           'Swift'
           'Type Script'
         )
-        TabOrder = 3
+        TabOrder = 2
       end
       object ToolVersionEdit: TComboBox
-        AnchorSideRight.Control = URLEdit64
+        AnchorSideTop.Control = ProgramNameEdit
         AnchorSideRight.Side = asrBottom
-        Left = 662
+        Left = 673
         Height = 37
-        Top = 134
+        Top = 85
         Width = 134
         Anchors = [akTop, akRight]
         Color = 15663103
@@ -978,18 +981,18 @@ object MainForm: TMainForm
         Items.Strings = (
           'unknown'
         )
-        TabOrder = 4
+        TabOrder = 3
       end
     end
     object TabSheet4: TTabSheet
       Caption = 'HELP'
-      ClientHeight = 617
-      ClientWidth = 983
+      ClientHeight = 624
+      ClientWidth = 994
       object Memo1: TMemo
         Left = 5
-        Height = 607
+        Height = 614
         Top = 5
-        Width = 973
+        Width = 984
         Align = alClient
         BorderSpacing.Left = 5
         BorderSpacing.Top = 5
@@ -1053,18 +1056,21 @@ object MainForm: TMainForm
     Left = 0
     Height = 48
     Top = 0
-    Width = 989
+    Width = 1000
     Align = alTop
     ClientHeight = 48
-    ClientWidth = 989
+    ClientWidth = 1000
     TabOrder = 1
     object Bevel1: TBevel
+      AnchorSideLeft.Control = SaveBtn
+      AnchorSideLeft.Side = asrBottom
       AnchorSideTop.Control = SaveBtn
       AnchorSideTop.Side = asrCenter
-      Left = 372
+      Left = 374
       Height = 31
       Top = 6
       Width = 9
+      BorderSpacing.Left = 10
       Shape = bsLeftLine
     end
     object LoadBtn: TButton
@@ -1092,8 +1098,10 @@ object MainForm: TMainForm
       TabOrder = 1
     end
     object AboutBtn: TButton
+      AnchorSideTop.Control = SaveBtn
+      AnchorSideTop.Side = asrCenter
       AnchorSideRight.Control = BuildBtn
-      Left = 789
+      Left = 800
       Height = 30
       Hint = '|About'
       Top = 6
@@ -1107,9 +1115,11 @@ object MainForm: TMainForm
       TabOrder = 5
     end
     object BuildBtn: TButton
+      AnchorSideTop.Control = SaveBtn
+      AnchorSideTop.Side = asrCenter
       AnchorSideRight.Control = Panel1
       AnchorSideRight.Side = asrBottom
-      Left = 823
+      Left = 834
       Height = 30
       Top = 6
       Width = 160
@@ -1122,14 +1132,16 @@ object MainForm: TMainForm
       TabOrder = 6
     end
     object MetaCheck: TCheckBox
+      AnchorSideLeft.Control = NoArchCheck
       AnchorSideLeft.Side = asrBottom
       AnchorSideTop.Control = SaveBtn
       AnchorSideTop.Side = asrCenter
-      Left = 459
+      Left = 469
       Height = 32
       Hint = '|Empty package'
       Top = 5
       Width = 65
+      BorderSpacing.Left = 10
       Caption = 'meta'
       OnClick = MetaCheckClick
       ParentShowHint = False
@@ -1137,9 +1149,11 @@ object MainForm: TMainForm
       TabOrder = 3
     end
     object NoArchCheck: TCheckBox
+      AnchorSideLeft.Control = Bevel1
+      AnchorSideLeft.Side = asrBottom
       AnchorSideTop.Control = SaveBtn
       AnchorSideTop.Side = asrCenter
-      Left = 379
+      Left = 383
       Height = 32
       Hint = '|For all architectures'
       Top = 5
@@ -1152,18 +1166,23 @@ object MainForm: TMainForm
       TabOrder = 2
     end
     object Bevel4: TBevel
+      AnchorSideLeft.Control = MetaCheck
+      AnchorSideLeft.Side = asrBottom
       AnchorSideTop.Control = SaveBtn
       AnchorSideTop.Side = asrCenter
-      Left = 533
+      Left = 544
       Height = 31
       Top = 6
       Width = 9
+      BorderSpacing.Left = 10
       Shape = bsLeftLine
     end
     object DEBCheckBox: TCheckBox
+      AnchorSideLeft.Control = Bevel4
+      AnchorSideLeft.Side = asrBottom
       AnchorSideTop.Control = SaveBtn
       AnchorSideTop.Side = asrCenter
-      Left = 540
+      Left = 553
       Height = 32
       Hint = '|Additionally build a DEB package in ~/debbuild'
       Top = 5
@@ -1177,8 +1196,8 @@ object MainForm: TMainForm
   object StatusBar1: TStatusBar
     Left = 0
     Height = 19
-    Top = 702
-    Width = 989
+    Top = 709
+    Width = 1000
     AutoHint = True
     Font.Height = -12
     Font.Name = 'Sans'
@@ -1195,7 +1214,7 @@ object MainForm: TMainForm
     AnchorSideTop.Control = PageControl1
     AnchorSideRight.Control = PageControl1
     AnchorSideRight.Side = asrBottom
-    Left = 752
+    Left = 763
     Height = 17
     Top = 52
     Width = 232
@@ -1210,28 +1229,28 @@ object MainForm: TMainForm
   end
   object MainFormStorage: TXMLPropStorage
     StoredValues = <>
-    Left = 728
-    Top = 144
+    Left = 736
+    Top = 624
   end
   object SaveFile: TSaveDialog
     DefaultExt = '.*.prj'
     Filter = 'RPMCreator Files (*.prj)|*.prj'
     InitialDir = '~/'
     Options = [ofOverwritePrompt, ofNoNetworkButton, ofEnableSizing, ofViewDetail]
-    Left = 624
-    Top = 144
+    Left = 640
+    Top = 624
   end
   object OpenFile: TOpenDialog
     Filter = 'RPMCreator Files (*.prj)|*.prj'
     InitialDir = '~/'
     Options = [ofAllowMultiSelect, ofEnableSizing, ofViewDetail]
-    Left = 520
-    Top = 144
+    Left = 568
+    Top = 624
   end
   object PopupMenu1: TPopupMenu
     Images = ImageList1
-    Left = 840
-    Top = 144
+    Left = 832
+    Top = 624
     object MenuItem1: TMenuItem
       Caption = 'Add objects'
       ImageIndex = 0
@@ -1265,8 +1284,8 @@ object MainForm: TMainForm
     end
   end
   object ImageList1: TImageList
-    Left = 928
-    Top = 144
+    Left = 920
+    Top = 624
     Bitmap = {
       4C7A050000001000000010000000780400000000000078DAD597B94F244714C6
       87FB988BFB66B8AF00C10A362240C05F00C15A22046602C4122C582024526232

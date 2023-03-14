@@ -35,7 +35,6 @@ type
     DevToolEdit: TComboBox;
     CreateRepackTxt: TButton;
     Label10: TLabel;
-    Label21: TLabel;
     Memo1: TMemo;
     ProgramNameEdit: TEdit;
     TabSheet4: TTabSheet;
@@ -93,7 +92,6 @@ type
     TabSheet3: TTabSheet;
     URLCopyEdit: TEdit;
     URLEdit32: TEdit;
-    URLEdit64: TEdit;
     VendorEdit: TEdit;
     SummaryEdit: TEdit;
     VersEdit: TEdit;
@@ -261,7 +259,7 @@ begin
 
   //Вкладка repack.txt
   URLEdit32.Text := PRJ.ReadString('URL32', 'url32', '');
-  URLEdit64.Text := PRJ.ReadString('URL64', 'url64', '');
+  //URLEdit64.Text := PRJ.ReadString('URL64', 'url64', '');
   ProgramNameEdit.Text := PRJ.ReadString('PROGRAMNAME', 'programname', '');
   DevToolEdit.Text := PRJ.ReadString('DEVTOOL', 'devtool', '');
   ToolVersionEdit.Text := PRJ.ReadString('TOOLVERSION', 'toolversion', '');
@@ -342,7 +340,7 @@ begin
 
   //Вкладка repack.txt
   PRJ.WriteString('URL32', 'url32', URLEdit32.Text);
-  PRJ.WriteString('URL64', 'url64', URLEdit64.Text);
+  // PRJ.WriteString('URL64', 'url64', URLEdit64.Text);
   PRJ.WriteString('PROGRAMNAME', 'programname', ProgramNameEdit.Text);
   PRJ.WriteString('DEVTOOL', 'devtool', DevToolEdit.Text);
   PRJ.WriteString('TOOLVERSION', 'toolversion', ToolVersionEdit.Text);
@@ -442,7 +440,7 @@ begin
   BeforeRemoveEdit.Text := Trim(BeforeRemoveEdit.Text);
   //Вкладка repack.txt
   URLEdit32.Text := Trim(URLEdit32.Text);
-  URLEdit64.Text := Trim(URLEdit64.Text);
+  //URLEdit64.Text := Trim(URLEdit64.Text);
   ProgramNameEdit.Text := Trim(ProgramNameEdit.Text);
   DevToolEdit.Text := Trim(DevToolEdit.Text);
   ToolVersionEdit.Text := Trim(ToolVersionEdit.Text);
@@ -579,11 +577,11 @@ begin
       Add('Program development tool: ' + DevToolEdit.Text);
       Add('Version of program development tool: ' + ToolVersionEdit.Text);
       Add('URL the sources of the author (32 bit): ' + URLEdit32.Text);
-      if URLEdit64.Text = '' then
+     { if URLEdit64.Text = '' then
         Add('URL the sources of the author (64 bit): unknown')
       else
         Add('URL the sources of the author (64 bit): ' + URLEdit64.Text);
-      Add('');
+      Add(''); }
 
       //Информация о rpm-пакете
       Add('Information about the rpm-package:');
@@ -718,6 +716,7 @@ begin
 
   MainForm.Caption := Application.Title;
   PageControl1.ActivePageIndex := 0;
+  AboutBtn.Width := AboutBtn.Height;
 
   //Параметры
   if ParamStr(1) <> '' then LoadProject(ParamStr(1), nil);

@@ -133,7 +133,7 @@ msgid "Package name:"
 msgstr ""
 
 #: tmainform.label10.caption
-msgid "URL author sources + binaries (32 bit):"
+msgid "URL author sources + binaries:"
 msgstr ""
 
 #: tmainform.label11.caption
@@ -177,10 +177,6 @@ msgstr ""
 #: tmainform.label20.caption
 msgctxt "tmainform.label20.caption"
 msgid "Version:"
-msgstr ""
-
-#: tmainform.label21.caption
-msgid "URL author sources + binaries (64 bit):"
 msgstr ""
 
 #: tmainform.label23.caption

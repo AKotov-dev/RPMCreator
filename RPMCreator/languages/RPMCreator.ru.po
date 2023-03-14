@@ -154,7 +154,9 @@ msgid "Package name:"
 msgstr "Имя пакета:"
 
 #: tmainform.label10.caption
-msgid "URL author sources + binaries (32 bit):"
+#, fuzzy
+#| msgid "URL author sources + binaries (32 bit):"
+msgid "URL author sources + binaries:"
 msgstr "URL авторских sources + binaries (32 bit):"
 
 #: tmainform.label11.caption
@@ -199,10 +201,6 @@ msgstr "Название программы:"
 msgctxt "tmainform.label20.caption"
 msgid "Version:"
 msgstr "Версия:"
-
-#: tmainform.label21.caption
-msgid "URL author sources + binaries (64 bit):"
-msgstr "URL авторских sources + binaries (64 bit):"
 
 #: tmainform.label23.caption
 msgid "Additional information:"

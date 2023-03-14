@@ -1,7 +1,7 @@
 object UnpackForm: TUnpackForm
-  Left = 302
+  Left = 643
   Height = 572
-  Top = 135
+  Top = 115
   Width = 780
   Caption = 'Package unpacker'
   ClientHeight = 572
@@ -21,14 +21,14 @@ object UnpackForm: TUnpackForm
     AnchorSideBottom.Control = Owner
     AnchorSideBottom.Side = asrBottom
     Left = 5
-    Height = 419
+    Height = 409
     Hint = '|Log of the package unpacking process'
-    Top = 148
+    Top = 158
     Width = 770
     Align = alBottom
     Anchors = [akTop, akLeft, akRight, akBottom]
     BorderSpacing.Left = 5
-    BorderSpacing.Top = 10
+    BorderSpacing.Top = 5
     BorderSpacing.Right = 5
     BorderSpacing.Bottom = 5
     ParentFont = False
@@ -40,28 +40,32 @@ object UnpackForm: TUnpackForm
   end
   object Label1: TLabel
     AnchorSideLeft.Control = EditButton1
+    AnchorSideTop.Control = UnpackBtn
+    AnchorSideTop.Side = asrBottom
     AnchorSideBottom.Control = EditButton1
     Left = 5
     Height = 17
-    Top = 24
+    Top = 36
     Width = 144
-    Anchors = [akLeft, akBottom]
-    BorderSpacing.Bottom = 3
+    BorderSpacing.Bottom = 1
     Caption = 'Unpack (*.deb or *.rpm):'
     ParentColor = False
     ParentFont = False
   end
   object EditButton1: TEditButton
     AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Label1
+    AnchorSideTop.Side = asrBottom
     AnchorSideRight.Control = Owner
     AnchorSideRight.Side = asrBottom
     Left = 5
     Height = 37
     Hint = '|Select the package to unpack'
-    Top = 44
+    Top = 55
     Width = 770
     Anchors = [akTop, akLeft, akRight]
     BorderSpacing.Left = 5
+    BorderSpacing.Top = 2
     BorderSpacing.Right = 5
     ButtonCaption = '...'
     ButtonWidth = 23
@@ -79,15 +83,18 @@ object UnpackForm: TUnpackForm
   end
   object EditButton2: TEditButton
     AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Label2
+    AnchorSideTop.Side = asrBottom
     AnchorSideRight.Control = Owner
     AnchorSideRight.Side = asrBottom
     Left = 5
     Height = 37
     Hint = '|Select the directory to save the contents of the package'
-    Top = 101
+    Top = 116
     Width = 770
     Anchors = [akTop, akLeft, akRight]
     BorderSpacing.Left = 5
+    BorderSpacing.Top = 2
     BorderSpacing.Right = 5
     ButtonCaption = '...'
     ButtonWidth = 23
@@ -105,12 +112,13 @@ object UnpackForm: TUnpackForm
   end
   object Label2: TLabel
     AnchorSideLeft.Control = EditButton2
-    AnchorSideBottom.Control = EditButton2
+    AnchorSideTop.Control = EditButton1
+    AnchorSideTop.Side = asrBottom
     Left = 5
     Height = 17
-    Top = 81
+    Top = 96
     Width = 138
-    Anchors = [akLeft, akBottom]
+    BorderSpacing.Top = 4
     BorderSpacing.Bottom = 3
     Caption = 'Content upload folder:'
     ParentColor = False

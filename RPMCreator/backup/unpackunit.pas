@@ -133,7 +133,7 @@ begin
   EditButton2.Button.Width := EditButton2.Height;
 end;
 
-//Выбор пакета для распаковки (*.rpm/*.deb)
+//Выбор пакета для распаковки (*.rpm, *.deb)
 procedure TUnpackForm.EditButton2ButtonClick(Sender: TObject);
 begin
   if SelectDirectoryDialog1.Execute then
