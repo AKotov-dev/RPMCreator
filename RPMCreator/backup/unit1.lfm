@@ -633,7 +633,7 @@ object MainForm: TMainForm
       end
     end
     object TabSheet2: TTabSheet
-      Caption = 'Script''s'
+      Caption = 'Scripts'
       ClientHeight = 617
       ClientWidth = 983
       object Label6: TLabel
