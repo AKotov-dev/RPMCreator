@@ -23,7 +23,6 @@ type
     Bevel3: TBevel;
     Bevel4: TBevel;
     Bevel5: TBevel;
-    Bevel6: TBevel;
     Button1: TButton;
     DEBCheckBox: TCheckBox;
     EditEntry: TMenuItem;
@@ -34,7 +33,6 @@ type
     BuildLabel: TLabel;
     ToolVersionEdit: TComboBox;
     DevToolEdit: TComboBox;
-    SignCheckBox: TCheckBox;
     CreateRepackTxt: TButton;
     Label10: TLabel;
     Label21: TLabel;
@@ -113,7 +111,6 @@ type
     procedure BuildBtnClick(Sender: TObject);
     procedure Button7Click(Sender: TObject);
     procedure MetaCheckClick(Sender: TObject);
-    procedure NameEditChange(Sender: TObject);
     procedure NameEditKeyPress(Sender: TObject; var Key: char);
     procedure RPMBtnClick(Sender: TObject);
     procedure SaveBtnClick(Sender: TObject);
@@ -141,8 +138,8 @@ resourcestring
   SProjectChange = 'Project changed. Save it?';
   SFileListEmpty = 'The list of files is empty!';
   SNoListObject = 'No list object:';
-  SMacrosNotFound = 'No file found ~/.rpmmacros! Not ready to sign packages!';
-  SSignRPM = 'Sign the packages:';
+  //SMacrosNotFound = 'No file found ~/.rpmmacros! Not ready to sign packages!';
+  //SSignRPM = 'Sign the packages:';
   SCompleted = 'Completed. Press Enter to continue...';
   SInputName = 'Please, enter the name of the package:';
   SSymLink = 'This is SymLink! Need a real target!';
@@ -209,7 +206,7 @@ begin
   DepsEdit.Text := PRJ.ReadString('DEPS', 'deps', '');
   MetaCheck.Checked := PRJ.ReadBool('META', 'meta', False);
   NoArchCheck.Checked := PRJ.ReadBool('NOARCH', 'noarch', False);
-  SignCheckBox.Checked := PRJ.ReadBool('SIGN', 'sign', False);
+  //SignCheckBox.Checked := PRJ.ReadBool('SIGN', 'sign', False);
   DEBCheckBox.Checked := PRJ.ReadBool('DEB', 'deb', False);
 
   //Обрабатываем содержимое списка файлов
@@ -324,7 +321,7 @@ begin
   PRJ.WriteString('DEPS', 'deps', DepsEdit.Text);
   PRJ.WriteBool('META', 'meta', MetaCheck.Checked);
   PRJ.WriteBool('NOARCH', 'noarch', NoArchCheck.Checked);
-  PRJ.WriteBool('SIGN', 'sign', SignCheckBox.Checked);
+  //PRJ.WriteBool('SIGN', 'sign', SignCheckBox.Checked);
   PRJ.WriteBool('DEB', 'deb', DEBCheckBox.Checked);
 
   for i := 0 to ListBox1.Items.Count - 1 do
@@ -713,9 +710,8 @@ begin
 end;
 
 procedure TMainForm.FormShow(Sender: TObject);
-var
+var //Поток считывания валидных групп
   FStartLoadGroups: TThread;
-  //Поток считывания валидных групп
 begin
   //For Plasma
   MainFormStorage.Restore;
@@ -786,11 +782,11 @@ begin
   end;
 
   //Прооверка готовности к подписи пакетов
-  if (SignCheckBox.Checked) and (not FileExists(GetUserDir + '.rpmmacros')) then
+ { if (SignCheckBox.Checked) and (not FileExists(GetUserDir + '.rpmmacros')) then
   begin
     MessageDlg(SMacrosNotFound, mtWarning, [mbOK], 0);
     Exit;
-  end;
+  end;}
 
   try
     BuildBtn.Enabled := False;
@@ -1111,7 +1107,7 @@ begin
     SPEC.Add('rpmbuild -ba ~/rpmbuild/SPECS/' + NameEdit.Text + '.spec');
 
     //Подпись пакетов в ~/rpmbuild/SRPMS RPMS/*/name_package*.rpm
-    if SignCheckBox.Checked then
+    {if SignCheckBox.Checked then
     begin
       SPEC.Add('echo');
       SPEC.Add('echo "' + SSignRPM + '"');
@@ -1132,7 +1128,11 @@ begin
     StartProcess('chmod +x ' + WorkDir + '/build.sh', 'sh');
 
     //Собираем пакет rpm + src.rpm
-    StartProcess(WorkDir + '/build.sh', 'xterm');
+    StartProcess(WorkDir + '/build.sh', 'xterm'); }
+
+    //Собираем пакет rpm + src.rpm
+    StartProcess('rpmbuild -ba ~/rpmbuild/SPECS/' + NameEdit.Text +
+      '.spec; echo "---"; read -p "' + SCompleted + '"', 'xterm');
 
   finally;
 
@@ -1155,11 +1155,6 @@ begin
     TabSheet3.TabVisible := False
   else
     TabSheet3.TabVisible := True;
-end;
-
-procedure TMainForm.NameEditChange(Sender: TObject);
-begin
-  SaveFlag := True;
 end;
 
 procedure TMainForm.NameEditKeyPress(Sender: TObject; var Key: char);

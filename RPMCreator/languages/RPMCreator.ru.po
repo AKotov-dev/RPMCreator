@@ -317,14 +317,6 @@ msgstr "Сохранить проект"
 msgid "|Save project *.prj"
 msgstr "|Сохранить проект *.prj"
 
-#: tmainform.signcheckbox.caption
-msgid "sign rpm"
-msgstr ""
-
-#: tmainform.signcheckbox.hint
-msgid "|Sign RPM package"
-msgstr "|Подписать пакет RPM"
-
 #: tmainform.tabsheet1.caption
 msgid "Basic"
 msgstr "Основное"
@@ -472,10 +464,6 @@ msgstr "Список файлов пуст!"
 msgid "Please, enter the name of the package:"
 msgstr "Пожалуйста, введите имя пакета:"
 
-#: unit1.smacrosnotfound
-msgid "No file found ~/.rpmmacros! Not ready to sign packages!"
-msgstr "Нет файла ~/.rpmmacros! Не готов подписать пакет!"
-
 #: unit1.snodata
 msgid "Not enough data for build package!"
 msgstr "Не хватает данных для сборки пакета!"
@@ -488,10 +476,7 @@ msgstr "Отсутствует объект списка:"
 msgid "Project changed. Save it?"
 msgstr "Проект изменялся. Сохранить изменения?"
 
-#: unit1.ssignrpm
-msgid "Sign the packages:"
-msgstr "Подпись пакетов:"
-
 #: unit1.ssymlink
 msgid "This is SymLink! Need a real target!"
 msgstr "Это SymLink! Нужна настоящая цель!"
+

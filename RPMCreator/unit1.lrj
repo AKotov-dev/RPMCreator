@@ -66,8 +66,6 @@
 {"hash":474273,"name":"tmainform.metacheck.caption","sourcebytes":[109,101,116,97],"value":"meta"},
 {"hash":122821475,"name":"tmainform.noarchcheck.hint","sourcebytes":[124,70,111,114,32,97,108,108,32,97,114,99,104,105,116,101,99,116,117,114,101,115],"value":"|For all architectures"},
 {"hash":123046040,"name":"tmainform.noarchcheck.caption","sourcebytes":[110,111,97,114,99,104],"value":"noarch"},
-{"hash":112248645,"name":"tmainform.signcheckbox.hint","sourcebytes":[124,83,105,103,110,32,82,80,77,32,112,97,99,107,97,103,101],"value":"|Sign RPM package"},
-{"hash":266370813,"name":"tmainform.signcheckbox.caption","sourcebytes":[115,105,103,110,32,114,112,109],"value":"sign rpm"},
 {"hash":136519860,"name":"tmainform.debcheckbox.hint","sourcebytes":[124,65,100,100,105,116,105,111,110,97,108,108,121,32,98,117,105,108,100,32,97,32,68,69,66,32,112,97,99,107,97,103,101,32,105,110,32,126,47,100,101,98,98,117,105,108,100],"value":"|Additionally build a DEB package in ~/debbuild"},
 {"hash":194706,"name":"tmainform.debcheckbox.caption","sourcebytes":[43,68,69,66],"value":"+DEB"},
 {"hash":100812494,"name":"tmainform.buildlabel.caption","sourcebytes":[98,117,105,108,100,105,110,103,32,97,110,32,105,110,116,101,114,109,101,100,105,97,116,101,32,97,114,99,104,105,118,101,44,32,119,97,105,116,46,46,46],"value":"building an intermediate archive, wait..."},

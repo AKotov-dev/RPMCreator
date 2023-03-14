@@ -295,14 +295,6 @@ msgstr ""
 msgid "|Save project *.prj"
 msgstr ""
 
-#: tmainform.signcheckbox.caption
-msgid "sign rpm"
-msgstr ""
-
-#: tmainform.signcheckbox.hint
-msgid "|Sign RPM package"
-msgstr ""
-
 #: tmainform.tabsheet1.caption
 msgid "Basic"
 msgstr ""
@@ -444,10 +436,6 @@ msgstr ""
 msgid "Please, enter the name of the package:"
 msgstr ""
 
-#: unit1.smacrosnotfound
-msgid "No file found ~/.rpmmacros! Not ready to sign packages!"
-msgstr ""
-
 #: unit1.snodata
 msgid "Not enough data for build package!"
 msgstr ""
@@ -458,10 +446,6 @@ msgstr ""
 
 #: unit1.sprojectchange
 msgid "Project changed. Save it?"
-msgstr ""
-
-#: unit1.ssignrpm
-msgid "Sign the packages:"
 msgstr ""
 
 #: unit1.ssymlink

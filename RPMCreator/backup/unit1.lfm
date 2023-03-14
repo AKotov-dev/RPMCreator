@@ -1,7 +1,7 @@
 object MainForm: TMainForm
-  Left = 286
+  Left = 287
   Height = 721
-  Top = 103
+  Top = 111
   Width = 989
   ActiveControl = LoadBtn
   Caption = 'RPMCreator'
@@ -52,7 +52,6 @@ object MainForm: TMainForm
         Top = 255
         Width = 219
         Color = 15663103
-        OnChange = NameEditChange
         OnKeyPress = NameEditKeyPress
         ParentShowHint = False
         ShowHint = True
@@ -82,7 +81,6 @@ object MainForm: TMainForm
         Top = 255
         Width = 80
         Color = 15663103
-        OnChange = NameEditChange
         OnKeyPress = NameEditKeyPress
         ParentShowHint = False
         ShowHint = True
@@ -112,7 +110,6 @@ object MainForm: TMainForm
         Top = 255
         Width = 88
         Color = 15663103
-        OnChange = NameEditChange
         OnKeyPress = NameEditKeyPress
         ParentShowHint = False
         ShowHint = True
@@ -156,7 +153,6 @@ object MainForm: TMainForm
         Width = 259
         BorderSpacing.Left = 5
         BorderSpacing.Right = 10
-        OnChange = NameEditChange
         ParentShowHint = False
         ShowHint = True
         TabOrder = 13
@@ -189,7 +185,6 @@ object MainForm: TMainForm
           '---'
           'More information: /usr/share/doc/package_name/repack.txt'
         )
-        OnChange = NameEditChange
         ParentShowHint = False
         ScrollBars = ssVertical
         ShowHint = True
@@ -208,7 +203,6 @@ object MainForm: TMainForm
         Anchors = [akTop, akLeft, akRight, akBottom]
         BorderSpacing.Right = 5
         BorderSpacing.Bottom = 5
-        OnChange = NameEditChange
         ParentShowHint = False
         ScrollBars = ssVertical
         ShowHint = True
@@ -239,7 +233,6 @@ object MainForm: TMainForm
         Width = 256
         BorderSpacing.Left = 5
         BorderSpacing.Right = 5
-        OnChange = NameEditChange
         ParentShowHint = False
         ShowHint = True
         TabOrder = 14
@@ -469,7 +462,6 @@ object MainForm: TMainForm
           ' Video/Television'
           ' Video/Utilities'
         )
-        OnChange = NameEditChange
         ParentShowHint = False
         ShowHint = True
         TabOrder = 11
@@ -514,7 +506,6 @@ object MainForm: TMainForm
           'LPPL'
           'MIT'
         )
-        OnChange = NameEditChange
         ParentShowHint = False
         ShowHint = True
         TabOrder = 12
@@ -531,7 +522,6 @@ object MainForm: TMainForm
         BorderSpacing.Left = 5
         BorderSpacing.Right = 5
         Color = 15663103
-        OnChange = NameEditChange
         ParentShowHint = False
         ShowHint = True
         TabOrder = 15
@@ -579,7 +569,6 @@ object MainForm: TMainForm
         Anchors = [akTop, akLeft, akRight]
         BorderSpacing.Right = 5
         Color = 15663103
-        OnChange = NameEditChange
         OnKeyPress = NameEditKeyPress
         ParentShowHint = False
         ShowHint = True
@@ -672,7 +661,6 @@ object MainForm: TMainForm
           '#update-desktop-database -q /usr/share/applications'
           '#export PKGSYSTEM_ENABLE_FSYNC=0 && update-mime-database -n /usr/share/mime'
         )
-        OnChange = NameEditChange
         ParentShowHint = False
         ScrollBars = ssVertical
         ShowHint = True
@@ -701,7 +689,6 @@ object MainForm: TMainForm
           '#update-desktop-database -q /usr/share/applications'
           '#export PKGSYSTEM_ENABLE_FSYNC=0 && update-mime-database -n /usr/share/mime'
         )
-        OnChange = NameEditChange
         ParentShowHint = False
         ScrollBars = ssVertical
         ShowHint = True
@@ -751,7 +738,6 @@ object MainForm: TMainForm
         BorderSpacing.Top = 5
         BorderSpacing.Right = 5
         BorderSpacing.Bottom = 5
-        OnChange = NameEditChange
         ParentShowHint = False
         ScrollBars = ssVertical
         ShowHint = True
@@ -786,7 +772,6 @@ object MainForm: TMainForm
         BorderSpacing.Top = 5
         BorderSpacing.Right = 5
         BorderSpacing.Bottom = 5
-        OnChange = NameEditChange
         ParentShowHint = False
         ScrollBars = ssVertical
         ShowHint = True
@@ -820,7 +805,6 @@ object MainForm: TMainForm
         Top = 134
         Width = 244
         Color = 15663103
-        OnChange = NameEditChange
         TabOrder = 2
       end
       object Label19: TLabel
@@ -877,7 +861,6 @@ object MainForm: TMainForm
         Anchors = [akTop, akLeft, akRight, akBottom]
         BorderSpacing.Right = 5
         BorderSpacing.Bottom = 5
-        OnChange = NameEditChange
         ScrollBars = ssVertical
         TabOrder = 5
       end
@@ -918,7 +901,6 @@ object MainForm: TMainForm
         Anchors = [akTop, akLeft, akRight]
         BorderSpacing.Right = 10
         Color = 15663103
-        OnChange = NameEditChange
         OnKeyPress = NameEditKeyPress
         ParentShowHint = False
         ShowHint = True
@@ -932,7 +914,6 @@ object MainForm: TMainForm
         Top = 81
         Width = 791
         Anchors = [akTop, akLeft, akRight]
-        OnChange = NameEditChange
         OnKeyPress = NameEditKeyPress
         ParentShowHint = False
         ShowHint = True
@@ -978,7 +959,6 @@ object MainForm: TMainForm
           'Swift'
           'Type Script'
         )
-        OnChange = NameEditChange
         TabOrder = 3
       end
       object ToolVersionEdit: TComboBox
@@ -994,7 +974,6 @@ object MainForm: TMainForm
         Items.Strings = (
           'unknown'
         )
-        OnChange = NameEditChange
         TabOrder = 4
       end
     end
@@ -1121,7 +1100,7 @@ object MainForm: TMainForm
       OnClick = AboutBtnClick
       ParentShowHint = False
       ShowHint = True
-      TabOrder = 6
+      TabOrder = 5
     end
     object BuildBtn: TButton
       AnchorSideRight.Control = Panel1
@@ -1136,7 +1115,7 @@ object MainForm: TMainForm
       OnClick = BuildBtnClick
       ParentShowHint = False
       ShowHint = True
-      TabOrder = 7
+      TabOrder = 6
     end
     object MetaCheck: TCheckBox
       AnchorSideLeft.Side = asrBottom
@@ -1148,7 +1127,6 @@ object MainForm: TMainForm
       Top = 5
       Width = 65
       Caption = 'meta'
-      OnChange = NameEditChange
       OnClick = MetaCheckClick
       ParentShowHint = False
       ShowHint = True
@@ -1164,30 +1142,15 @@ object MainForm: TMainForm
       Width = 76
       Caption = 'noarch'
       Color = clDefault
-      OnChange = NameEditChange
       ParentColor = False
       ParentShowHint = False
       ShowHint = True
       TabOrder = 2
     end
-    object SignCheckBox: TCheckBox
-      AnchorSideTop.Control = SaveBtn
-      AnchorSideTop.Side = asrCenter
-      Left = 539
-      Height = 32
-      Hint = '|Sign RPM package'
-      Top = 5
-      Width = 87
-      Caption = 'sign rpm'
-      OnChange = NameEditChange
-      ParentShowHint = False
-      ShowHint = True
-      TabOrder = 4
-    end
     object Bevel4: TBevel
       AnchorSideTop.Control = SaveBtn
       AnchorSideTop.Side = asrCenter
-      Left = 531
+      Left = 533
       Height = 31
       Top = 6
       Width = 9
@@ -1196,25 +1159,15 @@ object MainForm: TMainForm
     object DEBCheckBox: TCheckBox
       AnchorSideTop.Control = SaveBtn
       AnchorSideTop.Side = asrCenter
-      Left = 643
+      Left = 540
       Height = 32
       Hint = '|Additionally build a DEB package in ~/debbuild'
       Top = 5
       Width = 67
       Caption = '+DEB'
-      OnChange = NameEditChange
       ParentShowHint = False
       ShowHint = True
-      TabOrder = 5
-    end
-    object Bevel6: TBevel
-      AnchorSideTop.Control = SaveBtn
-      AnchorSideTop.Side = asrCenter
-      Left = 635
-      Height = 31
-      Top = 6
-      Width = 9
-      Shape = bsLeftLine
+      TabOrder = 4
     end
   end
   object StatusBar1: TStatusBar
