@@ -154,8 +154,6 @@ msgid "Package name:"
 msgstr "Имя пакета:"
 
 #: tmainform.label10.caption
-#, fuzzy
-#| msgid "URL author sources + binaries (32 bit):"
 msgid "URL author sources + binaries:"
 msgstr "URL авторских sources + binaries (32 bit):"
 
@@ -473,4 +471,3 @@ msgstr "Проект изменялся. Сохранить изменения?"
 #: unit1.ssymlink
 msgid "This is SymLink! Need a real target!"
 msgstr "Это SymLink! Нужна настоящая цель!"
-
