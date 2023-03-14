@@ -6,8 +6,8 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls,
-  XMLPropStorage, ExtCtrls, ComCtrls, Menus, Process, IniFiles, LCLType,
-  Buttons, StrUtils, LCLTranslator, DefaultTranslator;
+  XMLPropStorage, ExtCtrls, ComCtrls, Menus, Process, IniFiles,// LCLType,
+  Buttons, StrUtils, DefaultTranslator;
 
 type
 
@@ -134,7 +134,7 @@ type
 resourcestring
   SDeleteRecords = 'Delete selected items?';
   SNoData = 'Not enough data for build package!';
-  SClearWorkDir = 'Clearing the working directory...';
+  //SClearWorkDir = 'Clearing the working directory...';
   SProjectChange = 'Project changed. Save it?';
   SFileListEmpty = 'The list of files is empty!';
   SNoListObject = 'No list object:';
@@ -686,8 +686,8 @@ end;
 procedure TMainForm.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 begin
   //Очищаем рабочую папку
-  MainForm.Caption := SClearWorkDir;
-  StartProcess('find ' + WorkDir + '/* -type f ! -name "*.xml" -delete', 'sh');
+{  MainForm.Caption := SClearWorkDir;
+  StartProcess('find ' + WorkDir + '/* -type f ! -name "*.xml" -delete', 'sh'); }
 end;
 
 procedure TMainForm.FormCloseQuery(Sender: TObject; var CanClose: boolean);

@@ -412,10 +412,6 @@ msgstr ""
 msgid "The program is already running!"
 msgstr ""
 
-#: unit1.sclearworkdir
-msgid "Clearing the working directory..."
-msgstr ""
-
 #: unit1.scompleted
 msgid "Completed. Press Enter to continue..."
 msgstr ""

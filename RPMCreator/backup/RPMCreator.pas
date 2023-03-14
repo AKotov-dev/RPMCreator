@@ -4,7 +4,7 @@ program RPMCreator;
 
 uses
  {$IFDEF UNIX}
-  cthreads,       {$ENDIF}
+  cthreads,   {$ENDIF}
   Interfaces, // this includes the LCL widgetset
   Forms,
   Unit1,
@@ -53,9 +53,8 @@ begin
 
   //---
 
-
-  Application.Scaled := True;
-  Application.Title := 'RPMCreator v2.1';
+  Application.Scaled:=True;
+  Application.Title:='RPMCreator v2.2';
   RequireDerivedFormResource := True;
   Application.Initialize;
   Application.CreateForm(TMainForm, MainForm);

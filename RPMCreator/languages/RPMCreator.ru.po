@@ -440,10 +440,6 @@ msgstr "|Приступить к распаковке"
 msgid "The program is already running!"
 msgstr "Программа уже запущена!"
 
-#: unit1.sclearworkdir
-msgid "Clearing the working directory..."
-msgstr "Очистка рабочей директории..."
-
 #: unit1.scompleted
 msgid "Completed. Press Enter to continue..."
 msgstr "Завершено. Для продолжения нажмите Enter..."
