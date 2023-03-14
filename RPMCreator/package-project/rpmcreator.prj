@@ -31,16 +31,13 @@ urlcopy=https://github.com/AKotov-dev/RPMCreator
 license=GPLv3
 
 [DEPS]
-deps=xterm rpm-build rpm-sign gnupg createrepo gcc make p7zip dpkg-dev gtk2
+deps=xterm rpm-build p7zip dpkg-dev gtk2
 
 [META]
 meta=0
 
 [NOARCH]
 noarch=0
-
-[SIGN]
-sign=0
 
 [DEB]
 deb=0
@@ -68,9 +65,6 @@ deb=0
 
 [URL32]
 url32=https://github.com/AKotov-dev/RPMCreator
-
-[URL64]
-url64=
 
 [PROGRAMNAME]
 programname=RPMCreator
