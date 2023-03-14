@@ -40,10 +40,9 @@
       <Unit0>
         <Filename Value="RPMCreator.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="4"/>
-        <CursorPos X="22"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="28" Y="5"/>
         <UsageCount Value="193"/>
-        <Loaded Value="True"/>
       </Unit0>
       <Unit1>
         <Filename Value="unit1.pas"/>
@@ -52,6 +51,7 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit1"/>
+        <IsVisibleTab Value="True"/>
         <CursorPos X="40" Y="10"/>
         <UsageCount Value="193"/>
         <Loaded Value="True"/>
@@ -64,11 +64,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit2"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="1"/>
+        <EditorIndex Value="-1"/>
         <CursorPos X="78" Y="8"/>
         <UsageCount Value="178"/>
-        <Loaded Value="True"/>
       </Unit2>
       <Unit3>
         <Filename Value="selectunit.pas"/>
@@ -77,10 +75,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="SelectUnit"/>
-        <EditorIndex Value="5"/>
-        <CursorPos X="18"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="28" Y="4"/>
         <UsageCount Value="67"/>
-        <Loaded Value="True"/>
       </Unit3>
       <Unit4>
         <Filename Value="unpackunit.pas"/>
@@ -88,19 +85,17 @@
         <ComponentName Value="UnpackForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="-1"/>
         <CursorPos X="39" Y="136"/>
         <UsageCount Value="46"/>
-        <Loaded Value="True"/>
       </Unit4>
       <Unit5>
         <Filename Value="loadgroupstrd.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="LoadGroupsTRD"/>
-        <EditorIndex Value="3"/>
+        <EditorIndex Value="-1"/>
         <CursorPos X="22"/>
         <UsageCount Value="21"/>
-        <Loaded Value="True"/>
       </Unit5>
       <Unit6>
         <Filename Value="..\StartAsRootUnit.pas"/>
