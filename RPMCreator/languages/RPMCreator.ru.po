@@ -155,7 +155,7 @@ msgstr "Имя пакета:"
 
 #: tmainform.label10.caption
 msgid "URL author sources + binaries:"
-msgstr "URL авторских sources + binaries (32 bit):"
+msgstr "URL авторских sources + binaries:"
 
 #: tmainform.label11.caption
 #, object-pascal-format
