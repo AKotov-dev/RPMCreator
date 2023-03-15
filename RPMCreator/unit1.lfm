@@ -85,7 +85,7 @@ object MainForm: TMainForm
         Height = 37
         Hint = '|Sample: 1.2'
         Top = 263
-        Width = 80
+        Width = 88
         Color = 15663103
         OnChange = NameEditChange
         OnKeyPress = NameEditKeyPress
@@ -97,7 +97,7 @@ object MainForm: TMainForm
         AnchorSideLeft.Control = ReleaseEdit
         AnchorSideBottom.Control = Label1
         AnchorSideBottom.Side = asrBottom
-        Left = 320
+        Left = 328
         Height = 17
         Top = 244
         Width = 55
@@ -112,7 +112,7 @@ object MainForm: TMainForm
       object ReleaseEdit: TEdit
         AnchorSideTop.Control = VersEdit
         AnchorSideRight.Side = asrBottom
-        Left = 320
+        Left = 328
         Height = 37
         Hint = '|Sample: 0.mrx8'
         Top = 263
@@ -355,10 +355,10 @@ object MainForm: TMainForm
         AnchorSideTop.Control = ReleaseEdit
         AnchorSideRight.Control = TabSheet1
         AnchorSideRight.Side = asrBottom
-        Left = 416
+        Left = 424
         Height = 37
         Top = 263
-        Width = 320
+        Width = 336
         BorderSpacing.Right = 5
         Color = 15663103
         ItemHeight = 0
@@ -494,7 +494,7 @@ object MainForm: TMainForm
         AnchorSideLeft.Control = GroupCBox
         AnchorSideBottom.Control = Label1
         AnchorSideBottom.Side = asrBottom
-        Left = 416
+        Left = 424
         Height = 17
         Top = 244
         Width = 43

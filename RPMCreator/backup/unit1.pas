@@ -178,6 +178,7 @@ begin
   else
   begin
     PRJ := TIniFile.Create(ParamStr(1));
+    OpenFile.InitialDir := ExtractFilePath(ParamStr(1));
     MainForm.Caption := Application.Title + ' <' + ExtractFileName(ParamStr(1)) + '>';
   end;
 
@@ -1149,7 +1150,7 @@ begin
     SPEC.Free;
     FILES.Free;
 
-    //Возвращаем в SaveFile CurrentDirectory
+    //Возвращаем в SaveFile CurrentDirectory, если проект изменялся
     SaveFile.InitialDir := OpenFile.InitialDir;
 
     BuildBtn.Enabled := True;
