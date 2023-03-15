@@ -51,9 +51,8 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit1"/>
-        <IsVisibleTab Value="True"/>
-        <TopLine Value="270"/>
-        <CursorPos X="36" Y="274"/>
+        <TopLine Value="467"/>
+        <CursorPos X="3" Y="457"/>
         <UsageCount Value="196"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -86,9 +85,13 @@
         <ComponentName Value="UnpackForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
-        <CursorPos X="26" Y="3"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="101"/>
+        <CursorPos X="3" Y="104"/>
         <UsageCount Value="49"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit4>
       <Unit5>
         <Filename Value="loadgroupstrd.pas"/>
@@ -125,7 +128,7 @@
         <UsageCount Value="10"/>
       </Unit8>
     </Units>
-    <JumpHistory Count="4" HistoryIndex="3">
+    <JumpHistory Count="7" HistoryIndex="6">
       <Position1>
         <Filename Value="unit1.pas"/>
         <Caret Line="3" Column="28"/>
@@ -142,6 +145,18 @@
         <Filename Value="unit1.pas"/>
         <Caret Line="5" Column="10"/>
       </Position4>
+      <Position5>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="274" Column="36" TopLine="261"/>
+      </Position5>
+      <Position6>
+        <Filename Value="unit1.pas"/>
+        <Caret Column="13"/>
+      </Position6>
+      <Position7>
+        <Filename Value="unpackunit.pas"/>
+        <Caret Line="3" Column="26"/>
+      </Position7>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>

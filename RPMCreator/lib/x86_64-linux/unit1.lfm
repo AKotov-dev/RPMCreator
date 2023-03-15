@@ -358,7 +358,7 @@ object MainForm: TMainForm
         Left = 416
         Height = 37
         Top = 263
-        Width = 344
+        Width = 320
         BorderSpacing.Right = 5
         Color = 15663103
         ItemHeight = 0

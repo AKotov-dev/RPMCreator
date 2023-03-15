@@ -86,7 +86,8 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
-        <CursorPos X="26" Y="3"/>
+        <TopLine Value="101"/>
+        <CursorPos X="18" Y="103"/>
         <UsageCount Value="49"/>
       </Unit4>
       <Unit5>
@@ -124,7 +125,7 @@
         <UsageCount Value="10"/>
       </Unit8>
     </Units>
-    <JumpHistory Count="5" HistoryIndex="4">
+    <JumpHistory Count="6" HistoryIndex="5">
       <Position1>
         <Filename Value="unit1.pas"/>
         <Caret Line="3" Column="28"/>
@@ -145,6 +146,10 @@
         <Filename Value="unit1.pas"/>
         <Caret Line="274" Column="36" TopLine="261"/>
       </Position5>
+      <Position6>
+        <Filename Value="unit1.pas"/>
+        <Caret Column="13"/>
+      </Position6>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>

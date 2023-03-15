@@ -1149,6 +1149,9 @@ begin
     SPEC.Free;
     FILES.Free;
 
+    //Возвращаем в SaveFile CurrentDirectory
+    SaveFile.InitialDir := OpenFile.InitialDir;
+
     BuildBtn.Enabled := True;
   end;
 end;
