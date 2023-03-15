@@ -109,12 +109,13 @@ type
     procedure BuildBtnClick(Sender: TObject);
     procedure Button7Click(Sender: TObject);
     procedure MetaCheckClick(Sender: TObject);
+    procedure NameEditChange(Sender: TObject);
     procedure NameEditKeyPress(Sender: TObject; var Key: char);
     procedure RPMBtnClick(Sender: TObject);
     procedure SaveBtnClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure StartProcess(command, terminal: string);
-    procedure SearchDeskTop;
+    // procedure SearchDeskTop;
     procedure StatusBar1DrawPanel(StatusBar: TStatusBar; Panel: TStatusPanel;
       const Rect: TRect);
     procedure TrimEdits;
@@ -492,7 +493,7 @@ begin
   ListBox1.ItemIndex := N;
 end;
 
-//Ищем Рабочий Стол
+{//Ищем Рабочий Стол
 procedure TMainForm.SearchDeskTop;
 begin
   if DirectoryExists(GetUserDir + 'Рабочий стол') then
@@ -504,7 +505,7 @@ begin
     OpenFile.InitialDir := '/home';
 
   SaveFile.InitialDir := OpenFile.InitialDir;
-end;
+end;}
 
 procedure TMainForm.StatusBar1DrawPanel(StatusBar: TStatusBar;
   Panel: TStatusPanel; const Rect: TRect);
@@ -715,15 +716,21 @@ begin
   MainFormStorage.Restore;
 
   MainForm.Caption := Application.Title;
+
   PageControl1.ActivePageIndex := 0;
   AboutBtn.Width := AboutBtn.Height;
 
+  //Получить список валидных групп RPM
+  if not FileExists(WorkDir + '/rpm-groups.lst') then
+  begin
+    FStartLoadGroups := StartLoadGroups.Create(False);
+    FStartLoadGroups.Priority := tpNormal;
+  end
+  else
+    GroupCBox.Items.LoadFromFile(WorkDir + '/rpm-groups.lst');
+
   //Параметры
   if ParamStr(1) <> '' then LoadProject(ParamStr(1), nil);
-
-  //Получить список валидных групп RPM
-  FStartLoadGroups := StartLoadGroups.Create(False);
-  FStartLoadGroups.Priority := tpNormal;
 end;
 
 //Редактирование записей списка файлов и папок
@@ -1156,6 +1163,11 @@ begin
     TabSheet3.TabVisible := True;
 end;
 
+procedure TMainForm.NameEditChange(Sender: TObject);
+begin
+  SaveFlag := True;
+end;
+
 procedure TMainForm.NameEditKeyPress(Sender: TObject; var Key: char);
 begin
   if Key = char(VK_SPACE) then
@@ -1213,7 +1225,7 @@ begin
   MainFormStorage.FileName := WorkDir + '/settings.xml';
 
   //Ищем Рабочий стол
-  SearchDeskTop;
+  //SearchDeskTop;
 end;
 
 end.

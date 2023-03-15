@@ -30,7 +30,6 @@ uses Unit1;
 { TRD }
 
 //Получить список валидных групп
-
 procedure StartLoadGroups.Execute;
 var
   ExProcess: TProcess;
@@ -86,6 +85,7 @@ end;
 { ВЫВОД }
 procedure StartLoadGroups.UpdateGroupBox;
 begin
+  S.SaveToFile(WorkDir + '/rpmgroups.lst');
   MainForm.GroupCBox.Items.Assign(S);
 end;
 

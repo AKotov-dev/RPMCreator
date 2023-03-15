@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=RPMCreator
+Comment=Build RPM and DEB packages program
+Comment[ru]=Программа сборки пакетов RPM и DEB
+Icon=rpmcreator
+Exec=rpmcreator
+Type=Application
+Categories=System;
+Terminal=false
+MimeType=application/x-rpmcreator-project
+

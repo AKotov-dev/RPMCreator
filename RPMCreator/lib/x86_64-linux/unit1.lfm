@@ -12,7 +12,7 @@ object MainForm: TMainForm
   OnCreate = FormCreate
   OnShow = FormShow
   Position = poMainFormCenter
-  SessionProperties = 'Height;LangBtn.Caption;Splitter1.Top;Width;Left;Top'
+  SessionProperties = 'Height;LangBtn.Caption;Left;Splitter1.Top;Top;Width;SaveFile.InitialDir;OpenFile.InitialDir'
   LCLVersion = '2.2.4.0'
   object PageControl1: TPageControl
     Left = 0
@@ -55,6 +55,7 @@ object MainForm: TMainForm
         Width = 219
         BorderSpacing.Top = 2
         Color = 15663103
+        OnChange = NameEditChange
         OnKeyPress = NameEditKeyPress
         ParentShowHint = False
         ShowHint = True
@@ -86,6 +87,7 @@ object MainForm: TMainForm
         Top = 263
         Width = 80
         Color = 15663103
+        OnChange = NameEditChange
         OnKeyPress = NameEditKeyPress
         ParentShowHint = False
         ShowHint = True
@@ -116,6 +118,7 @@ object MainForm: TMainForm
         Top = 263
         Width = 88
         Color = 15663103
+        OnChange = NameEditChange
         OnKeyPress = NameEditKeyPress
         ParentShowHint = False
         ShowHint = True
@@ -161,6 +164,7 @@ object MainForm: TMainForm
         Width = 259
         BorderSpacing.Left = 5
         BorderSpacing.Top = 2
+        OnChange = NameEditChange
         ParentShowHint = False
         ShowHint = True
         TabOrder = 13
@@ -196,6 +200,7 @@ object MainForm: TMainForm
           '---'
           'More information: /usr/share/doc/package_name/repack.txt'
         )
+        OnChange = NameEditChange
         ParentShowHint = False
         ScrollBars = ssVertical
         ShowHint = True
@@ -217,6 +222,7 @@ object MainForm: TMainForm
         BorderSpacing.Top = 2
         BorderSpacing.Right = 5
         BorderSpacing.Bottom = 5
+        OnChange = NameEditChange
         ParentShowHint = False
         ScrollBars = ssVertical
         ShowHint = True
@@ -248,6 +254,7 @@ object MainForm: TMainForm
         Width = 256
         BorderSpacing.Left = 5
         BorderSpacing.Right = 5
+        OnChange = NameEditChange
         ParentShowHint = False
         ShowHint = True
         TabOrder = 14
@@ -478,6 +485,7 @@ object MainForm: TMainForm
           ' Video/Television'
           ' Video/Utilities'
         )
+        OnChange = NameEditChange
         ParentShowHint = False
         ShowHint = True
         TabOrder = 11
@@ -521,6 +529,7 @@ object MainForm: TMainForm
           'LPPL'
           'MIT'
         )
+        OnChange = NameEditChange
         ParentShowHint = False
         ShowHint = True
         TabOrder = 12
@@ -538,6 +547,7 @@ object MainForm: TMainForm
         BorderSpacing.Left = 5
         BorderSpacing.Right = 5
         Color = 15663103
+        OnChange = NameEditChange
         ParentShowHint = False
         ShowHint = True
         TabOrder = 15
@@ -588,6 +598,7 @@ object MainForm: TMainForm
         BorderSpacing.Top = 2
         BorderSpacing.Right = 5
         Color = 15663103
+        OnChange = NameEditChange
         OnKeyPress = NameEditKeyPress
         ParentShowHint = False
         ShowHint = True
@@ -680,6 +691,7 @@ object MainForm: TMainForm
           '#update-desktop-database -q /usr/share/applications'
           '#export PKGSYSTEM_ENABLE_FSYNC=0 && update-mime-database -n /usr/share/mime'
         )
+        OnChange = NameEditChange
         ParentShowHint = False
         ScrollBars = ssVertical
         ShowHint = True
@@ -708,6 +720,7 @@ object MainForm: TMainForm
           '#update-desktop-database -q /usr/share/applications'
           '#export PKGSYSTEM_ENABLE_FSYNC=0 && update-mime-database -n /usr/share/mime'
         )
+        OnChange = NameEditChange
         ParentShowHint = False
         ScrollBars = ssVertical
         ShowHint = True
@@ -757,6 +770,7 @@ object MainForm: TMainForm
         BorderSpacing.Top = 2
         BorderSpacing.Right = 5
         BorderSpacing.Bottom = 4
+        OnChange = NameEditChange
         ParentShowHint = False
         ScrollBars = ssVertical
         ShowHint = True
@@ -791,6 +805,7 @@ object MainForm: TMainForm
         BorderSpacing.Top = 2
         BorderSpacing.Right = 5
         BorderSpacing.Bottom = 4
+        OnChange = NameEditChange
         ParentShowHint = False
         ScrollBars = ssVertical
         ShowHint = True
@@ -829,6 +844,7 @@ object MainForm: TMainForm
         Width = 244
         BorderSpacing.Top = 2
         Color = 15663103
+        OnChange = NameEditChange
         TabOrder = 1
       end
       object Label19: TLabel
@@ -888,6 +904,7 @@ object MainForm: TMainForm
         Anchors = [akTop, akLeft, akRight, akBottom]
         BorderSpacing.Right = 5
         BorderSpacing.Bottom = 5
+        OnChange = NameEditChange
         ScrollBars = ssVertical
         TabOrder = 4
       end
@@ -933,6 +950,7 @@ object MainForm: TMainForm
         BorderSpacing.Top = 2
         BorderSpacing.Right = 10
         Color = 15663103
+        OnChange = NameEditChange
         OnKeyPress = NameEditKeyPress
         ParentShowHint = False
         ShowHint = True
@@ -966,6 +984,7 @@ object MainForm: TMainForm
           'Swift'
           'Type Script'
         )
+        OnChange = NameEditChange
         TabOrder = 2
       end
       object ToolVersionEdit: TComboBox
@@ -981,6 +1000,7 @@ object MainForm: TMainForm
         Items.Strings = (
           'unknown'
         )
+        OnChange = NameEditChange
         TabOrder = 3
       end
     end
@@ -1234,15 +1254,15 @@ object MainForm: TMainForm
   end
   object SaveFile: TSaveDialog
     DefaultExt = '.*.prj'
-    Filter = 'RPMCreator Files (*.prj)|*.prj'
-    InitialDir = '~/'
+    Filter = 'RPMCreator project (*.prj)|*.prj'
+    InitialDir = '~'
     Options = [ofOverwritePrompt, ofNoNetworkButton, ofEnableSizing, ofViewDetail]
     Left = 640
     Top = 624
   end
   object OpenFile: TOpenDialog
-    Filter = 'RPMCreator Files (*.prj)|*.prj'
-    InitialDir = '~/'
+    Filter = 'RPMCreator project (*.prj)|*.prj'
+    InitialDir = '~'
     Options = [ofAllowMultiSelect, ofEnableSizing, ofViewDetail]
     Left = 568
     Top = 624

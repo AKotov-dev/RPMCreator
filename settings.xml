@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CONFIG>
+  <TApplication>
+    <Form1 Edit1_Text="E11111" Edit2_Text="2222222"/>
+    <MainForm Edit1_Text="abakan" Edit2_Text="/home/marsik/Рабочий стол/папка назначения" Splitter1_Top="481" MainForm_Width="878" LangBtn_Caption="EN" MainForm_Height="646" CheckBox1_Checked="0">
+      <ListBox1_Items Count="1" Item0="/home/marsik/Desktop/111/MgaRemixCreator.tar.gz"/>
+    </MainForm>
+    <AboutForm AboutForm_Width="408" AboutForm_Height="261"/>
+  </TApplication>
+</CONFIG>

@@ -1,0 +1,159 @@
+object UnpackForm: TUnpackForm
+  Left = 487
+  Height = 572
+  Top = 213
+  Width = 780
+  Caption = 'Package unpacker'
+  ClientHeight = 572
+  ClientWidth = 780
+  FormStyle = fsStayOnTop
+  OnCreate = FormCreate
+  OnShow = FormShow
+  Position = poMainFormCenter
+  SessionProperties = 'Height;Width;EditButton2.Text'
+  LCLVersion = '2.2.4.0'
+  object LogMemo: TMemo
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = EditButton2
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 5
+    Height = 409
+    Hint = '|Log of the package unpacking process'
+    Top = 158
+    Width = 770
+    Align = alBottom
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Left = 5
+    BorderSpacing.Top = 5
+    BorderSpacing.Right = 5
+    BorderSpacing.Bottom = 5
+    ParentFont = False
+    ParentShowHint = False
+    ReadOnly = True
+    ScrollBars = ssVertical
+    ShowHint = True
+    TabOrder = 2
+  end
+  object Label1: TLabel
+    AnchorSideLeft.Control = EditButton1
+    AnchorSideTop.Control = UnpackBtn
+    AnchorSideTop.Side = asrBottom
+    AnchorSideBottom.Control = EditButton1
+    Left = 5
+    Height = 17
+    Top = 36
+    Width = 144
+    BorderSpacing.Bottom = 1
+    Caption = 'Unpack (*.deb or *.rpm):'
+    ParentColor = False
+    ParentFont = False
+  end
+  object EditButton1: TEditButton
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Label1
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 5
+    Height = 37
+    Hint = '|Select the package to unpack'
+    Top = 55
+    Width = 770
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Left = 5
+    BorderSpacing.Top = 2
+    BorderSpacing.Right = 5
+    ButtonCaption = '...'
+    ButtonWidth = 23
+    Color = 15663103
+    MaxLength = 0
+    NumGlyphs = 1
+    OnButtonClick = EditButton1ButtonClick
+    OnChange = EditButton1Change
+    OnKeyPress = EditButton1KeyPress
+    ParentFont = False
+    ParentShowHint = False
+    PasswordChar = #0
+    ShowHint = True
+    TabOrder = 0
+  end
+  object EditButton2: TEditButton
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Label2
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 5
+    Height = 37
+    Hint = '|Select the directory to save the contents of the package'
+    Top = 116
+    Width = 770
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Left = 5
+    BorderSpacing.Top = 2
+    BorderSpacing.Right = 5
+    ButtonCaption = '...'
+    ButtonWidth = 23
+    Color = 15663103
+    MaxLength = 0
+    NumGlyphs = 1
+    OnButtonClick = EditButton2ButtonClick
+    OnChange = EditButton1Change
+    OnKeyPress = EditButton1KeyPress
+    ParentFont = False
+    ParentShowHint = False
+    PasswordChar = #0
+    ShowHint = True
+    TabOrder = 1
+  end
+  object Label2: TLabel
+    AnchorSideLeft.Control = EditButton2
+    AnchorSideTop.Control = EditButton1
+    AnchorSideTop.Side = asrBottom
+    Left = 5
+    Height = 17
+    Top = 96
+    Width = 138
+    BorderSpacing.Top = 4
+    BorderSpacing.Bottom = 3
+    Caption = 'Content upload folder:'
+    ParentColor = False
+    ParentFont = False
+  end
+  object UnpackBtn: TButton
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 680
+    Height = 30
+    Hint = '|Start unpacking'
+    Top = 6
+    Width = 95
+    Anchors = [akTop, akRight]
+    BorderSpacing.Right = 5
+    Caption = 'Start'
+    Enabled = False
+    OnClick = UnpackBtnClick
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 3
+  end
+  object SelectDirectoryDialog1: TSelectDirectoryDialog
+    Left = 152
+    Top = 168
+  end
+  object OpenDialog1: TOpenDialog
+    Filter = 'Package (*.deb, *.rpm)|*.deb;*.rpm'
+    Left = 40
+    Top = 168
+  end
+  object UnpackFormStorage: TXMLPropStorage
+    StoredValues = <>
+    Left = 296
+    Top = 168
+  end
+end
