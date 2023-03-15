@@ -274,6 +274,8 @@ begin
     Delete(S, 1, Pos('=', S));
     InfoMemo.Lines[i] := S;
   end;
+  //Курсор вначало InfoMemo после наполнения
+  InfoMemo.SelStart := 0;
 
   PRJ.Free;
 

@@ -274,6 +274,8 @@ begin
     Delete(S, 1, Pos('=', S));
     InfoMemo.Lines[i] := S;
   end;
+  //Курсор вначало InfoMemo после наполнения
+  InfoMemo.SelStart := 0;
 
   PRJ.Free;
 
@@ -632,7 +634,7 @@ begin
       end;
 
       //Сохраняем через pkexec в /usr/share/doc/имя_пакета
-      RepackTXT.Text:=Trim(RepackTXT.Text);
+      RepackTXT.Text := Trim(RepackTXT.Text);
       RepackTXT.SaveToFile(WorkDir + '/repack.txt');
       Application.ProcessMessages;
 
