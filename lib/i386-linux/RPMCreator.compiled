@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CONFIG>
-  <Compiler Value="/usr/bin/fpc" Date="1542198759"/>
-  <Params Value=" -MObjFPC -Scghi -CX -O3 -XX -l -vewnhibq -Fi/home/marsik/Desktop/RPMCreator+GUI/lib/i386-linux -Fu/usr/lib/lazarus/lcl/units/i386-linux/gtk2 -Fu/usr/lib/lazarus/lcl/units/i386-linux -Fu/usr/lib/lazarus/components/lazutils/lib/i386-linux -Fu/usr/lib/lazarus/packager/units/i386-linux -Fu/home/marsik/Desktop/RPMCreator+GUI/ -FU/home/marsik/Desktop/RPMCreator+GUI/lib/i386-linux/ -dLCL -dLCLgtk2 RPMCreator.pas"/>
-</CONFIG>
