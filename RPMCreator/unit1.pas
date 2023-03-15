@@ -1163,11 +1163,13 @@ begin
     TabSheet3.TabVisible := True;
 end;
 
+//Флаг изменения проекта
 procedure TMainForm.NameEditChange(Sender: TObject);
 begin
   SaveFlag := True;
 end;
 
+//Запрет пробелов в определенных полях
 procedure TMainForm.NameEditKeyPress(Sender: TObject; var Key: char);
 begin
   if Key = char(VK_SPACE) then

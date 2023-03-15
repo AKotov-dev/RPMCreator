@@ -1001,6 +1001,7 @@ object MainForm: TMainForm
           'unknown'
         )
         OnChange = NameEditChange
+        OnKeyPress = NameEditKeyPress
         TabOrder = 3
       end
     end
