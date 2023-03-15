@@ -179,6 +179,7 @@ begin
   begin
     PRJ := TIniFile.Create(ParamStr(1));
     OpenFile.InitialDir := ExtractFilePath(ParamStr(1));
+    SaveFile.InitialDir := OpenFile.InitialDir;
     MainForm.Caption := Application.Title + ' <' + ExtractFileName(ParamStr(1)) + '>';
   end;
 
