@@ -1176,11 +1176,10 @@ begin
     Key := #0;
 end;
 
-//Список файлов по имени пакета
 procedure TMainForm.RPMBtnClick(Sender: TObject);
 var
-  i: integer;
   RPMName: string;
+  i: integer;
 begin
   //Грузим список файлов, из которых состоит пакет.rpm
   RPMName := '';
@@ -1188,7 +1187,7 @@ begin
   if not InputQuery('RPMCreator', SInputName, RPMName) or (Trim(RPMName) = '') then
     Exit;
 
-  StartProcess('rpm -ql ' + RPMName + ' > ' + WorkDir + '/rpm-ql.lst', 'sh');
+  StartProcess('/usr/bin/rpm -ql ' + RPMName + ' > ' + WorkDir + '/rpm-ql.lst', 'sh');
   ListBox1.Items.LoadFromFile(WorkDir + '/rpm-ql.lst');
 
   //Исключаем каталоги (кроме пустых), иначе будут повторы
