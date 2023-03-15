@@ -577,12 +577,12 @@ begin
       Add('Version of program: ' + VersEdit.Text);
       Add('Program development tool: ' + DevToolEdit.Text);
       Add('Version of program development tool: ' + ToolVersionEdit.Text);
-      Add('URL the sources of the author (32 bit): ' + URLEdit32.Text);
+      Add('URL the sources + binaries of the author: ' + URLEdit32.Text);
      { if URLEdit64.Text = '' then
         Add('URL the sources of the author (64 bit): unknown')
       else
-        Add('URL the sources of the author (64 bit): ' + URLEdit64.Text);
-      Add(''); }
+        Add('URL the sources of the author (64 bit): ' + URLEdit64.Text);}
+      Add('');
 
       //Информация о rpm-пакете
       Add('Information about the rpm-package:');
@@ -632,6 +632,7 @@ begin
       end;
 
       //Сохраняем через pkexec в /usr/share/doc/имя_пакета
+      RepackTXT.Text := Trim(RepackTXT.Text);
       RepackTXT.SaveToFile(WorkDir + '/repack.txt');
       Application.ProcessMessages;
 

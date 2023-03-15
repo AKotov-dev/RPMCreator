@@ -1,4 +1,4 @@
-**RPMCreator** - GUI for building RPM and DEB packages from pre-installed files and folders
+**RPMCreator** - GUI for building RPM and DEB packages from pre-installed files and folders.
 
 **Dependencies:** `xterm rpm-build p7zip dpkg-dev gtk2`
 

@@ -13,7 +13,7 @@ URL the sources of the author (64 bit): unknown
 Information about the rpm-package:
 ---
 Build method: Portable RPM
-Time stamp: 12-3-23 19:15:25
+Time stamp: 13-3-23 11:02:05
 
 Name: rpmcreator
 Version: 2.1
@@ -41,8 +41,10 @@ Additionally information:
 Lazarus is required to compile the program
 
 v2.1
-+ Opening *.prj files from File Manager
 + Recompilation in Lazarus-2.2.4
++ Opening *.prj files from File Manager
++ Loading valid groups in a separate thread
++ PopUp menu - Edit an entry in the file list
 + RPM packages for Mageia-8/9
 
 v2.0
