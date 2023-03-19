@@ -41,10 +41,9 @@
         <Filename Value="RPMCreator.pas"/>
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
-        <EditorIndex Value="1"/>
+        <EditorIndex Value="-1"/>
         <CursorPos X="11" Y="4"/>
         <UsageCount Value="196"/>
-        <Loaded Value="True"/>
       </Unit0>
       <Unit1>
         <Filename Value="unit1.pas"/>
@@ -53,10 +52,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit1"/>
+        <EditorIndex Value="-1"/>
         <CursorPos X="13"/>
         <UsageCount Value="196"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit1>
       <Unit2>
         <Filename Value="unit2.pas"/>
@@ -126,12 +124,10 @@
         <UsageCount Value="10"/>
       </Unit8>
     </Units>
-    <JumpHistory Count="1">
-      <Position1>
-        <Filename Value="RPMCreator.pas"/>
-        <Caret Line="11" Column="16"/>
-      </Position1>
-    </JumpHistory>
+    <General>
+      <ActiveWindowIndexAtStart Value="-1"/>
+    </General>
+    <JumpHistory HistoryIndex="-1"/>
     <RunParams>
       <FormatVersion Value="2"/>
       <Modes ActiveMode="default"/>
