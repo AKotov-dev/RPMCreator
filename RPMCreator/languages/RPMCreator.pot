@@ -37,6 +37,11 @@ msgstr ""
 msgid "|About"
 msgstr ""
 
+#: tmainform.additem.caption
+msgctxt "tmainform.additem.caption"
+msgid "Add objects"
+msgstr ""
+
 #: tmainform.afterinstalledit.hint
 msgid "|Actions performed after installing the package"
 msgstr ""
@@ -55,6 +60,11 @@ msgstr ""
 
 #: tmainform.buildbtn.caption
 msgctxt "tmainform.buildbtn.caption"
+msgid "Build package"
+msgstr ""
+
+#: tmainform.builditem.caption
+msgctxt "tmainform.builditem.caption"
 msgid "Build package"
 msgstr ""
 
@@ -119,7 +129,8 @@ msgstr ""
 msgid "|Move record down"
 msgstr ""
 
-#: tmainform.editentry.caption
+#: tmainform.edititem.caption
+msgctxt "tmainform.edititem.caption"
 msgid "Edit an entry"
 msgstr ""
 
@@ -227,27 +238,13 @@ msgstr ""
 msgid "|Load project *.prj"
 msgstr ""
 
-#: tmainform.maintaineredit.hint
-msgid "|Sample: Alex Kotov"
-msgstr ""
-
-#: tmainform.menuitem1.caption
-msgid "Add objects"
-msgstr ""
-
-#: tmainform.menuitem10.caption
-msgctxt "tmainform.menuitem10.caption"
-msgid "Build package"
-msgstr ""
-
-#: tmainform.menuitem7.caption
-msgctxt "tmainform.menuitem7.caption"
+#: tmainform.loaditem.caption
+msgctxt "tmainform.loaditem.caption"
 msgid "Load project"
 msgstr ""
 
-#: tmainform.menuitem8.caption
-msgctxt "tmainform.menuitem8.caption"
-msgid "Save project"
+#: tmainform.maintaineredit.hint
+msgid "|Sample: Alex Kotov"
 msgstr ""
 
 #: tmainform.metacheck.caption
@@ -289,6 +286,11 @@ msgstr ""
 
 #: tmainform.savebtn.hint
 msgid "|Save project *.prj"
+msgstr ""
+
+#: tmainform.saveitem.caption
+msgctxt "tmainform.saveitem.caption"
+msgid "Save project"
 msgstr ""
 
 #: tmainform.tabsheet1.caption

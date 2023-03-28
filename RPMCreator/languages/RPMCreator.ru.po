@@ -58,6 +58,11 @@ msgstr ""
 msgid "|About"
 msgstr "|О программе"
 
+#: tmainform.additem.caption
+msgctxt "tmainform.additem.caption"
+msgid "Add objects"
+msgstr "Добавить объекты"
+
 #: tmainform.afterinstalledit.hint
 msgid "|Actions performed after installing the package"
 msgstr "|Действия выполняются после установки пакета"
@@ -76,6 +81,11 @@ msgstr "|Действия выполняются перед удалением �
 
 #: tmainform.buildbtn.caption
 msgctxt "tmainform.buildbtn.caption"
+msgid "Build package"
+msgstr "Собрать пакет"
+
+#: tmainform.builditem.caption
+msgctxt "tmainform.builditem.caption"
 msgid "Build package"
 msgstr "Собрать пакет"
 
@@ -140,7 +150,8 @@ msgstr ""
 msgid "|Move record down"
 msgstr "|Переместить запись вниз"
 
-#: tmainform.editentry.caption
+#: tmainform.edititem.caption
+msgctxt "tmainform.edititem.caption"
 msgid "Edit an entry"
 msgstr "Редактировать запись"
 
@@ -248,28 +259,14 @@ msgstr "Загрузить проект"
 msgid "|Load project *.prj"
 msgstr "|Загрузить проект *.prj"
 
-#: tmainform.maintaineredit.hint
-msgid "|Sample: Alex Kotov"
-msgstr "|Например: Alex Kotov"
-
-#: tmainform.menuitem1.caption
-msgid "Add objects"
-msgstr "Добавить объекты"
-
-#: tmainform.menuitem10.caption
-msgctxt "tmainform.menuitem10.caption"
-msgid "Build package"
-msgstr "Собрать пакет"
-
-#: tmainform.menuitem7.caption
-msgctxt "tmainform.menuitem7.caption"
+#: tmainform.loaditem.caption
+msgctxt "tmainform.loaditem.caption"
 msgid "Load project"
 msgstr "Загрузить проект"
 
-#: tmainform.menuitem8.caption
-msgctxt "tmainform.menuitem8.caption"
-msgid "Save project"
-msgstr "Сохранить проект"
+#: tmainform.maintaineredit.hint
+msgid "|Sample: Alex Kotov"
+msgstr "|Например: Alex Kotov"
 
 #: tmainform.metacheck.caption
 msgid "meta"
@@ -312,6 +309,11 @@ msgstr "Сохранить проект"
 #: tmainform.savebtn.hint
 msgid "|Save project *.prj"
 msgstr "|Сохранить проект *.prj"
+
+#: tmainform.saveitem.caption
+msgctxt "tmainform.saveitem.caption"
+msgid "Save project"
+msgstr "Сохранить проект"
 
 #: tmainform.tabsheet1.caption
 msgid "Basic"

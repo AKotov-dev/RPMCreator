@@ -25,7 +25,7 @@ type
     Bevel5: TBevel;
     Button1: TButton;
     DEBCheckBox: TCheckBox;
-    EditEntry: TMenuItem;
+    EditItem: TMenuItem;
     UPBtn: TButton;
     DNBtn: TButton;
     UnpackBtn: TButton;
@@ -71,11 +71,11 @@ type
     ListBox1: TListBox;
     LoadBtn: TButton;
     MaintainerEdit: TEdit;
-    MenuItem1: TMenuItem;
-    MenuItem10: TMenuItem;
+    AddItem: TMenuItem;
+    BuildItem: TMenuItem;
     MenuItem6: TMenuItem;
-    MenuItem7: TMenuItem;
-    MenuItem8: TMenuItem;
+    LoadItem: TMenuItem;
+    SaveItem: TMenuItem;
     MenuItem9: TMenuItem;
     NameEdit: TEdit;
     OpenFile: TOpenDialog;
@@ -100,7 +100,7 @@ type
     procedure Button3Click(Sender: TObject);
     procedure CreateRepackTxtClick(Sender: TObject);
     procedure DevToolEditChange(Sender: TObject);
-    procedure EditEntryClick(Sender: TObject);
+    procedure EditItemClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCloseQuery(Sender: TObject; var CanClose: boolean);
     procedure FormShow(Sender: TObject);
@@ -169,7 +169,7 @@ begin
   Application.ProcessMessages;
 
   //Загрузка с кнопки или из параметра?
-  if Sender = LoadBtn then
+  if (Sender = LoadBtn) or (Sender = LoadItem) then
   begin
     PRJ := TIniFile.Create(OpenFile.FileName);
     MainForm.Caption := Application.Title + ' <' +
@@ -669,7 +669,7 @@ begin
 end;
 
 //Редактирование записей списка файлов и папок
-procedure TMainForm.EditEntryClick(Sender: TObject);
+procedure TMainForm.EditItemClick(Sender: TObject);
 var
   S: string;
 begin
@@ -741,7 +741,7 @@ end;
 //Редактирование записей списка файлов и папок
 procedure TMainForm.ListBox1DblClick(Sender: TObject);
 begin
-  EditEntry.Click;
+  EditItem.Click;
 end;
 
 procedure TMainForm.LoadBtnClick(Sender: TObject);

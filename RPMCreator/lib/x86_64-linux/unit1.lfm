@@ -1275,25 +1275,25 @@ object MainForm: TMainForm
     Images = ImageList1
     Left = 832
     Top = 624
-    object MenuItem1: TMenuItem
+    object AddItem: TMenuItem
       Caption = 'Add objects'
       ImageIndex = 0
       OnClick = Button1Click
     end
-    object EditEntry: TMenuItem
+    object EditItem: TMenuItem
       Caption = 'Edit an entry'
       ImageIndex = 1
-      OnClick = EditEntryClick
+      OnClick = EditItemClick
     end
     object MenuItem6: TMenuItem
       Caption = '-'
     end
-    object MenuItem7: TMenuItem
+    object LoadItem: TMenuItem
       Caption = 'Load project'
       ImageIndex = 2
       OnClick = LoadBtnClick
     end
-    object MenuItem8: TMenuItem
+    object SaveItem: TMenuItem
       Caption = 'Save project'
       ImageIndex = 3
       OnClick = SaveBtnClick
@@ -1301,7 +1301,7 @@ object MainForm: TMainForm
     object MenuItem9: TMenuItem
       Caption = '-'
     end
-    object MenuItem10: TMenuItem
+    object BuildItem: TMenuItem
       Caption = 'Build package'
       ImageIndex = 4
       OnClick = BuildBtnClick

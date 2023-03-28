@@ -68,9 +68,9 @@
 {"hash":136519860,"name":"tmainform.debcheckbox.hint","sourcebytes":[124,65,100,100,105,116,105,111,110,97,108,108,121,32,98,117,105,108,100,32,97,32,68,69,66,32,112,97,99,107,97,103,101,32,105,110,32,126,47,100,101,98,98,117,105,108,100],"value":"|Additionally build a DEB package in ~/debbuild"},
 {"hash":194706,"name":"tmainform.debcheckbox.caption","sourcebytes":[43,68,69,66],"value":"+DEB"},
 {"hash":100812494,"name":"tmainform.buildlabel.caption","sourcebytes":[98,117,105,108,100,105,110,103,32,97,110,32,105,110,116,101,114,109,101,100,105,97,116,101,32,97,114,99,104,105,118,101,44,32,119,97,105,116,46,46,46],"value":"building an intermediate archive, wait..."},
-{"hash":97983683,"name":"tmainform.menuitem1.caption","sourcebytes":[65,100,100,32,111,98,106,101,99,116,115],"value":"Add objects"},
-{"hash":198983129,"name":"tmainform.editentry.caption","sourcebytes":[69,100,105,116,32,97,110,32,101,110,116,114,121],"value":"Edit an entry"},
-{"hash":46235092,"name":"tmainform.menuitem7.caption","sourcebytes":[76,111,97,100,32,112,114,111,106,101,99,116],"value":"Load project"},
-{"hash":36621524,"name":"tmainform.menuitem8.caption","sourcebytes":[83,97,118,101,32,112,114,111,106,101,99,116],"value":"Save project"},
-{"hash":263860709,"name":"tmainform.menuitem10.caption","sourcebytes":[66,117,105,108,100,32,112,97,99,107,97,103,101],"value":"Build package"}
+{"hash":97983683,"name":"tmainform.additem.caption","sourcebytes":[65,100,100,32,111,98,106,101,99,116,115],"value":"Add objects"},
+{"hash":198983129,"name":"tmainform.edititem.caption","sourcebytes":[69,100,105,116,32,97,110,32,101,110,116,114,121],"value":"Edit an entry"},
+{"hash":46235092,"name":"tmainform.loaditem.caption","sourcebytes":[76,111,97,100,32,112,114,111,106,101,99,116],"value":"Load project"},
+{"hash":36621524,"name":"tmainform.saveitem.caption","sourcebytes":[83,97,118,101,32,112,114,111,106,101,99,116],"value":"Save project"},
+{"hash":263860709,"name":"tmainform.builditem.caption","sourcebytes":[66,117,105,108,100,32,112,97,99,107,97,103,101],"value":"Build package"}
 ]}

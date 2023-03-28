@@ -53,7 +53,7 @@ begin
   //---
 
   Application.Scaled:=True;
-  Application.Title:='RPMCreator v2.3';
+  Application.Title:='RPMCreator v2.4';
   RequireDerivedFormResource := True;
   Application.Initialize;
   Application.CreateForm(TMainForm, MainForm);
