@@ -40,10 +40,9 @@
       <Unit0>
         <Filename Value="RPMCreator.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="1"/>
+        <EditorIndex Value="-1"/>
         <CursorPos X="11" Y="4"/>
-        <UsageCount Value="196"/>
-        <Loaded Value="True"/>
+        <UsageCount Value="197"/>
       </Unit0>
       <Unit1>
         <Filename Value="unit1.pas"/>
@@ -53,9 +52,9 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit1"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="160"/>
-        <CursorPos X="21" Y="166"/>
-        <UsageCount Value="196"/>
+        <TopLine Value="748"/>
+        <CursorPos X="11" Y="766"/>
+        <UsageCount Value="197"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
@@ -68,7 +67,7 @@
         <UnitName Value="Unit2"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="78" Y="8"/>
-        <UsageCount Value="181"/>
+        <UsageCount Value="182"/>
       </Unit2>
       <Unit3>
         <Filename Value="selectunit.pas"/>
@@ -78,8 +77,9 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="SelectUnit"/>
         <EditorIndex Value="-1"/>
-        <CursorPos X="28" Y="4"/>
-        <UsageCount Value="70"/>
+        <TopLine Value="101"/>
+        <CursorPos Y="104"/>
+        <UsageCount Value="71"/>
       </Unit3>
       <Unit4>
         <Filename Value="unpackunit.pas"/>
@@ -90,7 +90,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="101"/>
         <CursorPos X="18" Y="103"/>
-        <UsageCount Value="49"/>
+        <UsageCount Value="50"/>
       </Unit4>
       <Unit5>
         <Filename Value="loadgroupstrd.pas"/>
@@ -100,7 +100,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="61"/>
         <CursorPos X="32" Y="88"/>
-        <UsageCount Value="24"/>
+        <UsageCount Value="25"/>
       </Unit5>
       <Unit6>
         <Filename Value="..\StartAsRootUnit.pas"/>
@@ -127,7 +127,24 @@
         <UsageCount Value="10"/>
       </Unit8>
     </Units>
-    <JumpHistory HistoryIndex="-1"/>
+    <JumpHistory Count="4" HistoryIndex="3">
+      <Position1>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="168" Column="21" TopLine="162"/>
+      </Position1>
+      <Position2>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="762" Column="18" TopLine="749"/>
+      </Position2>
+      <Position3>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="763" Column="17" TopLine="750"/>
+      </Position3>
+      <Position4>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="765" Column="39" TopLine="742"/>
+      </Position4>
+    </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>
       <Modes ActiveMode="default"/>

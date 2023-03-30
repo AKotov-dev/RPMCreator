@@ -1,7 +1,7 @@
 object SelectForm: TSelectForm
-  Left = 342
+  Left = 376
   Height = 643
-  Top = 132
+  Top = 125
   Width = 864
   ActiveControl = FileListBox1
   Caption = 'Select files and folders'
