@@ -106,7 +106,7 @@ type
     procedure FormCloseQuery(Sender: TObject; var CanClose: boolean);
     procedure FormShow(Sender: TObject);
     procedure ListBox1DblClick(Sender: TObject);
-    procedure ListBox1DrawItem(Control: TWinControl; Index: Integer;
+    procedure ListBox1DrawItem(Control: TWinControl; Index: integer;
       ARect: TRect; State: TOwnerDrawState);
     procedure LoadBtnClick(Sender: TObject);
     procedure BuildBtnClick(Sender: TObject);
@@ -748,7 +748,7 @@ begin
 end;
 
 //Иконки в списке файлов
-procedure TMainForm.ListBox1DrawItem(Control: TWinControl; Index: Integer;
+procedure TMainForm.ListBox1DrawItem(Control: TWinControl; Index: integer;
   ARect: TRect; State: TOwnerDrawState);
 var
   BitMap: TBitMap;
@@ -761,11 +761,12 @@ begin
       //Название файла
       Canvas.TextOut(aRect.Left + 26, aRect.Top + 5, Items[Index]);
       //Иконка файла
-      if Items[Index][Length(Items[Index])] <> '/' then
-      ImageList2.GetBitMap(1, BitMap) else
-      ImageList2.GetBitMap(0, BitMap);
+      if Items[Index][Length(Items[Index])] = '/' then
+        ImageList2.GetBitMap(0, BitMap)
+      else
+        ImageList2.GetBitMap(1, BitMap);
 
-      Canvas.Draw(aRect.Left + 2, aRect.Top + 2, BitMap);
+      Canvas.Draw(aRect.Left + 2, aRect.Top + 5, BitMap);
     end;
   finally
     BitMap.Free;

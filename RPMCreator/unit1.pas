@@ -766,7 +766,7 @@ begin
       else
         ImageList2.GetBitMap(1, BitMap);
 
-      Canvas.Draw(aRect.Left + 2, aRect.Top + 2, BitMap);
+      Canvas.Draw(aRect.Left + 2, aRect.Top + 5, BitMap);
     end;
   finally
     BitMap.Free;
