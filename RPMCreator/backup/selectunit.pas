@@ -105,17 +105,21 @@ var
   BitMap: TBitMap;
 begin
   try
-    BitMap := TBitMap.Create;
-    with FileListBox1 do
-    begin
-      Canvas.FillRect(aRect);
-      //Название файла
-      Canvas.TextOut(aRect.Left + 26, aRect.Top + 5, Items[Index]);
-      //Иконка файла
-      ImageList1.GetBitMap(1, BitMap);
-      Canvas.Draw(aRect.Left + 2, aRect.Top + 2, BitMap);
-    end;
-  finally
+     BitMap := TBitMap.Create;
+     with FileListBox1 do
+     begin
+       Canvas.FillRect(aRect);
+       //Название файла
+       //Canvas.TextOut(aRect.Left + 26, aRect.Top + 5, Items[Index]);
+       //Название (текст по центру-вертикали)
+       Canvas.TextOut(aRect.Left + 26, aRect.Top + ItemHeight div 2 -
+         Canvas.TextHeight('A') div 2 + 1, Items[Index]);
+
+       //Иконка файла
+       ImageList1.GetBitMap(1, BitMap);
+       Canvas.Draw(aRect.Left + 2, aRect.Top + (ItemHeight - 22) div 2 + 2, BitMap);
+     end;
+   finally
     BitMap.Free;
   end;
 end;

@@ -1,7 +1,7 @@
 object SelectForm: TSelectForm
-  Left = 342
+  Left = 287
   Height = 643
-  Top = 132
+  Top = 128
   Width = 864
   ActiveControl = FileListBox1
   Caption = 'Select files and folders'
@@ -97,7 +97,7 @@ object SelectForm: TSelectForm
     Align = alClient
     Directory = '~/'
     FileType = [ftReadOnly, ftHidden, ftSystem, ftArchive, ftNormal]
-    ItemHeight = 22
+    ItemHeight = 24
     MultiSelect = True
     OnClick = FileListBox1Click
     OnDrawItem = FileListBox1DrawItem
