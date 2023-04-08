@@ -50,7 +50,7 @@ begin
 
     //Получить список валидных групп
     ExProcess.Parameters.Add(
-      '[[ $(type -f rpmlint 2>/dev/null) ]] && rpmlint --explain non-standard-group ' +
+      '[[ $(type -f rpmlint1 2>/dev/null) ]] && rpmlint --explain non-standard-group ' +
       '| grep "\"" | tr "\n" " " | tr "," "\n" | tr -d [".\""] | sed "s/^ *//"');
 
     Exprocess.Execute;

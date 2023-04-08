@@ -729,13 +729,13 @@ begin
   AboutBtn.Width := AboutBtn.Height;
 
   //Получить список валидных групп RPM
-  if not FileExists(WorkDir + '/rpm-groups.lst') then
+  if not FileExists(WorkDir + '/rpm-groups.list') then
   begin
     FStartLoadGroups := StartLoadGroups.Create(False);
     FStartLoadGroups.Priority := tpNormal;
   end
   else
-    GroupCBox.Items.LoadFromFile(WorkDir + '/rpm-groups.lst');
+    GroupCBox.Items.LoadFromFile(WorkDir + '/rpm-groups.list');
 
   //Параметры
   if ParamStr(1) <> '' then LoadProject(ParamStr(1), nil);
@@ -1267,9 +1267,6 @@ begin
     MkDir(WorkDir);
 
   MainFormStorage.FileName := WorkDir + '/settings.xml';
-
-  //Ищем Рабочий стол
-  //SearchDeskTop;
 end;
 
 end.

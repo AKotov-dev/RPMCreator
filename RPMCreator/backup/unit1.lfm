@@ -365,6 +365,8 @@ object MainForm: TMainForm
         Color = 15663103
         ItemHeight = 0
         Items.Strings = (
+          'Compatible RPMCreator Groups...'
+          ''
           'Accessibility'
           'Archiving/Backup'
           'Archiving/Cd burning'
