@@ -2,7 +2,7 @@
 name=rpmcreator
 
 [VERSION]
-version=2.4
+version=2.5
 
 [RELEASE]
 release=0.mrx9
