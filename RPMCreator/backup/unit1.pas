@@ -791,9 +791,9 @@ end;
 
 procedure TMainForm.BuildBtnClick(Sender: TObject);
 var
-  SPEC, FILES: TStringList;
   i: integer;
-  size: ansistring;
+  deps, size: ansistring;
+  SPEC, FILES: TStringList;
 begin
   //Обрезаем крайние пробелы
   TrimEdits;
@@ -901,26 +901,34 @@ begin
       SPEC.Add('Maintainer: ' + MaintainerEdit.Text);
 
       //Если в зависимостях нет запятых, заменяем пробелы запятыми
-      if pos(',', DepsEdit.Text) = 0 then
+     { if pos(',', DepsEdit.Text) = 0 then
         SPEC.Add('Depends: ' + Trim(StringReplace(DepsEdit.Text, ' ',
           ',', [rfReplaceAll])))
       else
-        SPEC.Add('Depends: ' + Trim(DepsEdit.Text));
+        SPEC.Add('Depends: ' + Trim(DepsEdit.Text));}
+      if RunCommand('/bin/bash', ['-c', 'echo "' + Trim(DepsEdit.Text) +
+        '" | tr -s [:space:][:punct:] | tr " " "," | tr -s [:punct:] | sed "s/,/, /g"'],
+        deps) then
+        SPEC.Add('Depends: ' + Trim(deps));
+
 
       SPEC.Add('Priority: extra');
       SPEC.Add('Section: misc');
       SPEC.Add('Homepage: ' + URLCopyEdit.Text);
 
-      //Ставим Installed-Size в KiB (килобайты)
+      //Installed-Size в KiB (килобайты)
       if RunCommand('/bin/bash',
         ['-c', 'du -schk ~/debbuild/tmp/*[^DEBIAN] | tail -n1 | cut -f1 '], size) then
         SPEC.Add('Installed-Size: ' + Trim(size));
 
+      //Description (Brief + Full)
       SPEC.Add('Description: ' + SummaryEdit.Text);
+      for i := 0 to DescEdit.Lines.Count - 1 do
+        SPEC.Add(' ' + Trim(DescEdit.Lines[i]));
 
       SPEC.SaveToFile(GetUserDir + 'debbuild/tmp/DEBIAN/control');
 
-      //Контрольная сумма файлов корня пакета DEB
+      //Контрольная сумма файлов из корня пакета DEB
       if not MetaCheck.Checked then
         StartProcess(
           'cd ~/debbuild/tmp; md5sum $(find *[^DEBIAN] -type f) > ~/debbuild/tmp/DEBIAN/md5sums; cd -',

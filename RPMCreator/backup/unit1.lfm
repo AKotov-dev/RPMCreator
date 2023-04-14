@@ -1,7 +1,7 @@
 object MainForm: TMainForm
-  Left = 284
+  Left = 285
   Height = 728
-  Top = 104
+  Top = 96
   Width = 1000
   ActiveControl = LoadBtn
   Caption = 'RPMCreator'
@@ -34,7 +34,7 @@ object MainForm: TMainForm
         AnchorSideTop.Side = asrBottom
         Left = 5
         Height = 17
-        Top = 244
+        Top = 253
         Width = 98
         BorderSpacing.Top = 5
         Caption = 'Package name:'
@@ -51,7 +51,7 @@ object MainForm: TMainForm
         Left = 5
         Height = 37
         Hint = '|Sample: mypackage'
-        Top = 263
+        Top = 272
         Width = 219
         BorderSpacing.Top = 2
         Color = 15663103
@@ -68,7 +68,7 @@ object MainForm: TMainForm
         AnchorSideBottom.Side = asrBottom
         Left = 232
         Height = 17
-        Top = 244
+        Top = 253
         Width = 52
         Anchors = [akLeft, akBottom]
         Caption = 'Version:'
@@ -84,7 +84,7 @@ object MainForm: TMainForm
         Left = 232
         Height = 37
         Hint = '|Sample: 1.2'
-        Top = 263
+        Top = 272
         Width = 88
         Color = 15663103
         OnChange = NameEditChange
@@ -99,7 +99,7 @@ object MainForm: TMainForm
         AnchorSideBottom.Side = asrBottom
         Left = 328
         Height = 17
-        Top = 244
+        Top = 253
         Width = 55
         Anchors = [akLeft, akBottom]
         Caption = 'Release:'
@@ -115,7 +115,7 @@ object MainForm: TMainForm
         Left = 328
         Height = 37
         Hint = '|Sample: 0.mrx8'
-        Top = 263
+        Top = 272
         Width = 88
         Color = 15663103
         OnChange = NameEditChange
@@ -130,7 +130,7 @@ object MainForm: TMainForm
         AnchorSideTop.Side = asrBottom
         Left = 5
         Height = 17
-        Top = 364
+        Top = 373
         Width = 133
         BorderSpacing.Top = 4
         Caption = 'Package description:'
@@ -146,7 +146,7 @@ object MainForm: TMainForm
         AnchorSideTop.Side = asrBottom
         Left = 5
         Height = 17
-        Top = 304
+        Top = 313
         Width = 67
         BorderSpacing.Top = 4
         Caption = 'Maintainer:'
@@ -160,7 +160,7 @@ object MainForm: TMainForm
         Left = 5
         Height = 37
         Hint = '|Sample: Alex Kotov'
-        Top = 323
+        Top = 332
         Width = 259
         BorderSpacing.Left = 5
         BorderSpacing.Top = 2
@@ -175,7 +175,7 @@ object MainForm: TMainForm
         AnchorSideTop.Side = asrBottom
         Left = 5
         Height = 17
-        Top = 545
+        Top = 554
         Width = 139
         BorderSpacing.Top = 4
         Caption = 'Package dependencies:'
@@ -189,7 +189,7 @@ object MainForm: TMainForm
         AnchorSideRight.Side = asrBottom
         Left = 5
         Height = 98
-        Top = 383
+        Top = 392
         Width = 984
         Anchors = [akTop, akLeft, akRight]
         BorderSpacing.Top = 2
@@ -214,9 +214,9 @@ object MainForm: TMainForm
         AnchorSideBottom.Control = TabSheet1
         AnchorSideBottom.Side = asrBottom
         Left = 5
-        Height = 55
+        Height = 46
         Hint = '|Package names separated by commas or spaces'
-        Top = 564
+        Top = 573
         Width = 984
         Anchors = [akTop, akLeft, akRight, akBottom]
         BorderSpacing.Top = 2
@@ -235,7 +235,7 @@ object MainForm: TMainForm
         AnchorSideBottom.Side = asrBottom
         Left = 272
         Height = 17
-        Top = 304
+        Top = 313
         Width = 47
         Anchors = [akLeft, akBottom]
         Caption = 'Vendor:'
@@ -250,7 +250,7 @@ object MainForm: TMainForm
         Left = 272
         Height = 37
         Hint = '|Sample: alex_q_2000 (C) 2021'
-        Top = 323
+        Top = 332
         Width = 256
         BorderSpacing.Left = 5
         BorderSpacing.Right = 5
@@ -263,7 +263,7 @@ object MainForm: TMainForm
         AnchorSideRight.Control = TabSheet1
         AnchorSideRight.Side = asrBottom
         Left = 5
-        Height = 199
+        Height = 208
         Hint = '|List of files and folders to build the package [there is a PopUp menu]; double click - edit an entry in the list'
         Top = 40
         Width = 984
@@ -323,7 +323,7 @@ object MainForm: TMainForm
         AnchorSideBottom.Side = asrBottom
         Left = 823
         Height = 17
-        Top = 244
+        Top = 253
         Width = 47
         Anchors = [akLeft, akBottom]
         Caption = 'License:'
@@ -359,7 +359,7 @@ object MainForm: TMainForm
         AnchorSideRight.Side = asrBottom
         Left = 424
         Height = 37
-        Top = 263
+        Top = 272
         Width = 336
         BorderSpacing.Right = 5
         Color = 15663103
@@ -500,7 +500,7 @@ object MainForm: TMainForm
         AnchorSideBottom.Side = asrBottom
         Left = 424
         Height = 17
-        Top = 244
+        Top = 253
         Width = 43
         Anchors = [akLeft, akBottom]
         Caption = 'Group:'
@@ -516,7 +516,7 @@ object MainForm: TMainForm
         AnchorSideRight.Side = asrBottom
         Left = 823
         Height = 37
-        Top = 263
+        Top = 272
         Width = 166
         Anchors = [akTop, akRight]
         BorderSpacing.Right = 5
@@ -545,7 +545,7 @@ object MainForm: TMainForm
         AnchorSideRight.Side = asrBottom
         Left = 536
         Height = 37
-        Top = 323
+        Top = 332
         Width = 453
         Anchors = [akTop, akLeft, akRight]
         BorderSpacing.Left = 5
@@ -562,7 +562,7 @@ object MainForm: TMainForm
         AnchorSideBottom.Side = asrBottom
         Left = 536
         Height = 17
-        Top = 304
+        Top = 313
         Width = 211
         Anchors = [akLeft, akBottom]
         Caption = 'Brief description of the package:'
@@ -578,7 +578,7 @@ object MainForm: TMainForm
         AnchorSideTop.Side = asrBottom
         Left = 5
         Height = 17
-        Top = 485
+        Top = 494
         Width = 375
         BorderSpacing.Top = 4
         Caption = 'URL of a copy of the source code (*.tar.gz, *.src.rpm, etc):'
@@ -596,7 +596,7 @@ object MainForm: TMainForm
         Left = 5
         Height = 37
         Hint = '|Sample: https://github.com/AKotov-dev/RPMCreator'
-        Top = 504
+        Top = 513
         Width = 984
         Anchors = [akTop, akLeft, akRight]
         BorderSpacing.Top = 2
