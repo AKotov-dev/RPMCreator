@@ -1036,10 +1036,9 @@ object MainForm: TMainForm
           ''
           ' На вкладке "Основное" добавьте в список все файлы и папки, указанные выше'
           ' Заполните все поля для правильного оформления будущего пакета'
-          ' Добавьте предустановочные/постустановочные сценарии на вкладке "Скрипты"'
-          ' Заполните необходимую информацию на вкладке файла документации "repack.txt"'
-          ' Создайте repack.txt и поместите его в папку /usr/share/doc/имя_пакета/repack.txt'
-          ' Добавьте папку /usr/share/doc/имя_пакета/ в список файлов на вкладке "Основное"'
+          ' При необходимости добавьте предустановочные/постустановочные сценарии на вкладке "Скрипты"'
+          ' Введите информацию на вкладке файла документации "repack.txt" и нажмите "Создать repack.txt"'
+          ' Файл /usr/share/doc/имя_пакета/repack.txt будет добавлен в список файлов пакета автоматически'
           ''
           ' Убедитесь, что программа запускается из системного меню'
           ''
@@ -1060,10 +1059,9 @@ object MainForm: TMainForm
           ''
           ' On the "Basic" tab, add all the files and folders listed above to the List'
           ' Fill in all the fields for the correct design of the future package'
-          ' If you want, add scripts in the tab "Scripts"'
-          ' Fill in the required information on the documentation file tab "repack.txt"'
-          ' Create repack.txt file and place it in the /usr/share/doc/package_name/repack.txt'
-          ' Add the /usr/share/doc/package_name/ folder to the file list on the "Basic" tab'
+          ' If necessary, add pre-installation/post-installation scripts on the "Scripts" tab'
+          ' Enter the information on the documentation file tab "repack.txt " and click "Create repack.txt "'
+          ' File /usr/share/doc/package_name/repack.txt it will be added to the list of package files automatically'
           ''
           ' Make sure the program is started from the system menu'
           ''
@@ -1355,8 +1353,8 @@ object MainForm: TMainForm
     }
   end
   object ImageList2: TImageList
-    Left = 48
-    Top = 144
+    Left = 504
+    Top = 624
     Bitmap = {
       4C7A020000001000000010000000BF0000000000000078DA6360A00C70753FAD
       07E277A8F8D9569EEE176244EADF0DC4FF31F1B3675C3D4FE772753D99890B73
