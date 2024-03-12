@@ -925,7 +925,7 @@ begin
       SPEC.Add('Description: ' + SummaryEdit.Text);
       for i := 0 to DescEdit.Lines.Count - 1 do
         if Length(Trim(DescEdit.Lines[i])) = 0 then
-          SPEC.Add(' .' + Trim(DescEdit.Lines[i]))
+          SPEC.Add(' .')
         else
           SPEC.Add(' ' + Trim(DescEdit.Lines[i]));
 

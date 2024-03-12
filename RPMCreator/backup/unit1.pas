@@ -921,13 +921,13 @@ begin
         ['-c', 'du -schk ~/debbuild/tmp/*[^DEBIAN] | tail -n1 | cut -f1 '], size) then
         SPEC.Add('Installed-Size: ' + Trim(size));
 
-      //Description (Brief + Full) https://linux.die.net/man/5/deb-control
+      //Description (Short + Long) https://linux.die.net/man/5/deb-control
       SPEC.Add('Description: ' + SummaryEdit.Text);
       for i := 0 to DescEdit.Lines.Count - 1 do
         if Length(Trim(DescEdit.Lines[i])) = 0 then
-          SPEC.Add(' .' + Trim(DescEdit.Lines[i]))
+          SPEC.Add(' .')
         else
-          SPEC.Add(' ' + Trim(DescEdit.Lines[i]));
+          SPEC.Add(' ' + DescEdit.Lines[i]);
 
       SPEC.SaveToFile(GetUserDir + 'debbuild/tmp/DEBIAN/control');
 
