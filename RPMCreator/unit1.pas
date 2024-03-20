@@ -157,9 +157,9 @@ implementation
 
 uses unit2, LoadGroupsTRD, selectunit, unpackunit;
 
-{$R *.lfm}
+  {$R *.lfm}
 
-{ TMainForm }
+  { TMainForm }
 
 //Открыть проект
 procedure TMainForm.LoadProject(FileName: string; Sender: TObject);
@@ -1257,7 +1257,6 @@ begin
 end;
 
 procedure TMainForm.SaveBtnClick(Sender: TObject);
-
 begin
   //Обрезаем лишние пробелы в эдитах
   TrimEdits;

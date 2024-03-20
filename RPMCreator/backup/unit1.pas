@@ -927,7 +927,7 @@ begin
         if Length(Trim(DescEdit.Lines[i])) = 0 then
           SPEC.Add(' .')
         else
-          SPEC.Add(' ' + DescEdit.Lines[i]);
+          SPEC.Add(' ' + Trim(DescEdit.Lines[i]));
 
       SPEC.SaveToFile(GetUserDir + 'debbuild/tmp/DEBIAN/control');
 
