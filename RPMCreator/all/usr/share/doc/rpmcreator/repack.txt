@@ -1,22 +1,21 @@
-This repack.txt file was created automatically by RPMCreator v2.1
+This repack.txt file was created automatically by RPMCreator v2.6
 It contains the necessary information to recreation the program from the source code
 
 Information about the program:
 ---
 Name of program: RPMCreator
-Version of program: 2.1
+Version of program: 2.6
 Program development tool: Lazarus
-Version of program development tool: 2.2.4
-URL the sources of the author (32 bit): https://github.com/AKotov-dev/RPMCreator
-URL the sources of the author (64 bit): unknown
+Version of program development tool: 3.2-0
+URL the sources + binaries of the author: https://github.com/AKotov-dev/RPMCreator
 
 Information about the rpm-package:
 ---
 Build method: Portable RPM
-Time stamp: 13-3-23 11:02:05
+Time stamp: 20-3-24 13:50:21
 
 Name: rpmcreator
-Version: 2.1
+Version: 2.6
 Release: 0.mrx9
 Group: Applications/System
 License: GPLv3
@@ -34,11 +33,39 @@ More information: /usr/share/doc/package_name/repack.txt
 
 Package dependencies:
 ---
-xterm rpm-build rpm-sign gnupg createrepo gcc make p7zip dpkg-dev gtk2
+xterm rpm-build p7zip dpkg-dev gtk2
 
 Additionally information:
 ---
 Lazarus is required to compile the program
+
+v2.6
++ Recompilation in Lazarus-3.2-0
++ Formatting a long description for DEB
++ RPM packages for Mageia-8 and Mageia-9
+
+v2.5
++ Formatting the dependency list for DEB
++ Short and complete description for DEB
++ RPM packages for Mageia-8 and Mageia-9
+
+v2.4
++ Icons in the package file list
++ Fixed PopUp menu in the file list
++ Fixed the list of groups from rpmlint
++ Dependencies: xterm rpm-build p7zip dpkg-dev gtk2
++ RPM packages for Mageia-8 and Mageia-9
+
+v2.3
++ Corrective release for maintainers
++ Removing a reference to a missing module unique_utils
++ RPM packages for Mageia-8/Mageia-9
+
+v2.2
++ Handling spaces when unpacking packages
++ Removed package signing as unnecessary
++ General code optimization and cosmetics
++ RPM packages for Mageia-8/Mageia-9
 
 v2.1
 + Recompilation in Lazarus-2.2.4
@@ -101,4 +128,3 @@ v1.4-1
 url: https://fedoraproject.org/wiki/RPMGroups
 rpm -qa --qf '%{group}\n' | sort -u
 + updated the list of licenses
-
