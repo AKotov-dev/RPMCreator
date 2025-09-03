@@ -7,13 +7,13 @@ object MainForm: TMainForm
   Caption = 'RPMCreator'
   ClientHeight = 728
   ClientWidth = 1000
+  Position = poMainFormCenter
+  SessionProperties = 'Height;LangBtn.Caption;Left;Splitter1.Top;Top;Width;SaveFile.InitialDir;OpenFile.InitialDir'
+  LCLVersion = '4.2.0.0'
   OnClose = FormClose
   OnCloseQuery = FormCloseQuery
   OnCreate = FormCreate
   OnShow = FormShow
-  Position = poMainFormCenter
-  SessionProperties = 'Height;LangBtn.Caption;Left;Splitter1.Top;Top;Width;SaveFile.InitialDir;OpenFile.InitialDir'
-  LCLVersion = '2.2.4.0'
   object PageControl1: TPageControl
     Left = 0
     Height = 661
@@ -55,11 +55,11 @@ object MainForm: TMainForm
         Width = 219
         BorderSpacing.Top = 2
         Color = 15663103
-        OnChange = NameEditChange
-        OnKeyPress = NameEditKeyPress
         ParentShowHint = False
         ShowHint = True
         TabOrder = 8
+        OnChange = NameEditChange
+        OnKeyPress = NameEditKeyPress
       end
       object Label4: TLabel
         AnchorSideLeft.Control = VersEdit
@@ -87,11 +87,11 @@ object MainForm: TMainForm
         Top = 272
         Width = 88
         Color = 15663103
-        OnChange = NameEditChange
-        OnKeyPress = NameEditKeyPress
         ParentShowHint = False
         ShowHint = True
         TabOrder = 9
+        OnChange = NameEditChange
+        OnKeyPress = NameEditKeyPress
       end
       object Label8: TLabel
         AnchorSideLeft.Control = ReleaseEdit
@@ -118,11 +118,11 @@ object MainForm: TMainForm
         Top = 272
         Width = 88
         Color = 15663103
-        OnChange = NameEditChange
-        OnKeyPress = NameEditKeyPress
         ParentShowHint = False
         ShowHint = True
         TabOrder = 10
+        OnChange = NameEditChange
+        OnKeyPress = NameEditKeyPress
       end
       object Label5: TLabel
         AnchorSideLeft.Control = DescEdit
@@ -164,10 +164,10 @@ object MainForm: TMainForm
         Width = 259
         BorderSpacing.Left = 5
         BorderSpacing.Top = 2
-        OnChange = NameEditChange
         ParentShowHint = False
         ShowHint = True
         TabOrder = 13
+        OnChange = NameEditChange
       end
       object Label3: TLabel
         AnchorSideLeft.Control = DepsEdit
@@ -200,11 +200,11 @@ object MainForm: TMainForm
           '---'
           'More information: /usr/share/doc/package_name/repack.txt'
         )
-        OnChange = NameEditChange
         ParentShowHint = False
         ScrollBars = ssVertical
         ShowHint = True
         TabOrder = 16
+        OnChange = NameEditChange
       end
       object DepsEdit: TMemo
         AnchorSideTop.Control = Label3
@@ -222,12 +222,12 @@ object MainForm: TMainForm
         BorderSpacing.Top = 2
         BorderSpacing.Right = 5
         BorderSpacing.Bottom = 5
-        OnChange = NameEditChange
         ParentShowHint = False
         ScrollBars = ssVertical
         ShowHint = True
         TabOrder = 18
         WantReturns = False
+        OnChange = NameEditChange
       end
       object Label13: TLabel
         AnchorSideLeft.Control = VendorEdit
@@ -254,10 +254,10 @@ object MainForm: TMainForm
         Width = 256
         BorderSpacing.Left = 5
         BorderSpacing.Right = 5
-        OnChange = NameEditChange
         ParentShowHint = False
         ShowHint = True
         TabOrder = 14
+        OnChange = NameEditChange
       end
       object ListBox1: TListBox
         AnchorSideRight.Control = TabSheet1
@@ -271,8 +271,6 @@ object MainForm: TMainForm
         BorderSpacing.Right = 5
         ItemHeight = 22
         MultiSelect = True
-        OnDblClick = ListBox1DblClick
-        OnDrawItem = ListBox1DrawItem
         ParentShowHint = False
         PopupMenu = PopupMenu1
         ScrollWidth = 973
@@ -280,6 +278,8 @@ object MainForm: TMainForm
         Style = lbOwnerDrawFixed
         TabOrder = 7
         TopIndex = -1
+        OnDblClick = ListBox1DblClick
+        OnDrawItem = ListBox1DrawItem
       end
       object Button1: TButton
         Left = 5
@@ -288,10 +288,10 @@ object MainForm: TMainForm
         Top = 6
         Width = 159
         Caption = '+ Files and Folders'
-        OnClick = Button1Click
         ParentShowHint = False
         ShowHint = True
         TabOrder = 0
+        OnClick = Button1Click
       end
       object Button7: TButton
         Left = 191
@@ -300,10 +300,10 @@ object MainForm: TMainForm
         Top = 6
         Width = 40
         Caption = '{*}'
-        OnClick = Button7Click
         ParentShowHint = False
         ShowHint = True
         TabOrder = 1
+        OnClick = Button7Click
       end
       object Button3: TButton
         Left = 232
@@ -312,10 +312,10 @@ object MainForm: TMainForm
         Top = 6
         Width = 40
         Caption = 'X'
-        OnClick = Button3Click
         ParentShowHint = False
         ShowHint = True
         TabOrder = 2
+        OnClick = Button3Click
       end
       object Label14: TLabel
         AnchorSideLeft.Control = LicenseEdit
@@ -341,10 +341,10 @@ object MainForm: TMainForm
         Anchors = [akTop, akRight]
         BorderSpacing.Right = 5
         Caption = 'RPM'
-        OnClick = RPMBtnClick
         ParentShowHint = False
         ShowHint = True
         TabOrder = 6
+        OnClick = RPMBtnClick
       end
       object Bevel3: TBevel
         Left = 178
@@ -489,10 +489,10 @@ object MainForm: TMainForm
           ' Video/Television'
           ' Video/Utilities'
         )
-        OnChange = NameEditChange
         ParentShowHint = False
         ShowHint = True
         TabOrder = 11
+        OnChange = NameEditChange
       end
       object Label15: TLabel
         AnchorSideLeft.Control = GroupCBox
@@ -533,10 +533,10 @@ object MainForm: TMainForm
           'LPPL'
           'MIT'
         )
-        OnChange = NameEditChange
         ParentShowHint = False
         ShowHint = True
         TabOrder = 12
+        OnChange = NameEditChange
       end
       object SummaryEdit: TEdit
         AnchorSideLeft.Side = asrBottom
@@ -551,10 +551,10 @@ object MainForm: TMainForm
         BorderSpacing.Left = 5
         BorderSpacing.Right = 5
         Color = 15663103
-        OnChange = NameEditChange
         ParentShowHint = False
         ShowHint = True
         TabOrder = 15
+        OnChange = NameEditChange
       end
       object Label16: TLabel
         AnchorSideLeft.Control = SummaryEdit
@@ -602,11 +602,11 @@ object MainForm: TMainForm
         BorderSpacing.Top = 2
         BorderSpacing.Right = 5
         Color = 15663103
-        OnChange = NameEditChange
-        OnKeyPress = NameEditKeyPress
         ParentShowHint = False
         ShowHint = True
         TabOrder = 17
+        OnChange = NameEditChange
+        OnKeyPress = NameEditKeyPress
       end
       object UnpackBtn: TButton
         AnchorSideRight.Control = RPMBtn
@@ -618,10 +618,10 @@ object MainForm: TMainForm
         Anchors = [akTop, akRight]
         BorderSpacing.Right = 4
         Caption = 'Unpack'
-        OnClick = UnpackBtnClick
         ParentShowHint = False
         ShowHint = True
         TabOrder = 5
+        OnClick = UnpackBtnClick
       end
       object UPBtn: TButton
         Left = 279
@@ -630,10 +630,10 @@ object MainForm: TMainForm
         Top = 6
         Width = 40
         Caption = 'UP'
-        OnClick = UPBtnClick
         ParentShowHint = False
         ShowHint = True
         TabOrder = 3
+        OnClick = UPBtnClick
       end
       object DNBtn: TButton
         Left = 320
@@ -642,10 +642,10 @@ object MainForm: TMainForm
         Top = 6
         Width = 40
         Caption = 'DN'
-        OnClick = UPBtnClick
         ParentShowHint = False
         ShowHint = True
         TabOrder = 4
+        OnClick = UPBtnClick
       end
       object Bevel5: TBevel
         Left = 372
@@ -695,11 +695,11 @@ object MainForm: TMainForm
           '#update-desktop-database -q /usr/share/applications'
           '#export PKGSYSTEM_ENABLE_FSYNC=0 && update-mime-database -n /usr/share/mime'
         )
-        OnChange = NameEditChange
         ParentShowHint = False
         ScrollBars = ssVertical
         ShowHint = True
         TabOrder = 1
+        OnChange = NameEditChange
       end
       object AfterRemoveEdit: TMemo
         AnchorSideTop.Control = Label7
@@ -724,11 +724,11 @@ object MainForm: TMainForm
           '#update-desktop-database -q /usr/share/applications'
           '#export PKGSYSTEM_ENABLE_FSYNC=0 && update-mime-database -n /usr/share/mime'
         )
-        OnChange = NameEditChange
         ParentShowHint = False
         ScrollBars = ssVertical
         ShowHint = True
         TabOrder = 3
+        OnChange = NameEditChange
       end
       object Label7: TLabel
         AnchorSideLeft.Control = AfterRemoveEdit
@@ -774,11 +774,11 @@ object MainForm: TMainForm
         BorderSpacing.Top = 2
         BorderSpacing.Right = 5
         BorderSpacing.Bottom = 4
-        OnChange = NameEditChange
         ParentShowHint = False
         ScrollBars = ssVertical
         ShowHint = True
         TabOrder = 0
+        OnChange = NameEditChange
       end
       object Label12: TLabel
         AnchorSideLeft.Control = BeforeRemoveEdit
@@ -809,11 +809,11 @@ object MainForm: TMainForm
         BorderSpacing.Top = 2
         BorderSpacing.Right = 5
         BorderSpacing.Bottom = 4
-        OnChange = NameEditChange
         ParentShowHint = False
         ScrollBars = ssVertical
         ShowHint = True
         TabOrder = 2
+        OnChange = NameEditChange
       end
     end
     object TabSheet3: TTabSheet
@@ -848,8 +848,8 @@ object MainForm: TMainForm
         Width = 244
         BorderSpacing.Top = 2
         Color = 15663103
-        OnChange = NameEditChange
         TabOrder = 1
+        OnChange = NameEditChange
       end
       object Label19: TLabel
         AnchorSideLeft.Control = DevToolEdit
@@ -908,9 +908,9 @@ object MainForm: TMainForm
         Anchors = [akTop, akLeft, akRight, akBottom]
         BorderSpacing.Right = 5
         BorderSpacing.Bottom = 5
-        OnChange = NameEditChange
         ScrollBars = ssVertical
         TabOrder = 4
+        OnChange = NameEditChange
       end
       object CreateRepackTxt: TButton
         AnchorSideTop.Control = URLEdit32
@@ -924,8 +924,8 @@ object MainForm: TMainForm
         Anchors = [akTop, akRight]
         BorderSpacing.Right = 5
         Caption = 'Create repack.txt'
-        OnClick = CreateRepackTxtClick
         TabOrder = 5
+        OnClick = CreateRepackTxtClick
       end
       object Label10: TLabel
         AnchorSideLeft.Control = URLEdit32
@@ -954,11 +954,11 @@ object MainForm: TMainForm
         BorderSpacing.Top = 2
         BorderSpacing.Right = 10
         Color = 15663103
-        OnChange = NameEditChange
-        OnKeyPress = NameEditKeyPress
         ParentShowHint = False
         ShowHint = True
         TabOrder = 0
+        OnChange = NameEditChange
+        OnKeyPress = NameEditKeyPress
       end
       object DevToolEdit: TComboBox
         AnchorSideTop.Control = ProgramNameEdit
@@ -988,8 +988,8 @@ object MainForm: TMainForm
           'Swift'
           'Type Script'
         )
-        OnChange = NameEditChange
         TabOrder = 2
+        OnChange = NameEditChange
       end
       object ToolVersionEdit: TComboBox
         AnchorSideTop.Control = ProgramNameEdit
@@ -1004,9 +1004,9 @@ object MainForm: TMainForm
         Items.Strings = (
           'unknown'
         )
+        TabOrder = 3
         OnChange = NameEditChange
         OnKeyPress = NameEditKeyPress
-        TabOrder = 3
       end
     end
     object TabSheet4: TTabSheet
@@ -1103,10 +1103,10 @@ object MainForm: TMainForm
       Top = 6
       Width = 176
       Caption = 'Load project'
-      OnClick = LoadBtnClick
       ParentShowHint = False
       ShowHint = True
       TabOrder = 0
+      OnClick = LoadBtnClick
     end
     object SaveBtn: TButton
       Left = 188
@@ -1115,10 +1115,10 @@ object MainForm: TMainForm
       Top = 6
       Width = 176
       Caption = 'Save project'
-      OnClick = SaveBtnClick
       ParentShowHint = False
       ShowHint = True
       TabOrder = 1
+      OnClick = SaveBtnClick
     end
     object AboutBtn: TButton
       AnchorSideTop.Control = SaveBtn
@@ -1132,10 +1132,10 @@ object MainForm: TMainForm
       Anchors = [akTop, akRight]
       BorderSpacing.Right = 4
       Caption = '?'
-      OnClick = AboutBtnClick
       ParentShowHint = False
       ShowHint = True
       TabOrder = 5
+      OnClick = AboutBtnClick
     end
     object BuildBtn: TButton
       AnchorSideTop.Control = SaveBtn
@@ -1149,10 +1149,10 @@ object MainForm: TMainForm
       Anchors = [akTop, akRight]
       BorderSpacing.Right = 5
       Caption = 'Build package'
-      OnClick = BuildBtnClick
       ParentShowHint = False
       ShowHint = True
       TabOrder = 6
+      OnClick = BuildBtnClick
     end
     object MetaCheck: TCheckBox
       AnchorSideLeft.Control = NoArchCheck
@@ -1166,11 +1166,11 @@ object MainForm: TMainForm
       Width = 65
       BorderSpacing.Left = 10
       Caption = 'meta'
-      OnChange = NameEditChange
-      OnClick = MetaCheckClick
       ParentShowHint = False
       ShowHint = True
       TabOrder = 3
+      OnChange = NameEditChange
+      OnClick = MetaCheckClick
     end
     object NoArchCheck: TCheckBox
       AnchorSideLeft.Control = Bevel1
@@ -1184,11 +1184,11 @@ object MainForm: TMainForm
       Width = 76
       Caption = 'noarch'
       Color = clDefault
-      OnChange = NameEditChange
       ParentColor = False
       ParentShowHint = False
       ShowHint = True
       TabOrder = 2
+      OnChange = NameEditChange
     end
     object Bevel4: TBevel
       AnchorSideLeft.Control = MetaCheck
@@ -1213,10 +1213,10 @@ object MainForm: TMainForm
       Top = 5
       Width = 67
       Caption = '+DEB'
-      OnChange = NameEditChange
       ParentShowHint = False
       ShowHint = True
       TabOrder = 4
+      OnChange = NameEditChange
     end
   end
   object StatusBar1: TStatusBar

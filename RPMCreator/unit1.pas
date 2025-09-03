@@ -1009,6 +1009,10 @@ begin
     SPEC.Add('%define _unstripped_binary_or_object 0'); }
 
     SPEC.Add('');
+    SPEC.Add('#Disable Build-IDs warning');
+    SPEC.Add('%define _build_id_links none');
+
+    SPEC.Add('');
     SPEC.Add('#Allow building noarch packages that contain binaries');
     SPEC.Add('%define _binaries_in_noarch_packages_terminate_build 0');
 

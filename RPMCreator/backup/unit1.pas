@@ -157,9 +157,9 @@ implementation
 
 uses unit2, LoadGroupsTRD, selectunit, unpackunit;
 
-{$R *.lfm}
+  {$R *.lfm}
 
-{ TMainForm }
+  { TMainForm }
 
 //Открыть проект
 procedure TMainForm.LoadProject(FileName: string; Sender: TObject);
@@ -1009,6 +1009,10 @@ begin
     SPEC.Add('%define _unstripped_binary_or_object 0'); }
 
     SPEC.Add('');
+    SPEC.Add('#Disable Build-IDs warning');
+    SPEC.Add('%define _build_id_links none');
+
+    SPEC.Add('');
     SPEC.Add('#Allow building noarch packages that contain binaries');
     SPEC.Add('%define _binaries_in_noarch_packages_terminate_build 0');
 
@@ -1257,7 +1261,6 @@ begin
 end;
 
 procedure TMainForm.SaveBtnClick(Sender: TObject);
-
 begin
   //Обрезаем лишние пробелы в эдитах
   TrimEdits;
