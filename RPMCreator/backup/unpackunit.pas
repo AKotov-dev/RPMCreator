@@ -121,6 +121,10 @@ begin
 
     S.Add('#!/bin/bash');
     S.Add('');
+    //Запоминаем PID скрипта
+    S.Add('echo $$ > ~/.RPMCreator/unpack.sh-pid');
+
+    S.Add('');
     //Файл пакета передан?
     S.Add('FILE="$1"');
     S.Add('if [ -z "$FILE" ] || [ ! -f "$FILE" ]; then');
@@ -258,7 +262,13 @@ procedure TUnpackForm.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 var
   S: ansistring;
 begin
-  RunCommand('bash', ['-c', 'pkill -f "unpack.sh"'], S);
+  // RunCommand('bash', ['-c', 'pkill -f "cpio|rpm2cpio|dpkg-deb|unpack.sh"'], S);
+
+  RunCommand('bash',
+    ['-c', 'if [ -f ~/.RPMCreator/unpack.sh-pid ]; then ' +
+    'PID=$(cat ~/.RPMCreator/unpack.sh-pid); ' + 'pkill -P $PID; ' +
+    'kill $PID 2>/dev/null; ' + 'rm -f ~/.RPMCreator/unpack.sh-pid; ' + 'fi'],
+    S);
 end;
 
 //Выбор пакета для распаковки (*.rpm, *.deb)
