@@ -1,18 +1,18 @@
 object AboutForm: TAboutForm
-  Left = 289
+  Left = 350
   Height = 277
-  Top = 126
+  Top = 131
   Width = 405
   ActiveControl = OkBtn
   Caption = 'About'
   ClientHeight = 277
   ClientWidth = 405
   FormStyle = fsStayOnTop
-  OnCreate = FormCreate
-  OnShow = FormShow
   Position = poMainFormCenter
   SessionProperties = 'Width;Height'
-  LCLVersion = '2.2.4.0'
+  LCLVersion = '4.4.0.0'
+  OnCreate = FormCreate
+  OnShow = FormShow
   object Image1: TImage
     Left = 8
     Height = 72
@@ -385,8 +385,8 @@ object AboutForm: TAboutForm
     Left = 112
     Height = 170
     Top = 48
-    Width = 253
-    Caption = 'Packages build program'#10'  '#10'License: GPLv3'#10'Compilation: Lazarus 2.2.4'#10'Grantitudes: AlexL, Oberon'#10'Author: alex_q_2000 (C) 2021'#10'  '#10'Used by rpmbuild (spec, src)'#10'  '#10'Russian Linux Forum: https://linuxforum.ru'
+    Width = 266
+    Caption = 'Packages build program'#10'  '#10'License: GPLv3'#10'Compilation: Lazarus 4.4'#10'Grantitudes: AlexL, Oberon'#10'Author: alex_q_2000 (C) 2021'#10'  '#10'Used by rpmbuild (spec, src)'#10'  '#10'https://github.com/AKotov-dev/RPMCreator'
     ParentColor = False
   end
   object Bevel1: TBevel
@@ -417,7 +417,7 @@ object AboutForm: TAboutForm
     BorderSpacing.Top = 8
     BorderSpacing.Right = 165
     Caption = 'Ok'
-    OnClick = OkBtnClick
     TabOrder = 0
+    OnClick = OkBtnClick
   end
 end

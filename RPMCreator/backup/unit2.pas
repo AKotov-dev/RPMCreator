@@ -33,9 +33,9 @@ implementation
 
 uses unit1;
 
-  {$R *.lfm}
+{$R *.lfm}
 
-  { TAboutForm }
+{ TAboutForm }
 
 procedure TAboutForm.OkBtnClick(Sender: TObject);
 begin

@@ -27,7 +27,7 @@ implementation
 
 uses Unit1;
 
-{ TRD }
+  { TRD }
 
 //Получить список валидных групп
 procedure StartLoadGroups.Execute;
