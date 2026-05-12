@@ -1,17 +1,17 @@
 object UnpackForm: TUnpackForm
-  Left = 487
+  Left = 369
   Height = 572
-  Top = 213
+  Top = 145
   Width = 780
   Caption = 'Package unpacker'
   ClientHeight = 572
   ClientWidth = 780
   FormStyle = fsStayOnTop
-  OnCreate = FormCreate
-  OnShow = FormShow
   Position = poMainFormCenter
   SessionProperties = 'Height;Width;EditButton2.Text'
-  LCLVersion = '2.2.4.0'
+  LCLVersion = '4.4.0.0'
+  OnCreate = FormCreate
+  OnShow = FormShow
   object LogMemo: TMemo
     AnchorSideLeft.Control = Owner
     AnchorSideTop.Control = EditButton2
@@ -72,14 +72,14 @@ object UnpackForm: TUnpackForm
     Color = 15663103
     MaxLength = 0
     NumGlyphs = 1
-    OnButtonClick = EditButton1ButtonClick
-    OnChange = EditButton1Change
-    OnKeyPress = EditButton1KeyPress
     ParentFont = False
     ParentShowHint = False
     PasswordChar = #0
     ShowHint = True
     TabOrder = 0
+    OnButtonClick = EditButton1ButtonClick
+    OnChange = EditButton1Change
+    OnKeyPress = EditButton1KeyPress
   end
   object EditButton2: TEditButton
     AnchorSideLeft.Control = Owner
@@ -101,14 +101,14 @@ object UnpackForm: TUnpackForm
     Color = 15663103
     MaxLength = 0
     NumGlyphs = 1
-    OnButtonClick = EditButton2ButtonClick
-    OnChange = EditButton1Change
-    OnKeyPress = EditButton1KeyPress
     ParentFont = False
     ParentShowHint = False
     PasswordChar = #0
     ShowHint = True
     TabOrder = 1
+    OnButtonClick = EditButton2ButtonClick
+    OnChange = EditButton1Change
+    OnKeyPress = EditButton1KeyPress
   end
   object Label2: TLabel
     AnchorSideLeft.Control = EditButton2
@@ -136,11 +136,11 @@ object UnpackForm: TUnpackForm
     BorderSpacing.Right = 5
     Caption = 'Start'
     Enabled = False
-    OnClick = UnpackBtnClick
     ParentFont = False
     ParentShowHint = False
     ShowHint = True
     TabOrder = 3
+    OnClick = UnpackBtnClick
   end
   object SelectDirectoryDialog1: TSelectDirectoryDialog
     Left = 152

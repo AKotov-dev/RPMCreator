@@ -26,6 +26,7 @@ type
     Button1: TButton;
     DEBCheckBox: TCheckBox;
     EditItem: TMenuItem;
+    Image1: TImage;
     ImageList2: TImageList;
     UPBtn: TButton;
     DNBtn: TButton;
@@ -1270,7 +1271,19 @@ begin
 end;
 
 procedure TMainForm.FormCreate(Sender: TObject);
+var
+  bmp: TBitmap;
 begin
+  // Устраняем баг иконки приложения
+  bmp := TBitmap.Create;
+  try
+    bmp.PixelFormat := pf32bit;
+    bmp.Assign(Image1.Picture.Graphic);
+    Application.Icon.Assign(bmp);
+  finally
+    bmp.Free;
+  end;
+
   //Флаг сохранения списка
   SaveFlag := False;
 

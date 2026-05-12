@@ -1,7 +1,7 @@
 object UnpackForm: TUnpackForm
-  Left = 369
+  Left = 487
   Height = 572
-  Top = 145
+  Top = 213
   Width = 780
   Caption = 'Package unpacker'
   ClientHeight = 572

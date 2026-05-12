@@ -26,6 +26,7 @@ type
     Button1: TButton;
     DEBCheckBox: TCheckBox;
     EditItem: TMenuItem;
+    Image1: TImage;
     ImageList2: TImageList;
     UPBtn: TButton;
     DNBtn: TButton;
