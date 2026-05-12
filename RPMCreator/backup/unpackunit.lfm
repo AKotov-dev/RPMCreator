@@ -1,7 +1,7 @@
 object UnpackForm: TUnpackForm
-  Left = 487
+  Left = 369
   Height = 572
-  Top = 213
+  Top = 145
   Width = 780
   Caption = 'Package unpacker'
   ClientHeight = 572
@@ -10,6 +10,7 @@ object UnpackForm: TUnpackForm
   Position = poMainFormCenter
   SessionProperties = 'Height;Width;EditButton2.Text'
   LCLVersion = '4.4.0.0'
+  OnClose = FormClose
   OnCreate = FormCreate
   OnShow = FormShow
   object LogMemo: TMemo

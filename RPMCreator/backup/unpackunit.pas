@@ -22,6 +22,7 @@ type
     OpenDialog1: TOpenDialog;
     SelectDirectoryDialog1: TSelectDirectoryDialog;
     UnpackFormStorage: TXMLPropStorage;
+    procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormShow(Sender: TObject);
     procedure UnpackBtnClick(Sender: TObject);
     procedure EditButton1ButtonClick(Sender: TObject);
@@ -53,15 +54,19 @@ uses unit1;
 procedure TUnpackForm.UnpackProcess(PackageName: string);
 var
   ExProcess: TProcess;
+  Buffer: array[0..2047] of byte;
+  Count: longint;
+  S: string;
 begin
   Screen.Cursor := crHourGlass;
   Application.ProcessMessages;
+
+  ExProcess := TProcess.Create(nil);
+
   try
-    ExProcess := TProcess.Create(nil);
     LogMemo.Clear;
 
-    ExProcess.Options := ExProcess.Options + [poWaitOnExit, poUsePipes,
-      poStdErrToOutput];
+    ExProcess.Options := [poUsePipes, poStdErrToOutput];
 
     ExProcess.Executable := 'bash';
     ExProcess.Parameters.Add('-c');
@@ -70,7 +75,35 @@ begin
       PackageName + '"');
 
     ExProcess.Execute;
-    LogMemo.Lines.LoadFromStream(ExProcess.Output);
+
+    while ExProcess.Running do
+    begin
+      while ExProcess.Output.NumBytesAvailable > 0 do
+      begin
+        Count := ExProcess.Output.Read(Buffer, SizeOf(Buffer));
+
+        if Count > 0 then
+        begin
+          SetString(S, PChar(@Buffer[0]), Count);
+          LogMemo.Text := LogMemo.Text + S;
+          Application.ProcessMessages;
+        end;
+      end;
+
+      Sleep(10);
+    end;
+
+    // дочитать остатки
+    while ExProcess.Output.NumBytesAvailable > 0 do
+    begin
+      Count := ExProcess.Output.Read(Buffer, SizeOf(Buffer));
+
+      if Count > 0 then
+      begin
+        SetString(S, PChar(@Buffer[0]), Count);
+        LogMemo.Text := LogMemo.Text + S;
+      end;
+    end;
 
   finally
     ExProcess.Free;
@@ -218,6 +251,14 @@ begin
   UnPackFormStorage.Restore;
   EditButton1.Button.Width := EditButton1.Height;
   EditButton2.Button.Width := EditButton2.Height;
+end;
+
+//Отбой на случай зависания скрипта распаковки
+procedure TUnpackForm.FormClose(Sender: TObject; var CloseAction: TCloseAction);
+var
+  S: ansistring;
+begin
+  RunCommand('bash', ['-c', 'pkill -f "unpack.sh"'], S);
 end;
 
 //Выбор пакета для распаковки (*.rpm, *.deb)
