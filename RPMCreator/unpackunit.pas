@@ -273,8 +273,8 @@ procedure TUnpackForm.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 var
   S: ansistring;
 begin
-{  RunCommand('bash', ['-c',
-    'pgrep "unpack.sh" && pkill -f cpio rpm2cpio dpkg-deb unpack.sh'], S);}
+  RunCommand('bash', ['-c',
+    'PID=$(pgrep -f "unpack-rpm-deb.sh"); if [ -n "$PID" ]; then pkill -P "$PID"; kill "$PID"; fi'], S);
 end;
 
 //Выбор пакета для распаковки (*.rpm, *.deb)

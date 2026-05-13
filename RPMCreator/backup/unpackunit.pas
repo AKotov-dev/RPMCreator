@@ -82,7 +82,11 @@ begin
 
         if Count > 0 then
         begin
-          SetString(S, PChar(@Buffer[0]), Count);
+          // SetString(S, PChar(@Buffer[0]), Count);
+
+          SetLength(S, Count);
+          Move(Buffer[0], S[1], Count);
+
           LogMemo.Text := LogMemo.Text + S;
           Application.ProcessMessages;
         end;
@@ -98,7 +102,11 @@ begin
 
       if Count > 0 then
       begin
-        SetString(S, PChar(@Buffer[0]), Count);
+        //  SetString(S, PChar(@Buffer[0]), Count);
+
+        SetLength(S, Count);
+        Move(Buffer[0], S[1], Count);
+
         LogMemo.Text := LogMemo.Text + S;
       end;
     end;
@@ -267,6 +275,9 @@ var
 begin
 {  RunCommand('bash', ['-c',
     'pgrep "unpack.sh" && pkill -f cpio rpm2cpio dpkg-deb unpack.sh'], S);}
+  RunCommand('bash', ['-c',
+    'PID=$(pgrep -f "unpack-rpm-deb.sh"); if [ -n "$PID" ]; then pkill -P "$PID"; kill "$PID"; fi'], S);
+
 end;
 
 //Выбор пакета для распаковки (*.rpm, *.deb)
