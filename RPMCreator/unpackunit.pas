@@ -180,7 +180,7 @@ begin
     S.Add('        rpm -qpi "$FILE" > "$META_DIR/info.txt" 2>/dev/null');
     S.Add('        rpm -qp --changelog "$FILE" > "$META_DIR/changelog.txt" 2>/dev/null');
     S.Add('        rpm -qpl "$FILE" > "$META_DIR/filelist.txt" 2>/dev/null');
-    S.Add('        rpm -qp --requires "$FILE" > "$META_DIR/requires.txt" 2>/dev/null');
+    S.Add('        rpm -qp --requires "$FILE" 2>/dev/null | sort -u > "$META_DIR/requires.txt"');
     S.Add('        rpm -qp --provides "$FILE" > "$META_DIR/provides.txt" 2>/dev/null');
     S.Add('        rpm -qp --triggers "$FILE" > "$META_DIR/triggers.txt" 2>/dev/null');
 

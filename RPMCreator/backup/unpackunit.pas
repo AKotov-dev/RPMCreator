@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls,
-  EditBtn, XMLPropStorage, Process;
+  EditBtn, XMLPropStorage, Process, StrUtils;
 
 type
 
@@ -180,7 +180,12 @@ begin
     S.Add('        rpm -qpi "$FILE" > "$META_DIR/info.txt" 2>/dev/null');
     S.Add('        rpm -qp --changelog "$FILE" > "$META_DIR/changelog.txt" 2>/dev/null');
     S.Add('        rpm -qpl "$FILE" > "$META_DIR/filelist.txt" 2>/dev/null');
-    S.Add('        rpm -qp --requires "$FILE" > "$META_DIR/requires.txt" 2>/dev/null');
+    //    S.Add('        rpm -qp --requires "$FILE" > "$META_DIR/requires.txt" 2>/dev/null');
+    S.Add('        rpm -qp --requires "$FILE" 2>/dev/null | sort -u > "$META_DIR/requires.txt"');
+
+    // Проверяем, заканчивается ли имя именно на .src.rpm (BuildRequires)
+    S.Add('        rpmspec -q --buildreqs "$FILE" 2>/dev/null | sort -u > "$META_DIR/build_requires.txt"');
+
     S.Add('        rpm -qp --provides "$FILE" > "$META_DIR/provides.txt" 2>/dev/null');
     S.Add('        rpm -qp --triggers "$FILE" > "$META_DIR/triggers.txt" 2>/dev/null');
 
@@ -273,11 +278,8 @@ procedure TUnpackForm.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 var
   S: ansistring;
 begin
-{  RunCommand('bash', ['-c',
-    'pgrep "unpack.sh" && pkill -f cpio rpm2cpio dpkg-deb unpack.sh'], S);}
   RunCommand('bash', ['-c',
     'PID=$(pgrep -f "unpack-rpm-deb.sh"); if [ -n "$PID" ]; then pkill -P "$PID"; kill "$PID"; fi'], S);
-
 end;
 
 //Выбор пакета для распаковки (*.rpm, *.deb)
