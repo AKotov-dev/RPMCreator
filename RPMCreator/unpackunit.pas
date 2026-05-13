@@ -67,12 +67,10 @@ begin
     LogMemo.Clear;
 
     ExProcess.Options := [poUsePipes, poStdErrToOutput];
+    ExProcess.Parameters.Clear;
 
-    ExProcess.Executable := 'bash';
-    ExProcess.Parameters.Add('-c');
-    ExProcess.Parameters.Add(
-      'chmod +x ~/.RPMCreator/unpack.sh; ~/.RPMCreator/unpack.sh "' +
-      PackageName + '"');
+    ExProcess.Executable := GetUserDir + '.RPMCreator/unpack-rpm-deb.sh';
+    ExProcess.Parameters.Add(PackageName);
 
     ExProcess.Execute;
 
@@ -114,6 +112,7 @@ end;
 //Создание скрипта полной распаковки RPM/DEB (включая метаданные)
 procedure TUnpackForm.CreateUnpackScript;
 var
+  K: ansistring;
   S: TStringList;
 begin
   try
@@ -191,7 +190,11 @@ begin
     S.Add('');
     S.Add('exit 0');
 
-    S.SaveToFile(GetUserDir + '.RPMCreator/unpack.sh');
+    //Сохраняем скрипт
+    S.SaveToFile(GetUserDir + '.RPMCreator/unpack-rpm-deb.sh');
+
+    //Делаем скрипт исполняемым
+    RunCommand('bash', ['-c', 'chmod +x ~/.RPMCreator/unpack-rpm-deb.sh'], K);
 
   finally
     S.Free;
@@ -239,8 +242,10 @@ begin
     //Текущий каталог = EditButton2.Text (./)
     SetCurrentDir(EditButton2.Text);
 
+    UnpackBtn.Enabled := False;
     //Отправляем пакет на распаковку
     UnpackProcess(EditButton1.Text);
+    UnpackBtn.Enabled := True;
 
     //Промотать список вниз
     LogMemo.SelStart := Length(LogMemo.Text);
