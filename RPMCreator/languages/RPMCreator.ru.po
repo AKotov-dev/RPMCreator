@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.8\n"
 
 #: taboutform.caption
 msgid "About"
@@ -22,18 +22,6 @@ msgid "RPMCreator"
 msgstr ""
 
 #: taboutform.label2.caption
-#, fuzzy
-#| msgid ""
-#| "Packages build program\n"
-#| "  \n"
-#| "License: GPLv3\n"
-#| "Compilation: Lazarus 2.2.4\n"
-#| "Grantitudes: AlexL, Oberon\n"
-#| "Author: alex_q_2000 (C) 2021\n"
-#| "  \n"
-#| "Used by rpmbuild (spec, src)\n"
-#| "  \n"
-#| "Russian Linux Forum: https://linuxforum.ru"
 msgid ""
 "Packages build program\n"
 "  \n"
@@ -55,7 +43,7 @@ msgstr ""
 "  \n"
 "Используется rpmbuild (spec, src)\n"
 "  \n"
-"Russian Linux Forum: https://linuxforum.ru"
+"https://github.com/AKotov-dev/RPMCreator"
 
 #: taboutform.okbtn.caption
 msgctxt "taboutform.okbtn.caption"
@@ -485,4 +473,3 @@ msgstr "Проект изменялся. Сохранить изменения?"
 #: unit1.ssymlink
 msgid "This is SymLink! Need a real target!"
 msgstr "Это SymLink! Нужна настоящая цель!"
-
