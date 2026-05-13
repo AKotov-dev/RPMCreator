@@ -242,8 +242,10 @@ begin
     //Текущий каталог = EditButton2.Text (./)
     SetCurrentDir(EditButton2.Text);
 
+    UnpackBtn.Enabled := False;
     //Отправляем пакет на распаковку
     UnpackProcess(EditButton1.Text);
+    UnpackBtn.Enabled := True;
 
     //Промотать список вниз
     LogMemo.SelStart := Length(LogMemo.Text);

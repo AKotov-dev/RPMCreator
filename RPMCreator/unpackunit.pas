@@ -82,7 +82,11 @@ begin
 
         if Count > 0 then
         begin
-          SetString(S, PChar(@Buffer[0]), Count);
+          // SetString(S, PChar(@Buffer[0]), Count);
+
+          SetLength(S, Count);
+          Move(Buffer[0], S[1], Count);
+
           LogMemo.Text := LogMemo.Text + S;
           Application.ProcessMessages;
         end;
@@ -98,7 +102,11 @@ begin
 
       if Count > 0 then
       begin
-        SetString(S, PChar(@Buffer[0]), Count);
+        //  SetString(S, PChar(@Buffer[0]), Count);
+
+        SetLength(S, Count);
+        Move(Buffer[0], S[1], Count);
+
         LogMemo.Text := LogMemo.Text + S;
       end;
     end;
