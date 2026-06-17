@@ -1043,8 +1043,17 @@ begin
     SPEC.Add('#Disable build-id');
     SPEC.Add('%global _missing_build_ids_terminate_build 0');
 
+    SPEC.Add('');
     SPEC.Add('#Disable other dependency');
     SPEC.Add('%global debug_package %{nil}');
+
+    //  SPEC.Add('');
+    //  SPEC.Add('#Disable library control');
+    //  SPEC.Add('%define _disable_ld_as_needed 1');
+
+    SPEC.Add('');
+    SPEC.Add('#Disable binary RPATH/Runpath checking');
+    SPEC.Add('%global __brp_check_rpaths %{nil}');
 
     SPEC.Add('');
     SPEC.Add('Name: ' + NameEdit.Text);
@@ -1271,7 +1280,19 @@ begin
 end;
 
 procedure TMainForm.FormCreate(Sender: TObject);
+var
+  bmp: TBitmap;
 begin
+  // Устраняем баг иконки приложения
+  bmp := TBitmap.Create;
+  try
+    bmp.PixelFormat := pf32bit;
+    bmp.Assign(Image1.Picture.Graphic);
+    Application.Icon.Assign(bmp);
+  finally
+    bmp.Free;
+  end;
+
   //Флаг сохранения списка
   SaveFlag := False;
 

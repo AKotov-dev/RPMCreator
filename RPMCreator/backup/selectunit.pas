@@ -46,9 +46,9 @@ implementation
 
 uses unit1;
 
-{$R *.lfm}
+  {$R *.lfm}
 
-{ TSelectForm }
+  { TSelectForm }
 
 procedure TSelectForm.ShellTreeView1Change(Sender: TObject; Node: TTreeNode);
 begin

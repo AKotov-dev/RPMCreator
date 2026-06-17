@@ -1,13 +1,12 @@
 object MainForm: TMainForm
-  Left = 330
+  Left = 287
   Height = 728
-  Top = 119
+  Top = 102
   Width = 1000
   ActiveControl = LoadBtn
   Caption = 'RPMCreator'
   ClientHeight = 728
   ClientWidth = 1000
-  Position = poMainFormCenter
   SessionProperties = 'Height;Left;OpenFile.InitialDir;SaveFile.InitialDir;Splitter1.Top;Top;Width'
   LCLVersion = '4.4.0.0'
   OnClose = FormClose
