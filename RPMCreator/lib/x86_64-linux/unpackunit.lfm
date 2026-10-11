@@ -7,7 +7,6 @@ object UnpackForm: TUnpackForm
   ClientHeight = 572
   ClientWidth = 780
   FormStyle = fsStayOnTop
-  Position = poMainFormCenter
   SessionProperties = 'Height;Width;EditButton2.Text'
   LCLVersion = '4.4.0.0'
   OnClose = FormClose

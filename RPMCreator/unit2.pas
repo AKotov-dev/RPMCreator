@@ -47,6 +47,10 @@ begin
   //Авторазмер
   AboutForm.Width := Label2.Left + Label2.Width + 50;
   AboutForm.Height := OkBtn.Top + OkBtn.Height + 8;
+
+  //В центр
+  Left := MainForm.Left + MainForm.Width div 2 - Width div 2;
+  Top := MainForm.Top + MainForm.Height div 2 - Height div 2;
 end;
 
 procedure TAboutForm.FormCreate(Sender: TObject);

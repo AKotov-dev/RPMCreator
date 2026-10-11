@@ -1011,11 +1011,15 @@ begin
 
     SPEC.Add('');
     SPEC.Add('#Disable Build-IDs warning');
-    SPEC.Add('%define _build_id_links none');
+    SPEC.Add('%global _build_id_links none');
+
+    SPEC.Add('');
+    SPEC.Add('#Disable source_date_epoch_from_changelog');
+    SPEC.Add('%global source_date_epoch_from_changelog 0');
 
     SPEC.Add('');
     SPEC.Add('#Allow building noarch packages that contain binaries');
-    SPEC.Add('%define _binaries_in_noarch_packages_terminate_build 0');
+    SPEC.Add('%global _binaries_in_noarch_packages_terminate_build 0');
 
     SPEC.Add('');
     SPEC.Add('#Disable RPM-s automatic dependency');
@@ -1025,19 +1029,19 @@ begin
 
     SPEC.Add('');
     SPEC.Add('#Disable check shebang (#!/bin/bash <> #!/usr/bin/bash)');
-    SPEC.Add('%define __brp_mangle_shebangs %{nil}');
+    SPEC.Add('%global __brp_mangle_shebangs %{nil}');
 
     SPEC.Add('');
     SPEC.Add('#Disable Python dependency');
     SPEC.Add('AutoReqProv: nopython');
-    SPEC.Add('%define __python %{nil}');
+    SPEC.Add('%global __python %{nil}');
 
     SPEC.Add('#Turn off the brp-python-bytecompile script');
-    SPEC.Add('%define __brp_python_bytecompile %{nil}');
+    SPEC.Add('%global __brp_python_bytecompile %{nil}');
 
     SPEC.Add('');
     SPEC.Add('#Disable Java dependency');
-    SPEC.Add('%define __jar_repack %{nil}');
+    SPEC.Add('%global __jar_repack %{nil}');
     SPEC.Add('');
 
     SPEC.Add('#Disable build-id');
@@ -1049,7 +1053,7 @@ begin
 
     //  SPEC.Add('');
     //  SPEC.Add('#Disable library control');
-    //  SPEC.Add('%define _disable_ld_as_needed 1');
+    //  SPEC.Add('%global _disable_ld_as_needed 1');
 
     SPEC.Add('');
     SPEC.Add('#Disable binary RPATH/Runpath checking');

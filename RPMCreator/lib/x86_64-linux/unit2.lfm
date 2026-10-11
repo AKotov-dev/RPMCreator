@@ -8,8 +8,6 @@ object AboutForm: TAboutForm
   ClientHeight = 277
   ClientWidth = 405
   FormStyle = fsStayOnTop
-  Position = poMainFormCenter
-  SessionProperties = 'Width;Height'
   LCLVersion = '4.4.0.0'
   OnCreate = FormCreate
   OnShow = FormShow

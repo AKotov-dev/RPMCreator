@@ -1,19 +1,18 @@
 object SelectForm: TSelectForm
-  Left = 287
+  Left = 331
   Height = 643
-  Top = 128
+  Top = 131
   Width = 864
   ActiveControl = FileListBox1
   Caption = 'Select files and folders'
   ClientHeight = 643
   ClientWidth = 864
   FormStyle = fsStayOnTop
+  SessionProperties = 'Height;Width'
+  LCLVersion = '4.4.0.0'
   OnClose = FormClose
   OnCreate = FormCreate
   OnShow = FormShow
-  Position = poMainFormCenter
-  SessionProperties = 'Height;Width'
-  LCLVersion = '2.2.4.0'
   object ShellTreeView1: TShellTreeView
     Left = 0
     Height = 584
@@ -29,18 +28,17 @@ object SelectForm: TSelectForm
     Images = ImageList1
     ParentFont = False
     ParentShowHint = False
-    ReadOnly = True
     Root = '/'
     RowSelect = True
     ScrollBars = ssVertical
     ShowHint = True
     TabOrder = 0
-    OnChange = ShellTreeView1Change
-    OnClick = ShellTreeView1Click
-    OnGetImageIndex = ShellTreeView1GetImageIndex
     Options = [tvoAutoItemHeight, tvoHideSelection, tvoHotTrack, tvoKeepCollapsedNodes, tvoReadOnly, tvoRowSelect, tvoShowButtons, tvoShowLines, tvoShowRoot, tvoToolTips, tvoThemedDraw]
     ExpandSignColor = clGray
     ObjectTypes = [otFolders, otHidden]
+    OnChange = ShellTreeView1Change
+    OnClick = ShellTreeView1Click
+    OnGetImageIndex = ShellTreeView1GetImageIndex
   end
   object Panel1: TPanel
     Left = 0
@@ -63,11 +61,11 @@ object SelectForm: TSelectForm
       Anchors = [akTop, akRight]
       BorderSpacing.Right = 5
       Caption = 'Add'
-      OnClick = AddBtnClick
       ParentFont = False
       ParentShowHint = False
       ShowHint = True
       TabOrder = 1
+      OnClick = AddBtnClick
     end
     object UpdateBtn: TButton
       Left = 6
@@ -75,11 +73,11 @@ object SelectForm: TSelectForm
       Top = 4
       Width = 99
       Caption = 'Update'
-      OnClick = UpdateBtnClick
       ParentFont = False
       ParentShowHint = False
       ShowHint = True
       TabOrder = 0
+      OnClick = UpdateBtnClick
     end
   end
   object Splitter1: TSplitter
@@ -99,14 +97,14 @@ object SelectForm: TSelectForm
     FileType = [ftReadOnly, ftHidden, ftSystem, ftArchive, ftNormal]
     ItemHeight = 24
     MultiSelect = True
-    OnClick = FileListBox1Click
-    OnDrawItem = FileListBox1DrawItem
     ParentShowHint = False
     ParentFont = False
     ShowHint = True
     Style = lbOwnerDrawFixed
     TabOrder = 3
     TopIndex = -1
+    OnClick = FileListBox1Click
+    OnDrawItem = FileListBox1DrawItem
   end
   object StatusBar1: TStatusBar
     Left = 0
