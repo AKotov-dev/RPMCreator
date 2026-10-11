@@ -7,7 +7,7 @@ interface
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls,
   XMLPropStorage, ExtCtrls, ComCtrls, Menus, Process, IniFiles, LCLType,
-  Buttons, StrUtils, DefaultTranslator, Types;
+  Buttons, StrUtils, DefaultTranslator, Types, LCLIntf;
 
 type
 
@@ -24,6 +24,7 @@ type
     Bevel4: TBevel;
     Bevel5: TBevel;
     Button1: TButton;
+    OnlineBtn: TButton;
     DEBCheckBox: TCheckBox;
     EditItem: TMenuItem;
     Image1: TImage;
@@ -115,6 +116,7 @@ type
     procedure MetaCheckClick(Sender: TObject);
     procedure NameEditChange(Sender: TObject);
     procedure NameEditKeyPress(Sender: TObject; var Key: char);
+    procedure OnlineBtnClick(Sender: TObject);
     procedure RPMBtnClick(Sender: TObject);
     procedure SaveBtnClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -1244,6 +1246,12 @@ procedure TMainForm.NameEditKeyPress(Sender: TObject; var Key: char);
 begin
   if Key = char(VK_SPACE) then
     Key := #0;
+end;
+
+//Поисковая база пакетов
+procedure TMainForm.OnlineBtnClick(Sender: TObject);
+begin
+  OpenURL('https://pkgs.org');
 end;
 
 //Список файлов по имени пакета

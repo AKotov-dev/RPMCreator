@@ -267,6 +267,16 @@ msgstr ""
 msgid "|For all architectures"
 msgstr ""
 
+#: tmainform.onlinebtn.caption
+msgctxt "tmainform.onlinebtn.caption"
+msgid "pkgs.org"
+msgstr ""
+
+#: tmainform.onlinebtn.hint
+msgctxt "tmainform.onlinebtn.hint"
+msgid "|Package search database"
+msgstr ""
+
 #: tmainform.releaseedit.hint
 msgid "|Sample: 0.mrx8"
 msgstr ""
