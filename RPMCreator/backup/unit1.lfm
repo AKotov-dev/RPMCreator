@@ -658,11 +658,11 @@ object MainForm: TMainForm
         AnchorSideRight.Control = UnpackBtn
         AnchorSideBottom.Control = UnpackBtn
         AnchorSideBottom.Side = asrBottom
-        Left = 674
+        Left = 672
         Height = 30
         Hint = '|Package search database'
         Top = 6
-        Width = 107
+        Width = 109
         Anchors = [akTop, akRight, akBottom]
         BorderSpacing.Right = 4
         Caption = 'pkgs.org'

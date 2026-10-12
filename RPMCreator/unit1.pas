@@ -120,7 +120,7 @@ type
     procedure RPMBtnClick(Sender: TObject);
     procedure SaveBtnClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
-    procedure StartProcess(command, terminal: string);
+    procedure StartProcess(command: string);
     // procedure SearchDeskTop;
     procedure StatusBar1DrawPanel(StatusBar: TStatusBar; Panel: TStatusPanel;
       const Rect: TRect);
@@ -163,6 +163,29 @@ uses unit2, LoadGroupsTRD, selectunit, unpackunit;
   {$R *.lfm}
 
   { TMainForm }
+
+
+//Общая процедура запуска команд
+procedure TMainForm.StartProcess(command: string);
+var
+  ExProcess: TProcess;
+begin
+  Screen.Cursor := crHourGlass;
+  Application.ProcessMessages;
+
+  ExProcess := TProcess.Create(nil);
+  try
+    ExProcess.Executable := 'bash';
+    ExProcess.Parameters.Add('-c');
+
+    ExProcess.Parameters.Add(command);
+    ExProcess.Options := ExProcess.Options + [poWaitOnExit];
+    ExProcess.Execute;
+  finally
+    ExProcess.Free;
+    Screen.Cursor := crDefault;
+  end;
+end;
 
 //Открыть проект
 procedure TMainForm.LoadProject(FileName: string; Sender: TObject);
@@ -378,52 +401,6 @@ begin
     if (SR.Name = '.') or (SR.Name = '..') then
       Result := FindNext(SR) <> 0;
   FindClose(SR);
-end;
-
-//Общая процедура запуска команд
-procedure TMainForm.StartProcess(command, terminal: string);
-var
-  ExProcess: TProcess;
-begin
-  Screen.Cursor := crHourGlass;
-  Application.ProcessMessages;
-
-  ExProcess := TProcess.Create(nil);
-  try
-    ExProcess.Executable := terminal;  //sh или xterm
-    if terminal <> 'sh' then
-    begin
-      ExProcess.Parameters.Add('-fa'); //имя шрифта
-      ExProcess.Parameters.Add('monospace');
-      ExProcess.Parameters.Add('-fs'); //размер шрифта
-      ExProcess.Parameters.Add('10');
-
-      ExProcess.Parameters.Add('-xrm');
-      ExProcess.Parameters.Add('XTerm*foreground:white');
-      ExProcess.Parameters.Add('-xrm');
-      ExProcess.Parameters.Add('XTerm*background:black');
-      ExProcess.Parameters.Add('-xrm');
-      ExProcess.Parameters.Add('XTerm*allowTitleOps:false');
-      ExProcess.Parameters.Add('-T');
-      ExProcess.Parameters.Add('Build RPM-package');
-      ExProcess.Parameters.Add('-g');
-      ExProcess.Parameters.Add('120x40+10+10');
-      ExProcess.Parameters.Add('-xrm');
-      ExProcess.Parameters.Add('XTerm*cursorColor:red'); //цвет курсора
-      ExProcess.Parameters.Add('-xrm');
-      ExProcess.Parameters.Add('XTerm*cursorBlink:true'); //мигающий курсор
-      ExProcess.Parameters.Add('-e');
-    end
-    else
-      ExProcess.Parameters.Add('-c');
-
-    ExProcess.Parameters.Add(command);
-    ExProcess.Options := ExProcess.Options + [poWaitOnExit];
-    ExProcess.Execute;
-  finally
-    ExProcess.Free;
-    Screen.Cursor := crDefault;
-  end;
 end;
 
 procedure TMainForm.TrimEdits;
@@ -842,12 +819,12 @@ begin
     BuildLabel.Visible := True;
 
     //Пересоздаём рабочие директории для сборки RPM
-    StartProcess('[ -d ~/rpmbuild ] && rm -rf ~/rpmbuild/*', 'sh');
-    StartProcess('mkdir -p ~/rpmbuild/{BUILD,BUILDROOT,RPMS,SOURCES,SPECS,SRPMS}', 'sh');
+    StartProcess('[ -d ~/rpmbuild ] && rm -rf ~/rpmbuild/*');
+    StartProcess('mkdir -p ~/rpmbuild/{BUILD,BUILDROOT,RPMS,SOURCES,SPECS,SRPMS}');
 
     //Пересоздаём рабочие директории для сборки DEB
-    StartProcess('[ -d ~/debbuild ] && rm -rf ~/debbuild/*', 'sh');
-    StartProcess('mkdir -p ~/debbuild/tmp/DEBIAN', 'sh');
+    StartProcess('[ -d ~/debbuild ] && rm -rf ~/debbuild/*');
+    StartProcess('mkdir -p ~/debbuild/tmp/DEBIAN');
 
     //АРХИВ ИСХОДНИКОВ ДОЛЖЕН БЫТЬ ВСЕГДА!
     //Собираем /home/$USER/rpmbuild/SOURCES/имя_пакета-версия.tar.gz
@@ -858,11 +835,11 @@ begin
 
     //Жмём архив
     StartProcess('nice -n 15 tar -czf ' + NameEdit.Text + '-' +
-      VersEdit.Text + '.tar.gz --exclude="*.bak" --exclude="*.or" -T ./files.lst', 'sh');
+      VersEdit.Text + '.tar.gz --exclude="*.bak" --exclude="*.or" -T ./files.lst');
 
     //Формируем необработанный список файлов архива исходников
     StartProcess('nice -n 15 tar -tzf ' + NameEdit.Text + '-' +
-      VersEdit.Text + '.tar.gz > ./files.lst', 'sh');
+      VersEdit.Text + '.tar.gz > ./files.lst');
 
     //Начитываем и форматируем список файлов из архива исходников
     FILES := TStringList.Create;
@@ -887,7 +864,7 @@ begin
       //Распаковываем архив для deb-пакета
       if not MetaCheck.Checked then
         StartProcess('nice -n 15 tar -xvzf ' + NameEdit.Text + '-' +
-          VersEdit.Text + '.tar.gz' + ' -C ~/debbuild/tmp', 'sh');
+          VersEdit.Text + '.tar.gz' + ' -C ~/debbuild/tmp');
 
       SPEC.Add('Package: ' + NameEdit.Text);
       SPEC.Add('Version: ' + VersEdit.Text + '-' + ReleaseEdit.Text);
@@ -937,8 +914,7 @@ begin
       //Контрольная сумма файлов из корня пакета DEB
       if not MetaCheck.Checked then
         StartProcess(
-          'cd ~/debbuild/tmp; md5sum $(find *[^DEBIAN] -type f) > ~/debbuild/tmp/DEBIAN/md5sums; cd -',
-          'sh');
+          'cd ~/debbuild/tmp; md5sum $(find *[^DEBIAN] -type f) > ~/debbuild/tmp/DEBIAN/md5sums; cd -');
 
       //pre/post скрипты
       if Trim(BeforeInstallEdit.Text) <> '' then
@@ -954,10 +930,10 @@ begin
         AfterRemoveEdit.Lines.SaveToFile(GetUserDir + 'debbuild/tmp/DEBIAN/postrm');
 
       //Права на скрипты pre/post (755)
-      StartProcess('chmod 755 ~/debbuild/tmp/DEBIAN/{pre*,post*}', 'sh');
+      StartProcess('chmod 755 ~/debbuild/tmp/DEBIAN/{pre*,post*}');
 
       //Собираем DEB-пакет в ~/debbuild
-      StartProcess('dpkg-deb -b ~/debbuild/tmp ~/debbuild', 'sh');
+      StartProcess('dpkg-deb -b ~/debbuild/tmp ~/debbuild');
     end;
 
     //Скрываем метку ожидания
@@ -1179,6 +1155,8 @@ begin
 
     //Создаём пускач сборки пакета
     SPEC.Clear;
+    SPEC.Add('#!/bin/bash');
+    SPEC.Add('');
     SPEC.Add('rpmbuild -ba ~/rpmbuild/SPECS/' + NameEdit.Text + '.spec');
 
     //Подпись пакетов в ~/rpmbuild/SRPMS RPMS/*/name_package*.rpm
@@ -1192,22 +1170,29 @@ begin
 
       SPEC.Add('rpm --addsign ~/rpmbuild/RPMS/*/' + NameEdit.Text + '*.rpm');
       SPEC.Add('rpm --checksig ~/rpmbuild/RPMS/*/' + NameEdit.Text + '*.rpm');
-    end;
+    end;   }
 
     SPEC.Add('echo');
     SPEC.Add('echo "---"');
     SPEC.Add('read -p "' + SCompleted + '"');
+    SPEC.Add('exit 0');
+
     SPEC.SaveToFile(WorkDir + '/build.sh');
 
     //Делаем исполняемым
-    StartProcess('chmod +x ' + WorkDir + '/build.sh', 'sh');
+    StartProcess('chmod +x ' + WorkDir + '/build.sh');
 
     //Собираем пакет rpm + src.rpm
-    StartProcess(WorkDir + '/build.sh', 'xterm'); }
+    //StartProcess(WorkDir + '/build.sh', 'xterm');
 
+    //Запуск из ярлыка /usr/share/applications/rpmcreator-term.desktop
+    StartProcess('gio launch /usr/share/applications/rpmcreator-term.desktop');
+
+    {
     //Собираем пакет rpm + src.rpm
     StartProcess('rpmbuild -ba ~/rpmbuild/SPECS/' + NameEdit.Text +
       '.spec; echo -e "\n---"; read -p "' + SCompleted + '"', 'xterm');
+    }
 
   finally;
 
@@ -1266,7 +1251,7 @@ begin
   if not InputQuery('RPMCreator', SInputName, RPMName) or (Trim(RPMName) = '') then
     Exit;
 
-  StartProcess('rpm -ql ' + RPMName + ' > ' + WorkDir + '/rpm-ql.lst', 'sh');
+  StartProcess('rpm -ql ' + RPMName + ' > ' + WorkDir + '/rpm-ql.lst');
   ListBox1.Items.LoadFromFile(WorkDir + '/rpm-ql.lst');
 
   //Исключаем каталоги (кроме пустых), иначе будут повторы
