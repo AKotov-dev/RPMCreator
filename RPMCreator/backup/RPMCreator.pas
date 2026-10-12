@@ -3,7 +3,7 @@ program RPMCreator;
 {$mode objfpc}{$H+}
 
 uses
- {$IFDEF UNIX}
+  {$IFDEF UNIX}
   cthreads,     {$ENDIF}
   Interfaces, // this includes the LCL widgetset
   Forms,
@@ -17,9 +17,9 @@ uses
   unpackunit,
   LoadGroupsTRD { you can add units after this };
 
-{$R *.res}
+  {$R *.res}
 
-//--- Определяем, запущена ли копия программы
+  //--- Определяем, запущена ли копия программы
 var
   PID: TStringList;
   ExProcess: TProcess;
@@ -53,7 +53,7 @@ begin
   //---
 
   Application.Scaled:=True;
-  Application.Title:='RPMCreator v2.8';
+  Application.Title:='RPMCreator v3.0';
   RequireDerivedFormResource := True;
   Application.Initialize;
   Application.CreateForm(TMainForm, MainForm);

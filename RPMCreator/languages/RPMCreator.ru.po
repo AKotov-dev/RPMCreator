@@ -122,6 +122,14 @@ msgctxt "tmainform.caption"
 msgid "RPMCreator"
 msgstr ""
 
+#: tmainform.copybtn.caption
+msgid "<"
+msgstr ""
+
+#: tmainform.copybtn.hint
+msgid "|Copy from the \"Basic\" tab"
+msgstr "|Копировать с вкладки \"Основное\""
+
 #: tmainform.createrepacktxt.caption
 msgid "Create repack.txt"
 msgstr "Создать repack.txt"

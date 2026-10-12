@@ -24,6 +24,7 @@ type
     Bevel4: TBevel;
     Bevel5: TBevel;
     Button1: TButton;
+    CopyBtn: TButton;
     OnlineBtn: TButton;
     DEBCheckBox: TCheckBox;
     EditItem: TMenuItem;
@@ -100,6 +101,7 @@ type
     VersEdit: TEdit;
     procedure AboutBtnClick(Sender: TObject);
     procedure Button1Click(Sender: TObject);
+    procedure CopyBtnClick(Sender: TObject);
     procedure Button3Click(Sender: TObject);
     procedure CreateRepackTxtClick(Sender: TObject);
     procedure DevToolEditChange(Sender: TObject);
@@ -512,6 +514,12 @@ begin
   SelectForm.Show;
 end;
 
+//Дублировать строку из Basic
+procedure TMainForm.CopyBtnClick(Sender: TObject);
+begin
+  URLEdit32.Text := URLCopyEdit.Text;
+end;
+
 procedure TMainForm.AboutBtnClick(Sender: TObject);
 begin
   AboutForm.Show;
@@ -707,6 +715,7 @@ begin
 
   PageControl1.ActivePageIndex := 0;
   AboutBtn.Width := AboutBtn.Height;
+  CopyBtn.Width := CopyBtn.Height;
 
   //Получить список валидных групп RPM
   if not FileExists(WorkDir + '/rpm-groups.list') then
@@ -1297,7 +1306,7 @@ begin
   WorkDir := GetUserDir + '.RPMCreator';
 
   if not DirectoryExists(WorkDir) then
-    MkDir(WorkDir);
+    ForceDirectories(WorkDir);
 
   MainFormStorage.FileName := WorkDir + '/settings.xml';
 end;
