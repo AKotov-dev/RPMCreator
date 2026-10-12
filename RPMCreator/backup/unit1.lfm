@@ -320,7 +320,7 @@ object MainForm: TMainForm
         AnchorSideLeft.Control = LicenseEdit
         AnchorSideBottom.Control = Label1
         AnchorSideBottom.Side = asrBottom
-        Left = 816
+        Left = 800
         Height = 17
         Top = 253
         Width = 47
@@ -359,7 +359,7 @@ object MainForm: TMainForm
         Left = 424
         Height = 37
         Top = 272
-        Width = 336
+        Width = 344
         BorderSpacing.Right = 5
         Color = 15663103
         ItemHeight = 0
@@ -513,10 +513,10 @@ object MainForm: TMainForm
         AnchorSideTop.Control = GroupCBox
         AnchorSideRight.Control = TabSheet1
         AnchorSideRight.Side = asrBottom
-        Left = 816
+        Left = 800
         Height = 37
         Top = 272
-        Width = 173
+        Width = 189
         Anchors = [akTop, akRight]
         BorderSpacing.Right = 5
         ItemHeight = 0
@@ -1018,19 +1018,22 @@ object MainForm: TMainForm
         Items.Strings = (
           'C'
           'C++'
+          'C#'
           'CSS'
           'Go'
           'Java'
+          'JavaScript'
           'Lazarus'
           'Pascal'
           'Perl'
           'PHP'
           'Python'
           'Ruby'
+          'Rust'
           'Scala'
           'Shell'
           'Swift'
-          'Type Script'
+          'TypeScript'
         )
         TabOrder = 2
         OnChange = NameEditChange

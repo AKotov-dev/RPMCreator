@@ -1018,19 +1018,22 @@ object MainForm: TMainForm
         Items.Strings = (
           'C'
           'C++'
+          'C#'
           'CSS'
           'Go'
           'Java'
+          'JavaScript'
           'Lazarus'
           'Pascal'
           'Perl'
           'PHP'
           'Python'
           'Ruby'
+          'Rust'
           'Scala'
           'Shell'
           'Swift'
-          'Type Script'
+          'TypeScript'
         )
         TabOrder = 2
         OnChange = NameEditChange

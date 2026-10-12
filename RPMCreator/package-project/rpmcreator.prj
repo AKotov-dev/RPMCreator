@@ -28,7 +28,7 @@ summary=GUI for building RPM and DEB packages
 urlcopy=https://github.com/AKotov-dev/RPMCreator
 
 [LICENSE]
-license=GPLv3
+license=GPL-3.0-or-later
 
 [DEPS]
 deps=rpm-build dpkg-dev gtk2
