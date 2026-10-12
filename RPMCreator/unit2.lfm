@@ -384,7 +384,7 @@ object AboutForm: TAboutForm
     Height = 170
     Top = 48
     Width = 266
-    Caption = 'Packages build program'#10'  '#10'License: GPLv3'#10'Compilation: Lazarus 4.4'#10'Grantitudes: AlexL, Oberon'#10'Author: alex_q_2000 (C) 2021'#10'  '#10'Used by rpmbuild (spec, src)'#10'  '#10'https://github.com/AKotov-dev/RPMCreator'
+    Caption = 'Packages build program'#10'  '#10'License: GPLv3'#10'Compilation: Lazarus 4.4'#10'Grantitudes: AlexL, Oberon'#10'Author: alex_q_2000 (C) 2026'#10'  '#10'Used by rpmbuild (spec, src)'#10'  '#10'https://github.com/AKotov-dev/RPMCreator'
     ParentColor = False
   end
   object Bevel1: TBevel

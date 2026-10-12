@@ -133,7 +133,8 @@ type
   private
 
   public
-
+     WorkDir: string;
+  SaveFlag: boolean;
   end;
 
 resourcestring
@@ -153,8 +154,7 @@ resourcestring
 
 var
   MainForm: TMainForm;
-  WorkDir: string;
-  SaveFlag: boolean;
+
 
 implementation
 
@@ -1251,7 +1251,7 @@ begin
   if not InputQuery('RPMCreator', SInputName, RPMName) or (Trim(RPMName) = '') then
     Exit;
 
-  StartProcess('rpm -ql ' + RPMName + ' > ' + WorkDir + '/rpm-ql.lst', 'sh');
+  StartProcess('rpm -ql ' + RPMName + ' > ' + WorkDir + '/rpm-ql.lst');
   ListBox1.Items.LoadFromFile(WorkDir + '/rpm-ql.lst');
 
   //Исключаем каталоги (кроме пустых), иначе будут повторы
