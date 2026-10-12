@@ -264,11 +264,6 @@ end;
 procedure TUnpackForm.FormShow(Sender: TObject);
 begin
   UnPackFormStorage.Restore;
-
-  //В центр
-  Left := MainForm.Left + MainForm.Width div 2 - Width div 2;
-  Top := MainForm.Top + MainForm.Height div 2 - Height div 2;
-
   EditButton1.Button.Width := EditButton1.Height;
   EditButton2.Button.Width := EditButton2.Height;
 end;
@@ -285,29 +280,8 @@ end;
 //Выбор пакета для распаковки (*.rpm, *.deb)
 procedure TUnpackForm.EditButton2ButtonClick(Sender: TObject);
 begin
-  // 1. Если в FileName что-то есть, добавляем маску '*' для входа в папку
-  if SelectDirectoryDialog1.FileName <> '' then
-    SelectDirectoryDialog1.FileName :=
-      IncludeTrailingPathDelimiter(SelectDirectoryDialog1.FileName) + '*';
-
-  // 2. Показываем диалог
   if SelectDirectoryDialog1.Execute then
-  begin
-    // Пользователь нажал «ОК» — Linux сам вернул чистый путь
     EditButton2.Text := SelectDirectoryDialog1.FileName;
-  end
-  else
-  begin
-    // 3. Пользователь нажал «Отмена».
-    // Гарантированно очищаем '*' вручную для XMLPropStorage, если Linux её оставил
-    if (SelectDirectoryDialog1.FileName <> '') and
-      (SelectDirectoryDialog1.FileName[Length(SelectDirectoryDialog1.FileName)] = '*') then
-      SelectDirectoryDialog1.FileName :=
-        Copy(SelectDirectoryDialog1.FileName, 1, Length(SelectDirectoryDialog1.FileName) - 1);
-
-    // Убираем trailing slash, если он остался после удаления звездочки
-    SelectDirectoryDialog1.FileName := ExcludeTrailingPathDelimiter(SelectDirectoryDialog1.FileName);
-  end;
 end;
 
 end.
