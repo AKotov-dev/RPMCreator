@@ -1,14 +1,13 @@
 object UnpackForm: TUnpackForm
-  Left = 345
+  Left = 342
   Height = 572
-  Top = 135
+  Top = 129
   Width = 780
   Caption = 'Package unpacker'
   ClientHeight = 572
   ClientWidth = 780
   FormStyle = fsStayOnTop
-  Position = poMainFormCenter
-  SessionProperties = 'Height;Width;EditButton2.Text'
+  SessionProperties = 'EditButton2.Text;Height;OpenDialog1.InitialDir;Width;SelectDirectoryDialog1.FileName'
   LCLVersion = '4.4.0.0'
   OnClose = FormClose
   OnCreate = FormCreate
