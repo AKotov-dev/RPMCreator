@@ -133,8 +133,7 @@ type
   private
 
   public
-     WorkDir: string;
-  SaveFlag: boolean;
+
   end;
 
 resourcestring
@@ -154,7 +153,8 @@ resourcestring
 
 var
   MainForm: TMainForm;
-
+  WorkDir: string;
+  SaveFlag: boolean;
 
 implementation
 

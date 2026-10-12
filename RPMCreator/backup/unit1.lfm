@@ -320,7 +320,7 @@ object MainForm: TMainForm
         AnchorSideLeft.Control = LicenseEdit
         AnchorSideBottom.Control = Label1
         AnchorSideBottom.Side = asrBottom
-        Left = 823
+        Left = 816
         Height = 17
         Top = 253
         Width = 47
@@ -513,24 +513,51 @@ object MainForm: TMainForm
         AnchorSideTop.Control = GroupCBox
         AnchorSideRight.Control = TabSheet1
         AnchorSideRight.Side = asrBottom
-        Left = 823
+        Left = 816
         Height = 37
         Top = 272
-        Width = 166
+        Width = 173
         Anchors = [akTop, akRight]
         BorderSpacing.Right = 5
         ItemHeight = 0
         Items.Strings = (
-          'Apache'
-          'Artistic'
-          'BSD'
-          'CDDL'
-          'EULA'
-          'GPLv2'
-          'GPLv3'
-          'LGPL'
-          'LPPL'
+          '0BSD'
+          'AGPL-3.0-only'
+          'AGPL-3.0-or-later'
+          'Apache-2.0'
+          'Artistic-2.0'
+          'BSD-2-Clause'
+          'BSD-3-Clause'
+          'BSL-1.0'
+          'CC0-1.0'
+          'EPL-2.0'
+          'GFDL-1.3-only'
+          'GFDL-1.3-or-later'
+          'GPL-1.0-only'
+          'GPL-1.0-or-later'
+          'GPL-2.0-only'
+          'GPL-2.0-or-later'
+          'GPL-3.0-only'
+          'GPL-3.0-or-later'
+          'ISC'
+          'LGPL-2.0-only'
+          'LGPL-2.1-only'
+          'LGPL-2.1-or-later'
+          'LGPL-3.0-only'
+          'LGPL-3.0-or-later'
           'MIT'
+          'MPL-2.0'
+          'OFL-1.1'
+          'OpenSSL'
+          'PostgreSQL'
+          'PSF-2.0'
+          'Python-2.0'
+          'Ruby'
+          'Unicode-3.0'
+          'Unlicense'
+          'UPL-1.0'
+          'WTFPL'
+          'Zlib'
         )
         ParentShowHint = False
         ShowHint = True
