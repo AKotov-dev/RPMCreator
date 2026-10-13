@@ -1,7 +1,7 @@
 object MainForm: TMainForm
-  Left = 326
+  Left = 323
   Height = 728
-  Top = 101
+  Top = 104
   Width = 997
   ActiveControl = LoadBtn
   Caption = 'RPMCreator'
@@ -56,7 +56,7 @@ object MainForm: TMainForm
         Color = 15663103
         ParentShowHint = False
         ShowHint = True
-        TabOrder = 9
+        TabOrder = 10
         OnChange = NameEditChange
         OnKeyPress = NameEditKeyPress
       end
@@ -88,7 +88,7 @@ object MainForm: TMainForm
         Color = 15663103
         ParentShowHint = False
         ShowHint = True
-        TabOrder = 10
+        TabOrder = 11
         OnChange = NameEditChange
         OnKeyPress = NameEditKeyPress
       end
@@ -119,7 +119,7 @@ object MainForm: TMainForm
         Color = 15663103
         ParentShowHint = False
         ShowHint = True
-        TabOrder = 11
+        TabOrder = 12
         OnChange = NameEditChange
         OnKeyPress = NameEditKeyPress
       end
@@ -165,7 +165,7 @@ object MainForm: TMainForm
         BorderSpacing.Top = 2
         ParentShowHint = False
         ShowHint = True
-        TabOrder = 14
+        TabOrder = 15
         OnChange = NameEditChange
       end
       object Label3: TLabel
@@ -202,7 +202,7 @@ object MainForm: TMainForm
         ParentShowHint = False
         ScrollBars = ssVertical
         ShowHint = True
-        TabOrder = 17
+        TabOrder = 18
         OnChange = NameEditChange
       end
       object DepsEdit: TMemo
@@ -224,7 +224,7 @@ object MainForm: TMainForm
         ParentShowHint = False
         ScrollBars = ssVertical
         ShowHint = True
-        TabOrder = 19
+        TabOrder = 20
         WantReturns = False
         OnChange = NameEditChange
       end
@@ -255,7 +255,7 @@ object MainForm: TMainForm
         BorderSpacing.Right = 5
         ParentShowHint = False
         ShowHint = True
-        TabOrder = 15
+        TabOrder = 16
         OnChange = NameEditChange
       end
       object ListBox1: TListBox
@@ -275,7 +275,7 @@ object MainForm: TMainForm
         ScrollWidth = 973
         ShowHint = True
         Style = lbOwnerDrawFixed
-        TabOrder = 8
+        TabOrder = 9
         TopIndex = -1
         OnDblClick = ListBox1DblClick
         OnDrawItem = ListBox1DrawItem
@@ -342,7 +342,7 @@ object MainForm: TMainForm
         Caption = 'RPM'
         ParentShowHint = False
         ShowHint = True
-        TabOrder = 7
+        TabOrder = 8
         OnClick = RPMBtnClick
       end
       object Bevel3: TBevel
@@ -490,7 +490,7 @@ object MainForm: TMainForm
         )
         ParentShowHint = False
         ShowHint = True
-        TabOrder = 12
+        TabOrder = 13
         OnChange = NameEditChange
       end
       object Label15: TLabel
@@ -561,7 +561,7 @@ object MainForm: TMainForm
         )
         ParentShowHint = False
         ShowHint = True
-        TabOrder = 13
+        TabOrder = 14
         OnChange = NameEditChange
       end
       object SummaryEdit: TEdit
@@ -579,7 +579,7 @@ object MainForm: TMainForm
         Color = 15663103
         ParentShowHint = False
         ShowHint = True
-        TabOrder = 16
+        TabOrder = 17
         OnChange = NameEditChange
       end
       object Label16: TLabel
@@ -630,7 +630,7 @@ object MainForm: TMainForm
         Color = 15663103
         ParentShowHint = False
         ShowHint = True
-        TabOrder = 18
+        TabOrder = 19
         OnChange = NameEditChange
         OnKeyPress = NameEditKeyPress
       end
@@ -649,7 +649,7 @@ object MainForm: TMainForm
         Caption = 'UNPACK'
         ParentShowHint = False
         ShowHint = True
-        TabOrder = 6
+        TabOrder = 7
         OnClick = UnpackBtnClick
       end
       object UPBtn: TButton
@@ -716,7 +716,7 @@ object MainForm: TMainForm
         Caption = 'DEPS'
         ParentShowHint = False
         ShowHint = True
-        TabOrder = 20
+        TabOrder = 6
         OnClick = DepsBtnClick
       end
     end
