@@ -496,8 +496,8 @@ msgid "|Select the directory to save the contents of the package"
 msgstr "|Выберите каталог для сохранения содержимого пакета"
 
 #: tunpackform.label1.caption
-msgid "Select package (*.deb or *.rpm):"
-msgstr "Выбрать пакет (*.deb или *.rpm):"
+msgid "Select package rpm / deb:"
+msgstr "Выбрать пакет rpm / deb:"
 
 #: tunpackform.label2.caption
 msgid "Content upload folder:"

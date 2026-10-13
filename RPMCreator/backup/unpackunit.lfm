@@ -21,9 +21,9 @@ object UnpackForm: TUnpackForm
     AnchorSideBottom.Control = Owner
     AnchorSideBottom.Side = asrBottom
     Left = 5
-    Height = 409
+    Height = 407
     Hint = '|Log of the package unpacking process'
-    Top = 158
+    Top = 160
     Width = 770
     Align = alBottom
     Anchors = [akTop, akLeft, akRight, akBottom]
@@ -46,9 +46,9 @@ object UnpackForm: TUnpackForm
     Left = 5
     Height = 17
     Top = 36
-    Width = 144
+    Width = 188
     BorderSpacing.Bottom = 1
-    Caption = 'Unpack (*.deb or *.rpm):'
+    Caption = 'Select package (*.deb or *.rpm):'
     ParentColor = False
     ParentFont = False
   end
@@ -61,11 +61,11 @@ object UnpackForm: TUnpackForm
     Left = 5
     Height = 37
     Hint = '|Select the package to unpack'
-    Top = 55
+    Top = 56
     Width = 770
     Anchors = [akTop, akLeft, akRight]
     BorderSpacing.Left = 5
-    BorderSpacing.Top = 2
+    BorderSpacing.Top = 3
     BorderSpacing.Right = 5
     ButtonCaption = '...'
     ButtonWidth = 23
@@ -90,11 +90,11 @@ object UnpackForm: TUnpackForm
     Left = 5
     Height = 37
     Hint = '|Select the directory to save the contents of the package'
-    Top = 116
+    Top = 118
     Width = 770
     Anchors = [akTop, akLeft, akRight]
     BorderSpacing.Left = 5
-    BorderSpacing.Top = 2
+    BorderSpacing.Top = 3
     BorderSpacing.Right = 5
     ButtonCaption = '...'
     ButtonWidth = 23
@@ -116,9 +116,9 @@ object UnpackForm: TUnpackForm
     AnchorSideTop.Side = asrBottom
     Left = 5
     Height = 17
-    Top = 96
+    Top = 98
     Width = 138
-    BorderSpacing.Top = 4
+    BorderSpacing.Top = 5
     BorderSpacing.Bottom = 3
     Caption = 'Content upload folder:'
     ParentColor = False

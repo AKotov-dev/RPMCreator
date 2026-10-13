@@ -46,9 +46,9 @@ object UnpackForm: TUnpackForm
     Left = 5
     Height = 17
     Top = 36
-    Width = 188
+    Width = 154
     BorderSpacing.Bottom = 1
-    Caption = 'Select package (*.deb or *.rpm):'
+    Caption = 'Select package rpm / deb:'
     ParentColor = False
     ParentFont = False
   end

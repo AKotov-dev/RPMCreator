@@ -469,7 +469,7 @@ msgid "|Select the directory to save the contents of the package"
 msgstr ""
 
 #: tunpackform.label1.caption
-msgid "Select package (*.deb or *.rpm):"
+msgid "Select package rpm / deb:"
 msgstr ""
 
 #: tunpackform.label2.caption
