@@ -53,17 +53,17 @@ msgstr ""
 #: tdepsform.button1.caption
 msgctxt "tdepsform.button1.caption"
 msgid "Copy"
-msgstr ""
+msgstr "Копировать"
 
 #: tdepsform.button2.caption
 msgctxt "tdepsform.button2.caption"
 msgid "Copy"
-msgstr ""
+msgstr "Копировать"
 
 #: tdepsform.button3.caption
 msgctxt "tdepsform.button3.caption"
 msgid "Copy"
-msgstr ""
+msgstr "Копировать"
 
 #: tdepsform.caption
 msgid "Dependencies from *.spec"

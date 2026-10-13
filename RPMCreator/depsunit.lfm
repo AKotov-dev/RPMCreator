@@ -1,7 +1,7 @@
 object DepsForm: TDepsForm
-  Left = 429
+  Left = 337
   Height = 566
-  Top = 174
+  Top = 132
   Width = 785
   Caption = 'Dependencies from *.spec'
   ClientHeight = 566
@@ -15,7 +15,7 @@ object DepsForm: TDepsForm
   object Edit1: TEdit
     Left = 8
     Height = 37
-    Top = 16
+    Top = 8
     Width = 424
     TabOrder = 0
   end
@@ -27,7 +27,7 @@ object DepsForm: TDepsForm
     AnchorSideBottom.Side = asrBottom
     Left = 432
     Height = 37
-    Top = 16
+    Top = 8
     Width = 40
     Anchors = [akTop, akLeft, akBottom]
     Caption = '...'
@@ -116,10 +116,10 @@ object DepsForm: TDepsForm
     AnchorSideRight.Control = Memo1
     AnchorSideRight.Side = asrBottom
     AnchorSideBottom.Control = Memo1
-    Left = 183
+    Left = 138
     Height = 30
     Top = 62
-    Width = 75
+    Width = 120
     Anchors = [akRight, akBottom]
     BorderSpacing.Bottom = 4
     Caption = 'Copy'
@@ -127,12 +127,14 @@ object DepsForm: TDepsForm
     OnClick = Button1Click
   end
   object Button2: TButton
+    AnchorSideRight.Control = Memo2
+    AnchorSideRight.Side = asrBottom
     AnchorSideBottom.Control = Memo2
-    Left = 442
+    Left = 397
     Height = 30
     Top = 62
-    Width = 75
-    Anchors = [akBottom]
+    Width = 120
+    Anchors = [akRight, akBottom]
     BorderSpacing.Bottom = 4
     Caption = 'Copy'
     TabOrder = 3
@@ -142,11 +144,11 @@ object DepsForm: TDepsForm
     AnchorSideRight.Control = Memo3
     AnchorSideRight.Side = asrBottom
     AnchorSideBottom.Control = Memo3
-    Left = 702
+    Left = 657
     Height = 30
     Top = 62
-    Width = 75
-    Anchors = [akLeft, akRight, akBottom]
+    Width = 120
+    Anchors = [akRight, akBottom]
     BorderSpacing.Bottom = 4
     Caption = 'Copy'
     TabOrder = 4
