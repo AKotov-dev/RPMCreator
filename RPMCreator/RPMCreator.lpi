@@ -79,7 +79,7 @@
         <PackageName Value="LCL"/>
       </Item1>
     </RequiredPackages>
-    <Units Count="6">
+    <Units Count="7">
       <Unit0>
         <Filename Value="RPMCreator.pas"/>
         <IsPartOfProject Value="True"/>
@@ -120,6 +120,13 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="LoadGroupsTRD"/>
       </Unit5>
+      <Unit6>
+        <Filename Value="depsunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="DepsForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit6>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

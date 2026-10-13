@@ -15,7 +15,7 @@ uses
   Unit2,
   SelectUnit,
   unpackunit,
-  LoadGroupsTRD { you can add units after this };
+  LoadGroupsTRD, depsunit { you can add units after this };
 
   {$R *.res}
 
@@ -60,5 +60,6 @@ begin
   Application.CreateForm(TAboutForm, AboutForm);
   Application.CreateForm(TSelectForm, SelectForm);
   Application.CreateForm(TUnpackForm, UnpackForm);
+  Application.CreateForm(TDepsForm, DepsForm);
   Application.Run;
 end.

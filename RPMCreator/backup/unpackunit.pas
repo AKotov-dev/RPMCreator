@@ -264,6 +264,11 @@ end;
 procedure TUnpackForm.FormShow(Sender: TObject);
 begin
   UnPackFormStorage.Restore;
+
+  //В центр
+  Left := MainForm.Left + MainForm.Width div 2 - Width div 2;
+  Top := MainForm.Top + MainForm.Height div 2 - Height div 2;
+
   EditButton1.Button.Width := EditButton1.Height;
   EditButton2.Button.Width := EditButton2.Height;
 end;

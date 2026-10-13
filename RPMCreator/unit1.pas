@@ -24,6 +24,7 @@ type
     Bevel4: TBevel;
     Bevel5: TBevel;
     Button1: TButton;
+    DepsBtn: TButton;
     CopyBtn: TButton;
     OnlineBtn: TButton;
     DEBCheckBox: TCheckBox;
@@ -101,6 +102,7 @@ type
     VersEdit: TEdit;
     procedure AboutBtnClick(Sender: TObject);
     procedure Button1Click(Sender: TObject);
+    procedure DepsBtnClick(Sender: TObject);
     procedure CopyBtnClick(Sender: TObject);
     procedure Button3Click(Sender: TObject);
     procedure CreateRepackTxtClick(Sender: TObject);
@@ -160,7 +162,7 @@ var
 
 implementation
 
-uses unit2, LoadGroupsTRD, selectunit, unpackunit;
+uses unit2, LoadGroupsTRD, selectunit, unpackunit, depsunit;
 
   {$R *.lfm}
 
@@ -512,6 +514,11 @@ end;
 procedure TMainForm.Button1Click(Sender: TObject);
 begin
   SelectForm.Show;
+end;
+
+procedure TMainForm.DepsBtnClick(Sender: TObject);
+begin
+  DepsForm.Show;
 end;
 
 //Дублировать строку из Basic

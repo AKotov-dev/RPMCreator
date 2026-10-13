@@ -50,6 +50,42 @@ msgctxt "taboutform.okbtn.caption"
 msgid "Ok"
 msgstr ""
 
+#: tdepsform.button1.caption
+msgctxt "tdepsform.button1.caption"
+msgid "Copy"
+msgstr ""
+
+#: tdepsform.button2.caption
+msgctxt "tdepsform.button2.caption"
+msgid "Copy"
+msgstr ""
+
+#: tdepsform.button3.caption
+msgctxt "tdepsform.button3.caption"
+msgid "Copy"
+msgstr ""
+
+#: tdepsform.caption
+msgid "Dependencies from *.spec"
+msgstr "Зависимости из *.spec"
+
+#: tdepsform.label1.caption
+msgid "Requires"
+msgstr ""
+
+#: tdepsform.label2.caption
+msgid "BuildRequires"
+msgstr ""
+
+#: tdepsform.label3.caption
+msgid "Recommends"
+msgstr ""
+
+#: tdepsform.openbtn.caption
+msgctxt "tdepsform.openbtn.caption"
+msgid "..."
+msgstr ""
+
 #: tmainform.aboutbtn.caption
 msgid "?"
 msgstr ""
@@ -145,6 +181,16 @@ msgstr ""
 #: tmainform.debcheckbox.hint
 msgid "|Additionally build a DEB package in ~/debbuild"
 msgstr "|Дополнительно собрать пакет DEB в ~/debbuild"
+
+#: tmainform.depsbtn.caption
+msgctxt "tmainform.depsbtn.caption"
+msgid "deps"
+msgstr ""
+
+#: tmainform.depsbtn.hint
+msgctxt "tmainform.depsbtn.hint"
+msgid "|Extracting dependency lists from a spec file"
+msgstr "|Получить списки зависимостей из spec-файла"
 
 #: tmainform.depsedit.hint
 msgid "|Package names separated by commas or spaces"

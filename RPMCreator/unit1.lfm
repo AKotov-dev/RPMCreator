@@ -1,5 +1,5 @@
 object MainForm: TMainForm
-  Left = 329
+  Left = 322
   Height = 728
   Top = 104
   Width = 999
@@ -682,10 +682,10 @@ object MainForm: TMainForm
       end
       object OnlineBtn: TButton
         AnchorSideTop.Control = UnpackBtn
-        AnchorSideRight.Control = UnpackBtn
+        AnchorSideRight.Control = DepsBtn
         AnchorSideBottom.Control = UnpackBtn
         AnchorSideBottom.Side = asrBottom
-        Left = 671
+        Left = 589
         Height = 30
         Hint = '|Package search database'
         Top = 6
@@ -697,6 +697,24 @@ object MainForm: TMainForm
         ShowHint = True
         TabOrder = 5
         OnClick = OnlineBtnClick
+      end
+      object DepsBtn: TButton
+        AnchorSideTop.Control = RPMBtn
+        AnchorSideRight.Control = UnpackBtn
+        AnchorSideBottom.Control = RPMBtn
+        AnchorSideBottom.Side = asrBottom
+        Left = 702
+        Height = 30
+        Hint = '|Extracting dependency lists from a spec file'
+        Top = 6
+        Width = 78
+        Anchors = [akTop, akRight, akBottom]
+        BorderSpacing.Right = 4
+        Caption = 'deps'
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 20
+        OnClick = DepsBtnClick
       end
     end
     object TabSheet2: TTabSheet

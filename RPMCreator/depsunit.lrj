@@ -1,0 +1,10 @@
+{"version":1,"strings":[
+{"hash":160440515,"name":"tdepsform.caption","sourcebytes":[68,101,112,101,110,100,101,110,99,105,101,115,32,102,114,111,109,32,42,46,115,112,101,99],"value":"Dependencies from *.spec"},
+{"hash":12558,"name":"tdepsform.openbtn.caption","sourcebytes":[46,46,46],"value":"..."},
+{"hash":210505027,"name":"tdepsform.label1.caption","sourcebytes":[82,101,113,117,105,114,101,115],"value":"Requires"},
+{"hash":88875267,"name":"tdepsform.label2.caption","sourcebytes":[66,117,105,108,100,82,101,113,117,105,114,101,115],"value":"BuildRequires"},
+{"hash":105271059,"name":"tdepsform.label3.caption","sourcebytes":[82,101,99,111,109,109,101,110,100,115],"value":"Recommends"},
+{"hash":304761,"name":"tdepsform.button1.caption","sourcebytes":[67,111,112,121],"value":"Copy"},
+{"hash":304761,"name":"tdepsform.button2.caption","sourcebytes":[67,111,112,121],"value":"Copy"},
+{"hash":304761,"name":"tdepsform.button3.caption","sourcebytes":[67,111,112,121],"value":"Copy"}
+]}
