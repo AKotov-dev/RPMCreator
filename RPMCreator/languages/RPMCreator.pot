@@ -342,7 +342,7 @@ msgstr ""
 
 #: tmainform.onlinebtn.caption
 msgctxt "tmainform.onlinebtn.caption"
-msgid "pkgs.org"
+msgid "PKGS.ORG"
 msgstr ""
 
 #: tmainform.onlinebtn.hint
@@ -399,7 +399,7 @@ msgstr ""
 
 #: tmainform.unpackbtn.caption
 msgctxt "tmainform.unpackbtn.caption"
-msgid "Unpack"
+msgid "UNPACK"
 msgstr ""
 
 #: tmainform.unpackbtn.hint

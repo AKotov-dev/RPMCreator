@@ -363,7 +363,7 @@ msgstr "|Для всех архитектур"
 
 #: tmainform.onlinebtn.caption
 msgctxt "tmainform.onlinebtn.caption"
-msgid "pkgs.org"
+msgid "PKGS.ORG"
 msgstr ""
 
 #: tmainform.onlinebtn.hint
@@ -421,8 +421,8 @@ msgstr "Помощь"
 
 #: tmainform.unpackbtn.caption
 msgctxt "tmainform.unpackbtn.caption"
-msgid "Unpack"
-msgstr "Распаковать"
+msgid "UNPACK"
+msgstr ""
 
 #: tmainform.unpackbtn.hint
 msgid "|Unpack RPM or DEB package"

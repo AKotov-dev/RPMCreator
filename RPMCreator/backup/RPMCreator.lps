@@ -51,6 +51,7 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit1"/>
+        <IsVisibleTab Value="True"/>
         <CursorPos X="14"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
@@ -85,11 +86,9 @@
         <ComponentName Value="UnpackForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="1"/>
+        <EditorIndex Value="-1"/>
         <CursorPos X="18"/>
         <UsageCount Value="66"/>
-        <Loaded Value="True"/>
       </Unit4>
       <Unit5>
         <Filename Value="loadgroupstrd.pas"/>
