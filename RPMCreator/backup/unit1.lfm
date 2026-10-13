@@ -1,7 +1,7 @@
 object MainForm: TMainForm
-  Left = 322
+  Left = 326
   Height = 728
-  Top = 104
+  Top = 101
   Width = 997
   ActiveControl = LoadBtn
   Caption = 'RPMCreator'
@@ -332,11 +332,11 @@ object MainForm: TMainForm
       object RPMBtn: TButton
         AnchorSideRight.Control = TabSheet1
         AnchorSideRight.Side = asrBottom
-        Left = 916
+        Left = 906
         Height = 30
         Hint = '|Download a list of files by package name'
         Top = 6
-        Width = 70
+        Width = 80
         Anchors = [akTop, akRight]
         BorderSpacing.Right = 5
         Caption = 'RPM'
@@ -639,11 +639,11 @@ object MainForm: TMainForm
         AnchorSideRight.Control = RPMBtn
         AnchorSideBottom.Control = RPMBtn
         AnchorSideBottom.Side = asrBottom
-        Left = 782
+        Left = 802
         Height = 30
         Hint = '|Unpack RPM or DEB package'
         Top = 6
-        Width = 130
+        Width = 100
         Anchors = [akTop, akRight, akBottom]
         BorderSpacing.Right = 4
         Caption = 'UNPACK'
@@ -688,11 +688,11 @@ object MainForm: TMainForm
         AnchorSideRight.Control = DepsBtn
         AnchorSideBottom.Control = RPMBtn
         AnchorSideBottom.Side = asrBottom
-        Left = 585
+        Left = 614
         Height = 30
         Hint = '|Online package search database'
         Top = 6
-        Width = 109
+        Width = 100
         Anchors = [akTop, akRight, akBottom]
         BorderSpacing.Right = 4
         Caption = 'PKGS.ORG'
@@ -706,7 +706,7 @@ object MainForm: TMainForm
         AnchorSideRight.Control = UnpackBtn
         AnchorSideBottom.Control = RPMBtn
         AnchorSideBottom.Side = asrBottom
-        Left = 698
+        Left = 718
         Height = 30
         Hint = '|Extracting dependency lists from a spec file'
         Top = 6

@@ -921,7 +921,7 @@ object MainForm: TMainForm
         AnchorSideTop.Control = Label2
         AnchorSideBottom.Control = Label2
         AnchorSideBottom.Side = asrBottom
-        Left = 448
+        Left = 442
         Height = 17
         Top = 65
         Width = 118
@@ -934,7 +934,7 @@ object MainForm: TMainForm
       object Label20: TLabel
         AnchorSideLeft.Control = ToolVersionEdit
         AnchorSideTop.Control = Label2
-        Left = 670
+        Left = 664
         Height = 17
         Top = 65
         Width = 48
@@ -1027,7 +1027,7 @@ object MainForm: TMainForm
       object DevToolEdit: TComboBox
         AnchorSideTop.Control = ProgramNameEdit
         AnchorSideRight.Control = ToolVersionEdit
-        Left = 448
+        Left = 442
         Height = 37
         Top = 85
         Width = 212
@@ -1061,10 +1061,10 @@ object MainForm: TMainForm
       object ToolVersionEdit: TComboBox
         AnchorSideTop.Control = ProgramNameEdit
         AnchorSideRight.Side = asrBottom
-        Left = 670
+        Left = 664
         Height = 37
         Top = 85
-        Width = 134
+        Width = 140
         Anchors = [akTop, akRight]
         Color = 15663103
         ItemHeight = 0
