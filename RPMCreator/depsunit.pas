@@ -50,6 +50,51 @@ uses unit1;
 
   { TDepsForm }
 
+
+// Функция возврата вывода команды
+function RunBashCommand(const Command: string; out OutputStr: string): boolean;
+const
+  BUF_SIZE = 2048;
+var
+  AProcess: TProcess;
+  Buffer: array[0..BUF_SIZE - 1] of byte;
+  BytesRead: longint;
+  OutputStream: TStringStream;
+begin
+  Result := False;
+  OutputStr := '';
+
+  AProcess := TProcess.Create(nil);
+  OutputStream := TStringStream.Create('');
+  try
+    // Зашиваем bash и его параметры прямо сюда
+    AProcess.Executable := 'bash';
+    AProcess.Parameters.Add('-c');
+    AProcess.Parameters.Add(Command);
+
+    AProcess.Options := [poUsePipes, poStderrToOutput, poNoConsole];
+    AProcess.Execute;
+
+    while AProcess.Running or (AProcess.Output.NumBytesAvailable > 0) do
+    begin
+      if AProcess.Output.NumBytesAvailable > 0 then
+      begin
+        BytesRead := AProcess.Output.Read(Buffer, BUF_SIZE);
+        if BytesRead > 0 then
+          OutputStream.Write(Buffer, BytesRead);
+      end
+      else
+        Sleep(10);
+    end;
+
+    OutputStr := OutputStream.DataString;
+    Result := (AProcess.ExitCode = 0);
+  finally
+    OutputStream.Free;
+    AProcess.Free;
+  end;
+end;
+
 procedure TDepsForm.FormShow(Sender: TObject);
 begin
   DepsFormStorage.Restore;
@@ -63,31 +108,36 @@ end;
 
 procedure TDepsForm.OpenBtnClick(Sender: TObject);
 var
-  S: string;
+  S, Cmd: string;
 begin
   S := '';
+  Cmd := '';
 
   if OpenDialog1.Execute then
   begin
     Edit1.Text := OpenDialog1.FileName;
 
-    RunCommand('bash', ['-c', 'rpmspec -q --requires "' +
-      OpenDialog1.FileName + '" 2>/dev/null | sort -u | sed ' + '''' +
-      's/.*(.*)/"&"/' + ''''], S);
+    Memo1.Clear;
+    Memo2.Clear;
+    Memo3.Clear;
 
-    Memo1.Text := S;
+    // Requires
+    Cmd := 'rpmspec -q --requires "' + OpenDialog1.FileName +
+      '" | sort -u | sed ' + '''' + 's/.*(.*)/"&"/' + '''';
 
-    RunCommand('bash', ['-c', 'rpmspec -q --buildrequires "' +
-      OpenDialog1.FileName + '" 2>/dev/null | sort -u | sed ' + '''' +
-      's/.*(.*)/"&"/' + ''''], S);
+    if RunBashCommand(Cmd, S) then Memo1.Text := S;
 
-    Memo2.Text := S;
+    // BuildRequires
+    Cmd := 'rpmspec -q --buildrequires "' + OpenDialog1.FileName +
+      '" | sort -u | sed ' + '''' + 's/.*(.*)/"&"/' + '''';
 
-    RunCommand('bash', ['-c', 'rpmspec -q --recommends "' +
-      OpenDialog1.FileName + '" 2>/dev/null | sort -u | sed ' + '''' +
-      's/.*(.*)/"&"/' + ''''], S);
+    if RunBashCommand(Cmd, S) then Memo2.Text := S;
 
-    Memo3.Text := S;
+    // Recommends
+    Cmd := 'rpmspec -q --recommends "' + OpenDialog1.FileName +
+      '" | sort -u | sed ' + '''' + 's/.*(.*)/"&"/' + '''';
+
+    if RunBashCommand(Cmd, S) then Memo3.Text := S;
   end;
 end;
 
