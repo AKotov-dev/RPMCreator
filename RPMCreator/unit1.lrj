@@ -34,7 +34,7 @@
 {"hash":1440,"name":"tmainform.upbtn.caption","sourcebytes":[85,80],"value":"UP"},
 {"hash":261928574,"name":"tmainform.dnbtn.hint","sourcebytes":[124,77,111,118,101,32,114,101,99,111,114,100,32,100,111,119,110],"value":"|Move record down"},
 {"hash":1166,"name":"tmainform.dnbtn.caption","sourcebytes":[68,78],"value":"DN"},
-{"hash":267333013,"name":"tmainform.onlinebtn.hint","sourcebytes":[124,80,97,99,107,97,103,101,32,115,101,97,114,99,104,32,100,97,116,97,98,97,115,101],"value":"|Package search database"},
+{"hash":32120149,"name":"tmainform.onlinebtn.hint","sourcebytes":[124,79,110,108,105,110,101,32,112,97,99,107,97,103,101,32,115,101,97,114,99,104,32,100,97,116,97,98,97,115,101],"value":"|Online package search database"},
 {"hash":31871479,"name":"tmainform.onlinebtn.caption","sourcebytes":[112,107,103,115,46,111,114,103],"value":"pkgs.org"},
 {"hash":42418517,"name":"tmainform.depsbtn.hint","sourcebytes":[124,69,120,116,114,97,99,116,105,110,103,32,100,101,112,101,110,100,101,110,99,121,32,108,105,115,116,115,32,102,114,111,109,32,97,32,115,112,101,99,32,102,105,108,101],"value":"|Extracting dependency lists from a spec file"},
 {"hash":297555,"name":"tmainform.depsbtn.caption","sourcebytes":[68,69,80,83],"value":"DEPS"},

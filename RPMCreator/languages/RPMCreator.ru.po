@@ -368,8 +368,8 @@ msgstr ""
 
 #: tmainform.onlinebtn.hint
 msgctxt "tmainform.onlinebtn.hint"
-msgid "|Package search database"
-msgstr "|Поисковая база пакетов"
+msgid "|Online package search database"
+msgstr "|Поисковая база пакетов онлайн"
 
 #: tmainform.releaseedit.hint
 msgctxt "tmainform.releaseedit.hint"
@@ -496,8 +496,8 @@ msgid "|Select the directory to save the contents of the package"
 msgstr "|Выберите каталог для сохранения содержимого пакета"
 
 #: tunpackform.label1.caption
-msgid "Unpack (*.deb or *.rpm):"
-msgstr "Распаковать (*.deb или *.rpm):"
+msgid "Select package (*.deb or *.rpm):"
+msgstr "Выбрать пакет (*.deb или *.rpm):"
 
 #: tunpackform.label2.caption
 msgid "Content upload folder:"
@@ -556,4 +556,3 @@ msgstr "Проект изменялся. Сохранить изменения?"
 #: unit1.ssymlink
 msgid "This is SymLink! Need a real target!"
 msgstr "Это SymLink! Нужна настоящая цель!"
-

@@ -347,7 +347,7 @@ msgstr ""
 
 #: tmainform.onlinebtn.hint
 msgctxt "tmainform.onlinebtn.hint"
-msgid "|Package search database"
+msgid "|Online package search database"
 msgstr ""
 
 #: tmainform.releaseedit.hint
@@ -469,7 +469,7 @@ msgid "|Select the directory to save the contents of the package"
 msgstr ""
 
 #: tunpackform.label1.caption
-msgid "Unpack (*.deb or *.rpm):"
+msgid "Select package (*.deb or *.rpm):"
 msgstr ""
 
 #: tunpackform.label2.caption

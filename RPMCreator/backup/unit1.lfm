@@ -1795,7 +1795,7 @@ object MainForm: TMainForm
     }
   end
   object ImageList2: TImageList
-    Left = 504
+    Left = 480
     Top = 624
     Bitmap = {
       4C7A020000001000000010000000BF0000000000000078DA6360A00C70753FAD
