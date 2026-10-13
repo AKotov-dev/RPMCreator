@@ -646,7 +646,7 @@ object MainForm: TMainForm
         Width = 130
         Anchors = [akTop, akRight, akBottom]
         BorderSpacing.Right = 4
-        Caption = 'Unpack'
+        Caption = 'UNPACK'
         ParentShowHint = False
         ShowHint = True
         TabOrder = 6
@@ -695,7 +695,7 @@ object MainForm: TMainForm
         Width = 109
         Anchors = [akTop, akRight, akBottom]
         BorderSpacing.Right = 4
-        Caption = 'pkgs.org'
+        Caption = 'PKGS.ORG'
         ParentShowHint = False
         ShowHint = True
         TabOrder = 5
