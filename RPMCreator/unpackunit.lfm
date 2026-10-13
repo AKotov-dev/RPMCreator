@@ -1,13 +1,13 @@
 object UnpackForm: TUnpackForm
-  Left = 935
+  Left = 330
   Height = 572
-  Top = 206
+  Top = 135
   Width = 780
   Caption = 'Package unpacker'
   ClientHeight = 572
   ClientWidth = 780
   FormStyle = fsStayOnTop
-  SessionProperties = 'Height;Width;EditButton2.Text'
+  SessionProperties = 'EditButton2.Text;Height;Width;OpenDialog1.InitialDir;SelectDirectoryDialog1.InitialDir'
   LCLVersion = '4.4.0.0'
   OnClose = FormClose
   OnCreate = FormCreate
@@ -36,7 +36,7 @@ object UnpackForm: TUnpackForm
     ReadOnly = True
     ScrollBars = ssVertical
     ShowHint = True
-    TabOrder = 2
+    TabOrder = 3
   end
   object Label1: TLabel
     AnchorSideLeft.Control = EditButton1
@@ -76,7 +76,7 @@ object UnpackForm: TUnpackForm
     ParentShowHint = False
     PasswordChar = #0
     ShowHint = True
-    TabOrder = 0
+    TabOrder = 1
     OnButtonClick = EditButton1ButtonClick
     OnChange = EditButton1Change
     OnKeyPress = EditButton1KeyPress
@@ -105,7 +105,7 @@ object UnpackForm: TUnpackForm
     ParentShowHint = False
     PasswordChar = #0
     ShowHint = True
-    TabOrder = 1
+    TabOrder = 2
     OnButtonClick = EditButton2ButtonClick
     OnChange = EditButton1Change
     OnKeyPress = EditButton1KeyPress
@@ -139,7 +139,7 @@ object UnpackForm: TUnpackForm
     ParentFont = False
     ParentShowHint = False
     ShowHint = True
-    TabOrder = 3
+    TabOrder = 0
     OnClick = UnpackBtnClick
   end
   object SelectDirectoryDialog1: TSelectDirectoryDialog
