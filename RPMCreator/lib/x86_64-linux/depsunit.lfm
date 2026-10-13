@@ -1,7 +1,7 @@
 object DepsForm: TDepsForm
   Left = 346
   Height = 566
-  Top = 140
+  Top = 145
   Width = 785
   Caption = 'Dependencies from *.spec'
   ClientHeight = 566
@@ -17,6 +17,7 @@ object DepsForm: TDepsForm
     Height = 37
     Top = 8
     Width = 424
+    Color = 15663103
     TabOrder = 0
   end
   object OpenBtn: TButton

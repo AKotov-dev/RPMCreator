@@ -111,10 +111,15 @@ var
   S, Cmd: string;
 begin
   S := '';
+  Cmd := '';
 
   if OpenDialog1.Execute then
   begin
     Edit1.Text := OpenDialog1.FileName;
+
+    Memo1.Clear;
+    Memo2.Clear;
+    Memo3.Clear;
 
     // Requires
     Cmd := 'rpmspec -q --requires "' + OpenDialog1.FileName +
