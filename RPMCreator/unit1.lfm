@@ -521,7 +521,6 @@ object MainForm: TMainForm
         BorderSpacing.Right = 5
         ItemHeight = 0
         Items.Strings = (
-          '0BSD'
           'AGPL-3.0-only'
           'AGPL-3.0-or-later'
           'Apache-2.0'
@@ -547,6 +546,7 @@ object MainForm: TMainForm
           'LGPL-3.0-or-later'
           'MIT'
           'MPL-2.0'
+          '0BSD'
           'OFL-1.1'
           'OpenSSL'
           'PostgreSQL'

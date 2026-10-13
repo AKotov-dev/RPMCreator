@@ -690,7 +690,7 @@ object MainForm: TMainForm
         AnchorSideBottom.Side = asrBottom
         Left = 585
         Height = 30
-        Hint = '|Package search database'
+        Hint = '|Online package search database'
         Top = 6
         Width = 109
         Anchors = [akTop, akRight, akBottom]
