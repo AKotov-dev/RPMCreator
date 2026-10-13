@@ -635,13 +635,16 @@ object MainForm: TMainForm
         OnKeyPress = NameEditKeyPress
       end
       object UnpackBtn: TButton
+        AnchorSideTop.Control = RPMBtn
         AnchorSideRight.Control = RPMBtn
+        AnchorSideBottom.Control = RPMBtn
+        AnchorSideBottom.Side = asrBottom
         Left = 782
         Height = 30
         Hint = '|Unpack RPM or DEB package'
         Top = 6
         Width = 130
-        Anchors = [akTop, akRight]
+        Anchors = [akTop, akRight, akBottom]
         BorderSpacing.Right = 4
         Caption = 'Unpack'
         ParentShowHint = False
@@ -681,9 +684,9 @@ object MainForm: TMainForm
         Shape = bsLeftLine
       end
       object OnlineBtn: TButton
-        AnchorSideTop.Control = UnpackBtn
+        AnchorSideTop.Control = RPMBtn
         AnchorSideRight.Control = DepsBtn
-        AnchorSideBottom.Control = UnpackBtn
+        AnchorSideBottom.Control = RPMBtn
         AnchorSideBottom.Side = asrBottom
         Left = 585
         Height = 30
@@ -710,7 +713,7 @@ object MainForm: TMainForm
         Width = 80
         Anchors = [akTop, akRight, akBottom]
         BorderSpacing.Right = 4
-        Caption = 'deps'
+        Caption = 'DEPS'
         ParentShowHint = False
         ShowHint = True
         TabOrder = 20
@@ -1681,10 +1684,10 @@ object MainForm: TMainForm
     AnchorSideRight.Side = asrBottom
     Left = 760
     Height = 17
-    Top = 52
+    Top = 53
     Width = 232
     Anchors = [akTop, akRight]
-    BorderSpacing.Top = 4
+    BorderSpacing.Top = 5
     BorderSpacing.Right = 5
     Caption = 'building an intermediate archive, wait...'
     Font.Color = clGray
