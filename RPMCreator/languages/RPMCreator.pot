@@ -34,14 +34,29 @@ msgctxt "tdepsform.button1.caption"
 msgid "Copy"
 msgstr ""
 
+#: tdepsform.button1.hint
+msgctxt "tdepsform.button1.hint"
+msgid "|Copy to clipboard"
+msgstr ""
+
 #: tdepsform.button2.caption
 msgctxt "tdepsform.button2.caption"
 msgid "Copy"
 msgstr ""
 
+#: tdepsform.button2.hint
+msgctxt "tdepsform.button2.hint"
+msgid "|Copy to clipboard"
+msgstr ""
+
 #: tdepsform.button3.caption
 msgctxt "tdepsform.button3.caption"
 msgid "Copy"
+msgstr ""
+
+#: tdepsform.button3.hint
+msgctxt "tdepsform.button3.hint"
+msgid "|Copy to clipboard"
 msgstr ""
 
 #: tdepsform.caption
@@ -63,6 +78,10 @@ msgstr ""
 #: tdepsform.openbtn.caption
 msgctxt "tdepsform.openbtn.caption"
 msgid "..."
+msgstr ""
+
+#: tdepsform.openbtn.hint
+msgid "|Select a *.spec file"
 msgstr ""
 
 #: tmainform.aboutbtn.caption
@@ -163,7 +182,7 @@ msgstr ""
 
 #: tmainform.depsbtn.caption
 msgctxt "tmainform.depsbtn.caption"
-msgid "deps"
+msgid "DEPS"
 msgstr ""
 
 #: tmainform.depsbtn.hint

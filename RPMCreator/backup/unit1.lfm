@@ -685,7 +685,7 @@ object MainForm: TMainForm
         AnchorSideRight.Control = DepsBtn
         AnchorSideBottom.Control = UnpackBtn
         AnchorSideBottom.Side = asrBottom
-        Left = 587
+        Left = 585
         Height = 30
         Hint = '|Package search database'
         Top = 6
@@ -703,11 +703,11 @@ object MainForm: TMainForm
         AnchorSideRight.Control = UnpackBtn
         AnchorSideBottom.Control = RPMBtn
         AnchorSideBottom.Side = asrBottom
-        Left = 700
+        Left = 698
         Height = 30
         Hint = '|Extracting dependency lists from a spec file'
         Top = 6
-        Width = 78
+        Width = 80
         Anchors = [akTop, akRight, akBottom]
         BorderSpacing.Right = 4
         Caption = 'deps'

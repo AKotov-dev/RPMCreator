@@ -1,7 +1,7 @@
 object DepsForm: TDepsForm
-  Left = 337
+  Left = 346
   Height = 566
-  Top = 132
+  Top = 140
   Width = 785
   Caption = 'Dependencies from *.spec'
   ClientHeight = 566
@@ -27,10 +27,13 @@ object DepsForm: TDepsForm
     AnchorSideBottom.Side = asrBottom
     Left = 432
     Height = 37
+    Hint = '|Select a *.spec file'
     Top = 8
     Width = 40
     Anchors = [akTop, akLeft, akBottom]
     Caption = '...'
+    ParentShowHint = False
+    ShowHint = True
     TabOrder = 1
     OnClick = OpenBtnClick
   end
@@ -118,11 +121,14 @@ object DepsForm: TDepsForm
     AnchorSideBottom.Control = Memo1
     Left = 138
     Height = 30
+    Hint = '|Copy to clipboard'
     Top = 62
     Width = 120
     Anchors = [akRight, akBottom]
     BorderSpacing.Bottom = 4
     Caption = 'Copy'
+    ParentShowHint = False
+    ShowHint = True
     TabOrder = 2
     OnClick = Button1Click
   end
@@ -132,11 +138,14 @@ object DepsForm: TDepsForm
     AnchorSideBottom.Control = Memo2
     Left = 397
     Height = 30
+    Hint = '|Copy to clipboard'
     Top = 62
     Width = 120
     Anchors = [akRight, akBottom]
     BorderSpacing.Bottom = 4
     Caption = 'Copy'
+    ParentShowHint = False
+    ShowHint = True
     TabOrder = 3
     OnClick = Button2Click
   end
@@ -146,11 +155,14 @@ object DepsForm: TDepsForm
     AnchorSideBottom.Control = Memo3
     Left = 657
     Height = 30
+    Hint = '|Copy to clipboard'
     Top = 62
     Width = 120
     Anchors = [akRight, akBottom]
     BorderSpacing.Bottom = 4
     Caption = 'Copy'
+    ParentShowHint = False
+    ShowHint = True
     TabOrder = 4
     OnClick = Button3Click
   end

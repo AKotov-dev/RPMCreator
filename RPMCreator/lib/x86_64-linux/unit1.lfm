@@ -710,7 +710,7 @@ object MainForm: TMainForm
         Width = 80
         Anchors = [akTop, akRight, akBottom]
         BorderSpacing.Right = 4
-        Caption = 'deps'
+        Caption = 'DEPS'
         ParentShowHint = False
         ShowHint = True
         TabOrder = 20

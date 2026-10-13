@@ -55,15 +55,30 @@ msgctxt "tdepsform.button1.caption"
 msgid "Copy"
 msgstr "Копировать"
 
+#: tdepsform.button1.hint
+msgctxt "tdepsform.button1.hint"
+msgid "|Copy to clipboard"
+msgstr "|Копировать в буфер обмена"
+
 #: tdepsform.button2.caption
 msgctxt "tdepsform.button2.caption"
 msgid "Copy"
 msgstr "Копировать"
 
+#: tdepsform.button2.hint
+msgctxt "tdepsform.button2.hint"
+msgid "|Copy to clipboard"
+msgstr "|Копировать в буфер обмена"
+
 #: tdepsform.button3.caption
 msgctxt "tdepsform.button3.caption"
 msgid "Copy"
 msgstr "Копировать"
+
+#: tdepsform.button3.hint
+msgctxt "tdepsform.button3.hint"
+msgid "|Copy to clipboard"
+msgstr "|Копировать в буфер обмена"
 
 #: tdepsform.caption
 msgid "Dependencies from *.spec"
@@ -85,6 +100,10 @@ msgstr ""
 msgctxt "tdepsform.openbtn.caption"
 msgid "..."
 msgstr ""
+
+#: tdepsform.openbtn.hint
+msgid "|Select a *.spec file"
+msgstr "|Выбрать файл *.spec"
 
 #: tmainform.aboutbtn.caption
 msgid "?"
@@ -184,7 +203,7 @@ msgstr "|Дополнительно собрать пакет DEB в ~/debbuild"
 
 #: tmainform.depsbtn.caption
 msgctxt "tmainform.depsbtn.caption"
-msgid "deps"
+msgid "DEPS"
 msgstr ""
 
 #: tmainform.depsbtn.hint
@@ -537,3 +556,4 @@ msgstr "Проект изменялся. Сохранить изменения?"
 #: unit1.ssymlink
 msgid "This is SymLink! Need a real target!"
 msgstr "Это SymLink! Нужна настоящая цель!"
+
