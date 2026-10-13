@@ -89,7 +89,6 @@ begin
 
     Memo3.Text := S;
   end;
-
 end;
 
 //Выравнивание по ширине
