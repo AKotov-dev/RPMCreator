@@ -1,5 +1,5 @@
 object MainForm: TMainForm
-  Left = 323
+  Left = 318
   Height = 728
   Top = 104
   Width = 997
@@ -56,7 +56,7 @@ object MainForm: TMainForm
         Color = 15663103
         ParentShowHint = False
         ShowHint = True
-        TabOrder = 10
+        TabOrder = 9
         OnChange = NameEditChange
         OnKeyPress = NameEditKeyPress
       end
@@ -88,7 +88,7 @@ object MainForm: TMainForm
         Color = 15663103
         ParentShowHint = False
         ShowHint = True
-        TabOrder = 11
+        TabOrder = 10
         OnChange = NameEditChange
         OnKeyPress = NameEditKeyPress
       end
@@ -119,7 +119,7 @@ object MainForm: TMainForm
         Color = 15663103
         ParentShowHint = False
         ShowHint = True
-        TabOrder = 12
+        TabOrder = 11
         OnChange = NameEditChange
         OnKeyPress = NameEditKeyPress
       end
@@ -165,7 +165,7 @@ object MainForm: TMainForm
         BorderSpacing.Top = 2
         ParentShowHint = False
         ShowHint = True
-        TabOrder = 15
+        TabOrder = 14
         OnChange = NameEditChange
       end
       object Label3: TLabel
@@ -202,7 +202,7 @@ object MainForm: TMainForm
         ParentShowHint = False
         ScrollBars = ssVertical
         ShowHint = True
-        TabOrder = 18
+        TabOrder = 17
         OnChange = NameEditChange
       end
       object DepsEdit: TMemo
@@ -224,7 +224,7 @@ object MainForm: TMainForm
         ParentShowHint = False
         ScrollBars = ssVertical
         ShowHint = True
-        TabOrder = 20
+        TabOrder = 19
         WantReturns = False
         OnChange = NameEditChange
       end
@@ -255,7 +255,7 @@ object MainForm: TMainForm
         BorderSpacing.Right = 5
         ParentShowHint = False
         ShowHint = True
-        TabOrder = 16
+        TabOrder = 15
         OnChange = NameEditChange
       end
       object ListBox1: TListBox
@@ -275,7 +275,7 @@ object MainForm: TMainForm
         ScrollWidth = 973
         ShowHint = True
         Style = lbOwnerDrawFixed
-        TabOrder = 9
+        TabOrder = 8
         TopIndex = -1
         OnDblClick = ListBox1DblClick
         OnDrawItem = ListBox1DrawItem
@@ -342,7 +342,7 @@ object MainForm: TMainForm
         Caption = 'RPM'
         ParentShowHint = False
         ShowHint = True
-        TabOrder = 8
+        TabOrder = 7
         OnClick = RPMBtnClick
       end
       object Bevel3: TBevel
@@ -490,7 +490,7 @@ object MainForm: TMainForm
         )
         ParentShowHint = False
         ShowHint = True
-        TabOrder = 13
+        TabOrder = 12
         OnChange = NameEditChange
       end
       object Label15: TLabel
@@ -561,7 +561,7 @@ object MainForm: TMainForm
         )
         ParentShowHint = False
         ShowHint = True
-        TabOrder = 14
+        TabOrder = 13
         OnChange = NameEditChange
       end
       object SummaryEdit: TEdit
@@ -579,7 +579,7 @@ object MainForm: TMainForm
         Color = 15663103
         ParentShowHint = False
         ShowHint = True
-        TabOrder = 17
+        TabOrder = 16
         OnChange = NameEditChange
       end
       object Label16: TLabel
@@ -630,7 +630,7 @@ object MainForm: TMainForm
         Color = 15663103
         ParentShowHint = False
         ShowHint = True
-        TabOrder = 19
+        TabOrder = 18
         OnChange = NameEditChange
         OnKeyPress = NameEditKeyPress
       end
@@ -649,7 +649,7 @@ object MainForm: TMainForm
         Caption = 'UNPACK'
         ParentShowHint = False
         ShowHint = True
-        TabOrder = 7
+        TabOrder = 6
         OnClick = UnpackBtnClick
       end
       object UPBtn: TButton
@@ -683,24 +683,6 @@ object MainForm: TMainForm
         Width = 9
         Shape = bsLeftLine
       end
-      object OnlineBtn: TButton
-        AnchorSideTop.Control = RPMBtn
-        AnchorSideRight.Control = DepsBtn
-        AnchorSideBottom.Control = RPMBtn
-        AnchorSideBottom.Side = asrBottom
-        Left = 614
-        Height = 30
-        Hint = '|Online package search database'
-        Top = 6
-        Width = 100
-        Anchors = [akTop, akRight, akBottom]
-        BorderSpacing.Right = 4
-        Caption = 'PKGS.ORG'
-        ParentShowHint = False
-        ShowHint = True
-        TabOrder = 5
-        OnClick = OnlineBtnClick
-      end
       object DepsBtn: TButton
         AnchorSideTop.Control = RPMBtn
         AnchorSideRight.Control = UnpackBtn
@@ -708,7 +690,7 @@ object MainForm: TMainForm
         AnchorSideBottom.Side = asrBottom
         Left = 718
         Height = 30
-        Hint = '|Extracting dependency lists from a spec file'
+        Hint = '|UTILITIES: Extracting dependency lists from a spec file'
         Top = 6
         Width = 80
         Anchors = [akTop, akRight, akBottom]
@@ -716,8 +698,30 @@ object MainForm: TMainForm
         Caption = 'DEPS'
         ParentShowHint = False
         ShowHint = True
-        TabOrder = 6
+        TabOrder = 5
         OnClick = DepsBtnClick
+      end
+      object Label18: TLabel
+        AnchorSideTop.Control = RPMBtn
+        AnchorSideTop.Side = asrCenter
+        AnchorSideRight.Control = DepsBtn
+        Cursor = crHandPoint
+        Left = 610
+        Height = 17
+        Hint = '|Online package search database'
+        Top = 13
+        Width = 98
+        Anchors = [akTop, akRight]
+        BorderSpacing.Right = 10
+        Caption = 'https://pkgs.org'
+        Font.Color = clBlue
+        Font.Style = [fsUnderline]
+        ParentFont = False
+        ParentShowHint = False
+        ShowHint = True
+        OnClick = Label18Click
+        OnMouseEnter = Label18MouseEnter
+        OnMouseLeave = Label18MouseLeave
       end
     end
     object TabSheet2: TTabSheet

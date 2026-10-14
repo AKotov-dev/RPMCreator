@@ -51,6 +51,7 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit1"/>
+        <IsVisibleTab Value="True"/>
         <CursorPos X="13"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
@@ -76,7 +77,7 @@
         <UnitName Value="SelectUnit"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="18"/>
-        <UsageCount Value="92"/>
+        <UsageCount Value="93"/>
       </Unit3>
       <Unit4>
         <Filename Value="unpackunit.pas"/>
@@ -86,7 +87,7 @@
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="18"/>
-        <UsageCount Value="71"/>
+        <UsageCount Value="72"/>
       </Unit4>
       <Unit5>
         <Filename Value="loadgroupstrd.pas"/>
@@ -94,7 +95,7 @@
         <UnitName Value="LoadGroupsTRD"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="21"/>
-        <UsageCount Value="46"/>
+        <UsageCount Value="47"/>
       </Unit5>
       <Unit6>
         <Filename Value="depsunit.pas"/>
@@ -102,13 +103,10 @@
         <ComponentName Value="DepsForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="1"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="115"/>
         <CursorPos X="6" Y="121"/>
-        <UsageCount Value="28"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
+        <UsageCount Value="29"/>
       </Unit6>
       <Unit7>
         <Filename Value="..\StartAsRootUnit.pas"/>
@@ -135,7 +133,7 @@
         <UsageCount Value="10"/>
       </Unit9>
     </Units>
-    <JumpHistory Count="6" HistoryIndex="5">
+    <JumpHistory Count="13" HistoryIndex="12">
       <Position1>
         <Filename Value="unit1.pas"/>
         <Caret Line="718" Column="35" TopLine="707"/>
@@ -157,9 +155,37 @@
         <Caret Line="690" Column="3" TopLine="688"/>
       </Position5>
       <Position6>
-        <Filename Value="depsunit.pas"/>
-        <Caret Line="124" Column="58" TopLine="109"/>
+        <Filename Value="unit1.pas"/>
+        <Caret Column="13"/>
       </Position6>
+      <Position7>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="1262" Column="2" TopLine="1259"/>
+      </Position7>
+      <Position8>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="744" Column="34" TopLine="727"/>
+      </Position8>
+      <Position9>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="1259" TopLine="1259"/>
+      </Position9>
+      <Position10>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="742" Column="48" TopLine="736"/>
+      </Position10>
+      <Position11>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="741" Column="48" TopLine="735"/>
+      </Position11>
+      <Position12>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="749" TopLine="735"/>
+      </Position12>
+      <Position13>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="750" Column="32" TopLine="736"/>
+      </Position13>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>

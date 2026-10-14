@@ -193,8 +193,8 @@ msgstr ""
 
 #: tmainform.depsbtn.hint
 msgctxt "tmainform.depsbtn.hint"
-msgid "|Extracting dependency lists from a spec file"
-msgstr "|Получить списки зависимостей из spec-файла"
+msgid "|UTILITIES: Extracting dependency lists from a spec file"
+msgstr "|УТИЛИТЫ: Получить списки зависимостей из spec-файла"
 
 #: tmainform.depsedit.hint
 msgid "|Package names separated by commas or spaces"
@@ -255,6 +255,15 @@ msgstr "Краткое описание пакета:"
 #: tmainform.label17.caption
 msgid "URL of a copy of the source code (*.tar.gz, *.src.rpm, etc):"
 msgstr "URL копии исходников (*.tar.gz, *.src.rpm, etc):"
+
+#: tmainform.label18.caption
+msgid "https://pkgs.org"
+msgstr ""
+
+#: tmainform.label18.hint
+msgctxt "tmainform.label18.hint"
+msgid "|Online package search database"
+msgstr "|Поисковая база пакетов онлайн"
 
 #: tmainform.label19.caption
 msgid "Development tools:"
@@ -346,16 +355,6 @@ msgstr ""
 msgid "|For all architectures"
 msgstr "|Для всех архитектур"
 
-#: tmainform.onlinebtn.caption
-msgctxt "tmainform.onlinebtn.caption"
-msgid "PKGS.ORG"
-msgstr ""
-
-#: tmainform.onlinebtn.hint
-msgctxt "tmainform.onlinebtn.hint"
-msgid "|Online package search database"
-msgstr "|Поисковая база пакетов онлайн"
-
 #: tmainform.releaseedit.hint
 msgctxt "tmainform.releaseedit.hint"
 msgid "|Sample: 0.mrx8"
@@ -366,8 +365,8 @@ msgid "RPM"
 msgstr ""
 
 #: tmainform.rpmbtn.hint
-msgid "|Download a list of files by package name"
-msgstr "|Загрузить список файлов по имени пакета"
+msgid "|UTILITIES: Load the list of files for an installed package by its name"
+msgstr "|УТИЛИТЫ: Загрузить список файлов установленного пакета по его имени"
 
 #: tmainform.savebtn.caption
 msgctxt "tmainform.savebtn.caption"
@@ -410,8 +409,8 @@ msgid "UNPACK"
 msgstr ""
 
 #: tmainform.unpackbtn.hint
-msgid "|Unpack RPM or DEB package"
-msgstr "|Распаковать пакет RPM или DEB"
+msgid "|UTILITIES: Unpack RPM or DEB package"
+msgstr "|УТИЛИТЫ: Распаковать пакет RPM или DEB"
 
 #: tmainform.upbtn.caption
 msgid "UP"

@@ -26,7 +26,7 @@ type
     Button1: TButton;
     DepsBtn: TButton;
     CopyBtn: TButton;
-    OnlineBtn: TButton;
+    Label18: TLabel;
     DEBCheckBox: TCheckBox;
     EditItem: TMenuItem;
     Image1: TImage;
@@ -111,6 +111,9 @@ type
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCloseQuery(Sender: TObject; var CanClose: boolean);
     procedure FormShow(Sender: TObject);
+    procedure Label18Click(Sender: TObject);
+    procedure Label18MouseEnter(Sender: TObject);
+    procedure Label18MouseLeave(Sender: TObject);
     procedure ListBox1DblClick(Sender: TObject);
     procedure ListBox1DrawItem(Control: TWinControl; Index: integer;
       ARect: TRect; State: TOwnerDrawState);
@@ -120,7 +123,6 @@ type
     procedure MetaCheckClick(Sender: TObject);
     procedure NameEditChange(Sender: TObject);
     procedure NameEditKeyPress(Sender: TObject; var Key: char);
-    procedure OnlineBtnClick(Sender: TObject);
     procedure RPMBtnClick(Sender: TObject);
     procedure SaveBtnClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -737,6 +739,22 @@ begin
   if ParamStr(1) <> '' then LoadProject(ParamStr(1), nil);
 end;
 
+//Поисковая база пакетов
+procedure TMainForm.Label18Click(Sender: TObject);
+begin
+  OpenURL('https://pkgs.org');
+end;
+
+procedure TMainForm.Label18MouseEnter(Sender: TObject);
+begin
+  Label18.Font.Color := clRed;
+end;
+
+procedure TMainForm.Label18MouseLeave(Sender: TObject);
+begin
+  Label18.Font.Color := clBlue;
+end;
+
 //Редактирование записей списка файлов и папок
 procedure TMainForm.ListBox1DblClick(Sender: TObject);
 begin
@@ -1249,11 +1267,6 @@ begin
     Key := #0;
 end;
 
-//Поисковая база пакетов
-procedure TMainForm.OnlineBtnClick(Sender: TObject);
-begin
-  OpenURL('https://pkgs.org');
-end;
 
 //Список файлов по имени пакета
 procedure TMainForm.RPMBtnClick(Sender: TObject);
