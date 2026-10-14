@@ -120,21 +120,21 @@ begin
 
     // Requires
     Cmd := 'rpmspec -q --requires "' + OpenDialog1.FileName +
-      '" | sort -u | sed ' + '''' + 's/.*(.*)/"&"/' + '''';
+      '" | cut -f1 -d" " | sort -u | sed ' + '''' + 's/.*(.*)/"&"/' + '''';
 
-    if RunBashCommand(Cmd, S) then Memo1.Text := S;
+    RunBashCommand(Cmd, S) then Memo1.Text := S;
 
     // BuildRequires
     Cmd := 'rpmspec -q --buildrequires "' + OpenDialog1.FileName +
-      '" | sort -u | sed ' + '''' + 's/.*(.*)/"&"/' + '''';
+      '" | cut -f1 -d" " | sort -u | sed ' + '''' + 's/.*(.*)/"&"/' + '''';
 
-    if RunBashCommand(Cmd, S) then Memo2.Text := S;
+    RunBashCommand(Cmd, S) then Memo2.Text := S;
 
     // Recommends
     Cmd := 'rpmspec -q --recommends "' + OpenDialog1.FileName +
-      '" | sort -u | sed ' + '''' + 's/.*(.*)/"&"/' + '''';
+      '" | cut -f1 -d" " | sort -u | sed ' + '''' + 's/.*(.*)/"&"/' + '''';
 
-    if RunBashCommand(Cmd, S) then Memo3.Text := S;
+    RunBashCommand(Cmd, S) then Memo3.Text := S;
   end;
 end;
 
