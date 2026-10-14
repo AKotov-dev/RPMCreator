@@ -1,7 +1,7 @@
 object MainForm: TMainForm
-  Left = 320
+  Left = 317
   Height = 728
-  Top = 93
+  Top = 87
   Width = 997
   ActiveControl = LoadBtn
   Caption = 'RPMCreator'

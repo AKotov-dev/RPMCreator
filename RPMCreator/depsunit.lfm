@@ -1,11 +1,11 @@
 object DepsForm: TDepsForm
-  Left = 320
-  Height = 569
-  Top = 124
-  Width = 789
+  Left = 355
+  Height = 593
+  Top = 139
+  Width = 862
   Caption = 'Dependencies from *.spec'
-  ClientHeight = 569
-  ClientWidth = 789
+  ClientHeight = 593
+  ClientWidth = 862
   FormStyle = fsStayOnTop
   SessionProperties = 'Height;Width;OpenDialog1.InitialDir'
   LCLVersion = '4.4.0.0'
@@ -43,7 +43,7 @@ object DepsForm: TDepsForm
     AnchorSideBottom.Control = Owner
     AnchorSideBottom.Side = asrBottom
     Left = 8
-    Height = 481
+    Height = 505
     Top = 80
     Width = 250
     Anchors = [akTop, akLeft, akBottom]
@@ -57,8 +57,8 @@ object DepsForm: TDepsForm
     AnchorSideLeft.Side = asrCenter
     AnchorSideBottom.Control = Owner
     AnchorSideBottom.Side = asrBottom
-    Left = 269
-    Height = 481
+    Left = 306
+    Height = 505
     Top = 80
     Width = 250
     Anchors = [akTop, akLeft, akBottom]
@@ -74,8 +74,8 @@ object DepsForm: TDepsForm
     AnchorSideRight.Side = asrBottom
     AnchorSideBottom.Control = Owner
     AnchorSideBottom.Side = asrBottom
-    Left = 531
-    Height = 481
+    Left = 604
+    Height = 505
     Top = 80
     Width = 250
     Anchors = [akTop, akRight, akBottom]
@@ -108,7 +108,7 @@ object DepsForm: TDepsForm
     AnchorSideLeft.Side = asrCenter
     AnchorSideBottom.Control = Memo2
     Cursor = crHandPoint
-    Left = 351
+    Left = 388
     Height = 17
     Hint = '|Copy to clipboard'
     Top = 59
@@ -127,7 +127,7 @@ object DepsForm: TDepsForm
     AnchorSideLeft.Side = asrCenter
     AnchorSideBottom.Control = Memo3
     Cursor = crHandPoint
-    Left = 615
+    Left = 688
     Height = 17
     Hint = '|Copy to clipboard'
     Top = 59
