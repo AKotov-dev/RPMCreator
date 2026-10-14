@@ -29,36 +29,6 @@ msgctxt "taboutform.okbtn.caption"
 msgid "Ok"
 msgstr ""
 
-#: tdepsform.button1.caption
-msgctxt "tdepsform.button1.caption"
-msgid "Copy"
-msgstr ""
-
-#: tdepsform.button1.hint
-msgctxt "tdepsform.button1.hint"
-msgid "|Copy to clipboard"
-msgstr ""
-
-#: tdepsform.button2.caption
-msgctxt "tdepsform.button2.caption"
-msgid "Copy"
-msgstr ""
-
-#: tdepsform.button2.hint
-msgctxt "tdepsform.button2.hint"
-msgid "|Copy to clipboard"
-msgstr ""
-
-#: tdepsform.button3.caption
-msgctxt "tdepsform.button3.caption"
-msgid "Copy"
-msgstr ""
-
-#: tdepsform.button3.hint
-msgctxt "tdepsform.button3.hint"
-msgid "|Copy to clipboard"
-msgstr ""
-
 #: tdepsform.caption
 msgid "Dependencies from *.spec"
 msgstr ""
@@ -82,6 +52,21 @@ msgstr ""
 
 #: tdepsform.openbtn.hint
 msgid "|Select a *.spec file"
+msgstr ""
+
+#: tdepsform.speedbutton1.hint
+msgctxt "tdepsform.speedbutton1.hint"
+msgid "|Copy to clipboard"
+msgstr ""
+
+#: tdepsform.speedbutton2.hint
+msgctxt "tdepsform.speedbutton2.hint"
+msgid "|Copy to clipboard"
+msgstr ""
+
+#: tdepsform.speedbutton3.hint
+msgctxt "tdepsform.speedbutton3.hint"
+msgid "|Copy to clipboard"
 msgstr ""
 
 #: tmainform.aboutbtn.caption

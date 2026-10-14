@@ -6,16 +6,13 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls,
-  XMLPropStorage, Process, ClipBrd;
+  XMLPropStorage, Process, ClipBrd, Buttons;
 
 type
 
   { TDepsForm }
 
   TDepsForm = class(TForm)
-    Button1: TButton;
-    Button2: TButton;
-    Button3: TButton;
     Label1: TLabel;
     Label2: TLabel;
     Label3: TLabel;
@@ -26,13 +23,16 @@ type
     Memo3: TMemo;
     OpenDialog1: TOpenDialog;
     DepsFormStorage: TXMLPropStorage;
-    procedure Button1Click(Sender: TObject);
-    procedure Button2Click(Sender: TObject);
-    procedure Button3Click(Sender: TObject);
+    SpeedButton1: TSpeedButton;
+    SpeedButton2: TSpeedButton;
+    SpeedButton3: TSpeedButton;
     procedure FormResize(Sender: TObject);
     procedure OpenBtnClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    procedure SpeedButton1Click(Sender: TObject);
+    procedure SpeedButton2Click(Sender: TObject);
+    procedure SpeedButton3Click(Sender: TObject);
   private
 
   public
@@ -106,6 +106,21 @@ begin
   Top := MainForm.Top + MainForm.Height div 2 - Height div 2;
 end;
 
+procedure TDepsForm.SpeedButton1Click(Sender: TObject);
+begin
+  ClipBoard.AsText := Trim(StringReplace(Memo1.Text, sLineBreak, ' ', [rfReplaceAll]));
+end;
+
+procedure TDepsForm.SpeedButton2Click(Sender: TObject);
+begin
+  ClipBoard.AsText := Trim(StringReplace(Memo2.Text, sLineBreak, ' ', [rfReplaceAll]));
+end;
+
+procedure TDepsForm.SpeedButton3Click(Sender: TObject);
+begin
+  ClipBoard.AsText := Trim(StringReplace(Memo3.Text, sLineBreak, ' ', [rfReplaceAll]));
+end;
+
 procedure TDepsForm.OpenBtnClick(Sender: TObject);
 var
   S, Cmd: string;
@@ -147,21 +162,6 @@ begin
   Memo1.Width := DepsForm.Width div 3 - 10;
   Memo2.Width := Memo1.Width;
   Memo3.Width := Memo1.Width;
-end;
-
-procedure TDepsForm.Button1Click(Sender: TObject);
-begin
-  ClipBoard.AsText := Trim(StringReplace(Memo1.Text, sLineBreak, ' ', [rfReplaceAll]));
-end;
-
-procedure TDepsForm.Button2Click(Sender: TObject);
-begin
-  ClipBoard.AsText := Trim(StringReplace(Memo2.Text, sLineBreak, ' ', [rfReplaceAll]));
-end;
-
-procedure TDepsForm.Button3Click(Sender: TObject);
-begin
-  ClipBoard.AsText := Trim(StringReplace(Memo3.Text, sLineBreak, ' ', [rfReplaceAll]));
 end;
 
 procedure TDepsForm.FormCreate(Sender: TObject);

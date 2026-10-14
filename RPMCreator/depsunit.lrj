@@ -5,10 +5,7 @@
 {"hash":210505027,"name":"tdepsform.label1.caption","sourcebytes":[82,101,113,117,105,114,101,115],"value":"Requires"},
 {"hash":88875267,"name":"tdepsform.label2.caption","sourcebytes":[66,117,105,108,100,82,101,113,117,105,114,101,115],"value":"BuildRequires"},
 {"hash":105271059,"name":"tdepsform.label3.caption","sourcebytes":[82,101,99,111,109,109,101,110,100,115],"value":"Recommends"},
-{"hash":265574180,"name":"tdepsform.button1.hint","sourcebytes":[124,67,111,112,121,32,116,111,32,99,108,105,112,98,111,97,114,100],"value":"|Copy to clipboard"},
-{"hash":304761,"name":"tdepsform.button1.caption","sourcebytes":[67,111,112,121],"value":"Copy"},
-{"hash":265574180,"name":"tdepsform.button2.hint","sourcebytes":[124,67,111,112,121,32,116,111,32,99,108,105,112,98,111,97,114,100],"value":"|Copy to clipboard"},
-{"hash":304761,"name":"tdepsform.button2.caption","sourcebytes":[67,111,112,121],"value":"Copy"},
-{"hash":265574180,"name":"tdepsform.button3.hint","sourcebytes":[124,67,111,112,121,32,116,111,32,99,108,105,112,98,111,97,114,100],"value":"|Copy to clipboard"},
-{"hash":304761,"name":"tdepsform.button3.caption","sourcebytes":[67,111,112,121],"value":"Copy"}
+{"hash":265574180,"name":"tdepsform.speedbutton1.hint","sourcebytes":[124,67,111,112,121,32,116,111,32,99,108,105,112,98,111,97,114,100],"value":"|Copy to clipboard"},
+{"hash":265574180,"name":"tdepsform.speedbutton2.hint","sourcebytes":[124,67,111,112,121,32,116,111,32,99,108,105,112,98,111,97,114,100],"value":"|Copy to clipboard"},
+{"hash":265574180,"name":"tdepsform.speedbutton3.hint","sourcebytes":[124,67,111,112,121,32,116,111,32,99,108,105,112,98,111,97,114,100],"value":"|Copy to clipboard"}
 ]}
