@@ -1,7 +1,7 @@
 object UnpackForm: TUnpackForm
-  Left = 338
+  Left = 326
   Height = 572
-  Top = 134
+  Top = 127
   Width = 780
   Caption = 'Package unpacker'
   ClientHeight = 572
@@ -117,10 +117,10 @@ object UnpackForm: TUnpackForm
     Left = 5
     Height = 17
     Top = 98
-    Width = 138
+    Width = 210
     BorderSpacing.Top = 5
     BorderSpacing.Bottom = 3
-    Caption = 'Content upload folder:'
+    Caption = 'Select the content export directory:'
     ParentColor = False
     ParentFont = False
   end

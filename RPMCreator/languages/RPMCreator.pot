@@ -37,12 +37,27 @@ msgstr ""
 msgid "Requires"
 msgstr ""
 
+#: tdepsform.label1.hint
+msgctxt "tdepsform.label1.hint"
+msgid "|Copy to clipboard"
+msgstr ""
+
 #: tdepsform.label2.caption
 msgid "BuildRequires"
 msgstr ""
 
+#: tdepsform.label2.hint
+msgctxt "tdepsform.label2.hint"
+msgid "|Copy to clipboard"
+msgstr ""
+
 #: tdepsform.label3.caption
 msgid "Recommends"
+msgstr ""
+
+#: tdepsform.label3.hint
+msgctxt "tdepsform.label3.hint"
+msgid "|Copy to clipboard"
 msgstr ""
 
 #: tdepsform.openbtn.caption
@@ -52,21 +67,6 @@ msgstr ""
 
 #: tdepsform.openbtn.hint
 msgid "|Select a *.spec file"
-msgstr ""
-
-#: tdepsform.speedbutton1.hint
-msgctxt "tdepsform.speedbutton1.hint"
-msgid "|Copy to clipboard"
-msgstr ""
-
-#: tdepsform.speedbutton2.hint
-msgctxt "tdepsform.speedbutton2.hint"
-msgid "|Copy to clipboard"
-msgstr ""
-
-#: tdepsform.speedbutton3.hint
-msgctxt "tdepsform.speedbutton3.hint"
-msgid "|Copy to clipboard"
 msgstr ""
 
 #: tmainform.aboutbtn.caption
@@ -458,7 +458,7 @@ msgid "Select package rpm / deb:"
 msgstr ""
 
 #: tunpackform.label2.caption
-msgid "Content upload folder:"
+msgid "Select the content export directory:"
 msgstr ""
 
 #: tunpackform.logmemo.hint

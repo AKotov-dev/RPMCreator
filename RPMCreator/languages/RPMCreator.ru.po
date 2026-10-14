@@ -58,13 +58,28 @@ msgstr "Зависимости из *.spec"
 msgid "Requires"
 msgstr ""
 
+#: tdepsform.label1.hint
+msgctxt "tdepsform.label1.hint"
+msgid "|Copy to clipboard"
+msgstr "|Копировать в буфер"
+
 #: tdepsform.label2.caption
 msgid "BuildRequires"
 msgstr ""
 
+#: tdepsform.label2.hint
+msgctxt "tdepsform.label2.hint"
+msgid "|Copy to clipboard"
+msgstr "|Копировать в буфер"
+
 #: tdepsform.label3.caption
 msgid "Recommends"
 msgstr ""
+
+#: tdepsform.label3.hint
+msgctxt "tdepsform.label3.hint"
+msgid "|Copy to clipboard"
+msgstr "|Копировать в буфер"
 
 #: tdepsform.openbtn.caption
 msgctxt "tdepsform.openbtn.caption"
@@ -74,21 +89,6 @@ msgstr ""
 #: tdepsform.openbtn.hint
 msgid "|Select a *.spec file"
 msgstr "|Выбрать файл *.spec"
-
-#: tdepsform.speedbutton1.hint
-msgctxt "tdepsform.speedbutton1.hint"
-msgid "|Copy to clipboard"
-msgstr "|Копировать в буфер"
-
-#: tdepsform.speedbutton2.hint
-msgctxt "tdepsform.speedbutton2.hint"
-msgid "|Copy to clipboard"
-msgstr "|Копировать в буфер"
-
-#: tdepsform.speedbutton3.hint
-msgctxt "tdepsform.speedbutton3.hint"
-msgid "|Copy to clipboard"
-msgstr "|Копировать в буфер"
 
 #: tmainform.aboutbtn.caption
 msgid "?"
@@ -485,8 +485,8 @@ msgid "Select package rpm / deb:"
 msgstr "Выбрать пакет rpm / deb:"
 
 #: tunpackform.label2.caption
-msgid "Content upload folder:"
-msgstr "Каталог выгрузки содержимого:"
+msgid "Select the content export directory:"
+msgstr "Выбрать каталог выгрузки содержимого:"
 
 #: tunpackform.logmemo.hint
 msgid "|Log of the package unpacking process"

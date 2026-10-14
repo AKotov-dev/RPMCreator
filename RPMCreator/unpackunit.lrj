@@ -6,7 +6,7 @@
 {"hash":12558,"name":"tunpackform.editbutton1.buttoncaption","sourcebytes":[46,46,46],"value":"..."},
 {"hash":217937749,"name":"tunpackform.editbutton2.hint","sourcebytes":[124,83,101,108,101,99,116,32,116,104,101,32,100,105,114,101,99,116,111,114,121,32,116,111,32,115,97,118,101,32,116,104,101,32,99,111,110,116,101,110,116,115,32,111,102,32,116,104,101,32,112,97,99,107,97,103,101],"value":"|Select the directory to save the contents of the package"},
 {"hash":12558,"name":"tunpackform.editbutton2.buttoncaption","sourcebytes":[46,46,46],"value":"..."},
-{"hash":45489066,"name":"tunpackform.label2.caption","sourcebytes":[67,111,110,116,101,110,116,32,117,112,108,111,97,100,32,102,111,108,100,101,114,58],"value":"Content upload folder:"},
+{"hash":258221754,"name":"tunpackform.label2.caption","sourcebytes":[83,101,108,101,99,116,32,116,104,101,32,99,111,110,116,101,110,116,32,101,120,112,111,114,116,32,100,105,114,101,99,116,111,114,121,58],"value":"Select the content export directory:"},
 {"hash":250117815,"name":"tunpackform.unpackbtn.hint","sourcebytes":[124,83,116,97,114,116,32,117,110,112,97,99,107,105,110,103],"value":"|Start unpacking"},
 {"hash":5941396,"name":"tunpackform.unpackbtn.caption","sourcebytes":[83,116,97,114,116],"value":"Start"}
 ]}
