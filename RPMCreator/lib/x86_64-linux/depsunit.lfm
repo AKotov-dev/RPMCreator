@@ -1,7 +1,7 @@
 object DepsForm: TDepsForm
-  Left = 336
+  Left = 320
   Height = 569
-  Top = 141
+  Top = 124
   Width = 789
   Caption = 'Dependencies from *.spec'
   ClientHeight = 569

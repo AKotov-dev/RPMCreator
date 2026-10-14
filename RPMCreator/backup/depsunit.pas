@@ -121,7 +121,7 @@ begin
 
     // Requires
     Cmd := 'rpmspec -q --requires "' + OpenDialog1.FileName +
-      '" | cut -f1 -d" " | sort -u | sed ' + '''' + 's/.*(.*)/"&"/' + '''';
+      '" | cut -f1 -d" " | grep -v '+ '''' + '^/' + '''' + ' | sort -u | sed ' + '''' + 's/.*(.*)/"&"/' + '''';
 
     if RunBashCommand(Cmd, S) then Memo1.Text := S;
 
