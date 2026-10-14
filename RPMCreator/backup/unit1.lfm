@@ -1,7 +1,7 @@
 object MainForm: TMainForm
-  Left = 318
+  Left = 320
   Height = 728
-  Top = 104
+  Top = 93
   Width = 997
   ActiveControl = LoadBtn
   Caption = 'RPMCreator'
@@ -334,7 +334,7 @@ object MainForm: TMainForm
         AnchorSideRight.Side = asrBottom
         Left = 906
         Height = 30
-        Hint = '|Download a list of files by package name'
+        Hint = '|UTILITIES: Load the list of files for an installed package by its name'
         Top = 6
         Width = 80
         Anchors = [akTop, akRight]
@@ -641,7 +641,7 @@ object MainForm: TMainForm
         AnchorSideBottom.Side = asrBottom
         Left = 802
         Height = 30
-        Hint = '|Unpack RPM or DEB package'
+        Hint = '|UTILITIES: Unpack RPM or DEB package'
         Top = 6
         Width = 100
         Anchors = [akTop, akRight, akBottom]
