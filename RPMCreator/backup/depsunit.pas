@@ -23,6 +23,7 @@ type
     Memo3: TMemo;
     OpenDialog1: TOpenDialog;
     DepsFormStorage: TXMLPropStorage;
+    procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormResize(Sender: TObject);
     procedure Label1Click(Sender: TObject);
     procedure Label2Click(Sender: TObject);
@@ -122,19 +123,19 @@ begin
     Cmd := 'rpmspec -q --requires "' + OpenDialog1.FileName +
       '" | cut -f1 -d" " | sort -u | sed ' + '''' + 's/.*(.*)/"&"/' + '''';
 
-    RunBashCommand(Cmd, S) then Memo1.Text := S;
+    if RunBashCommand(Cmd, S) then Memo1.Text := S;
 
     // BuildRequires
     Cmd := 'rpmspec -q --buildrequires "' + OpenDialog1.FileName +
       '" | cut -f1 -d" " | sort -u | sed ' + '''' + 's/.*(.*)/"&"/' + '''';
 
-    RunBashCommand(Cmd, S) then Memo2.Text := S;
+    if RunBashCommand(Cmd, S) then Memo2.Text := S;
 
     // Recommends
     Cmd := 'rpmspec -q --recommends "' + OpenDialog1.FileName +
       '" | cut -f1 -d" " | sort -u | sed ' + '''' + 's/.*(.*)/"&"/' + '''';
 
-    RunBashCommand(Cmd, S) then Memo3.Text := S;
+    if RunBashCommand(Cmd, S) then Memo3.Text := S;
   end;
 end;
 
@@ -144,6 +145,11 @@ begin
   Memo1.Width := DepsForm.Width div 3 - 10;
   Memo2.Width := Memo1.Width;
   Memo3.Width := Memo1.Width;
+end;
+
+procedure TDepsForm.FormClose(Sender: TObject; var CloseAction: TCloseAction);
+begin
+  DepsFormStorage.Save;
 end;
 
 procedure TDepsForm.Label1Click(Sender: TObject);

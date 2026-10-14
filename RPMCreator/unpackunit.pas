@@ -278,6 +278,8 @@ procedure TUnpackForm.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 var
   S: ansistring;
 begin
+  UnpackFormStorage.Save;
+
   RunCommand('bash', ['-c',
     'PID=$(pgrep -f "unpack-rpm-deb.sh"); if [ -n "$PID" ]; then pkill -P "$PID"; kill "$PID"; fi'], S);
 end;

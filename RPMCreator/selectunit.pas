@@ -126,6 +126,8 @@ end;
 
 procedure TSelectForm.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 begin
+  SelectFormStorage.Save;
+
   if MainForm.ListBox1.Count <> 0 then
     MainForm.ListBox1.ItemIndex := 0;
 end;

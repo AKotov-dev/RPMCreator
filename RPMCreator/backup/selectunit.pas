@@ -174,7 +174,7 @@ procedure TSelectForm.FormShow(Sender: TObject);
 begin
   SelectFormStorage.Restore;
 
-   //В центр
+  //В центр
   Left := MainForm.Left + MainForm.Width div 2 - Width div 2;
   Top := MainForm.Top + MainForm.Height div 2 - Height div 2;
 

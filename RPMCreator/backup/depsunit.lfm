@@ -2,13 +2,14 @@ object DepsForm: TDepsForm
   Left = 333
   Height = 569
   Top = 140
-  Width = 788
+  Width = 789
   Caption = 'Dependencies from *.spec'
   ClientHeight = 569
-  ClientWidth = 788
+  ClientWidth = 789
   FormStyle = fsStayOnTop
   SessionProperties = 'Height;Width;OpenDialog1.InitialDir'
   LCLVersion = '4.4.0.0'
+  OnClose = FormClose
   OnCreate = FormCreate
   OnResize = FormResize
   OnShow = FormShow
@@ -16,7 +17,7 @@ object DepsForm: TDepsForm
     Left = 8
     Height = 37
     Top = 8
-    Width = 424
+    Width = 480
     Color = 15663103
     TabOrder = 0
   end
@@ -26,7 +27,7 @@ object DepsForm: TDepsForm
     AnchorSideTop.Control = Edit1
     AnchorSideBottom.Control = Edit1
     AnchorSideBottom.Side = asrBottom
-    Left = 432
+    Left = 488
     Height = 37
     Hint = '|Select a *.spec file'
     Top = 8
@@ -73,7 +74,7 @@ object DepsForm: TDepsForm
     AnchorSideRight.Side = asrBottom
     AnchorSideBottom.Control = Owner
     AnchorSideBottom.Side = asrBottom
-    Left = 530
+    Left = 531
     Height = 481
     Top = 80
     Width = 250
@@ -126,7 +127,7 @@ object DepsForm: TDepsForm
     AnchorSideLeft.Side = asrCenter
     AnchorSideBottom.Control = Memo3
     Cursor = crHandPoint
-    Left = 614
+    Left = 615
     Height = 17
     Hint = '|Copy to clipboard'
     Top = 59
@@ -142,12 +143,12 @@ object DepsForm: TDepsForm
   end
   object OpenDialog1: TOpenDialog
     Filter = 'SPEC files (*.spec)|*.spec'
-    Left = 552
+    Left = 576
     Top = 8
   end
   object DepsFormStorage: TXMLPropStorage
     StoredValues = <>
-    Left = 656
+    Left = 688
     Top = 8
   end
 end

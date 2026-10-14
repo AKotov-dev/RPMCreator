@@ -23,6 +23,7 @@ type
     Memo3: TMemo;
     OpenDialog1: TOpenDialog;
     DepsFormStorage: TXMLPropStorage;
+    procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormResize(Sender: TObject);
     procedure Label1Click(Sender: TObject);
     procedure Label2Click(Sender: TObject);
@@ -144,6 +145,11 @@ begin
   Memo1.Width := DepsForm.Width div 3 - 10;
   Memo2.Width := Memo1.Width;
   Memo3.Width := Memo1.Width;
+end;
+
+procedure TDepsForm.FormClose(Sender: TObject; var CloseAction: TCloseAction);
+begin
+  DepsFormStorage.Save;
 end;
 
 procedure TDepsForm.Label1Click(Sender: TObject);
